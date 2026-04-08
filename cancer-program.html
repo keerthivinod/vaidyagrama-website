@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vaidyagrama Ayurveda" />
+  <meta property="og:title" content="AyurSakthi Cancer Support Program — Vaidyagrama" />
+  <meta property="og:description" content="Integrative Ayurvedic cancer support alongside conventional oncology. Personalized herbal remedies, detoxification, and mind-body techniques." />
+  <meta property="og:image" content="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-dhanwantari-temple1.jpg" />
+  <link rel="canonical" href="https://vaidyagrama.com/cancer-program" />
+  <meta name="theme-color" content="#2D5016" />
+  <meta name="msapplication-TileColor" content="#2D5016" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Ayurveda Cancer Support Program (AyurSakthi) — Vaidyagrama</title>
+  <meta name="description" content="Vaidyagrama's integrative Ayurveda cancer support program — complementary care alongside conventional oncology. Coimbatore, India." />
+  <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Montserrat:wght@300;400;500;600;700;800&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@400;500;600;700&family=Alike&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    img { max-width: 100%; height: auto; }
+    a { transition: color 0.2s, opacity 0.2s; }
+    html { overflow-x: clip; scroll-padding-top: 68px; }
+    body { overflow-x: clip; overscroll-behavior-y: contain; }
+    body { background-color: #FAF7F2; color: #1A1A1A; font-family: 'Gentium Plus', Georgia, serif; }
+    h1, h2, h3, h4 { font-family: 'GFS Didot', Georgia, serif; }
+    .placeholder-block { background: #FFF9E6; border: 2px dashed #F59E0B; border-radius: 8px; padding: 20px; margin: 12px 0; }
+    .placeholder-label { color: #92400E; font-weight: 700; font-size: 13px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px; }
+    .placeholder-desc { color: #78350F; font-size: 14px; font-family: 'Montserrat', sans-serif; }
+    .img-placeholder { background: #D1D5DB; display: flex; align-items: center; justify-content: center; color: #6B7280; font-style: italic; font-family: 'Montserrat', sans-serif; font-size: 13px; text-align: center; padding: 12px; border-radius: 8px; overflow: hidden; }
+    .nav-link { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 14px; color: #2D5016; transition: color 0.2s; }
+    .nav-link:hover, .nav-link.active { color: #D4841A; }
+    .nav-link.active { border-bottom: 2px solid #D4841A; }
+    .btn-saffron { background-color: #D4841A; color: white; font-family: 'Montserrat', sans-serif; font-weight: 700; padding: 12px 28px; border-radius: 6px; transition: background 0.2s, transform 0.1s; display: inline-block; letter-spacing: 0.5px; text-transform: uppercase; font-size: 13px; }
+    .btn-saffron:hover { background-color: #b8701a; transform: translateY(-1px); }
+    .section-label { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #D4841A; display: block; margin-bottom: 8px; }
+    .pillar-card { background: white; border-radius: 12px; border: 1px solid #E8E0D5; padding: 28px; }
+    .faq-item { border-bottom: 1px solid #E8E0D5; padding: 20px 0; }
+    .whatsapp-float { position: fixed; bottom: 28px; right: 28px; z-index: 999; }
+    .whatsapp-btn { background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(37,211,102,0.4); transition: transform 0.2s; }
+    .whatsapp-btn:hover { transform: scale(1.1); }
+    .whatsapp-tooltip { position: absolute; right: 68px; top: 50%; transform: translateY(-50%); background: #1A1A1A; color: white; font-family: 'Montserrat', sans-serif; font-size: 12px; padding: 6px 12px; border-radius: 4px; white-space: nowrap; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+    .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; }
+    /* ── Accessibility ──────────────────────────────── */
+    .skip-link { position: absolute; top: -50px; left: 8px; background: #2D5016; color: white; padding: 10px 18px; z-index: 10000; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; text-decoration: none; border-radius: 0 0 6px 6px; transition: top 0.2s; }
+    .skip-link:focus { top: 0; }
+    :focus-visible { outline: 3px solid #D4841A; outline-offset: 3px; border-radius: 3px; }
+    /* ── Reduced Motion ─────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    }
+    button { cursor: pointer; }
+
+    /* ═══ CROSS-PLATFORM & MOBILE RESPONSIVE ═══════════════════════════ */
+    /* Remove iOS/Android tap highlight */
+    * { -webkit-tap-highlight-color: transparent; }
+    /* Smooth momentum scroll on iOS */
+    body { -webkit-overflow-scrolling: touch; }
+    /* Prevent 300 ms tap delay */
+    a, button, [role="button"] { touch-action: manipulation; }
+    /* Remove iOS form styling */
+    input, select, textarea, button { -webkit-appearance: none; -moz-appearance: none; appearance: none; border-radius: 6px; }
+    select { -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234A4A4A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 36px !important; }
+    /* iOS input zoom prevention: font-size >= 16px */
+    input, select, textarea { font-size: 16px !important; }
+    /* iOS safe area for fixed elements */
+    .whatsapp-float { bottom: max(28px, calc(16px + env(safe-area-inset-bottom))); }
+    /* ── Section padding (mobile) ────────────────────────────── */
+    @media (max-width: 640px) {
+      section { padding-top: 48px !important; padding-bottom: 48px !important; }
+    }
+    /* ── Stat bar (trust bar) on mobile ─────────────────────── */
+    @media (max-width: 767px) {
+      .stat-card { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 16px 8px; }
+      .stat-card:last-child { border-bottom: none !important; }
+    }
+    /* ── Buttons full-width on mobile ───────────────────────── */
+    @media (max-width: 480px) {
+      .btn-saffron, .btn-outline-green, .btn-outline, .btn-outline-white { display: block; width: 100%; text-align: center; box-sizing: border-box; }
+    }
+    /* ── Form inputs 100% on mobile ─────────────────────────── */
+    @media (max-width: 640px) {
+      .form-input, input[type="text"], input[type="email"], input[type="tel"],
+      input[type="number"], input[type="date"], select, textarea {
+        width: 100% !important; max-width: 100% !important; box-sizing: border-box;
+      }
+      .doctor-card { padding: 20px 16px; }
+      .chip { font-size: 11px; padding: 4px 10px; }
+    }
+    /* ── WhatsApp smaller on very small screens ──────────────── */
+    @media (max-width: 380px) {
+      .whatsapp-btn { width: 52px; height: 52px; }
+      .whatsapp-float { right: 12px; }
+      .whatsapp-tooltip { display: none; }
+    }
+    /* ── Travel table scroll wrapper ────────────────────────── */
+    .travel-table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .travel-table-inner { min-width: 520px; }
+    /* ── Gallery grid on mobile ─────────────────────────────── */
+    @media (max-width: 640px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    /* ── Pricing table scroll ───────────────────────────────── */
+    .price-table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+    /* ── C7: Mobile Bottom Navigation Bar ────────────────────────── */
+    .mobile-bottom-bar { display:none; position:fixed; bottom:0; left:0; right:0; background:white; border-top:2px solid #2D5016; z-index:998; box-shadow:0 -4px 20px rgba(0,0,0,0.12); padding-bottom:env(safe-area-inset-bottom); }
+    .mobile-bottom-btn { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:10px 4px 8px; font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; color:#2D5016; text-decoration:none; gap:3px; border-right:1px solid #E8E0D5; letter-spacing:0.5px; text-transform:uppercase; transition:background 0.15s; }
+    .mobile-bottom-btn:last-child { border-right:none; }
+    .mobile-bottom-btn:active { background:#F0F4ED; }
+    .mobile-bottom-btn--primary { background:#2D5016; color:white; }
+    .mobile-bottom-btn--primary:active { background:#3a6b1d; }
+    .mobile-bottom-btn--wa { background:#25D366; color:white; }
+    .mobile-bottom-btn--wa:active { background:#1da855; }
+    @media (max-width: 1023px) {
+      .mobile-bottom-bar { display:flex; }
+      body { padding-bottom:calc(68px + env(safe-area-inset-bottom)); }
+    }
+    /* ── E3: Language Switcher ────────────────────────────────────── */
+    .lang-sw { display:flex; align-items:center; border:1.5px solid #E8E0D5; border-radius:6px; overflow:hidden; height:34px; }
+    .lang-sw-btn { padding:0 10px; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; background:none; border:none; color:#6B7280; cursor:pointer; transition:background 0.15s,color 0.15s; height:100%; }
+    .lang-sw-btn.active { background:#2D5016; color:white; }
+    .lang-sw-btn:hover:not(.active) { background:#F0F4ED; color:#2D5016; }
+    .lang-divider { width:1px; height:60%; background:#E8E0D5; }
+    /* Language notice overlay */
+    .lang-notice { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:10001; align-items:center; justify-content:center; padding:16px; }
+    .lang-notice.open { display:flex; }
+    .lang-notice-box { background:white; border-radius:16px; padding:36px 28px; max-width:380px; width:100%; text-align:center; }
+  
+    /* === UI/UX Pro Max: Accessibility & Interaction Fixes === */
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    /* Cursor pointer on interactive elements */
+    button, [role="button"], label[for], select, summary { cursor: pointer; }
+    /* Visible focus rings for keyboard nav (WCAG 2.4.7) */
+    :focus-visible {
+      outline: 2px solid #D4841A;
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+    /* Prevent overscroll pull-to-refresh flash on iOS */
+    
+    /* Smooth scroll */
+    html { scroll-behavior: smooth; }
+    /* Min touch targets on mobile */
+    @media (max-width: 1023px) {
+      button, a, [role="button"] { min-height: 44px; min-width: 44px; }
+    }
+
+    </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 bg-white border-b border-[#E8E0D5] shadow-sm" x-data="{ mobileOpen: false }">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center" style="line-height:0;">
+          <img src="logo-color.png" alt="Vaidyagrama Ayurveda" style="height:52px; width:auto; display:block;">
+        </a>
+        <div class="hidden lg:flex items-center gap-5">
+          <a href="treatments.html" class="nav-link">Treatments</a>
+          <a href="conditions.html" class="nav-link">Conditions</a>
+          <a href="doctors.html" class="nav-link">Doctors</a>
+          <a href="cancer-program.html" class="nav-link active">Cancer Program</a>
+          <a href="training.html" class="nav-link">Training</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="international.html" class="nav-link">International</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="hidden lg:block"><a href="booking.html" class="btn-saffron text-sm">Book Consultation</a></div>
+        <button @click="mobileOpen = !mobileOpen" class="lg:hidden p-2 text-[#2D5016]" aria-label="Toggle menu">
+          <svg x-show="!mobileOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg x-show="mobileOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div x-show="mobileOpen" x-transition class="lg:hidden border-t border-[#E8E0D5] py-4">
+        <div class="flex flex-col gap-3 px-2">
+          <a href="treatments.html" class="nav-link py-2" @click="mobileOpen = false">Treatments</a>
+          <a href="conditions.html" class="nav-link py-2" @click="mobileOpen = false">Conditions</a>
+          <a href="doctors.html" class="nav-link py-2" @click="mobileOpen = false">Doctors</a>
+          <a href="cancer-program.html" class="nav-link py-2 active" @click="mobileOpen = false">Cancer Program</a>
+          <a href="training.html" class="nav-link py-2" @click="mobileOpen = false">Training</a>
+          <a href="pricing.html" class="nav-link py-2" @click="mobileOpen = false">Pricing</a>
+          <a href="international.html" class="nav-link py-2" @click="mobileOpen = false">International</a>
+          <a href="about.html" class="nav-link py-2" @click="mobileOpen = false">About</a>
+          <a href="contact.html" class="nav-link py-2" @click="mobileOpen = false">Contact</a>
+          <a href="booking.html" class="btn-saffron text-center mt-2" @click="mobileOpen = false">Book Consultation</a>
+          <!-- Language (mobile) -->
+          <div class="flex items-center gap-2 pt-2 border-t border-[#E8E0D5] mt-2">
+            <span style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#6B7280;text-transform:uppercase;letter-spacing:1px;">Language:</span>
+            <button style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;background:#2D5016;color:white;border:none;padding:4px 10px;border-radius:4px;cursor:pointer;">EN</button>
+            <button onclick="mobileOpen=false;document.getElementById('lang-notice').classList.add('open')" style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;background:none;border:1.5px solid #E8E0D5;color:#6B7280;padding:4px 10px;border-radius:4px;cursor:pointer;">DE</button>
+          </div>
+          </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO — DARK FOREST GREEN -->
+  <section id="main-content" style="background:#2D5016; padding:100px 16px 80px;" class="relative">
+    <!-- PLACEHOLDER: Cancer program hero background image -->
+    <div class="max-w-3xl mx-auto text-center relative z-10">
+      <p class="section-label" style="color:#D4841A;">AyurSakthi</p>
+      <h1 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(28px,4.5vw,52px); font-weight:700; color:white; margin-bottom:16px; line-height:1.25;">Ayurveda-Based Cancer Support</h1>
+      <p style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(16px,2vw,22px); color:rgba(212,132,26,0.9); font-style:italic; margin-bottom:20px;">A Path of Integrative Healing</p>
+      <p style="font-family:'Montserrat',sans-serif; font-size:17px; color:rgba(255,255,255,0.85); max-width:560px; margin:0 auto 32px; line-height:1.8;">Supporting the body's innate healing intelligence — alongside your oncologist's care, not instead of it.</p>
+      <nav aria-label="breadcrumb">
+        <ol style="display:flex; gap:8px; justify-content:center; font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.6); list-style:none; padding:0; margin:0;">
+          <li><a href="index.html" style="color:rgba(255,255,255,0.7); text-decoration:none;">Home</a></li>
+          <li style="color:rgba(255,255,255,0.4);">/</li>
+          <li style="color:#D4841A;">Cancer Support Program</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- DISCLAIMER BOX -->
+  <section style="background:#FFF9E6; border-bottom:3px solid #F59E0B; padding:40px 16px;">
+    <div class="max-w-4xl mx-auto">
+      <div style="background:#FFF9E6; border:2px solid #F59E0B; border-radius:12px; padding:28px; display:flex; gap:16px; align-items:flex-start;">
+        <div style="font-size:28px; flex-shrink:0;">⚠️</div>
+        <div>
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:20px; font-weight:700; color:#92400E; margin-bottom:10px;">Important Medical Disclaimer</h3>
+          <p style="font-family:'Montserrat',sans-serif; font-size:15px; color:#78350F; line-height:1.8; margin-bottom:10px;">
+            <strong>Vaidyagrama's cancer support program is integrative and complementary. It works alongside — not instead of — conventional oncology treatment.</strong> Ayurveda does not claim to cure cancer. This program is designed to support your body, strengthen immunity, manage treatment side effects, and restore vitality during and after conventional cancer treatment.
+          </p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:15px; color:#78350F; line-height:1.8;">
+            <strong>Please consult your oncologist before beginning any complementary program.</strong> Always share your Ayurvedic treatment plan with your oncologist, and share your oncology treatment details with our physicians.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR APPROACH -->
+  <section style="background:#FAF7F2; padding:80px 0;">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="section-label">Our Approach</p>
+          <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(26px,3.5vw,40px); color:#2D5016; font-weight:700; margin-bottom:16px;">An Honest, Compassionate Framework</h2>
+          <p style="color:#4A4A4A; font-size:16px; line-height:1.85; margin-bottom:16px;">
+            Ayurveda does not promise to cure cancer. What it offers is something equally profound: a scientifically-grounded, time-tested framework to support the body, strengthen immunity, manage the side effects of chemotherapy and radiation, and restore the patient's vitality and sense of self.
+          </p>
+          <p style="color:#4A4A4A; font-size:16px; line-height:1.85; margin-bottom:16px;">
+            At Vaidyagrama, we work in true integration — our physicians communicate with your oncology team, review your treatment records, and design a complementary Ayurvedic protocol that is safe, appropriate, and deeply supportive.
+          </p>
+          <p style="color:#4A4A4A; font-size:16px; line-height:1.85;">
+            We also recognise that cancer is not only a physical experience. The mental and spiritual dimensions of the journey are equally real — and equally deserving of support.
+          </p>
+        </div>
+        <!-- PLACEHOLDER: Cancer support / healing image -->
+        <div>
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-dhanwantari-temple1.jpg" alt="Vaidyagrama healing environment — Dhanwantari temple amidst lush greenery" loading="lazy" style="height:400px; width:100%; object-fit:cover; border-radius:12px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE HELP — 4 PILLARS -->
+  <section style="background:#F0F4ED; padding:80px 0;">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="section-label">Our Support Framework</p>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(26px,3.5vw,40px); color:#2D5016; font-weight:700;">Four Pillars of Support</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div class="pillar-card">
+          <div class="w-14 h-14 rounded-full flex items-center justify-center mb-5" style="background:#F0F4ED;">
+            <svg class="w-7 h-7" fill="none" stroke="#2D5016" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          </div>
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:20px; font-weight:700; color:#2D5016; margin-bottom:10px;">1. Detoxification</h3>
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.8;">Classical Panchakarma-based detoxification protocols — carefully modified for the patient's current condition and tolerance — help clear accumulated toxins and create a cleaner internal environment for healing.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="w-14 h-14 rounded-full flex items-center justify-center mb-5" style="background:#F0F4ED;">
+            <svg class="w-7 h-7" fill="none" stroke="#2D5016" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:20px; font-weight:700; color:#2D5016; margin-bottom:10px;">2. Immunity</h3>
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.8;">Rasayana (rejuvenation) therapies and formulations to strengthen Ojas — the body's innate immunity and vitality. Especially important for patients whose immune systems are compromised by chemotherapy or surgery.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="w-14 h-14 rounded-full flex items-center justify-center mb-5" style="background:#FFF3E0;">
+            <svg class="w-7 h-7" fill="none" stroke="#D4841A" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:20px; font-weight:700; color:#2D5016; margin-bottom:10px;">3. Side Effects</h3>
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.8;">Targeted Ayurvedic interventions to help manage the side effects of chemotherapy, radiation, and surgery — including nausea, fatigue, hair loss, neuropathy, digestive disturbances, and pain.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="w-14 h-14 rounded-full flex items-center justify-center mb-5" style="background:#F0F4ED;">
+            <svg class="w-7 h-7" fill="none" stroke="#2D5016" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-9h-1M4.34 12H3m15.07-6.07l-.707.707M6.34 17.66l-.707.707M18.07 17.66l-.707-.707M6.34 6.34l-.707-.707"/></svg>
+          </div>
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:20px; font-weight:700; color:#2D5016; margin-bottom:10px;">4. Mind & Spirit</h3>
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.8;">Yoga, pranayama, meditation, chanting, and one-on-one counselling provide a container of support for the inner healing process — honouring the psychological and spiritual dimensions of the cancer journey.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO THIS IS FOR -->
+  <section style="background:#FAF7F2; padding:80px 0;">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="section-label">Is This Program Right for You?</p>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(24px,3vw,38px); color:#2D5016; font-weight:700;">Who This Program Supports</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div style="background:white; border-radius:12px; border:1px solid #E8E0D5; padding:24px; display:flex; gap:14px; align-items:flex-start;">
+          <span style="color:#2D5016; font-size:20px; flex-shrink:0;">✓</span>
+          <div>
+            <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:17px; color:#2D5016; margin-bottom:6px;">Undergoing Chemotherapy or Radiation</h4>
+            <p style="color:#4A4A4A; font-size:14px; line-height:1.7;">Supportive care to help manage treatment side effects, maintain strength, and sustain quality of life through the treatment phase.</p>
+          </div>
+        </div>
+        <div style="background:white; border-radius:12px; border:1px solid #E8E0D5; padding:24px; display:flex; gap:14px; align-items:flex-start;">
+          <span style="color:#2D5016; font-size:20px; flex-shrink:0;">✓</span>
+          <div>
+            <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:17px; color:#2D5016; margin-bottom:6px;">Post-Surgery Recovery</h4>
+            <p style="color:#4A4A4A; font-size:14px; line-height:1.7;">Rebuilding strength, supporting wound healing, and restoring the body's systems after surgical intervention.</p>
+          </div>
+        </div>
+        <div style="background:white; border-radius:12px; border:1px solid #E8E0D5; padding:24px; display:flex; gap:14px; align-items:flex-start;">
+          <span style="color:#2D5016; font-size:20px; flex-shrink:0;">✓</span>
+          <div>
+            <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:17px; color:#2D5016; margin-bottom:6px;">Remission & Prevention</h4>
+            <p style="color:#4A4A4A; font-size:14px; line-height:1.7;">For those in remission who wish to maintain the body in its strongest, most balanced state and reduce the risk of recurrence through lifestyle and Ayurvedic care.</p>
+          </div>
+        </div>
+        <div style="background:white; border-radius:12px; border:1px solid #E8E0D5; padding:24px; display:flex; gap:14px; align-items:flex-start;">
+          <span style="color:#2D5016; font-size:20px; flex-shrink:0;">✓</span>
+          <div>
+            <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:17px; color:#2D5016; margin-bottom:6px;">Palliative Support</h4>
+            <p style="color:#4A4A4A; font-size:14px; line-height:1.7;">For those seeking to enhance quality of life, reduce suffering, and find meaning and peace during a challenging journey — with compassionate, holistic support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PROTOCOL -->
+  <section style="background:#F0F4ED; padding:80px 0;">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <p class="section-label">Clinical Protocol</p>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(24px,3vw,38px); color:#2D5016; font-weight:700;">The Protocol</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        <div>
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:22px; font-weight:700; color:#2D5016; margin-bottom:14px;">The Ayurvedic Lens</h3>
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.85; margin-bottom:16px;">
+            Through the Ayurvedic lens, cancer is understood as a systemic imbalance. Disease represents accumulated toxins (ama) that have disrupted the body's natural intelligence. Rather than containment alone, the AyurSakthi program addresses root causes — restoring balance at the deepest level.
+          </p>
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.85; margin-bottom:16px;">
+            Each patient receives a personalized assessment. From this, a tailored treatment protocol is designed incorporating:
+          </p>
+          <ul style="color:#4A4A4A; font-size:15px; line-height:2; padding-left:20px; margin-bottom:16px;">
+            <li>Lifestyle modifications aligned to your constitution</li>
+            <li>Herbal remedies — safe, traditional preparations</li>
+            <li>Dietary adjustments to support healing</li>
+            <li>Detoxification therapies (modified Panchakarma)</li>
+            <li>Mind-body techniques including yoga, pranayama, and meditation</li>
+          </ul>
+          <div style="background:#FFF9E6; border:2px solid #F59E0B; border-radius:8px; padding:16px; margin-top:16px;">
+            <p style="font-family:'Montserrat',sans-serif; font-size:14px; color:#78350F; line-height:1.7; font-weight:600;">
+              "This program complements — it does not replace — your oncologist's treatment plan."
+            </p>
+          </div>
+        </div>
+        <div>
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-temple-1.jpg" alt="Vaidyagrama temple — a place of healing and reflection" loading="lazy" style="width:100%; border-radius:12px; margin-bottom:20px; object-fit:cover;">
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:22px; font-weight:700; color:#2D5016; margin-bottom:14px;">The Process</h3>
+          <div style="display:flex; gap:14px; align-items:flex-start; margin-bottom:16px;">
+            <span style="background:#2D5016; color:white; font-family:'Montserrat',sans-serif; font-weight:700; font-size:14px; width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">1</span>
+            <div>
+              <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:17px; color:#2D5016; margin-bottom:4px;">Initial Online Consultation</h4>
+              <p style="color:#4A4A4A; font-size:14px; line-height:1.7;">A detailed assessment of your condition, medical history, and concerns — conducted via video call with one of our senior physicians.</p>
+            </div>
+          </div>
+          <div style="display:flex; gap:14px; align-items:flex-start; margin-bottom:16px;">
+            <span style="background:#2D5016; color:white; font-family:'Montserrat',sans-serif; font-weight:700; font-size:14px; width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">2</span>
+            <div>
+              <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:17px; color:#2D5016; margin-bottom:4px;">In-House Treatment Course</h4>
+              <p style="color:#4A4A4A; font-size:14px; line-height:1.7;">A customized residential stay at Vaidyagrama — duration tailored to your specific needs, cancer type, and treatment stage.</p>
+            </div>
+          </div>
+          <div style="display:flex; gap:14px; align-items:flex-start;">
+            <span style="background:#2D5016; color:white; font-family:'Montserrat',sans-serif; font-weight:700; font-size:14px; width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">3</span>
+            <div>
+              <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:17px; color:#2D5016; margin-bottom:4px;">Ongoing Support</h4>
+              <p style="color:#4A4A4A; font-size:14px; line-height:1.7;">Post-treatment lifestyle guidance, follow-up consultations, and continued herbal protocols to sustain your progress at home.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUCCESS STORIES -->
+  <section style="background:#FAF7F2; padding:80px 0;">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="section-label">Patient Stories</p>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(24px,3vw,38px); color:#2D5016; font-weight:700;">Voices from the Journey</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Doctor: Vaidya Sreeji VN -->
+        <div style="background:white; border-radius:12px; border:1px solid #E8E0D5; padding:28px; text-align:center;">
+          <div style="width:72px; height:72px; border-radius:50%; background:#F0F4ED; display:flex; align-items:center; justify-content:center; margin:0 auto 16px;">
+            <svg class="w-8 h-8" fill="none" stroke="#2D5016" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+          </div>
+          <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:18px; color:#2D5016; margin-bottom:4px;">Vaidya Sreeji VN</h4>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#D4841A; font-weight:600; margin-bottom:10px;">Dr. Sreeji Sanjeev</p>
+          <p style="color:#4A4A4A; font-size:14px; line-height:1.7; margin-bottom:14px;">Blends rigorous university training with inherited traditional Ayurvedic practices. Brings deep clinical insight to each patient's cancer support protocol.</p>
+          <span style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; color:#2D5016; background:#F0F4ED; padding:6px 14px; border-radius:20px;">Online Consultations Available</span>
+        </div>
+        <!-- Doctor: Vaidya Vinod Govind -->
+        <div style="background:white; border-radius:12px; border:1px solid #E8E0D5; padding:28px; text-align:center;">
+          <div style="width:72px; height:72px; border-radius:50%; background:#F0F4ED; display:flex; align-items:center; justify-content:center; margin:0 auto 16px;">
+            <svg class="w-8 h-8" fill="none" stroke="#2D5016" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+          </div>
+          <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:18px; color:#2D5016; margin-bottom:4px;">Vaidya Vinod Govind</h4>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#D4841A; font-weight:600; margin-bottom:10px;">Dr. Vinod M Govind</p>
+          <p style="color:#4A4A4A; font-size:14px; line-height:1.7; margin-bottom:14px;">Combines formal medical education with a living lineage of traditional Ayurvedic knowledge. Offers compassionate, personalized guidance for cancer patients.</p>
+          <span style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; color:#2D5016; background:#F0F4ED; padding:6px 14px; border-radius:20px;">Online Consultations Available</span>
+        </div>
+        <!-- Facility -->
+        <div style="background:white; border-radius:12px; border:1px solid #E8E0D5; padding:0; overflow:hidden;">
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-ayurveda-village-indiavg-9.jpg" alt="Vaidyagrama Ayurveda healing village facility in Coimbatore, India" loading="lazy" style="width:100%; height:200px; object-fit:cover;">
+          <div style="padding:20px 28px 28px;">
+            <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:18px; color:#2D5016; margin-bottom:8px;">A Healing Environment</h4>
+            <p style="color:#4A4A4A; font-size:14px; line-height:1.7;">Set in a serene Ayurveda village near Coimbatore, Vaidyagrama provides the ideal surroundings for deep rest, recovery, and renewal during your cancer support journey.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDICAL TEAM -->
+  <section style="background:#F0F4ED; padding:56px 0;">
+    <div class="max-w-4xl mx-auto text-center px-4">
+      <p class="section-label">In Trusted Hands</p>
+      <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(24px,3vw,36px); color:#2D5016; font-weight:700; margin-bottom:14px;">Your Cancer Support Team</h2>
+      <p style="color:#4A4A4A; font-size:16px; line-height:1.8; max-width:560px; margin:0 auto 24px;">Our senior physicians — with 180+ years of combined experience — bring deep classical knowledge and a compassionate understanding of the cancer journey.</p>
+      <a href="doctors.html" style="color:#D4841A; font-family:'Montserrat',sans-serif; font-weight:700; font-size:15px; text-decoration:none;">Meet the Medical Team &rarr;</a>
+    </div>
+  </section>
+
+  <!-- PROGRAM DURATION -->
+  <section style="background:#FAF7F2; padding:56px 0;">
+    <div class="max-w-4xl mx-auto text-center px-4">
+      <p class="section-label">Duration</p>
+      <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(24px,3vw,36px); color:#2D5016; font-weight:700; margin-bottom:14px;">Program Duration</h2>
+      <p style="color:#4A4A4A; font-size:16px; line-height:1.85; max-width:620px; margin:0 auto 24px;">
+        The duration of the AyurSakthi program is fully customized to each patient's needs, cancer type, treatment stage, and overall health. There is no fixed duration — your physician designs a protocol that is right for you.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto" style="margin-top:24px;">
+        <div style="background:white; border-radius:12px; border:1px solid #E8E0D5; padding:24px; text-align:center;">
+          <div style="font-size:28px; margin-bottom:8px;">1</div>
+          <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:16px; color:#2D5016; margin-bottom:6px;">Online Consultation</h4>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#4A4A4A; line-height:1.6;">Initial assessment via video call to evaluate your condition and concerns.</p>
+        </div>
+        <div style="background:white; border-radius:12px; border:1px solid #E8E0D5; padding:24px; text-align:center;">
+          <div style="font-size:28px; margin-bottom:8px;">2</div>
+          <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:16px; color:#2D5016; margin-bottom:6px;">In-House Treatment</h4>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#4A4A4A; line-height:1.6;">Residential stay at Vaidyagrama — duration customized to your protocol.</p>
+        </div>
+        <div style="background:white; border-radius:12px; border:1px solid #E8E0D5; padding:24px; text-align:center;">
+          <div style="font-size:28px; margin-bottom:8px;">3</div>
+          <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:16px; color:#2D5016; margin-bottom:6px;">Ongoing Support</h4>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#4A4A4A; line-height:1.6;">Lifestyle guidance and follow-up consultations after you return home.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING CTA -->
+  <section style="background:#2D5016; padding:80px 0;">
+    <div class="max-w-3xl mx-auto text-center px-4">
+      <p class="section-label" style="color:#D4841A;">First Step</p>
+      <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(24px,3vw,38px); font-weight:700; color:white; margin-bottom:14px;">Begin with a Free 15-Minute Consultation</h2>
+      <p style="font-family:'Montserrat',sans-serif; font-size:16px; color:rgba(255,255,255,0.85); line-height:1.8; max-width:540px; margin:0 auto 28px;">No pressure. No commitment. Just an honest conversation about whether our program is a good fit for your situation. Conducted via Google Meet.</p>
+      <a href="booking.html" class="btn-saffron" style="font-size:14px; padding:14px 36px;">Book Your Free Chat &rarr;</a>
+      <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.6); margin-top:16px;">Please bring your recent oncology reports to the consultation.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:#FAF7F2; padding:80px 0;" x-data="{ openFaq: null }">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="section-label">Questions</p>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(24px,3vw,36px); color:#2D5016; font-weight:700;">Cancer Program FAQs</h2>
+      </div>
+
+      <div class="faq-item">
+        <button @click="openFaq = openFaq === 1 ? null : 1" class="w-full flex justify-between items-center text-left">
+          <span style="font-family:'GFS Didot',Georgia,serif; font-size:16px; font-weight:600; color:#2D5016;">Will Ayurveda interfere with my chemotherapy or radiation?</span>
+          <svg :class="openFaq === 1 ? 'rotate-180' : ''" class="w-5 h-5 text-[#D4841A] flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div x-show="openFaq === 1" x-transition class="mt-4">
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.8;">This is the most important question to ask — and we take it seriously. Our physicians review your complete oncology treatment plan before prescribing anything. Certain Ayurvedic medicines may interact with chemotherapy drugs, and our physicians are trained to identify and avoid such interactions. We also encourage you to share your Ayurvedic protocol with your oncologist. Safety is our first priority.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button @click="openFaq = openFaq === 2 ? null : 2" class="w-full flex justify-between items-center text-left">
+          <span style="font-family:'GFS Didot',Georgia,serif; font-size:16px; font-weight:600; color:#2D5016;">Can I do this program online if I cannot travel to Coimbatore?</span>
+          <svg :class="openFaq === 2 ? 'rotate-180' : ''" class="w-5 h-5 text-[#D4841A] flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div x-show="openFaq === 2" x-transition class="mt-4">
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.8;">Yes. Our physicians offer online consultations via Google Meet, Zoom, Skype, and WhatsApp. Many cancer patients who cannot travel benefit from regular online consultations, with medicines arranged to be delivered or prescribed for local procurement. However, for those who can travel, in-person treatment at Vaidyagrama offers a significantly more comprehensive experience.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button @click="openFaq = openFaq === 3 ? null : 3" class="w-full flex justify-between items-center text-left">
+          <span style="font-family:'GFS Didot',Georgia,serif; font-size:16px; font-weight:600; color:#2D5016;">What types of cancer do you support?</span>
+          <svg :class="openFaq === 3 ? 'rotate-180' : ''" class="w-5 h-5 text-[#D4841A] flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div x-show="openFaq === 3" x-transition class="mt-4">
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.8;">Our integrative support is not limited to a specific cancer type. We have worked with patients with breast cancer, colorectal cancer, lung cancer, haematological cancers, and others. The protocol is designed individually for each patient based on their cancer type, stage, current treatment, and overall health status. Please bring complete medical records to your consultation.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button @click="openFaq = openFaq === 4 ? null : 4" class="w-full flex justify-between items-center text-left">
+          <span style="font-family:'GFS Didot',Georgia,serif; font-size:16px; font-weight:600; color:#2D5016;">Can a family member accompany me?</span>
+          <svg :class="openFaq === 4 ? 'rotate-180' : ''" class="w-5 h-5 text-[#D4841A] flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div x-show="openFaq === 4" x-transition class="mt-4">
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.8;">Yes — we understand the importance of having a support person. Vaidyagrama's 80-room facility can accommodate accompanying family members. Please mention this when you contact us so we can make appropriate arrangements. Family members are also encouraged to participate in educational sessions on Ayurvedic caregiving.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" style="border-bottom:none;">
+        <button @click="openFaq = openFaq === 5 ? null : 5" class="w-full flex justify-between items-center text-left">
+          <span style="font-family:'GFS Didot',Georgia,serif; font-size:16px; font-weight:600; color:#2D5016;">How soon should I start Ayurvedic support after my diagnosis?</span>
+          <svg :class="openFaq === 5 ? 'rotate-180' : ''" class="w-5 h-5 text-[#D4841A] flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div x-show="openFaq === 5" x-transition class="mt-4">
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.8;">The earlier the better — but it's never too late. Ayurvedic support can begin at diagnosis, before treatment starts, during treatment, after treatment ends, or in remission. Each phase calls for a different protocol. Start with a consultation, bring your medical reports, and our physicians will tell you exactly what is appropriate for your current phase.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#2D5016;" class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="mb-4">
+            <img src="logo-white.png" loading="lazy" alt="Vaidyagrama Ayurveda" style="height:60px; width:auto; display:block;">
+          </div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.65); line-height:1.7;">NABH-Accredited Ayurveda Hospital & Retreat, Coimbatore</p>
+        </div>
+        <div>
+          <h4 style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:13px; letter-spacing:2px; text-transform:uppercase; color:#D4841A; margin-bottom:16px;">Quick Links</h4>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li style="margin-bottom:10px;"><a href="about.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;">About</a></li>
+            <li style="margin-bottom:10px;"><a href="doctors.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;">Doctors</a></li>
+            <li style="margin-bottom:10px;"><a href="booking.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;">Book Consultation</a></li>
+            <li><a href="contact.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:13px; letter-spacing:2px; text-transform:uppercase; color:#D4841A; margin-bottom:16px;">Programs</h4>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li style="margin-bottom:10px;"><a href="treatments.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;">Panchakarma</a></li>
+            <li style="margin-bottom:10px;"><a href="cancer-program.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;">Cancer Support</a></li>
+            <li><a href="training.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;">Training Academy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:13px; letter-spacing:2px; text-transform:uppercase; color:#D4841A; margin-bottom:16px;">Contact</h4>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.75); line-height:1.7; margin-bottom:8px;">15 (1) Rottigoundanur Road, Coimbatore, Tamil Nadu 641105</p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px;"><a href="tel:+914222364200" style="color:rgba(255,255,255,0.75); text-decoration:none;">+91 422 2364200</a></p>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,0.15); padding-top:24px;" class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.5);">&copy; 2025 Vaidyagrama Ayurveda. All rights reserved.</p>
+        <a href="#" style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.5); text-decoration:none;">Medical Disclaimer</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <div class="whatsapp-float">
+    <div class="whatsapp-tooltip">Chat with us</div>
+    <a href="https://wa.me/914222364200" target="_blank" rel="noopener" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="white"><path d="M15 2C8.373 2 3 7.373 3 14c0 2.385.668 4.61 1.832 6.5L3 28l7.75-1.808A11.952 11.952 0 0015 27c6.627 0 12-5.373 12-12S21.627 2 15 2zm5.195 15.37c-.285-.143-1.686-.832-1.948-.927-.262-.095-.452-.143-.643.143-.19.285-.737.927-.904 1.117-.166.19-.333.214-.618.071-.285-.143-1.203-.443-2.29-1.414-.846-.755-1.417-1.687-1.583-1.972-.166-.285-.018-.439.125-.581.128-.127.285-.333.428-.5.143-.166.19-.285.285-.476.095-.19.047-.357-.024-.5-.071-.143-.643-1.55-.881-2.12-.232-.557-.468-.481-.643-.49l-.548-.01c-.19 0-.5.071-.762.357-.261.285-1 .976-1 2.38 0 1.403 1.024 2.758 1.167 2.948.143.19 2.016 3.079 4.886 4.317.683.295 1.216.471 1.631.603.685.218 1.31.187 1.803.113.55-.082 1.686-.689 1.924-1.354.238-.666.238-1.236.167-1.354-.071-.119-.261-.19-.548-.333z"/></svg>
+    </a>
+  </div>
+
+  <script src="chat-widget.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Book a Consultation — Vaidyagrama Ayurveda</title>
+  <meta name="description" content="Book an online or in-person Ayurveda consultation with Vaidyagrama's senior physicians. Free 15-minute chat available." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vaidyagrama Ayurveda" />
+  <meta property="og:title" content="Book a Consultation — Vaidyagrama Ayurveda" />
+  <meta property="og:description" content="Book a free 15-minute chat or paid consultation with our senior Ayurvedic physicians. Online via Google Meet, Zoom, Skype, or WhatsApp." />
+  <meta property="og:image" content="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-ayurveda-village-indiavg-1.jpg" />
+  <link rel="canonical" href="https://vaidyagrama.com/booking" />
+  <meta name="theme-color" content="#2D5016" />
+  <meta name="msapplication-TileColor" content="#2D5016" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Montserrat:wght@300;400;500;600;700;800&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@400;500;600;700&family=Alike&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    img { max-width: 100%; height: auto; }
+    a { transition: color 0.2s, opacity 0.2s; }
+    :root { --bg-cream:#FAF7F2; --forest:#2D5016; --saffron:#D4841A; --sandstone:#C4956A; --light-bg:#F0F4ED; --border:#E8E0D5; }
+    html { overflow-x: clip; scroll-padding-top: 68px; }
+    body { overflow-x: clip; overscroll-behavior-y: contain; }
+    body { background-color:#FAF7F2; color:#1A1A1A; font-family:'Gentium Plus',Georgia,serif; }
+    h1,h2,h3,h4,h5,h6 { font-family:'GFS Didot',Georgia,serif; }
+    .placeholder-block { background:#FFF9E6; border:2px dashed #F59E0B; border-radius:8px; padding:20px; margin:12px 0; }
+    .placeholder-label { color:#92400E; font-weight:700; font-size:13px; font-family:'Montserrat',sans-serif; margin-bottom:4px; }
+    .placeholder-desc { color:#78350F; font-size:14px; font-family:'Montserrat',sans-serif; }
+    .nav-link { font-family:'Montserrat',sans-serif; font-weight:600; font-size:14px; color:#2D5016; transition:color 0.2s; text-decoration:none; }
+    .nav-link:hover,.nav-link.active { color:#D4841A; }
+    .btn-saffron { background-color:#D4841A; color:white; font-family:'Montserrat',sans-serif; font-weight:700; padding:12px 28px; border-radius:6px; transition:background 0.2s; display:inline-block; border:none; cursor:pointer; text-decoration:none; letter-spacing:0.5px; text-transform:uppercase; font-size:13px; }
+    .btn-saffron:hover { background-color:#b8701a; }
+    .btn-outline-green { border:2px solid #2D5016; color:#2D5016; font-family:'Montserrat',sans-serif; font-weight:700; padding:12px 28px; border-radius:6px; transition:all 0.2s; display:inline-block; text-decoration:none; letter-spacing:0.5px; text-transform:uppercase; font-size:13px; }
+    .btn-outline-green:hover { background:#2D5016; color:white; }
+    .section-label { font-family:'Montserrat',sans-serif; font-weight:700; font-size:12px; letter-spacing:2px; text-transform:uppercase; color:#D4841A; display:block; margin-bottom:8px; }
+    .whatsapp-float { position:fixed; bottom:28px; right:28px; z-index:999; }
+    .whatsapp-btn { background:#25D366; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 16px rgba(37,211,102,0.4); transition:transform 0.2s; }
+    .whatsapp-btn:hover { transform:scale(1.1); }
+    .whatsapp-tooltip { position:absolute; right:68px; top:50%; transform:translateY(-50%); background:#1A1A1A; color:white; font-family:'Montserrat',sans-serif; font-size:12px; padding:6px 12px; border-radius:4px; white-space:nowrap; opacity:0; transition:opacity 0.2s; pointer-events:none; }
+    .whatsapp-float:hover .whatsapp-tooltip { opacity:1; }
+    .form-label { font-family:'Montserrat',sans-serif; font-weight:600; font-size:14px; color:#2D5016; display:block; margin-bottom:6px; }
+    .form-input { width:100%; border:1px solid #E8E0D5; border-radius:6px; padding:12px 16px; font-family:'Gentium Plus',Georgia,serif; font-size:14px; color:#1A1A1A; background:white; transition:border-color 0.2s; outline:none; box-sizing:border-box; }
+    .form-input:focus { border-color:#D4841A; box-shadow:0 0 0 3px rgba(212,132,26,0.1); }
+    .doctor-booking-card { background:white; border:1px solid #E8E0D5; border-radius:12px; padding:28px; transition:box-shadow 0.2s; }
+    .doctor-booking-card:hover { box-shadow:0 8px 32px rgba(45,80,22,0.10); }
+    .availability-tag { background:#F0F4ED; color:#2D5016; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; padding:4px 12px; border-radius:20px; display:inline-block; border:1px solid #C4956A; }
+    .specialty-tag { background:#FAF7F2; color:#C4956A; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:600; padding:4px 10px; border-radius:20px; display:inline-block; border:1px solid #E8E0D5; }
+    .checklist-item { display:flex; align-items:flex-start; gap:12px; margin-bottom:14px; }
+    .checklist-icon { width:22px; height:22px; background:#2D5016; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px; }
+    /* ── Accessibility ──────────────────────────────── */
+    .skip-link { position: absolute; top: -50px; left: 8px; background: #2D5016; color: white; padding: 10px 18px; z-index: 10000; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; text-decoration: none; border-radius: 0 0 6px 6px; transition: top 0.2s; }
+    .skip-link:focus { top: 0; }
+    :focus-visible { outline: 3px solid #D4841A; outline-offset: 3px; border-radius: 3px; }
+    /* ── Reduced Motion ─────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    }
+    button { cursor: pointer; }
+
+    /* ═══ CROSS-PLATFORM & MOBILE RESPONSIVE ═══════════════════════════ */
+    /* Remove iOS/Android tap highlight */
+    * { -webkit-tap-highlight-color: transparent; }
+    /* Smooth momentum scroll on iOS */
+    body { -webkit-overflow-scrolling: touch; }
+    /* Prevent 300 ms tap delay */
+    a, button, [role="button"] { touch-action: manipulation; }
+    /* Remove iOS form styling */
+    input, select, textarea, button { -webkit-appearance: none; -moz-appearance: none; appearance: none; border-radius: 6px; }
+    select { -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234A4A4A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 36px !important; }
+    /* iOS input zoom prevention: font-size >= 16px */
+    input, select, textarea { font-size: 16px !important; }
+    /* iOS safe area for fixed elements */
+    .whatsapp-float { bottom: max(28px, calc(16px + env(safe-area-inset-bottom))); }
+    /* ── Section padding (mobile) ────────────────────────────── */
+    @media (max-width: 640px) {
+      section { padding-top: 48px !important; padding-bottom: 48px !important; }
+    }
+    /* ── Stat bar (trust bar) on mobile ─────────────────────── */
+    @media (max-width: 767px) {
+      .stat-card { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 16px 8px; }
+      .stat-card:last-child { border-bottom: none !important; }
+    }
+    /* ── Buttons full-width on mobile ───────────────────────── */
+    @media (max-width: 480px) {
+      .btn-saffron, .btn-outline-green, .btn-outline, .btn-outline-white { display: block; width: 100%; text-align: center; box-sizing: border-box; }
+    }
+    /* ── Form inputs 100% on mobile ─────────────────────────── */
+    @media (max-width: 640px) {
+      .form-input, input[type="text"], input[type="email"], input[type="tel"],
+      input[type="number"], input[type="date"], select, textarea {
+        width: 100% !important; max-width: 100% !important; box-sizing: border-box;
+      }
+      .doctor-card { padding: 20px 16px; }
+      .chip { font-size: 11px; padding: 4px 10px; }
+    }
+    /* ── WhatsApp smaller on very small screens ──────────────── */
+    @media (max-width: 380px) {
+      .whatsapp-btn { width: 52px; height: 52px; }
+      .whatsapp-float { right: 12px; }
+      .whatsapp-tooltip { display: none; }
+    }
+    /* ── Travel table scroll wrapper ────────────────────────── */
+    .travel-table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .travel-table-inner { min-width: 520px; }
+    /* ── Gallery grid on mobile ─────────────────────────────── */
+    @media (max-width: 640px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    /* ── Pricing table scroll ───────────────────────────────── */
+    .price-table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+    /* ── C7: Mobile Bottom Navigation Bar ────────────────────────── */
+    .mobile-bottom-bar { display:none; position:fixed; bottom:0; left:0; right:0; background:white; border-top:2px solid #2D5016; z-index:998; box-shadow:0 -4px 20px rgba(0,0,0,0.12); padding-bottom:env(safe-area-inset-bottom); }
+    .mobile-bottom-btn { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:10px 4px 8px; font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; color:#2D5016; text-decoration:none; gap:3px; border-right:1px solid #E8E0D5; letter-spacing:0.5px; text-transform:uppercase; transition:background 0.15s; }
+    .mobile-bottom-btn:last-child { border-right:none; }
+    .mobile-bottom-btn:active { background:#F0F4ED; }
+    .mobile-bottom-btn--primary { background:#2D5016; color:white; }
+    .mobile-bottom-btn--primary:active { background:#3a6b1d; }
+    .mobile-bottom-btn--wa { background:#25D366; color:white; }
+    .mobile-bottom-btn--wa:active { background:#1da855; }
+    @media (max-width: 1023px) {
+      .mobile-bottom-bar { display:flex; }
+      body { padding-bottom:calc(68px + env(safe-area-inset-bottom)); }
+    }
+    /* ── E3: Language Switcher ────────────────────────────────────── */
+    .lang-sw { display:flex; align-items:center; border:1.5px solid #E8E0D5; border-radius:6px; overflow:hidden; height:34px; }
+    .lang-sw-btn { padding:0 10px; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; background:none; border:none; color:#6B7280; cursor:pointer; transition:background 0.15s,color 0.15s; height:100%; }
+    .lang-sw-btn.active { background:#2D5016; color:white; }
+    .lang-sw-btn:hover:not(.active) { background:#F0F4ED; color:#2D5016; }
+    .lang-divider { width:1px; height:60%; background:#E8E0D5; }
+    /* Language notice overlay */
+    .lang-notice { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:10001; align-items:center; justify-content:center; padding:16px; }
+    .lang-notice.open { display:flex; }
+    .lang-notice-box { background:white; border-radius:16px; padding:36px 28px; max-width:380px; width:100%; text-align:center; }
+    .btn-outline-white { border:2px solid white; color:white; font-family:'Montserrat',sans-serif; font-weight:700; padding:12px 28px; border-radius:6px; transition:all 0.2s; display:inline-block; text-decoration:none; letter-spacing:0.5px; text-transform:uppercase; font-size:13px; }
+    .btn-outline-white:hover { background:white; color:#D4841A; }
+  
+    /* === UI/UX Pro Max: Accessibility & Interaction Fixes === */
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    /* Cursor pointer on interactive elements */
+    button, [role="button"], label[for], select, summary { cursor: pointer; }
+    /* Visible focus rings for keyboard nav (WCAG 2.4.7) */
+    :focus-visible {
+      outline: 2px solid #D4841A;
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+    /* Prevent overscroll pull-to-refresh flash on iOS */
+    
+    /* Smooth scroll */
+    html { scroll-behavior: smooth; }
+    /* Min touch targets on mobile */
+    @media (max-width: 1023px) {
+      button, a, [role="button"] { min-height: 44px; min-width: 44px; }
+    }
+
+    </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- NAVIGATION -->
+  <nav class="sticky top-0 z-50 bg-white border-b border-[#E8E0D5] shadow-sm" x-data="{ mobileOpen: false }">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center" style="line-height:0;"><img src="logo-color.png" alt="Vaidyagrama Ayurveda" style="height:52px; width:auto; display:block;"></a>
+        <div class="hidden lg:flex items-center gap-5">
+          <a href="treatments.html" class="nav-link">Treatments</a>
+          <a href="conditions.html" class="nav-link">Conditions</a>
+          <a href="doctors.html" class="nav-link">Doctors</a>
+          <a href="cancer-program.html" class="nav-link">Cancer Program</a>
+          <a href="training.html" class="nav-link">Training</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="international.html" class="nav-link">International</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <a href="booking.html" class="hidden lg:inline-block btn-saffron active" style="background:#b8701a;">Book Consultation</a>
+        <button @click="mobileOpen = !mobileOpen" class="lg:hidden p-2 rounded-md text-[#2D5016]" aria-label="Toggle menu">
+          <svg x-show="!mobileOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg x-show="mobileOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div x-show="mobileOpen" x-transition class="lg:hidden py-4 border-t border-[#E8E0D5]">
+        <div class="flex flex-col gap-3">
+          <a href="treatments.html" class="nav-link py-2" @click="mobileOpen = false">Treatments</a>
+          <a href="conditions.html" class="nav-link py-2" @click="mobileOpen = false">Conditions</a>
+          <a href="doctors.html" class="nav-link py-2" @click="mobileOpen = false">Doctors</a>
+          <a href="cancer-program.html" class="nav-link py-2" @click="mobileOpen = false">Cancer Program</a>
+          <a href="training.html" class="nav-link py-2" @click="mobileOpen = false">Training</a>
+          <a href="pricing.html" class="nav-link py-2" @click="mobileOpen = false">Pricing</a>
+          <a href="international.html" class="nav-link py-2" @click="mobileOpen = false">International</a>
+          <a href="about.html" class="nav-link py-2" @click="mobileOpen = false">About</a>
+          <a href="contact.html" class="nav-link py-2" @click="mobileOpen = false">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section id="main-content" style="background:#2D5016; padding:80px 0 64px;">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <span class="section-label" style="color:#C4956A;">Begin Your Journey</span>
+      <h1 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(2rem,4vw,3rem); color:white; margin-bottom:16px;">Book Your Consultation</h1>
+      <p style="font-family:'Gentium Plus',Georgia,serif; font-size:16px; color:rgba(255,255,255,0.75); max-width:560px; margin:0 auto; line-height:1.8;">
+        Choose how you would like to connect with our senior physicians — online, in-person, or start with a free 15-minute chat to see if we are the right fit for you.
+      </p>
+    </div>
+  </section>
+
+  <!-- C1: Free Consultation Prominence -->
+  <section style="background:#D4841A; padding:20px 0;">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; color:rgba(255,255,255,0.8); text-transform:uppercase; letter-spacing:1.5px; margin-bottom:4px;">New to Vaidyagrama? Start Here — It's Free</p>
+          <p style="font-family:'GFS Didot',Georgia,serif; font-size:22px; color:white; font-weight:700;">Not sure where to begin? Book a free 15-minute orientation chat first.</p>
+        </div>
+        <a href="#free-chat" style="white-space:nowrap;" class="btn-outline-white">Book Free Chat &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ONLINE CONSULTATIONS -->
+  <section style="padding:80px 0; background:#FAF7F2;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <span class="section-label">Online — From Anywhere in the World</span>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:2rem; color:#1A1A1A; margin-bottom:12px;">Online Consultations</h2>
+        <p style="font-family:'Gentium Plus',Georgia,serif; font-size:15px; color:#6B7280; max-width:560px; margin:0 auto; line-height:1.8;">
+          Connect with our senior physicians via Google Meet, Zoom, Skype, or WhatsApp Video. Available to patients worldwide.
+        </p>
+      </div>
+
+      <!-- Consultation Types -->
+      <div id="free-chat" class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 max-w-3xl mx-auto">
+        <div style="background:#F0F4ED; border-radius:12px; padding:28px; border:1px solid #E8E0D5; text-align:center;">
+          <div style="width:56px; height:56px; background:#2D5016; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 16px;">
+            <svg class="w-6 h-6" fill="white" viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+          </div>
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:1.2rem; color:#2D5016; margin-bottom:8px;">Free 15-Min Chat</h3>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:14px; color:#4A4A4A; margin-bottom:16px; line-height:1.7;">Assess if Ayurveda and Vaidyagrama are right for you. No diagnosis. No prescription. No obligation.</p>
+          <p style="font-family:'GFS Didot',Georgia,serif; font-size:1.5rem; color:#2D5016; font-weight:700; margin-bottom:16px;">Free</p>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:14px; color:#4A4A4A; line-height:1.7; margin-bottom:12px;">Via Google Meet. No payment required.</p>
+          <a href="contact.html?type=free-chat" class="btn-saffron" style="width:100%; text-align:center; display:block;">Book Free Chat &rarr;</a>
+        </div>
+        <div style="background:white; border-radius:12px; padding:28px; border:2px solid #D4841A; text-align:center; position:relative;">
+          <div style="position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:#D4841A; color:white; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; padding:4px 16px; border-radius:20px; white-space:nowrap; letter-spacing:1px;">FULL CONSULTATION</div>
+          <div style="width:56px; height:56px; background:#D4841A; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:16px auto 16px;">
+            <svg class="w-6 h-6" fill="white" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:1.2rem; color:#1A1A1A; margin-bottom:8px;">Paid 30-Min Consultation</h3>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:14px; color:#4A4A4A; margin-bottom:16px; line-height:1.7;">Full Ayurvedic diagnosis, personalized prescription, treatment plan, and follow-up guidance.</p>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:14px; color:#4A4A4A; line-height:1.7; margin-bottom:4px;">30 minutes with a senior physician. Contact us for current fees.</p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:12px; color:#6B7280; margin-bottom:16px;">Via: Google Meet, Zoom, Skype, or WhatsApp Video</p>
+          <a href="contact.html?type=paid-consultation" class="btn-saffron" style="width:100%; text-align:center; display:block;">Book Consultation &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Doctor Booking Cards -->
+      <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:1.5rem; color:#1A1A1A; text-align:center; margin-bottom:8px;">Choose Your Physician</h3>
+      <p style="font-family:'Montserrat',sans-serif; font-size:14px; color:#6B7280; text-align:center; margin-bottom:32px;">Select a doctor based on your health concern and available dates</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+
+        <!-- Doctor 1 -->
+        <div class="doctor-booking-card">
+          <div style="width:80px; height:80px; background:#E8E0D5; border-radius:50%; margin-bottom:16px; display:flex; align-items:center; justify-content:center;">
+            <svg class="w-8 h-8" style="color:#C4956A;" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#6B7280; margin-bottom:12px; font-style:italic;">Photo coming soon</p>
+          <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:1.1rem; color:#2D5016; margin-bottom:4px;">Vaidya Ramadas AR</h4>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280; margin-bottom:12px;">Senior Ayurvedic Physician</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="specialty-tag">General Health</span>
+            <span class="specialty-tag">Eye Health</span>
+          </div>
+          <div class="flex items-center gap-2 mb-4">
+            <svg class="w-4 h-4" style="color:#D4841A;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>
+            <span class="availability-tag">Monday &amp; Wednesday</span>
+          </div>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:14px; color:#4A4A4A; line-height:1.7;">After submitting this form, our team will contact you within 24 hours to confirm your appointment with one of our senior physicians.</p>
+        </div>
+
+        <!-- Doctor 2 -->
+        <div class="doctor-booking-card">
+          <div style="width:80px; height:80px; background:#E8E0D5; border-radius:50%; margin-bottom:16px; display:flex; align-items:center; justify-content:center;">
+            <svg class="w-8 h-8" style="color:#C4956A;" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#6B7280; margin-bottom:12px; font-style:italic;">Photo coming soon</p>
+          <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:1.1rem; color:#2D5016; margin-bottom:4px;">Vaidya Ramanandan EK</h4>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280; margin-bottom:12px;">Senior Ayurvedic Physician</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="specialty-tag">General Health</span>
+            <span class="specialty-tag">Gut Health</span>
+          </div>
+          <div class="flex items-center gap-2 mb-4">
+            <svg class="w-4 h-4" style="color:#D4841A;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>
+            <span class="availability-tag">Wednesday &amp; Friday</span>
+          </div>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:14px; color:#4A4A4A; line-height:1.7;">After submitting this form, our team will contact you within 24 hours to confirm your appointment with one of our senior physicians.</p>
+        </div>
+
+        <!-- Doctor 3 -->
+        <div class="doctor-booking-card">
+          <div style="width:80px; height:80px; background:#E8E0D5; border-radius:50%; margin-bottom:16px; display:flex; align-items:center; justify-content:center;">
+            <svg class="w-8 h-8" style="color:#C4956A;" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#6B7280; margin-bottom:12px; font-style:italic;">Photo coming soon</p>
+          <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:1.1rem; color:#2D5016; margin-bottom:4px;">Dr. Harikrishnan</h4>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280; margin-bottom:12px;">Senior Ayurvedic Physician</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="specialty-tag">General Health</span>
+            <span class="specialty-tag">Chronic Conditions</span>
+          </div>
+          <div class="flex items-center gap-2 mb-4">
+            <svg class="w-4 h-4" style="color:#D4841A;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>
+            <span class="availability-tag">Tuesday &amp; Thursday</span>
+          </div>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:14px; color:#4A4A4A; line-height:1.7;">After submitting this form, our team will contact you within 24 hours to confirm your appointment with one of our senior physicians.</p>
+        </div>
+      </div>
+
+      <!-- What to Prepare -->
+      <div style="background:#F0F4ED; border-radius:16px; padding:40px; max-width:700px; margin:0 auto;">
+        <span class="section-label">Before Your Session</span>
+        <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:1.5rem; color:#1A1A1A; margin-bottom:24px;">How to Prepare for Your Online Consultation</h3>
+        <div>
+          <div class="checklist-item">
+            <div class="checklist-icon"><svg class="w-3 h-3" fill="white" viewBox="0 0 12 12"><path d="M10 3L5 8.5 2 5.5" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p style="font-family:'Gentium Plus',Georgia,serif; font-size:15px; color:#4A4A4A; line-height:1.7;">Have your <strong>health history and recent reports</strong> ready (blood tests, scans, prescriptions)</p>
+          </div>
+          <div class="checklist-item">
+            <div class="checklist-icon"><svg class="w-3 h-3" fill="white" viewBox="0 0 12 12"><path d="M10 3L5 8.5 2 5.5" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p style="font-family:'Gentium Plus',Georgia,serif; font-size:15px; color:#4A4A4A; line-height:1.7;">Join <strong>5 minutes early</strong> with a working camera and microphone</p>
+          </div>
+          <div class="checklist-item">
+            <div class="checklist-icon"><svg class="w-3 h-3" fill="white" viewBox="0 0 12 12"><path d="M10 3L5 8.5 2 5.5" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p style="font-family:'Gentium Plus',Georgia,serif; font-size:15px; color:#4A4A4A; line-height:1.7;">Choose a <strong>quiet, private space</strong> with good lighting on your face</p>
+          </div>
+          <div class="checklist-item">
+            <div class="checklist-icon"><svg class="w-3 h-3" fill="white" viewBox="0 0 12 12"><path d="M10 3L5 8.5 2 5.5" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p style="font-family:'Gentium Plus',Georgia,serif; font-size:15px; color:#4A4A4A; line-height:1.7;">Be prepared to show your <strong>tongue</strong> — this is a key Ayurvedic diagnostic tool</p>
+          </div>
+          <div class="checklist-item">
+            <div class="checklist-icon"><svg class="w-3 h-3" fill="white" viewBox="0 0 12 12"><path d="M10 3L5 8.5 2 5.5" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p style="font-family:'Gentium Plus',Georgia,serif; font-size:15px; color:#4A4A4A; line-height:1.7;">Have a <strong>pen and paper</strong> to note the doctor's prescription and recommendations</p>
+          </div>
+          <div class="checklist-item" style="margin-bottom:0;">
+            <div class="checklist-icon"><svg class="w-3 h-3" fill="white" viewBox="0 0 12 12"><path d="M10 3L5 8.5 2 5.5" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p style="font-family:'Gentium Plus',Georgia,serif; font-size:15px; color:#4A4A4A; line-height:1.7;">All health information shared is <strong>100% confidential</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IN-PERSON / STAY BOOKING -->
+  <section style="padding:80px 0; background:#F0F4ED;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+
+      <!-- C2: Why Book Direct -->
+      <div style="background:#F0F4ED; border-radius:12px; border:1px solid #E8E0D5; padding:24px 28px; margin-bottom:32px;">
+        <p style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; color:#2D5016; margin-bottom:14px;">Why Book Directly with Vaidyagrama?</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div style="display:flex; gap:10px; align-items:flex-start;">
+            <span style="color:#D4841A; font-weight:700; font-size:16px; flex-shrink:0;">✓</span>
+            <div><p style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:13px; color:#2D5016;">Guaranteed Best Rate</p><p style="font-family:'Gentium Plus',Georgia,serif; font-size:13px; color:#4A4A4A;">No OTA commission mark-up. You pay the actual program rate.</p></div>
+          </div>
+          <div style="display:flex; gap:10px; align-items:flex-start;">
+            <span style="color:#D4841A; font-weight:700; font-size:16px; flex-shrink:0;">✓</span>
+            <div><p style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:13px; color:#2D5016;">Personalised Pre-Arrival Support</p><p style="font-family:'Gentium Plus',Georgia,serif; font-size:13px; color:#4A4A4A;">Direct contact with our team to answer health questions before you arrive.</p></div>
+          </div>
+          <div style="display:flex; gap:10px; align-items:flex-start;">
+            <span style="color:#D4841A; font-weight:700; font-size:16px; flex-shrink:0;">✓</span>
+            <div><p style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:13px; color:#2D5016;">Flexible Date Changes</p><p style="font-family:'Gentium Plus',Georgia,serif; font-size:13px; color:#4A4A4A;">Direct bookings receive priority for date amendments with no third-party delays.</p></div>
+          </div>
+          <div style="display:flex; gap:10px; align-items:flex-start;">
+            <span style="color:#D4841A; font-weight:700; font-size:16px; flex-shrink:0;">✓</span>
+            <div><p style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:13px; color:#2D5016;">Airport Pickup Coordination</p><p style="font-family:'Gentium Plus',Georgia,serif; font-size:13px; color:#4A4A4A;">We coordinate your transfer from Coimbatore Airport or Railway Station when you book direct.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mb-12">
+        <span class="section-label">At Our Campus</span>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:2rem; color:#1A1A1A; margin-bottom:12px;">Book an In-Person Stay</h2>
+        <p style="font-family:'Gentium Plus',Georgia,serif; font-size:15px; color:#6B7280; max-width:560px; margin:0 auto; line-height:1.8;">
+          For Panchakarma retreats, cancer support programs, and residential treatment — submit your inquiry and our reservations team will respond within 24 hours.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-4xl mx-auto">
+        <!-- Booking Form -->
+        <div>
+          <form action="#" method="POST" novalidate>
+            <div class="mb-5">
+              <label class="form-label" for="stay-name">Full Name <span style="color:#D4841A;">*</span></label>
+              <input class="form-input" type="text" id="stay-name" name="name" required placeholder="Your full name" />
+            </div>
+            <div class="grid grid-cols-2 gap-4 mb-5">
+              <div>
+                <label class="form-label" for="stay-email">Email <span style="color:#D4841A;">*</span></label>
+                <input class="form-input" type="email" inputmode="email" id="stay-email" name="email" required placeholder="email@example.com" />
+              </div>
+              <div>
+                <label class="form-label" for="stay-phone">Phone <span style="color:#D4841A;">*</span></label>
+                <input class="form-input" type="tel" inputmode="tel" id="stay-phone" name="phone" required placeholder="+country code" />
+              </div>
+            </div>
+            <div class="mb-5">
+              <label class="form-label" for="stay-country">Country <span style="color:#D4841A;">*</span></label>
+              <select class="form-input" id="stay-country" name="country" required>
+                <option value="">Select country</option>
+                <option>India</option><option>United Kingdom</option><option>United States</option>
+                <option>Germany</option><option>Italy</option><option>Australia</option>
+                <option>Canada</option><option>Singapore</option><option>UAE</option>
+                <option>Vietnam</option><option>Other</option>
+              </select>
+            </div>
+            <div class="mb-5">
+              <label class="form-label" for="stay-program">Program of Interest <span style="color:#D4841A;">*</span></label>
+              <select class="form-input" id="stay-program" name="program" required>
+                <option value="">Select a program</option>
+                <option>Panchakarma (Classic)</option>
+                <option>Cancer Support Program (AyurSakthi)</option>
+                <option>AyurOrtho</option>
+                <option>WellnessNext</option>
+                <option>Summer Retreat</option>
+                <option>Not sure — need guidance</option>
+              </select>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mb-5">
+              <div>
+                <label class="form-label" for="stay-date">Preferred Start Date</label>
+                <input class="form-input" type="date" id="stay-date" name="start_date" />
+              </div>
+              <div>
+                <label class="form-label" for="stay-duration">Preferred Duration</label>
+                <select class="form-input" id="stay-duration" name="duration">
+                  <option value="">Select</option>
+                  <option>7 nights</option>
+                  <option>14 nights</option>
+                  <option>21 nights</option>
+                  <option>28 nights</option>
+                  <option>Custom / As advised by doctor</option>
+                </select>
+              </div>
+            </div>
+            <div class="mb-5">
+              <label class="form-label" for="stay-concern">Your Health Concern <span style="color:#D4841A;">*</span></label>
+              <textarea class="form-input" id="stay-concern" name="concern" rows="4" required placeholder="Describe your condition, symptoms, and what you hope to achieve at Vaidyagrama..."></textarea>
+            </div>
+            <div class="mb-6">
+              <label class="form-label" for="stay-notes">Additional Notes</label>
+              <textarea class="form-input" id="stay-notes" name="notes" rows="3" placeholder="Dietary preferences, mobility limitations, companion coming with you, etc."></textarea>
+            </div>
+            <button type="submit" class="btn-saffron" style="width:100%; font-size:15px; padding:16px; text-align:center;">
+              Submit My Stay Inquiry &rarr;
+            </button>
+          </form>
+        </div>
+
+        <!-- Side Info -->
+        <div>
+          <div style="background:white; border-radius:12px; padding:32px; border:1px solid #E8E0D5; margin-bottom:20px;">
+            <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:1.2rem; color:#2D5016; margin-bottom:16px;">What Happens Next</h4>
+            <div style="border-left:3px solid #D4841A; padding-left:20px;">
+              <div style="margin-bottom:20px;">
+                <p style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:14px; color:#1A1A1A;">Step 1 — We Review Your Inquiry</p>
+                <p style="font-family:'Gentium Plus',Georgia,serif; font-size:13px; color:#6B7280; margin-top:4px;">Our reservations team reviews your health concern and matches you to the appropriate program.</p>
+              </div>
+              <div style="margin-bottom:20px;">
+                <p style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:14px; color:#1A1A1A;">Step 2 — We Contact You</p>
+                <p style="font-family:'Gentium Plus',Georgia,serif; font-size:13px; color:#6B7280; margin-top:4px;">We respond within 24 hours with program details, pricing, and available dates.</p>
+              </div>
+              <div style="margin-bottom:20px;">
+                <p style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:14px; color:#1A1A1A;">Step 3 — Confirm &amp; Pay Deposit</p>
+                <p style="font-family:'Gentium Plus',Georgia,serif; font-size:14px; color:#4A4A4A; line-height:1.7;">Payment via credit card (VISA/MasterCard), PayPal, Stripe, Wise, or bank transfer. An advance of USD 1,000 confirms your treatment booking.</p>
+              </div>
+              <div>
+                <p style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:14px; color:#1A1A1A;">Step 4 — Arrival &amp; Treatment Begins</p>
+                <p style="font-family:'Gentium Plus',Georgia,serif; font-size:13px; color:#6B7280; margin-top:4px;">Pre-arrival checklist sent. Your physician begins your consultation on Day 1.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:#2D5016; border-radius:12px; padding:24px; color:white;">
+            <p style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:14px; color:#D4841A; margin-bottom:8px;">CONFIDENTIALITY GUARANTEE</p>
+            <p style="font-family:'Gentium Plus',Georgia,serif; font-size:13px; color:rgba(255,255,255,0.85); line-height:1.7;">All health information you share with Vaidyagrama is held in strict confidence and used only by your treating physicians. We will never share your data with third parties.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- C3: PDF Brochure Download -->
+  <section style="background:#F0F4ED; padding:64px 0;">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <span class="section-label">Download &amp; Share</span>
+      <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(24px,3.5vw,34px); color:#2D5016; font-weight:700; margin-bottom:12px;">Take Vaidyagrama with You</h2>
+      <p style="font-family:'Gentium Plus',Georgia,serif; font-size:16px; color:#4A4A4A; line-height:1.7; margin-bottom:28px;">Download our complete program guide — treatments, pricing, accommodation, and patient journey — to review at your convenience or share with your family physician.</p>
+      <div style="background:white; border-radius:12px; border:1px solid #E8E0D5; padding:32px; max-width:420px; margin:0 auto;">
+        <div style="width:56px; height:56px; background:#F0F4ED; border-radius:12px; display:flex; align-items:center; justify-content:center; margin:0 auto 16px;">
+          <svg width="28" height="28" fill="none" stroke="#2D5016" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        </div>
+        <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:20px; color:#2D5016; margin-bottom:8px;">Vaidyagrama Program Guide 2025</h3>
+        <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280; margin-bottom:20px;">PDF &middot; Includes programs, pricing, room types, FAQs, travel guide</p>
+        <form onsubmit="return false;" style="display:flex; flex-direction:column; gap:10px; margin-bottom:12px;">
+          <input type="email" inputmode="email" placeholder="Your email address" required style="padding:12px 16px; border:1.5px solid #E8E0D5; border-radius:6px; font-size:16px; font-family:'Gentium Plus',Georgia,serif; outline:none; width:100%;" />
+          <a href="contact.html?type=program-guide" class="btn-saffron" style="width:100%; text-align:center; display:block;">Request Program Guide &rarr;</a>
+        </form>
+        <p style="font-family:'Montserrat',sans-serif; font-size:12px; color:#6B7280;">We'll also send you our monthly Ayurveda wellness newsletter.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#2D5016; padding:60px 0 32px;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div class="mb-4"><img src="logo-white.png" loading="lazy" alt="Vaidyagrama Ayurveda" style="height:60px; width:auto; display:block;"></div>
+          <p style="font-family:'Montserrat',sans-serif;font-size:13px;color:rgba(255,255,255,0.65);line-height:1.7;">Sarve Bhavantu Sukhinah<br/>May all beings be happy.</p>
+        </div>
+        <div>
+          <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#D4841A;margin-bottom:16px;">Quick Links</h4>
+          <ul style="list-style:none;padding:0;margin:0;">
+            <li style="margin-bottom:10px;"><a href="about.html" style="font-family:'Montserrat',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);text-decoration:none;">About</a></li>
+            <li style="margin-bottom:10px;"><a href="doctors.html" style="font-family:'Montserrat',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);text-decoration:none;">Our Doctors</a></li>
+            <li style="margin-bottom:10px;"><a href="conditions.html" style="font-family:'Montserrat',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);text-decoration:none;">Conditions We Treat</a></li>
+            <li style="margin-bottom:10px;"><a href="international.html" style="font-family:'Montserrat',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);text-decoration:none;">International Patients</a></li>
+            <li><a href="contact.html" style="font-family:'Montserrat',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);text-decoration:none;">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#D4841A;margin-bottom:16px;">Programs</h4>
+          <ul style="list-style:none;padding:0;margin:0;">
+            <li style="margin-bottom:10px;"><a href="treatments.html" style="font-family:'Montserrat',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);text-decoration:none;">Panchakarma</a></li>
+            <li style="margin-bottom:10px;"><a href="cancer-program.html" style="font-family:'Montserrat',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);text-decoration:none;">Cancer Support</a></li>
+            <li style="margin-bottom:10px;"><a href="treatments.html" style="font-family:'Montserrat',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);text-decoration:none;">AyurOrtho</a></li>
+            <li><a href="training.html" style="font-family:'Montserrat',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);text-decoration:none;">Training Academy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#D4841A;margin-bottom:16px;">Contact</h4>
+          <p style="font-family:'Montserrat',sans-serif;font-size:13px;color:rgba(255,255,255,0.75);line-height:1.8;margin-bottom:8px;">15 (1) Rottigoundanur Road,<br/>Coimbatore, TN 641105, India</p>
+          <a href="tel:+914222364200" style="font-family:'Montserrat',sans-serif;font-size:13px;color:rgba(255,255,255,0.75);text-decoration:none;display:block;">+91 422 2364200</a>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,0.15);padding-top:24px;" class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p style="font-family:'Montserrat',sans-serif;font-size:13px;color:rgba(255,255,255,0.5);">&copy; 2025 Vaidyagrama Ayurveda. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" style="font-family:'Montserrat',sans-serif;font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;">Privacy Policy</a>
+          <a href="#" style="font-family:'Montserrat',sans-serif;font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;">Medical Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <div class="whatsapp-float">
+    <span class="whatsapp-tooltip">Chat with us</span>
+    <a href="https://wa.me/914222364200" target="_blank" rel="noopener" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="white"><path d="M15 2C8.373 2 3 7.373 3 14c0 2.385.668 4.61 1.832 6.5L3 28l7.75-1.808A11.952 11.952 0 0015 27c6.627 0 12-5.373 12-12S21.627 2 15 2zm5.195 15.37c-.285-.143-1.686-.832-1.948-.927-.262-.095-.452-.143-.643.143-.19.285-.737.927-.904 1.117-.166.19-.333.214-.618.071-.285-.143-1.203-.443-2.29-1.414-.846-.755-1.417-1.687-1.583-1.972-.166-.285-.018-.439.125-.581.128-.127.285-.333.428-.5.143-.166.19-.285.285-.476.095-.19.047-.357-.024-.5-.071-.143-.643-1.55-.881-2.12-.232-.557-.468-.481-.643-.49l-.548-.01c-.19 0-.5.071-.762.357-.261.285-1 .976-1 2.38 0 1.403 1.024 2.758 1.167 2.948.143.19 2.016 3.079 4.886 4.317.683.295 1.216.471 1.631.603.685.218 1.31.187 1.803.113.55-.082 1.686-.689 1.924-1.354.238-.666.238-1.236.167-1.354-.071-.119-.261-.19-.548-.333z"/></svg>
+    </a>
+  </div>
+
+  <script src="chat-widget.js" defer></script>
+</body>
+</html>

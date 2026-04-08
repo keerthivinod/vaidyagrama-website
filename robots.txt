@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow documentation files
+Disallow: /WEBSITE-GUIDE.html
+Disallow: /PLACEHOLDERS.md
+
+Sitemap: https://vaidyagrama.netlify.app/sitemap.xml

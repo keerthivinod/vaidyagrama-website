@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Training Academy — Vaidyagrama Ayurveda</title>
+  <meta name="description" content="Learn classical Ayurveda from physicians with 180+ years of combined expertise. Courses for practitioners, doctors, therapists, and serious students." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vaidyagrama Ayurveda" />
+  <meta property="og:title" content="Vaidyagrama Training Academy — Ayurveda Education" />
+  <meta property="og:description" content="8 specialized training programs for practitioners, doctors, and therapists. Learn classical Ayurveda from masters with 180+ years experience." />
+  <meta property="og:image" content="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-wall.jpg" />
+  <link rel="canonical" href="https://vaidyagrama.com/training" />
+  <meta name="theme-color" content="#2D5016" />
+  <meta name="msapplication-TileColor" content="#2D5016" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Montserrat:wght@300;400;500;600;700;800&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@400;500;600;700&family=Alike&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    img { max-width: 100%; height: auto; }
+    a { transition: color 0.2s, opacity 0.2s; }
+    :root { --bg-cream:#FAF7F2; --forest:#2D5016; --saffron:#D4841A; --sandstone:#C4956A; --light-bg:#F0F4ED; --border:#E8E0D5; }
+    html { overflow-x: clip; scroll-padding-top: 68px; }
+    body { overflow-x: clip; overscroll-behavior-y: contain; }
+    body { background-color:#FAF7F2; color:#1A1A1A; font-family:'Gentium Plus',Georgia,serif; }
+    h1,h2,h3,h4,h5,h6 { font-family:'GFS Didot',Georgia,serif; }
+    .placeholder-block { background:#FFF9E6; border:2px dashed #F59E0B; border-radius:8px; padding:16px; margin:8px 0; }
+    .placeholder-label { color:#92400E; font-weight:700; font-size:13px; font-family:'Montserrat',sans-serif; margin-bottom:4px; }
+    .placeholder-desc { color:#78350F; font-size:13px; font-family:'Montserrat',sans-serif; }
+    .nav-link { font-family:'Montserrat',sans-serif; font-weight:600; font-size:14px; color:#2D5016; transition:color 0.2s; text-decoration:none; }
+    .nav-link:hover,.nav-link.active { color:#D4841A; }
+    .btn-saffron { background-color:#D4841A; color:white; font-family:'Montserrat',sans-serif; font-weight:700; padding:12px 28px; border-radius:6px; transition:background 0.2s; display:inline-block; border:none; cursor:pointer; text-decoration:none; letter-spacing:0.5px; text-transform:uppercase; font-size:13px; }
+    .btn-saffron:hover { background-color:#b8701a; }
+    .btn-outline-green { border:2px solid #2D5016; color:#2D5016; font-family:'Montserrat',sans-serif; font-weight:700; padding:11px 26px; border-radius:6px; transition:all 0.2s; display:inline-block; text-decoration:none; letter-spacing:0.5px; text-transform:uppercase; font-size:13px; }
+    .btn-outline-green:hover { background:#2D5016; color:white; }
+    .section-label { font-family:'Montserrat',sans-serif; font-weight:700; font-size:12px; letter-spacing:2px; text-transform:uppercase; color:#D4841A; display:block; margin-bottom:8px; }
+    .whatsapp-float { position:fixed; bottom:28px; right:28px; z-index:999; }
+    .whatsapp-btn { background:#25D366; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 16px rgba(37,211,102,0.4); transition:transform 0.2s; }
+    .whatsapp-btn:hover { transform:scale(1.1); }
+    .whatsapp-tooltip { position:absolute; right:68px; top:50%; transform:translateY(-50%); background:#1A1A1A; color:white; font-family:'Montserrat',sans-serif; font-size:12px; padding:6px 12px; border-radius:4px; white-space:nowrap; opacity:0; transition:opacity 0.2s; pointer-events:none; }
+    .whatsapp-float:hover .whatsapp-tooltip { opacity:1; }
+    .form-label { font-family:'Montserrat',sans-serif; font-weight:600; font-size:14px; color:#2D5016; display:block; margin-bottom:6px; }
+    .form-input { width:100%; border:1px solid #E8E0D5; border-radius:6px; padding:12px 16px; font-family:'Gentium Plus',Georgia,serif; font-size:14px; color:#1A1A1A; background:white; transition:border-color 0.2s; outline:none; box-sizing:border-box; }
+    .form-input:focus { border-color:#D4841A; box-shadow:0 0 0 3px rgba(212,132,26,0.1); }
+    .program-card { background:white; border:1px solid #E8E0D5; border-radius:12px; padding:28px; transition:box-shadow 0.2s, transform 0.15s; }
+    .program-card:hover { box-shadow:0 8px 32px rgba(45,80,22,0.10); transform:translateY(-3px); }
+    .audience-card { background:white; border:1px solid #E8E0D5; border-radius:12px; padding:28px; text-align:center; }
+    .mode-badge { font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; padding:3px 10px; border-radius:20px; letter-spacing:0.5px; }
+    .mode-online { background:#EFF6FF; color:#1D4ED8; }
+    .mode-inperson { background:#F0FDF4; color:#166534; }
+    .mode-both { background:#FFF7ED; color:#C2410C; }
+    /* ── Accessibility ──────────────────────────────── */
+    .skip-link { position: absolute; top: -50px; left: 8px; background: #2D5016; color: white; padding: 10px 18px; z-index: 10000; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; text-decoration: none; border-radius: 0 0 6px 6px; transition: top 0.2s; }
+    .skip-link:focus { top: 0; }
+    :focus-visible { outline: 3px solid #D4841A; outline-offset: 3px; border-radius: 3px; }
+    /* ── Reduced Motion ─────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    }
+    button { cursor: pointer; }
+
+    /* ═══ CROSS-PLATFORM & MOBILE RESPONSIVE ═══════════════════════════ */
+    /* Remove iOS/Android tap highlight */
+    * { -webkit-tap-highlight-color: transparent; }
+    /* Smooth momentum scroll on iOS */
+    body { -webkit-overflow-scrolling: touch; }
+    /* Prevent 300 ms tap delay */
+    a, button, [role="button"] { touch-action: manipulation; }
+    /* Remove iOS form styling */
+    input, select, textarea, button { -webkit-appearance: none; -moz-appearance: none; appearance: none; border-radius: 6px; }
+    select { -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234A4A4A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 36px !important; }
+    /* iOS input zoom prevention: font-size >= 16px */
+    input, select, textarea { font-size: 16px !important; }
+    /* iOS safe area for fixed elements */
+    .whatsapp-float { bottom: max(28px, calc(16px + env(safe-area-inset-bottom))); }
+    /* ── Section padding (mobile) ────────────────────────────── */
+    @media (max-width: 640px) {
+      section { padding-top: 48px !important; padding-bottom: 48px !important; }
+    }
+    /* ── Stat bar (trust bar) on mobile ─────────────────────── */
+    @media (max-width: 767px) {
+      .stat-card { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 16px 8px; }
+      .stat-card:last-child { border-bottom: none !important; }
+    }
+    /* ── Buttons full-width on mobile ───────────────────────── */
+    @media (max-width: 480px) {
+      .btn-saffron, .btn-outline-green, .btn-outline, .btn-outline-white { display: block; width: 100%; text-align: center; box-sizing: border-box; }
+    }
+    /* ── Form inputs 100% on mobile ─────────────────────────── */
+    @media (max-width: 640px) {
+      .form-input, input[type="text"], input[type="email"], input[type="tel"],
+      input[type="number"], input[type="date"], select, textarea {
+        width: 100% !important; max-width: 100% !important; box-sizing: border-box;
+      }
+      .doctor-card { padding: 20px 16px; }
+      .chip { font-size: 11px; padding: 4px 10px; }
+    }
+    /* ── WhatsApp smaller on very small screens ──────────────── */
+    @media (max-width: 380px) {
+      .whatsapp-btn { width: 52px; height: 52px; }
+      .whatsapp-float { right: 12px; }
+      .whatsapp-tooltip { display: none; }
+    }
+    /* ── Travel table scroll wrapper ────────────────────────── */
+    .travel-table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .travel-table-inner { min-width: 520px; }
+    /* ── Gallery grid on mobile ─────────────────────────────── */
+    @media (max-width: 640px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    /* ── Pricing table scroll ───────────────────────────────── */
+    .price-table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+    /* ── C7: Mobile Bottom Navigation Bar ────────────────────────── */
+    .mobile-bottom-bar { display:none; position:fixed; bottom:0; left:0; right:0; background:white; border-top:2px solid #2D5016; z-index:998; box-shadow:0 -4px 20px rgba(0,0,0,0.12); padding-bottom:env(safe-area-inset-bottom); }
+    .mobile-bottom-btn { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:10px 4px 8px; font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; color:#2D5016; text-decoration:none; gap:3px; border-right:1px solid #E8E0D5; letter-spacing:0.5px; text-transform:uppercase; transition:background 0.15s; }
+    .mobile-bottom-btn:last-child { border-right:none; }
+    .mobile-bottom-btn:active { background:#F0F4ED; }
+    .mobile-bottom-btn--primary { background:#2D5016; color:white; }
+    .mobile-bottom-btn--primary:active { background:#3a6b1d; }
+    .mobile-bottom-btn--wa { background:#25D366; color:white; }
+    .mobile-bottom-btn--wa:active { background:#1da855; }
+    @media (max-width: 1023px) {
+      .mobile-bottom-bar { display:flex; }
+      body { padding-bottom:calc(68px + env(safe-area-inset-bottom)); }
+    }
+    /* ── E3: Language Switcher ────────────────────────────────────── */
+    .lang-sw { display:flex; align-items:center; border:1.5px solid #E8E0D5; border-radius:6px; overflow:hidden; height:34px; }
+    .lang-sw-btn { padding:0 10px; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; background:none; border:none; color:#6B7280; cursor:pointer; transition:background 0.15s,color 0.15s; height:100%; }
+    .lang-sw-btn.active { background:#2D5016; color:white; }
+    .lang-sw-btn:hover:not(.active) { background:#F0F4ED; color:#2D5016; }
+    .lang-divider { width:1px; height:60%; background:#E8E0D5; }
+    /* Language notice overlay */
+    .lang-notice { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:10001; align-items:center; justify-content:center; padding:16px; }
+    .lang-notice.open { display:flex; }
+    .lang-notice-box { background:white; border-radius:16px; padding:36px 28px; max-width:380px; width:100%; text-align:center; }
+  
+    /* === UI/UX Pro Max: Accessibility & Interaction Fixes === */
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    /* Cursor pointer on interactive elements */
+    button, [role="button"], label[for], select, summary { cursor: pointer; }
+    /* Visible focus rings for keyboard nav (WCAG 2.4.7) */
+    :focus-visible {
+      outline: 2px solid #D4841A;
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+    /* Prevent overscroll pull-to-refresh flash on iOS */
+    
+    /* Smooth scroll */
+    html { scroll-behavior: smooth; }
+    /* Min touch targets on mobile */
+    @media (max-width: 1023px) {
+      button, a, [role="button"] { min-height: 44px; min-width: 44px; }
+    }
+
+    </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- NAVIGATION -->
+  <nav class="sticky top-0 z-50 bg-white border-b border-[#E8E0D5] shadow-sm" x-data="{ mobileOpen: false }">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center" style="line-height:0;"><img src="logo-color.png" alt="Vaidyagrama Ayurveda" style="height:52px; width:auto; display:block;"></a>
+        <div class="hidden lg:flex items-center gap-5">
+          <a href="treatments.html" class="nav-link">Treatments</a>
+          <a href="conditions.html" class="nav-link">Conditions</a>
+          <a href="doctors.html" class="nav-link">Doctors</a>
+          <a href="cancer-program.html" class="nav-link">Cancer Program</a>
+          <a href="training.html" class="nav-link active">Training</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="international.html" class="nav-link">International</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <a href="booking.html" class="hidden lg:inline-block btn-saffron">Book Consultation</a>
+        <button @click="mobileOpen = !mobileOpen" class="lg:hidden p-2 rounded-md text-[#2D5016]" aria-label="Toggle menu">
+          <svg x-show="!mobileOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg x-show="mobileOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div x-show="mobileOpen" x-transition class="lg:hidden py-4 border-t border-[#E8E0D5]">
+        <div class="flex flex-col gap-3">
+          <a href="treatments.html" class="nav-link py-2" @click="mobileOpen = false">Treatments</a>
+          <a href="conditions.html" class="nav-link py-2" @click="mobileOpen = false">Conditions</a>
+          <a href="doctors.html" class="nav-link py-2" @click="mobileOpen = false">Doctors</a>
+          <a href="cancer-program.html" class="nav-link py-2" @click="mobileOpen = false">Cancer Program</a>
+          <a href="training.html" class="nav-link py-2" @click="mobileOpen = false" style="color:#D4841A;">Training</a>
+          <a href="pricing.html" class="nav-link py-2" @click="mobileOpen = false">Pricing</a>
+          <a href="international.html" class="nav-link py-2" @click="mobileOpen = false">International</a>
+          <a href="about.html" class="nav-link py-2" @click="mobileOpen = false">About</a>
+          <a href="contact.html" class="nav-link py-2" @click="mobileOpen = false">Contact</a>
+          <a href="booking.html" class="btn-saffron text-center mt-2" @click="mobileOpen = false">Book Consultation</a>
+          <!-- Language (mobile) -->
+          <div class="flex items-center gap-2 pt-2 border-t border-[#E8E0D5] mt-2">
+            <span style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#6B7280;text-transform:uppercase;letter-spacing:1px;">Language:</span>
+            <button style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;background:#2D5016;color:white;border:none;padding:4px 10px;border-radius:4px;cursor:pointer;">EN</button>
+            <button onclick="mobileOpen=false;document.getElementById('lang-notice').classList.add('open')" style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;background:none;border:1.5px solid #E8E0D5;color:#6B7280;padding:4px 10px;border-radius:4px;cursor:pointer;">DE</button>
+          </div>
+          </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section id="main-content" style="background:linear-gradient(135deg,#2D5016 0%,#3d6b20 100%); padding:80px 0 60px; position:relative; overflow:hidden;">
+    <div style="position:absolute;top:0;right:0;width:400px;height:100%;background:rgba(212,132,26,0.06);clip-path:polygon(30% 0,100% 0,100% 100%,0% 100%);"></div>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center" style="position:relative;">
+      <span class="section-label" style="color:#C4956A;">Vaidyagrama Academy</span>
+      <h1 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(2rem,4vw,3.2rem); color:white; margin-bottom:16px; line-height:1.2;">
+        Training Academy<br/><em style="font-weight:400; color:#D4841A;">Learn from the Masters</em>
+      </h1>
+      <p style="font-family:'Gentium Plus',Georgia,serif; font-size:16px; color:rgba(255,255,255,0.80); max-width:600px; margin:0 auto 32px; line-height:1.8;">
+        Classical Ayurveda education from physicians with a combined 180+ years of clinical experience. Programs for practitioners, doctors, therapists, and serious students worldwide.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#programs" class="btn-saffron">View All Programs</a>
+        <a href="#apply" class="btn-outline-green" style="border-color:rgba(255,255,255,0.5); color:white;">Apply Now</a>
+      </div>
+      <div style="margin-top:16px; font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.45);">
+        <a href="index.html" style="color:rgba(255,255,255,0.45); text-decoration:none;">Home</a>
+        <span style="margin:0 8px;">›</span>
+        <span style="color:#D4841A;">Training Academy</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO STATS -->
+  <section style="background:white; border-bottom:1px solid #E8E0D5; padding:32px 0;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-0 divide-x divide-[#E8E0D5]">
+        <div style="text-align:center; padding:20px;">
+          <p style="font-family:'GFS Didot',Georgia,serif; font-size:2rem; color:#2D5016; font-weight:700;">180+</p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280;">Years Combined Faculty Experience</p>
+        </div>
+        <div style="text-align:center; padding:20px;">
+          <p style="font-family:'GFS Didot',Georgia,serif; font-size:2rem; color:#2D5016; font-weight:700;">8</p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280;">Specialized Programs</p>
+        </div>
+        <div style="text-align:center; padding:20px;">
+          <p style="font-family:'GFS Didot',Georgia,serif; font-size:2rem; color:#2D5016; font-weight:700;">500+</p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280;">Students Trained</p>
+        </div>
+        <div style="text-align:center; padding:20px;">
+          <p style="font-family:'GFS Didot',Georgia,serif; font-size:2rem; color:#2D5016; font-weight:700;">Online</p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280;">+ In-Person Options</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO SHOULD ATTEND -->
+  <section style="padding:80px 0; background:#F0F4ED;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <span class="section-label">Is This For You?</span>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:2rem; color:#1A1A1A;">Who Should Attend</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="audience-card">
+          <div style="width:60px; height:60px; background:#2D5016; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 16px;">
+            <svg class="w-7 h-7" fill="white" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
+          <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:1.1rem; color:#2D5016; margin-bottom:8px;">Ayurveda Practitioners</h4>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:13px; color:#6B7280; line-height:1.7;">BAMS graduates and practicing vaidyas looking to deepen clinical mastery and case-based learning.</p>
+        </div>
+        <div class="audience-card">
+          <div style="width:60px; height:60px; background:#D4841A; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 16px;">
+            <svg class="w-7 h-7" fill="white" viewBox="0 0 24 24"><path d="M20 6h-2.18c.07-.44.18-.88.18-1.33C18 2.54 15.46 0 12.33 0c-1.85 0-3.53.82-4.67 2.13C6.54.82 4.85 0 3 0 1.34 0 0 1.34 0 3c0 .17.03.33.04.5H0v.5C0 7.14 3.5 9.5 6 11H3v10h18V11h-3C20.5 9.5 24 7.14 24 4v-.5h-.04c.01-.17.04-.33.04-.5C24 1.34 22.66 0 21 0c-1.85 0-3.53.82-4.67 2.13A5.327 5.327 0 0012.33 0z"/></svg>
+          </div>
+          <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:1.1rem; color:#2D5016; margin-bottom:8px;">Medical Doctors</h4>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:13px; color:#6B7280; line-height:1.7;">MBBS, MD, and specialist physicians seeking to integrate Ayurvedic frameworks into their clinical practice.</p>
+        </div>
+        <div class="audience-card">
+          <div style="width:60px; height:60px; background:#C4956A; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 16px;">
+            <svg class="w-7 h-7" fill="white" viewBox="0 0 24 24"><path d="M12 2a5 5 0 100 10A5 5 0 0012 2zM2 20c0-4 4-7 10-7s10 3 10 7v2H2v-2z"/></svg>
+          </div>
+          <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:1.1rem; color:#2D5016; margin-bottom:8px;">Therapists &amp; Nurses</h4>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:13px; color:#6B7280; line-height:1.7;">Healthcare professionals wanting certification in Ayurvedic therapy techniques (Paricharaka / Panchakarma assistant).</p>
+        </div>
+        <div class="audience-card">
+          <div style="width:60px; height:60px; background:#6B7280; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 16px;">
+            <svg class="w-7 h-7" fill="white" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+          </div>
+          <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:1.1rem; color:#2D5016; margin-bottom:8px;">Serious Students</h4>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:13px; color:#6B7280; line-height:1.7;">Dedicated individuals from any background who want deep, authentic Ayurveda education from master clinicians.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINING PROGRAMS -->
+  <section id="programs" style="padding:80px 0; background:#FAF7F2;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <span class="section-label">Programs</span>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:2rem; color:#1A1A1A; margin-bottom:12px;">All Training Programs</h2>
+        <p style="font-family:'Gentium Plus',Georgia,serif; font-size:15px; color:#6B7280; max-width:560px; margin:0 auto; line-height:1.8;">Each program is taught by senior physicians with decades of clinical experience in classical Ayurveda.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Program 1: Tongue26 -->
+        <div class="program-card">
+          <div class="flex items-start justify-between gap-4 mb-4">
+            <div style="width:48px; height:48px; background:#F0F4ED; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:24px;">👅</div>
+            <div style="flex:1;">
+              <div class="flex items-center gap-2 flex-wrap">
+                <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:1.2rem; color:#2D5016;">Tongue26</h3>
+                <span class="mode-badge mode-both">Online &amp; In-Person</span>
+              </div>
+              <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280; margin-top:4px;">Tongue Diagnostics Mastery Program</p>
+            </div>
+          </div>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:14px; color:#4A4A4A; line-height:1.7; margin-bottom:16px;">
+            Master the ancient art of Jihva (tongue) diagnosis — one of Ayurveda's most powerful diagnostic tools. Learn to read the 26 diagnostic zones of the tongue to understand the state of organs, doshas, and tissues in the body.
+          </p>
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div style="background:#F0F4ED; border-radius:8px; padding:10px 14px;">
+              <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#6B7280; text-transform:uppercase; letter-spacing:1px;">Duration</p>
+              <p style="font-family:'Montserrat',sans-serif; font-size:14px; color:#2D5016; font-weight:600;">Contact for details</p>
+            </div>
+            <div style="background:#F0F4ED; border-radius:8px; padding:10px 14px;">
+              <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#6B7280; text-transform:uppercase; letter-spacing:1px;">Fee</p>
+              <p style="font-family:'Montserrat',sans-serif; font-size:14px; color:#2D5016; font-weight:600;">Contact for current fees</p>
+            </div>
+          </div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:12px; color:#D4841A; font-weight:600; margin-bottom:16px;">Next batch dates announced quarterly — subscribe to our newsletter for updates.</p>
+          <a href="#apply" class="btn-outline-green" style="font-size:13px; padding:10px 20px;">Apply for Tongue26 &rarr;</a>
+        </div>
+
+        <!-- Program 2: Nutrition -->
+        <div class="program-card">
+          <div class="flex items-start justify-between gap-4 mb-4">
+            <div style="width:48px; height:48px; background:#F0F4ED; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:24px;">🌿</div>
+            <div style="flex:1;">
+              <div class="flex items-center gap-2 flex-wrap">
+                <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:1.2rem; color:#2D5016;">Nutrition Program</h3>
+                <span class="mode-badge mode-both">Online &amp; In-Person</span>
+              </div>
+              <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280; margin-top:4px;">Classical Ayurvedic Nutritional Science</p>
+            </div>
+          </div>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:14px; color:#4A4A4A; line-height:1.7; margin-bottom:16px;">
+            An in-depth program in Ayurvedic Ahara (diet and nutrition). Learn how to design personalized diets based on Prakriti (constitution), Vikriti (imbalance), season, and disease state — going far beyond generic "Ayurvedic diet" advice.
+          </p>
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div style="background:#F0F4ED; border-radius:8px; padding:10px 14px;">
+              <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#6B7280; text-transform:uppercase; letter-spacing:1px;">Duration</p>
+              <p style="font-family:'Montserrat',sans-serif; font-size:14px; color:#2D5016; font-weight:600;">Contact for details</p>
+            </div>
+            <div style="background:#F0F4ED; border-radius:8px; padding:10px 14px;">
+              <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#6B7280; text-transform:uppercase; letter-spacing:1px;">Fee</p>
+              <p style="font-family:'Montserrat',sans-serif; font-size:14px; color:#2D5016; font-weight:600;">Contact for current fees</p>
+            </div>
+          </div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:12px; color:#D4841A; font-weight:600; margin-bottom:16px;">Next batch dates announced quarterly — subscribe to our newsletter for updates.</p>
+          <a href="#apply" class="btn-outline-green" style="font-size:13px; padding:10px 20px;">Apply for Nutrition &rarr;</a>
+        </div>
+
+        <!-- Program 3: Agni & Diseases -->
+        <div class="program-card">
+          <div class="flex items-start justify-between gap-4 mb-4">
+            <div style="width:48px; height:48px; background:#F0F4ED; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:24px;">🔥</div>
+            <div style="flex:1;">
+              <div class="flex items-center gap-2 flex-wrap">
+                <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:1.2rem; color:#2D5016;">Agni &amp; Diseases</h3>
+                <span class="mode-badge mode-both">Online &amp; In-Person</span>
+              </div>
+              <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280; margin-top:4px;">Digestive Fire and Disease Pathology</p>
+            </div>
+          </div>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:14px; color:#4A4A4A; line-height:1.7; margin-bottom:16px;">
+            Agni (digestive fire) is central to all disease in Ayurveda. This program explores the 13 types of Agni, how their dysfunction leads to specific disease states, and how to correct them through diet, herbs, and Panchakarma protocols.
+          </p>
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div style="background:#F0F4ED; border-radius:8px; padding:10px 14px;">
+              <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#6B7280; text-transform:uppercase; letter-spacing:1px;">Duration</p>
+              <p style="font-family:'Montserrat',sans-serif; font-size:14px; color:#2D5016; font-weight:600;">Contact for details</p>
+            </div>
+            <div style="background:#F0F4ED; border-radius:8px; padding:10px 14px;">
+              <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#6B7280; text-transform:uppercase; letter-spacing:1px;">Fee</p>
+              <p style="font-family:'Montserrat',sans-serif; font-size:14px; color:#2D5016; font-weight:600;">Contact for current fees</p>
+            </div>
+          </div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:12px; color:#D4841A; font-weight:600; margin-bottom:16px;">Next batch dates announced quarterly — subscribe to our newsletter for updates.</p>
+          <a href="#apply" class="btn-outline-green" style="font-size:13px; padding:10px 20px;">Apply for Agni &amp; Diseases &rarr;</a>
+        </div>
+
+        <!-- Program 4: BhishagElite — Flagship -->
+        <div class="program-card" style="border:2px solid #D4841A; position:relative;">
+          <div style="position:absolute; top:-12px; left:24px; background:#D4841A; color:white; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; padding:4px 16px; border-radius:20px; letter-spacing:1px;">FLAGSHIP PROGRAM</div>
+          <div class="flex items-start justify-between gap-4 mb-4" style="margin-top:8px;">
+            <div style="width:48px; height:48px; background:#FFF7ED; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:24px;">⭐</div>
+            <div style="flex:1;">
+              <div class="flex items-center gap-2 flex-wrap">
+                <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:1.2rem; color:#2D5016;">BhishagElite</h3>
+                <span class="mode-badge mode-inperson">In-Person</span>
+              </div>
+              <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280; margin-top:4px;">Advanced Practitioner Development</p>
+            </div>
+          </div>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:14px; color:#4A4A4A; line-height:1.7; margin-bottom:16px;">
+            The most comprehensive training program at Vaidyagrama. Designed for senior practitioners who want to elevate their clinical practice to the level of a classical Vaidya. Intensive case-based learning alongside senior faculty in a live hospital setting.
+          </p>
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div style="background:#F0F4ED; border-radius:8px; padding:10px 14px;">
+              <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#6B7280; text-transform:uppercase; letter-spacing:1px;">Duration</p>
+              <p style="font-family:'Montserrat',sans-serif; font-size:14px; color:#2D5016; font-weight:600;">Contact for details</p>
+            </div>
+            <div style="background:#F0F4ED; border-radius:8px; padding:10px 14px;">
+              <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#6B7280; text-transform:uppercase; letter-spacing:1px;">Fee</p>
+              <p style="font-family:'Montserrat',sans-serif; font-size:14px; color:#2D5016; font-weight:600;">Contact for current fees</p>
+            </div>
+          </div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:12px; color:#D4841A; font-weight:600; margin-bottom:16px;">Next batch dates announced quarterly — subscribe to our newsletter for updates.</p>
+          <a href="#apply" class="btn-saffron" style="font-size:13px; padding:10px 20px;">Apply for BhishagElite &rarr;</a>
+        </div>
+
+        <!-- Program 5: Therapist Certification -->
+        <div class="program-card">
+          <div class="flex items-start justify-between gap-4 mb-4">
+            <div style="width:48px; height:48px; background:#F0F4ED; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:24px;">🤲</div>
+            <div style="flex:1;">
+              <div class="flex items-center gap-2 flex-wrap">
+                <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:1.2rem; color:#2D5016;">Therapist / Paricharaka Certification</h3>
+                <span class="mode-badge mode-inperson">In-Person</span>
+              </div>
+              <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280; margin-top:4px;">Hands-On Panchakarma Therapy Training</p>
+            </div>
+          </div>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:14px; color:#4A4A4A; line-height:1.7; margin-bottom:16px;">
+            Comprehensive hands-on certification for aspiring Ayurvedic therapists. Covers all major Panchakarma procedures: Abhyanga, Shirodhara, Basti, Nasya, Virechana, and more. Training happens in Vaidyagrama's live clinical setting.
+          </p>
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div style="background:#F0F4ED; border-radius:8px; padding:10px 14px;">
+              <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#6B7280; text-transform:uppercase; letter-spacing:1px;">Duration</p>
+              <p style="font-family:'Montserrat',sans-serif; font-size:14px; color:#2D5016; font-weight:600;">Contact for details</p>
+            </div>
+            <div style="background:#F0F4ED; border-radius:8px; padding:10px 14px;">
+              <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#6B7280; text-transform:uppercase; letter-spacing:1px;">Fee</p>
+              <p style="font-family:'Montserrat',sans-serif; font-size:14px; color:#2D5016; font-weight:600;">Contact for current fees</p>
+            </div>
+          </div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:12px; color:#D4841A; font-weight:600; margin-bottom:16px;">Next batch dates announced quarterly — subscribe to our newsletter for updates.</p>
+          <a href="#apply" class="btn-outline-green" style="font-size:13px; padding:10px 20px;">Apply for Therapist Cert &rarr;</a>
+        </div>
+
+        <!-- Program 6: DoctorCoaching -->
+        <div class="program-card">
+          <div class="flex items-start justify-between gap-4 mb-4">
+            <div style="width:48px; height:48px; background:#F0F4ED; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:24px;">🩺</div>
+            <div style="flex:1;">
+              <div class="flex items-center gap-2 flex-wrap">
+                <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:1.2rem; color:#2D5016;">DoctorCoaching</h3>
+                <span class="mode-badge mode-both">Online &amp; In-Person</span>
+              </div>
+              <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280; margin-top:4px;">Clinical Mentoring for Physicians</p>
+            </div>
+          </div>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:14px; color:#4A4A4A; line-height:1.7; margin-bottom:16px;">
+            One-on-one and small-group mentoring for Ayurveda doctors and general physicians. Structured case discussions, diagnostic training, protocol review, and clinical reasoning development with senior Vaidyagrama faculty.
+          </p>
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div style="background:#F0F4ED; border-radius:8px; padding:10px 14px;">
+              <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#6B7280; text-transform:uppercase; letter-spacing:1px;">Format</p>
+              <p style="font-family:'Montserrat',sans-serif; font-size:14px; color:#2D5016; font-weight:600;">1-on-1 Mentorship</p>
+            </div>
+            <div style="background:#F0F4ED; border-radius:8px; padding:10px 14px;">
+              <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#6B7280; text-transform:uppercase; letter-spacing:1px;">Fee</p>
+              <p style="font-family:'Montserrat',sans-serif; font-size:14px; color:#2D5016; font-weight:600;">Contact for current fees</p>
+            </div>
+          </div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:12px; color:#D4841A; font-weight:600; margin-bottom:16px;">Available year-round — schedule arranged based on physician availability.</p>
+          <a href="#apply" class="btn-outline-green" style="font-size:13px; padding:10px 20px;">Apply for DoctorCoaching &rarr;</a>
+        </div>
+
+        <!-- Program 7: Mastery26 -->
+        <div class="program-card">
+          <div class="flex items-start justify-between gap-4 mb-4">
+            <div style="width:48px; height:48px; background:#F0F4ED; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:24px;">🎓</div>
+            <div style="flex:1;">
+              <div class="flex items-center gap-2 flex-wrap">
+                <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:1.2rem; color:#2D5016;">Mastery26</h3>
+                <span class="mode-badge mode-both">Online &amp; In-Person</span>
+              </div>
+              <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280; margin-top:4px;">Comprehensive Ayurveda Mastery Program</p>
+            </div>
+          </div>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:14px; color:#4A4A4A; line-height:1.7; margin-bottom:16px;">
+            A structured, multi-module program covering the complete foundations and advanced applications of classical Ayurveda. Suitable for practitioners wanting a systematic upgrade of their knowledge base across all core disciplines.
+          </p>
+          <div class="grid grid-cols-2 gap-3 mb-4">
+            <div style="background:#F0F4ED; border-radius:8px; padding:10px 14px;">
+              <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#6B7280; text-transform:uppercase; letter-spacing:1px;">Duration</p>
+              <p style="font-family:'Montserrat',sans-serif; font-size:14px; color:#2D5016; font-weight:600;">Extended program</p>
+            </div>
+            <div style="background:#F0F4ED; border-radius:8px; padding:10px 14px;">
+              <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#6B7280; text-transform:uppercase; letter-spacing:1px;">Fee</p>
+              <p style="font-family:'Montserrat',sans-serif; font-size:14px; color:#2D5016; font-weight:600;">Contact for current fees</p>
+            </div>
+          </div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:12px; color:#D4841A; font-weight:600; margin-bottom:16px;">Next batch dates announced quarterly — subscribe to our newsletter for updates.</p>
+          <a href="#apply" class="btn-outline-green" style="font-size:13px; padding:10px 20px;">Apply for Mastery26 &rarr;</a>
+        </div>
+
+        <!-- Program 8: Customised Courses -->
+        <div class="program-card" style="background:#F0F4ED; border-style:dashed;">
+          <div class="flex items-start justify-between gap-4 mb-4">
+            <div style="width:48px; height:48px; background:#2D5016; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:24px;">⚙️</div>
+            <div style="flex:1;">
+              <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:1.2rem; color:#2D5016;">Customised Courses</h3>
+              <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280; margin-top:4px;">Tailored for Institutions, Hospitals &amp; Groups</p>
+            </div>
+          </div>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:14px; color:#4A4A4A; line-height:1.7; margin-bottom:16px;">
+            Vaidyagrama designs and delivers custom Ayurveda training programs for hospitals, wellness centers, medical colleges, and corporate wellness teams. Duration, content, and delivery format tailored to your institution's needs.
+          </p>
+          <a href="contact.html" class="btn-saffron" style="font-size:13px; padding:10px 20px;">Contact Us to Discuss &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- UPCOMING BATCHES -->
+  <section style="padding:80px 0; background:white;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <span class="section-label">2026 Schedule</span>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:2rem; color:#1A1A1A;">Upcoming Batches</h2>
+      </div>
+      <div style="max-width:800px; margin:0 auto; background:#F0F4ED; border-radius:16px; padding:40px; text-align:center;">
+        <div style="width:64px; height:64px; background:#2D5016; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px;">
+          <svg class="w-8 h-8" fill="white" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14a2 2 0 002 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+        </div>
+        <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:1.5rem; color:#2D5016; margin-bottom:12px;">Batch Dates Announced Quarterly</h3>
+        <p style="font-family:'Gentium Plus',Georgia,serif; font-size:16px; color:#4A4A4A; line-height:1.8; margin-bottom:24px;">New training batches are scheduled throughout the year. Subscribe to our newsletter or contact us directly to receive the latest schedule and secure your place.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="contact.html" class="btn-saffron" style="font-size:13px; padding:12px 28px;">Enquire About Next Batch &rarr;</a>
+          <a href="#newsletter" class="btn-outline-green" style="font-size:13px; padding:12px 28px;">Subscribe to Updates</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACULTY -->
+  <section style="padding:80px 0; background:#F0F4ED;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <span class="section-label">Your Teachers</span>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:2rem; color:#1A1A1A; margin-bottom:8px;">Training Faculty</h2>
+        <p style="font-family:'Gentium Plus',Georgia,serif; font-size:15px; color:#6B7280; line-height:1.8;">You learn directly from the physicians who practice every day — not from trainers who teach theory alone.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div style="background:white; border-radius:12px; padding:28px; text-align:center; border:1px solid #E8E0D5;">
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/doctor-vaidyagrama-ayurveda-village-indiavg-18_8.jpg" alt="Vaidya Ramadas AR" loading="lazy" style="width:80px; height:80px; border-radius:50%; object-fit:cover; margin:0 auto 12px; display:block; border:3px solid #E8E0D5;">
+          <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:1.1rem; color:#2D5016;">Vaidya Ramadas AR</h4>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#D4841A; font-weight:600; margin-top:4px;">Medical Director</p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280; margin-top:4px;">Psychiatry, Ophthalmology</p>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:13px; color:#4A4A4A; margin-top:12px; line-height:1.6;">From Thrissur, Kerala. M.S. in Psychotherapy & Counseling. Chosen Guru of Rashtriya Ayurveda Vidyapeeth.</p>
+        </div>
+        <div style="background:white; border-radius:12px; padding:28px; text-align:center; border:1px solid #E8E0D5;">
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/ramanandan-vaidyagrama-ayurveda_orig.jpeg" alt="Vaidya Ramanandan EK" loading="lazy" style="width:80px; height:80px; border-radius:50%; object-fit:cover; margin:0 auto 12px; display:block; border:3px solid #E8E0D5;">
+          <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:1.1rem; color:#2D5016;">Vaidya Ramanandan EK</h4>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#D4841A; font-weight:600; margin-top:4px;">Medical Director</p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280; margin-top:4px;">Neurology, Lifestyle Diseases, Fertility</p>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:13px; color:#4A4A4A; margin-top:12px; line-height:1.6;">Third-generation physician. MBA in Hospital Admin. Organized five international Ayurveda conferences.</p>
+        </div>
+        <div style="background:white; border-radius:12px; padding:28px; text-align:center; border:1px solid #E8E0D5;">
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/doctor-vaidyagrama-ayurveda-village-indiavg-50_5.jpg" alt="Vaidya Harikrishnan KK" loading="lazy" style="width:80px; height:80px; border-radius:50%; object-fit:cover; margin:0 auto 12px; display:block; border:3px solid #E8E0D5;">
+          <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:1.1rem; color:#2D5016;">Vaidya Harikrishnan KK</h4>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#D4841A; font-weight:600; margin-top:4px;">Medical Director</p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280; margin-top:4px;">General Medicine, Pediatrics</p>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:13px; color:#4A4A4A; margin-top:12px; line-height:1.6;">Over 30 years clinical practice. Distinguished Ayurvedic lineage from Kerala. Graduated 1991.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLICATION FORM -->
+  <section id="apply" style="padding:80px 0; background:#FAF7F2;">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <span class="section-label">Take the First Step</span>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:2rem; color:#1A1A1A; margin-bottom:8px;">Apply for a Program</h2>
+        <p style="font-family:'Gentium Plus',Georgia,serif; font-size:15px; color:#6B7280; line-height:1.8;">Submit your application and our training coordinator will contact you within 48 hours.</p>
+      </div>
+      <form action="#" method="POST" style="background:white; border-radius:16px; padding:40px; border:1px solid #E8E0D5;">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+          <div>
+            <label class="form-label" for="app-name">Full Name *</label>
+            <input class="form-input" type="text" id="app-name" name="name" required placeholder="Your full name" />
+          </div>
+          <div>
+            <label class="form-label" for="app-email">Email *</label>
+            <input class="form-input" type="email" inputmode="email" id="app-email" name="email" required placeholder="email@example.com" />
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+          <div>
+            <label class="form-label" for="app-phone">Phone *</label>
+            <input class="form-input" type="tel" inputmode="tel" id="app-phone" name="phone" required placeholder="+country code + number" />
+          </div>
+          <div>
+            <label class="form-label" for="app-country">Country *</label>
+            <select class="form-input" id="app-country" name="country" required>
+              <option value="">Select country</option>
+              <option>India</option><option>United Kingdom</option><option>United States</option>
+              <option>Germany</option><option>Italy</option><option>Australia</option>
+              <option>Singapore</option><option>UAE</option><option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-5">
+          <label class="form-label" for="app-program">Program Interested In *</label>
+          <select class="form-input" id="app-program" name="program" required>
+            <option value="">Select a program</option>
+            <option>Tongue26</option>
+            <option>Nutrition Program</option>
+            <option>Agni &amp; Diseases</option>
+            <option>BhishagElite</option>
+            <option>Therapist / Paricharaka Certification</option>
+            <option>DoctorCoaching</option>
+            <option>Mastery26</option>
+            <option>Customised Course (Institutional)</option>
+          </select>
+        </div>
+        <div class="mb-5">
+          <label class="form-label" for="app-profession">Your Professional Background *</label>
+          <select class="form-input" id="app-profession" name="profession" required>
+            <option value="">Select your background</option>
+            <option>BAMS / Ayurveda Practitioner</option>
+            <option>MBBS / Allopathic Doctor</option>
+            <option>MD / Specialist Physician</option>
+            <option>Therapist / Nurse</option>
+            <option>Yoga / Naturopathy Practitioner</option>
+            <option>Student (Ayurveda / Medical)</option>
+            <option>Other Healthcare Professional</option>
+            <option>Non-medical / Serious Student</option>
+          </select>
+        </div>
+        <div class="mb-5">
+          <label class="form-label" for="app-experience">Years of Clinical Experience</label>
+          <select class="form-input" id="app-experience" name="experience">
+            <option value="">Select</option>
+            <option>0–1 years (student)</option>
+            <option>1–3 years</option>
+            <option>3–7 years</option>
+            <option>7–15 years</option>
+            <option>15+ years</option>
+          </select>
+        </div>
+        <div class="mb-6">
+          <label class="form-label" for="app-message">Why do you want to attend this program? *</label>
+          <textarea class="form-input" id="app-message" name="message" rows="5" required placeholder="Tell us about your background, what you hope to gain, and how this training fits into your practice or goals..."></textarea>
+        </div>
+        <button type="submit" class="btn-saffron" style="width:100%; font-size:15px; padding:16px; text-align:center;">
+          Submit My Application &rarr;
+        </button>
+        <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280; text-align:center; margin-top:16px;">Our training coordinator will respond within 48 hours.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#2D5016; padding:60px 0 32px;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div>
+          <div class="mb-4"><img src="logo-white.png" loading="lazy" alt="Vaidyagrama Ayurveda" style="height:60px; width:auto; display:block;"></div>
+          <p style="font-family:'Montserrat',sans-serif;font-size:13px;color:rgba(255,255,255,0.65);line-height:1.7;">Sarve Bhavantu Sukhinah<br/>May all beings be happy.</p>
+        </div>
+        <div>
+          <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#D4841A;margin-bottom:16px;">Training Programs</h4>
+          <ul style="list-style:none;padding:0;margin:0;">
+            <li style="margin-bottom:10px;"><a href="#programs" style="font-family:'Montserrat',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);text-decoration:none;">Tongue26</a></li>
+            <li style="margin-bottom:10px;"><a href="#programs" style="font-family:'Montserrat',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);text-decoration:none;">BhishagElite</a></li>
+            <li style="margin-bottom:10px;"><a href="#programs" style="font-family:'Montserrat',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);text-decoration:none;">DoctorCoaching</a></li>
+            <li style="margin-bottom:10px;"><a href="#programs" style="font-family:'Montserrat',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);text-decoration:none;">Mastery26</a></li>
+            <li><a href="#programs" style="font-family:'Montserrat',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);text-decoration:none;">All Programs &rarr;</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#D4841A;margin-bottom:16px;">Hospital</h4>
+          <ul style="list-style:none;padding:0;margin:0;">
+            <li style="margin-bottom:10px;"><a href="treatments.html" style="font-family:'Montserrat',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);text-decoration:none;">Treatments</a></li>
+            <li style="margin-bottom:10px;"><a href="doctors.html" style="font-family:'Montserrat',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);text-decoration:none;">Our Doctors</a></li>
+            <li style="margin-bottom:10px;"><a href="cancer-program.html" style="font-family:'Montserrat',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);text-decoration:none;">Cancer Program</a></li>
+            <li><a href="booking.html" style="font-family:'Montserrat',sans-serif;font-size:14px;color:rgba(255,255,255,0.75);text-decoration:none;">Book Consultation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#D4841A;margin-bottom:16px;">Contact</h4>
+          <p style="font-family:'Montserrat',sans-serif;font-size:13px;color:rgba(255,255,255,0.75);line-height:1.8;margin-bottom:8px;">Coimbatore, Tamil Nadu, India</p>
+          <a href="tel:+914222364200" style="font-family:'Montserrat',sans-serif;font-size:13px;color:rgba(255,255,255,0.75);text-decoration:none;display:block;">+91 422 2364200</a>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,0.15);padding-top:24px;" class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p style="font-family:'Montserrat',sans-serif;font-size:13px;color:rgba(255,255,255,0.5);">&copy; 2025 Vaidyagrama Ayurveda. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" style="font-family:'Montserrat',sans-serif;font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;">Privacy Policy</a>
+          <a href="#" style="font-family:'Montserrat',sans-serif;font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;">Medical Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <div class="whatsapp-float">
+    <span class="whatsapp-tooltip">Chat with us</span>
+    <a href="https://wa.me/914222364200" target="_blank" rel="noopener" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="white"><path d="M15 2C8.373 2 3 7.373 3 14c0 2.385.668 4.61 1.832 6.5L3 28l7.75-1.808A11.952 11.952 0 0015 27c6.627 0 12-5.373 12-12S21.627 2 15 2zm5.195 15.37c-.285-.143-1.686-.832-1.948-.927-.262-.095-.452-.143-.643.143-.19.285-.737.927-.904 1.117-.166.19-.333.214-.618.071-.285-.143-1.203-.443-2.29-1.414-.846-.755-1.417-1.687-1.583-1.972-.166-.285-.018-.439.125-.581.128-.127.285-.333.428-.5.143-.166.19-.285.285-.476.095-.19.047-.357-.024-.5-.071-.143-.643-1.55-.881-2.12-.232-.557-.468-.481-.643-.49l-.548-.01c-.19 0-.5.071-.762.357-.261.285-1 .976-1 2.38 0 1.403 1.024 2.758 1.167 2.948.143.19 2.016 3.079 4.886 4.317.683.295 1.216.471 1.631.603.685.218 1.31.187 1.803.113.55-.082 1.686-.689 1.924-1.354.238-.666.238-1.236.167-1.354-.071-.119-.261-.19-.548-.333z"/></svg>
+    </a>
+  </div>
+
+  <script src="chat-widget.js" defer></script>
+</body>
+</html>

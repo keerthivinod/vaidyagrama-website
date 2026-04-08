@@ -1,0 +1,15 @@
+{
+  "name": "vaidyagrama-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vaidyagrama Healing Village — Ayurvedic chat function dependencies",
+  "scripts": {
+    "start": "node local-server.js"
+  },
+  "dependencies": {
+    "openai": "^4.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.6.1"
+  }
+}

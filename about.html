@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vaidyagrama Ayurveda" />
+  <meta property="og:title" content="About Vaidyagrama — Our Story, Mission & Philosophy" />
+  <meta property="og:description" content="Founded in 2008 by 4 vaidyas and 2 management experts. NABH-accredited, eco-friendly Ayurveda healing village in Coimbatore." />
+  <meta property="og:image" content="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-temple-1.jpg" />
+  <link rel="canonical" href="https://vaidyagrama.com/about" />
+  <meta name="theme-color" content="#2D5016" />
+  <meta name="msapplication-TileColor" content="#2D5016" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>About Vaidyagrama — Ayurveda Hospital & Retreat, Coimbatore</title>
+  <meta name="description" content="Learn about Vaidyagrama Ayurveda — NABH-accredited hospital founded in 2008, rooted in classical Ayurveda, located in Coimbatore, India. Authentic Ayurveda for Universal Wellbeing." />
+  <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Montserrat:wght@300;400;500;600;700;800&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@400;500;600;700&family=Alike&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    img { max-width: 100%; height: auto; }
+    a { transition: color 0.2s, opacity 0.2s; }
+    html { overflow-x: clip; scroll-padding-top: 68px; }
+    body { overflow-x: clip; overscroll-behavior-y: contain; }
+    body { background-color: #FAF7F2; color: #1A1A1A; font-family: 'Gentium Plus', Georgia, serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'GFS Didot', Georgia, serif; }
+    .nav-link { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 14px; color: #2D5016; transition: color 0.2s; }
+    .nav-link:hover { color: #D4841A; }
+    .nav-link.active { color: #D4841A; border-bottom: 2px solid #D4841A; }
+    .btn-saffron { background-color: #D4841A; color: white; font-family: 'Montserrat', sans-serif; font-weight: 700; padding: 12px 28px; border-radius: 6px; transition: background 0.2s, transform 0.1s; display: inline-block; letter-spacing: 0.5px; text-transform: uppercase; font-size: 13px; }
+    .btn-saffron:hover { background-color: #b8701a; transform: translateY(-1px); }
+    .btn-outline-green { border: 2px solid #2D5016; color: #2D5016; font-family: 'Montserrat', sans-serif; font-weight: 700; padding: 12px 28px; border-radius: 6px; transition: all 0.2s; display: inline-block; letter-spacing: 0.5px; text-transform: uppercase; font-size: 13px; }
+    .btn-outline-green:hover { background: #2D5016; color: white; }
+    .section-label { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #D4841A; display: block; margin-bottom: 8px; }
+    .whatsapp-float { position: fixed; bottom: 28px; right: 28px; z-index: 999; }
+    .whatsapp-btn { background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(37,211,102,0.4); transition: transform 0.2s; }
+    .whatsapp-btn:hover { transform: scale(1.1); }
+    .whatsapp-tooltip { position: absolute; right: 68px; top: 50%; transform: translateY(-50%); background: #1A1A1A; color: white; font-family: 'Montserrat', sans-serif; font-size: 12px; padding: 6px 12px; border-radius: 4px; white-space: nowrap; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+    .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; }
+    .stat-card { text-align: center; padding: 24px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    @media (max-width: 768px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+    /* ── Accessibility ──────────────────────────────── */
+    .skip-link { position: absolute; top: -50px; left: 8px; background: #2D5016; color: white; padding: 10px 18px; z-index: 10000; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; text-decoration: none; border-radius: 0 0 6px 6px; transition: top 0.2s; }
+    .skip-link:focus { top: 0; }
+    :focus-visible { outline: 3px solid #D4841A; outline-offset: 3px; border-radius: 3px; }
+    /* ── Reduced Motion ─────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    }
+    button { cursor: pointer; }
+
+    /* ═══ CROSS-PLATFORM & MOBILE RESPONSIVE ═══════════════════════════ */
+    * { -webkit-tap-highlight-color: transparent; }
+    body { -webkit-overflow-scrolling: touch; }
+    a, button, [role="button"] { touch-action: manipulation; }
+    input, select, textarea, button { -webkit-appearance: none; -moz-appearance: none; appearance: none; border-radius: 6px; }
+    select { -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234A4A4A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 36px !important; }
+    input, select, textarea { font-size: 16px !important; }
+    .whatsapp-float { bottom: max(28px, calc(16px + env(safe-area-inset-bottom))); }
+    @media (max-width: 640px) {
+      section { padding-top: 48px !important; padding-bottom: 48px !important; }
+    }
+    @media (max-width: 767px) {
+      .stat-card { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 16px 8px; }
+      .stat-card:last-child { border-bottom: none !important; }
+    }
+    @media (max-width: 480px) {
+      .btn-saffron, .btn-outline-green, .btn-outline, .btn-outline-white { display: block; width: 100%; text-align: center; box-sizing: border-box; }
+    }
+    @media (max-width: 640px) {
+      .form-input, input[type="text"], input[type="email"], input[type="tel"],
+      input[type="number"], input[type="date"], select, textarea {
+        width: 100% !important; max-width: 100% !important; box-sizing: border-box;
+      }
+      .doctor-card { padding: 20px 16px; }
+      .chip { font-size: 11px; padding: 4px 10px; }
+    }
+    @media (max-width: 380px) {
+      .whatsapp-btn { width: 52px; height: 52px; }
+      .whatsapp-float { right: 12px; }
+      .whatsapp-tooltip { display: none; }
+    }
+    .travel-table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .travel-table-inner { min-width: 520px; }
+    @media (max-width: 640px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    .price-table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+    /* ── C7: Mobile Bottom Navigation Bar ────────────────────────── */
+    .mobile-bottom-bar { display:none; position:fixed; bottom:0; left:0; right:0; background:white; border-top:2px solid #2D5016; z-index:998; box-shadow:0 -4px 20px rgba(0,0,0,0.12); padding-bottom:env(safe-area-inset-bottom); }
+    .mobile-bottom-btn { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:10px 4px 8px; font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; color:#2D5016; text-decoration:none; gap:3px; border-right:1px solid #E8E0D5; letter-spacing:0.5px; text-transform:uppercase; transition:background 0.15s; }
+    .mobile-bottom-btn:last-child { border-right:none; }
+    .mobile-bottom-btn:active { background:#F0F4ED; }
+    .mobile-bottom-btn--primary { background:#2D5016; color:white; }
+    .mobile-bottom-btn--primary:active { background:#3a6b1d; }
+    .mobile-bottom-btn--wa { background:#25D366; color:white; }
+    .mobile-bottom-btn--wa:active { background:#1da855; }
+    @media (max-width: 1023px) {
+      .mobile-bottom-bar { display:flex; }
+      body { padding-bottom:calc(68px + env(safe-area-inset-bottom)); }
+    }
+    /* ── E3: Language Switcher ────────────────────────────────────── */
+    .lang-sw { display:flex; align-items:center; border:1.5px solid #E8E0D5; border-radius:6px; overflow:hidden; height:34px; }
+    .lang-sw-btn { padding:0 10px; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; background:none; border:none; color:#6B7280; cursor:pointer; transition:background 0.15s,color 0.15s; height:100%; }
+    .lang-sw-btn.active { background:#2D5016; color:white; }
+    .lang-sw-btn:hover:not(.active) { background:#F0F4ED; color:#2D5016; }
+    .lang-divider { width:1px; height:60%; background:#E8E0D5; }
+    .lang-notice { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:10001; align-items:center; justify-content:center; padding:16px; }
+    .lang-notice.open { display:flex; }
+    .lang-notice-box { background:white; border-radius:16px; padding:36px 28px; max-width:380px; width:100%; text-align:center; }
+
+    /* === Accessibility & Interaction Fixes === */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    button, [role="button"], label[for], select, summary { cursor: pointer; }
+    :focus-visible {
+      outline: 2px solid #D4841A;
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+    html { scroll-behavior: smooth; }
+    @media (max-width: 1023px) {
+      button, a, [role="button"] { min-height: 44px; min-width: 44px; }
+    }
+
+    /* Initiative card hover */
+    .initiative-card { transition: transform 0.2s, box-shadow 0.2s; }
+    .initiative-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+
+    </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="sticky top-0 z-50 bg-white border-b border-[#E8E0D5] shadow-sm" x-data="{ mobileOpen: false }">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center" style="line-height:0;">
+          <img src="logo-color.png" alt="Vaidyagrama Ayurveda" style="height:52px; width:auto; display:block;">
+        </a>
+        <div class="hidden lg:flex items-center gap-5">
+          <a href="treatments.html" class="nav-link">Treatments</a>
+          <a href="conditions.html" class="nav-link">Conditions</a>
+          <a href="doctors.html" class="nav-link">Doctors</a>
+          <a href="cancer-program.html" class="nav-link">Cancer Program</a>
+          <a href="training.html" class="nav-link">Training</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="international.html" class="nav-link">International</a>
+          <a href="about.html" class="nav-link active">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="hidden lg:block">
+          <a href="booking.html" class="btn-saffron text-sm">Book Consultation</a>
+        </div>
+        <button @click="mobileOpen = !mobileOpen" class="lg:hidden p-2 rounded-md text-[#2D5016]" aria-label="Toggle menu">
+          <svg x-show="!mobileOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg x-show="mobileOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div x-show="mobileOpen" x-transition class="lg:hidden border-t border-[#E8E0D5] py-4">
+        <div class="flex flex-col gap-3 px-2">
+          <a href="treatments.html" class="nav-link py-2" @click="mobileOpen = false">Treatments</a>
+          <a href="conditions.html" class="nav-link py-2" @click="mobileOpen = false">Conditions</a>
+          <a href="doctors.html" class="nav-link py-2" @click="mobileOpen = false">Doctors</a>
+          <a href="cancer-program.html" class="nav-link py-2" @click="mobileOpen = false">Cancer Program</a>
+          <a href="training.html" class="nav-link py-2" @click="mobileOpen = false">Training</a>
+          <a href="pricing.html" class="nav-link py-2" @click="mobileOpen = false">Pricing</a>
+          <a href="international.html" class="nav-link py-2" @click="mobileOpen = false">International</a>
+          <a href="about.html" class="nav-link py-2 active" @click="mobileOpen = false">About</a>
+          <a href="contact.html" class="nav-link py-2" @click="mobileOpen = false">Contact</a>
+          <a href="booking.html" class="btn-saffron text-center mt-2" @click="mobileOpen = false">Book Consultation</a>
+          <!-- Language (mobile) -->
+          <div class="flex items-center gap-2 pt-2 border-t border-[#E8E0D5] mt-2">
+            <span style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#6B7280;text-transform:uppercase;letter-spacing:1px;">Language:</span>
+            <button style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;background:#2D5016;color:white;border:none;padding:4px 10px;border-radius:4px;cursor:pointer;">EN</button>
+            <button onclick="mobileOpen=false;document.getElementById('lang-notice').classList.add('open')" style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;background:none;border:1.5px solid #E8E0D5;color:#6B7280;padding:4px 10px;border-radius:4px;cursor:pointer;">DE</button>
+          </div>
+          </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO BANNER ==================== -->
+  <section id="main-content" style="background:linear-gradient(135deg,#2D5016 0%,#3a6b1d 60%,#1a3009 100%); padding:80px 16px 64px;" class="relative">
+    <div class="max-w-3xl mx-auto text-center relative z-10">
+      <p class="section-label" style="color:#D4841A;">Est. 2008</p>
+      <h1 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(32px,5vw,56px); font-weight:700; color:white; margin-bottom:16px;">About Vaidyagrama</h1>
+      <p style="color:rgba(255,255,255,0.85); font-size:20px; margin-bottom:8px; max-width:560px; margin-left:auto; margin-right:auto; line-height:1.6; font-family:'Montserrat',sans-serif; font-weight:600; letter-spacing:1px;">LIVE SIMPLE : LIVE WELL : LIVE HEALTHY : LIVE HAPPY</p>
+      <p style="color:rgba(255,255,255,0.8); font-size:18px; margin-bottom:24px; max-width:560px; margin-left:auto; margin-right:auto; line-height:1.8;">A healing village offering Authentic Ayurveda for Universal Wellbeing, rooted in classical tradition, clinical excellence, and compassionate care.</p>
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb">
+        <ol style="display:flex; gap:8px; justify-content:center; font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.6); list-style:none; padding:0; margin:0;">
+          <li><a href="index.html" style="color:rgba(255,255,255,0.7); text-decoration:none;">Home</a></li>
+          <li style="color:rgba(255,255,255,0.4);">/</li>
+          <li style="color:#D4841A;">About</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ==================== OUR STORY ==================== -->
+  <section style="background:#FAF7F2; padding:80px 0;">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="section-label">Our Story</p>
+          <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(26px,3.5vw,40px); color:#2D5016; font-weight:700; margin-bottom:20px;">Born from a Vision to Restore Authentic Ayurveda</h2>
+          <p style="color:#4A4A4A; font-size:16px; line-height:1.85; margin-bottom:16px;">
+            Vaidyagrama was established in 2008 as a dream seen by a group of four young vaidyas and two management experts. During an era when global interest in ancient wisdom and Ayurveda was growing significantly, they envisioned a place where classical Ayurveda could be practised in its fullest, most authentic form -- without compromise. The name "Vaidyagrama" itself translates to "healing village," reflecting this core intention.
+          </p>
+          <p style="color:#4A4A4A; font-size:16px; line-height:1.85; margin-bottom:16px;">
+            Situated in the green outskirts of Coimbatore, South India, surrounded by mountains and natural forest, the campus was designed as a self-contained healing ecosystem. Rather than creating a transactional healthcare facility, the founders chose a different path -- one centred on healing relationships, where environment, food, medicine, rhythm, and human connection all align in service of restoration.
+          </p>
+          <p style="color:#4A4A4A; font-size:16px; line-height:1.85; margin-bottom:16px;">
+            Under the medical leadership of Dr. Ramkumar, Dr. Ramadas, Dr. Harikrishnan, Dr. Harikumar, and Dr. Ramanandan, and with the guidance of life coaches Dr. J M Sampath and Dr. Kalpana Sampath, Vaidyagrama grew from a shared vision into a community-centred healing village that today serves patients from around the world.
+          </p>
+        </div>
+        <div>
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-ayurveda-village-indiavg-1.jpg" alt="Vaidyagrama Ayurveda healing village campus in Coimbatore" loading="lazy" style="width:100%; height:400px; object-fit:cover; border-radius:12px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PHILOSOPHY & MISSION ==================== -->
+  <section style="background:#2D5016; padding:80px 0;">
+    <div class="max-w-4xl mx-auto text-center px-4">
+      <p class="section-label mb-4" style="color:#D4841A;">Our Philosophy</p>
+      <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(28px,4vw,44px); font-weight:700; color:white; margin-bottom:20px;">
+        Authentic Ayurveda for Universal Wellbeing
+      </h2>
+      <p style="font-family:'GFS Didot',Georgia,serif; font-size:20px; color:#D4841A; font-style:italic; margin-bottom:28px;">Sarve Bhavantu Sukhinah -- May all beings be happy.</p>
+      <p style="font-family:'Montserrat',sans-serif; font-size:17px; color:rgba(255,255,255,0.85); line-height:1.85; max-width:620px; margin:0 auto 20px;">
+        At Vaidyagrama, healing is not a transaction -- it is a relationship. We believe Ayurveda is not merely a medical system but a complete philosophy of life, one that honours the body as a sacred instrument, the mind as a field to be cultivated, and the spirit as the source of all healing. Every element of the village is designed with this intention: the architecture follows Vastu shastra principles, the construction maximises environmental sustainability, and the community-centred approach ensures that every patient is held in care by the entire village.
+      </p>
+      <p style="font-family:'Montserrat',sans-serif; font-size:17px; color:rgba(255,255,255,0.85); line-height:1.85; max-width:620px; margin:0 auto;">
+        Your physician is also your guide, your therapist also your companion, and the land itself your medicine. Clinical precision and spiritual sensitivity are not opposites -- they are partners in the truest healing.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== THE HEALING VILLAGE ==================== -->
+  <section style="background:#F0F4ED; padding:80px 0;">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-14">
+        <p class="section-label">What Makes Us Different</p>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(26px,3.5vw,40px); color:#2D5016; font-weight:700;">The Healing Village</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <div style="background:white; border-radius:12px; border:1px solid #E8E0D5; padding:28px;">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4" style="background:#F0F4ED;">
+            <svg class="w-6 h-6" fill="none" stroke="#2D5016" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
+          </div>
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:20px; font-weight:700; color:#2D5016; margin-bottom:10px;">Eco-Sustainable Campus</h3>
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.7;">Built with eco-friendly mud blocks following Kerala Nalukettu style architecture, the campus integrates maximum environmental sustainability. Rainwater harvesting, solar energy, organic farming, and natural construction methods ensure that healing begins with the environment itself.</p>
+        </div>
+
+        <div style="background:white; border-radius:12px; border:1px solid #E8E0D5; padding:28px;">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4" style="background:#F0F4ED;">
+            <svg class="w-6 h-6" fill="none" stroke="#2D5016" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:20px; font-weight:700; color:#2D5016; margin-bottom:10px;">Vastu-Designed Courtyards</h3>
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.7;">The facility houses 48 rooms divided into four clusters, with 12 rooms per medical director. Each cluster features four patient units and two treatment rooms arranged around a central courtyard, designed according to Vastu shastra principles for optimal healing energy.</p>
+        </div>
+
+        <div style="background:white; border-radius:12px; border:1px solid #E8E0D5; padding:28px;">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4" style="background:#F0F4ED;">
+            <svg class="w-6 h-6" fill="none" stroke="#2D5016" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-9h-1M4.34 12H3m15.07-6.07l-.707.707M6.34 17.66l-.707.707M18.07 17.66l-.707-.707M6.34 6.34l-.707-.707"/></svg>
+          </div>
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:20px; font-weight:700; color:#2D5016; margin-bottom:10px;">Ashram Atmosphere</h3>
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.7;">Life at Vaidyagrama follows a rhythmic, purposeful schedule -- morning prayers at the "Brahmakamalam," Yoga nidra sessions, Satsangs, nature walks, Ayurveda cooking demonstrations, and monthly special rituals and homams. This rhythm itself is therapeutic.</p>
+        </div>
+
+        <div style="background:white; border-radius:12px; border:1px solid #E8E0D5; padding:28px;">
+          <div class="w-12 h-12 rounded-full flex items-center justify-center mb-4" style="background:#FFF3E0;">
+            <svg class="w-6 h-6" fill="none" stroke="#D4841A" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+          </div>
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:20px; font-weight:700; color:#2D5016; margin-bottom:10px;">NABH Accreditation</h3>
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.7;">Vaidyagrama is an 80-room, 120-bedded NABH-accredited facility -- the highest quality standard for healthcare in India. This ensures clinical safety, protocol adherence, patient rights, and international-grade standards without compromising the authenticity of classical Ayurveda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== THE NUMBERS ==================== -->
+  <section style="background:#FAF7F2; padding:80px 0;">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="stat-card text-center">
+          <div style="font-family:'GFS Didot',Georgia,serif; font-size:36px; font-weight:700; color:#2D5016;">180+</div>
+          <div style="font-family:'Montserrat',sans-serif; font-size:13px; color:#4A4A4A; font-weight:500; margin-top:6px; line-height:1.5;">Years Combined<br/>Expertise</div>
+        </div>
+        <div class="stat-card text-center">
+          <div style="font-family:'GFS Didot',Georgia,serif; font-size:36px; font-weight:700; color:#2D5016;">18+</div>
+          <div style="font-family:'Montserrat',sans-serif; font-size:13px; color:#4A4A4A; font-weight:500; margin-top:6px; line-height:1.5;">Years<br/>In Service</div>
+        </div>
+        <div class="stat-card text-center">
+          <div style="font-family:'GFS Didot',Georgia,serif; font-size:36px; font-weight:700; color:#2D5016;">80</div>
+          <div style="font-family:'Montserrat',sans-serif; font-size:13px; color:#4A4A4A; font-weight:500; margin-top:6px; line-height:1.5;">Rooms<br/>120 Beds</div>
+        </div>
+        <div class="stat-card text-center">
+          <div style="font-family:'GFS Didot',Georgia,serif; font-size:36px; font-weight:700; color:#2D5016;">NABH</div>
+          <div style="font-family:'Montserrat',sans-serif; font-size:13px; color:#4A4A4A; font-weight:500; margin-top:6px; line-height:1.5;">Accredited<br/>Hospital</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NABH ACCREDITATION ==================== -->
+  <section style="background:#F0F4ED; padding:80px 0;">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="section-label">Quality & Safety</p>
+          <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(26px,3.5vw,38px); color:#2D5016; font-weight:700; margin-bottom:16px;">NABH Accreditation — What It Means for You</h2>
+          <p style="color:#4A4A4A; font-size:16px; line-height:1.8; margin-bottom:14px;">
+            The National Accreditation Board for Hospitals & Healthcare Providers (NABH) is part of the Quality Council of India and sets the gold standard for healthcare quality across India. Receiving NABH accreditation is a rigorous process -- it means Vaidyagrama has been independently assessed and found to meet exacting standards across clinical care, patient safety, infection control, documentation, and ethics.
+          </p>
+          <p style="color:#4A4A4A; font-size:16px; line-height:1.8; margin-bottom:20px;">
+            For patients, NABH accreditation means you can trust that you are receiving care in a facility that follows international-grade safety protocols -- without compromising the authenticity of classical Ayurveda.
+          </p>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li style="display:flex; gap:12px; align-items:flex-start; margin-bottom:12px; color:#4A4A4A; font-size:15px;"><span style="color:#2D5016; font-size:18px; margin-top:-2px;">&#10003;</span> Standardised clinical protocols</li>
+            <li style="display:flex; gap:12px; align-items:flex-start; margin-bottom:12px; color:#4A4A4A; font-size:15px;"><span style="color:#2D5016; font-size:18px; margin-top:-2px;">&#10003;</span> Patient rights and confidentiality</li>
+            <li style="display:flex; gap:12px; align-items:flex-start; margin-bottom:12px; color:#4A4A4A; font-size:15px;"><span style="color:#2D5016; font-size:18px; margin-top:-2px;">&#10003;</span> Infection control and hygiene standards</li>
+            <li style="display:flex; gap:12px; align-items:flex-start; margin-bottom:12px; color:#4A4A4A; font-size:15px;"><span style="color:#2D5016; font-size:18px; margin-top:-2px;">&#10003;</span> Qualified, credentialed medical staff</li>
+            <li style="display:flex; gap:12px; align-items:flex-start; color:#4A4A4A; font-size:15px;"><span style="color:#2D5016; font-size:18px; margin-top:-2px;">&#10003;</span> Grievance redressal mechanisms</li>
+          </ul>
+        </div>
+        <div>
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-temple-1.jpg" alt="Vaidyagrama temple and campus architecture" loading="lazy" style="width:100%; height:320px; object-fit:cover; border-radius:12px;">
+          <div style="background:white; border:1px solid #E8E0D5; border-radius:8px; padding:16px 20px; margin-top:16px; text-align:center;">
+            <p style="font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; color:#2D5016; margin-bottom:4px;">NABH Accredited</p>
+            <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#4A4A4A;">80-room, 120-bedded facility meeting the highest national healthcare quality standards</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== THE TEAM ==================== -->
+  <section style="background:#FAF7F2; padding:80px 0;">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="section-label">The People Behind the Healing</p>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(26px,3.5vw,40px); color:#2D5016; font-weight:700;">Our Team</h2>
+        <p style="color:#4A4A4A; max-width:560px; margin:14px auto 0; font-size:16px; line-height:1.8;">From senior physicians to kitchen staff, therapists to housekeeping -- every person at Vaidyagrama is part of your healing journey.</p>
+      </div>
+
+      <!-- Medical Directors -->
+      <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:22px; color:#2D5016; margin-bottom:20px; text-align:center;">Medical Directors</h3>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-10">
+        <div class="text-center">
+          <div style="width:100px; height:100px; border-radius:50%; background:#F0F4ED; display:flex; align-items:center; justify-content:center; margin:0 auto 10px; border:2px solid #2D5016;">
+            <svg class="w-10 h-10" fill="none" stroke="#2D5016" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+          </div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:#2D5016;">Dr. Ramkumar</p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#D4841A; font-weight:600;">Lead Medical Director</p>
+        </div>
+        <div class="text-center">
+          <div style="width:100px; height:100px; border-radius:50%; background:#F0F4ED; display:flex; align-items:center; justify-content:center; margin:0 auto 10px; border:2px solid #2D5016;">
+            <svg class="w-10 h-10" fill="none" stroke="#2D5016" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+          </div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:#2D5016;">Dr. Ramadas</p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#4A4A4A;">Medical Director</p>
+        </div>
+        <div class="text-center">
+          <div style="width:100px; height:100px; border-radius:50%; background:#F0F4ED; display:flex; align-items:center; justify-content:center; margin:0 auto 10px; border:2px solid #2D5016;">
+            <svg class="w-10 h-10" fill="none" stroke="#2D5016" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+          </div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:#2D5016;">Dr. Harikrishnan</p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#4A4A4A;">Medical Director</p>
+        </div>
+        <div class="text-center">
+          <div style="width:100px; height:100px; border-radius:50%; background:#F0F4ED; display:flex; align-items:center; justify-content:center; margin:0 auto 10px; border:2px solid #2D5016;">
+            <svg class="w-10 h-10" fill="none" stroke="#2D5016" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+          </div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:#2D5016;">Dr. Harikumar</p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#4A4A4A;">Medical Director</p>
+        </div>
+        <div class="text-center">
+          <div style="width:100px; height:100px; border-radius:50%; background:#F0F4ED; display:flex; align-items:center; justify-content:center; margin:0 auto 10px; border:2px solid #2D5016;">
+            <svg class="w-10 h-10" fill="none" stroke="#2D5016" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+          </div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:#2D5016;">Dr. Ramanandan</p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#4A4A4A;">Medical Director</p>
+        </div>
+      </div>
+
+      <!-- Management & Guidance -->
+      <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:22px; color:#2D5016; margin-bottom:20px; text-align:center;">Management & Guidance</h3>
+      <div class="grid grid-cols-2 gap-6 max-w-md mx-auto mb-10">
+        <div class="text-center">
+          <div style="width:100px; height:100px; border-radius:50%; background:#FFF3E0; display:flex; align-items:center; justify-content:center; margin:0 auto 10px; border:2px solid #D4841A;">
+            <svg class="w-10 h-10" fill="none" stroke="#D4841A" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+          </div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:#2D5016;">Dr. J M Sampath</p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#D4841A; font-weight:600;">Life Coach</p>
+        </div>
+        <div class="text-center">
+          <div style="width:100px; height:100px; border-radius:50%; background:#FFF3E0; display:flex; align-items:center; justify-content:center; margin:0 auto 10px; border:2px solid #D4841A;">
+            <svg class="w-10 h-10" fill="none" stroke="#D4841A" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+          </div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:#2D5016;">Dr. Kalpana Sampath</p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#D4841A; font-weight:600;">Life Coach</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="doctors.html" class="btn-saffron">Meet the Full Medical Team &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DAILY LIFE ==================== -->
+  <section style="background:#2D5016; padding:80px 0;">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="section-label" style="color:#D4841A;">Daily Life at the Village</p>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(26px,3.5vw,40px); color:white; font-weight:700;">A Rhythm That Heals</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div style="background:rgba(255,255,255,0.08); border-radius:12px; padding:24px; text-align:center;">
+          <div style="font-size:28px; margin-bottom:8px;">&#x1F64F;</div>
+          <h4 style="font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; color:white; margin-bottom:6px;">Morning Prayers</h4>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.7); line-height:1.6;">Daily prayers at the "Brahmakamalam" to begin each day with intention</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.08); border-radius:12px; padding:24px; text-align:center;">
+          <div style="font-size:28px; margin-bottom:8px;">&#x1F9D8;</div>
+          <h4 style="font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; color:white; margin-bottom:6px;">Yoga Nidra</h4>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.7); line-height:1.6;">Guided yogic sleep sessions for deep rest and nervous system restoration</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.08); border-radius:12px; padding:24px; text-align:center;">
+          <div style="font-size:28px; margin-bottom:8px;">&#x1F4AC;</div>
+          <h4 style="font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; color:white; margin-bottom:6px;">Satsangs</h4>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.7); line-height:1.6;">Evening gatherings for spiritual discourse and community connection</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.08); border-radius:12px; padding:24px; text-align:center;">
+          <div style="font-size:28px; margin-bottom:8px;">&#x1F333;</div>
+          <h4 style="font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; color:white; margin-bottom:6px;">Nature Walks</h4>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.7); line-height:1.6;">Gentle walks through the campus surrounded by mountains and natural forest</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.08); border-radius:12px; padding:24px; text-align:center;">
+          <div style="font-size:28px; margin-bottom:8px;">&#x1F373;</div>
+          <h4 style="font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; color:white; margin-bottom:6px;">Cooking Demos</h4>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.7); line-height:1.6;">Ayurveda cooking demonstrations teaching therapeutic meal preparation</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.08); border-radius:12px; padding:24px; text-align:center;">
+          <div style="font-size:28px; margin-bottom:8px;">&#x1F525;</div>
+          <h4 style="font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; color:white; margin-bottom:6px;">Rituals & Homams</h4>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.7); line-height:1.6;">Monthly special rituals and fire ceremonies for collective wellbeing</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ASSOCIATED INITIATIVES ==================== -->
+  <section style="background:#FAF7F2; padding:80px 0;">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="section-label">Beyond Healing</p>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(26px,3.5vw,40px); color:#2D5016; font-weight:700;">Associated Initiatives</h2>
+        <p style="color:#4A4A4A; max-width:560px; margin:14px auto 0; font-size:16px; line-height:1.8;">Vaidyagrama's commitment extends beyond the treatment room into the wider community, caring for children, elders, animals, and the environment.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <div class="initiative-card" style="background:white; border-radius:12px; border:1px solid #E8E0D5; padding:28px;">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background:#FFF3E0;">
+              <svg class="w-5 h-5" fill="none" stroke="#D4841A" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            </div>
+            <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:20px; font-weight:700; color:#2D5016;">Punarnava Ayurveda Trust</h3>
+          </div>
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.7;">Conducts free medical and eye camps for the underserved. The "Annam" project provides daily meals to 100+ elderly and destitute people in the surrounding community, embodying the belief that nourishment is the first medicine.</p>
+        </div>
+
+        <div class="initiative-card" style="background:white; border-radius:12px; border:1px solid #E8E0D5; padding:28px;">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background:#F0F4ED;">
+              <svg class="w-5 h-5" fill="none" stroke="#2D5016" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg>
+            </div>
+            <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:20px; font-weight:700; color:#2D5016;">Balagrama</h3>
+          </div>
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.7;">A children's home housing 30 orphaned and disadvantaged village children, providing them with education, nutrition, and a loving family environment. Balagrama ensures these children grow up with dignity and opportunity.</p>
+        </div>
+
+        <div class="initiative-card" style="background:white; border-radius:12px; border:1px solid #E8E0D5; padding:28px;">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background:#F0F4ED;">
+              <svg class="w-5 h-5" fill="none" stroke="#2D5016" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636"/></svg>
+            </div>
+            <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:20px; font-weight:700; color:#2D5016;">Lakshmigrama</h3>
+          </div>
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.7;">A sanctuary for 35+ native cows, supporting natural farming and preserving indigenous cattle breeds. The cows provide Panchagavya products used in traditional Ayurvedic preparations, completing the circle of sustainable healing.</p>
+        </div>
+
+        <div class="initiative-card" style="background:white; border-radius:12px; border:1px solid #E8E0D5; padding:28px;">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background:#FFF3E0;">
+              <svg class="w-5 h-5" fill="none" stroke="#D4841A" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
+            </div>
+            <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:20px; font-weight:700; color:#2D5016;">Nivrittigrama</h3>
+          </div>
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.7;">A community living concept promoting meaningful aging. Nivrittigrama envisions a space where elders can live with purpose, dignity, and connection -- supported by Ayurvedic care and surrounded by a vibrant, intergenerational community.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GALLERY ==================== -->
+  <section style="background:#F0F4ED; padding:80px 0;">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="section-label">The Campus</p>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(26px,3.5vw,40px); color:#2D5016; font-weight:700;">A Glimpse of Vaidyagrama</h2>
+      </div>
+      <div class="gallery-grid">
+        <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-deepasthambam-lightpole.jpg" alt="Vaidyagrama Deepasthambam (light pole)" loading="lazy" style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
+        <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-temple-1.jpg" alt="Vaidyagrama temple view" loading="lazy" style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
+        <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-temple-2.jpg" alt="Vaidyagrama temple second view" loading="lazy" style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
+        <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-nilkamal-blue-lotus.jpg" alt="Nilkamal blue lotus at Vaidyagrama" loading="lazy" style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
+        <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-ayurveda-village-indiavg-1.jpg" alt="Vaidyagrama Ayurveda village campus" loading="lazy" style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
+        <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-wall.jpg" alt="Vaidyagrama campus wall and architecture" loading="lazy" style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
+        <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-dhanwantari-temple1.jpg" alt="Dhanwantari temple at Vaidyagrama" loading="lazy" style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
+        <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-ayurveda-village-indiavg-9.jpg" alt="Vaidyagrama Ayurveda village grounds" loading="lazy" style="width:100%; height:200px; object-fit:cover; border-radius:8px;">
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== VIRTUAL CAMPUS TOUR (A5) ==================== -->
+  <section style="background:#1A1A1A; padding:80px 0;">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span class="section-label" style="color:#D4841A;">Explore Before You Arrive</span>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(28px,4vw,42px); color:white; font-weight:700; margin-bottom:12px;">Walk Through Vaidyagrama</h2>
+        <p style="font-family:'Montserrat',sans-serif; font-size:15px; color:rgba(255,255,255,0.7); max-width:520px; margin:0 auto;">Experience our healing campus from anywhere in the world -- treatment rooms, gardens, accommodation, and sacred spaces.</p>
+      </div>
+
+      <!-- Main virtual tour embed placeholder -->
+      <div style="background:rgba(255,255,255,0.05); border:2px dashed rgba(212,132,26,0.4); border-radius:16px; aspect-ratio:16/9; max-width:800px; margin:0 auto 32px; display:flex; align-items:center; justify-content:center; padding:32px; text-align:center;">
+        <div>
+          <svg width="64" height="64" fill="none" stroke="rgba(212,132,26,0.7)" stroke-width="1.5" viewBox="0 0 24 24" style="margin:0 auto 16px; display:block;"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          <p style="font-family:'GFS Didot',Georgia,serif; font-size:22px; color:white; margin-bottom:8px;">360&deg; Virtual Tour</p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.5); line-height:1.6;">Virtual tour coming soon. Contact us for a personal video walkthrough.</p>
+        </div>
+      </div>
+
+      <!-- Tour area thumbnails -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div style="background:rgba(255,255,255,0.06); border-radius:10px; overflow:hidden; cursor:pointer; transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-temple-2.jpg" alt="Treatment rooms at Vaidyagrama" loading="lazy" style="width:100%; height:120px; object-fit:cover;">
+          <p style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:600; color:rgba(255,255,255,0.8); padding:10px 12px;">Treatment Rooms</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.06); border-radius:10px; overflow:hidden; cursor:pointer; transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-nilkamal-blue-lotus.jpg" alt="Herbal garden and blue lotus at Vaidyagrama" loading="lazy" style="width:100%; height:120px; object-fit:cover;">
+          <p style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:600; color:rgba(255,255,255,0.8); padding:10px 12px;">Herbal Garden</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.06); border-radius:10px; overflow:hidden; cursor:pointer; transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-wall.jpg" alt="Accommodation at Vaidyagrama" loading="lazy" style="width:100%; height:120px; object-fit:cover;">
+          <p style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:600; color:rgba(255,255,255,0.8); padding:10px 12px;">Accommodation</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.06); border-radius:10px; overflow:hidden; cursor:pointer; transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform=''">
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-dhanwantari-temple1.jpg" alt="Dhanwantari temple and sacred spaces" loading="lazy" style="width:100%; height:120px; object-fit:cover;">
+          <p style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:600; color:rgba(255,255,255,0.8); padding:10px 12px;">Sacred Spaces</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section style="background:#FAF7F2; padding:80px 0;">
+    <div class="max-w-3xl mx-auto text-center px-4">
+      <p class="section-label">Take the First Step</p>
+      <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(26px,3.5vw,40px); color:#2D5016; font-weight:700; margin-bottom:16px;">Begin Your Healing Journey</h2>
+      <p style="color:#4A4A4A; font-size:17px; line-height:1.8; max-width:520px; margin:0 auto 32px;">Whether you carry a condition or simply seek restoration -- your path to healing begins with a conversation.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="booking.html" class="btn-saffron">Book a Consultation &rarr;</a>
+        <a href="contact.html" class="btn-outline-green">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer style="background:#2D5016;" class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="mb-4">
+            <img src="logo-white.png" loading="lazy" alt="Vaidyagrama Ayurveda" style="height:60px; width:auto; display:block;">
+          </div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.65); line-height:1.7;">Sarve Bhavantu Sukhinah<br/>NABH-Accredited Ayurveda Hospital & Retreat</p>
+        </div>
+        <div>
+          <h4 style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:13px; letter-spacing:2px; text-transform:uppercase; color:#D4841A; margin-bottom:16px;">Quick Links</h4>
+          <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0;">
+            <li style="margin-bottom:10px;"><a href="about.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;">About</a></li>
+            <li style="margin-bottom:10px;"><a href="doctors.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;">Doctors</a></li>
+            <li style="margin-bottom:10px;"><a href="conditions.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;">Conditions</a></li>
+            <li><a href="contact.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:13px; letter-spacing:2px; text-transform:uppercase; color:#D4841A; margin-bottom:16px;">Programs</h4>
+          <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0;">
+            <li style="margin-bottom:10px;"><a href="treatments.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;">Panchakarma</a></li>
+            <li style="margin-bottom:10px;"><a href="cancer-program.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;">Cancer Support</a></li>
+            <li style="margin-bottom:10px;"><a href="training.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;">Training Academy</a></li>
+            <li><a href="pricing.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:13px; letter-spacing:2px; text-transform:uppercase; color:#D4841A; margin-bottom:16px;">Visit Us</h4>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.75); line-height:1.7; margin-bottom:10px;">15 (1) Rottigoundanur Road, Thirumalayampalayam Panchayat, Coimbatore, Tamil Nadu 641105, India</p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.75);"><a href="tel:+914222364200" style="color:rgba(255,255,255,0.75); text-decoration:none;">+91 422 2364200</a></p>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,0.15); padding-top:24px;" class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.5);">&copy; 2025 Vaidyagrama Ayurveda. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.5); text-decoration:none;">Medical Disclaimer</a>
+          <a href="#" style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.5); text-decoration:none;">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <div class="whatsapp-float">
+    <div class="whatsapp-tooltip">Chat with us</div>
+    <a href="https://wa.me/914222364200" target="_blank" rel="noopener" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="white"><path d="M15 2C8.373 2 3 7.373 3 14c0 2.385.668 4.61 1.832 6.5L3 28l7.75-1.808A11.952 11.952 0 0015 27c6.627 0 12-5.373 12-12S21.627 2 15 2zm5.195 15.37c-.285-.143-1.686-.832-1.948-.927-.262-.095-.452-.143-.643.143-.19.285-.737.927-.904 1.117-.166.19-.333.214-.618.071-.285-.143-1.203-.443-2.29-1.414-.846-.755-1.417-1.687-1.583-1.972-.166-.285-.018-.439.125-.581.128-.127.285-.333.428-.5.143-.166.19-.285.285-.476.095-.19.047-.357-.024-.5-.071-.143-.643-1.55-.881-2.12-.232-.557-.468-.481-.643-.49l-.548-.01c-.19 0-.5.071-.762.357-.261.285-1 .976-1 2.38 0 1.403 1.024 2.758 1.167 2.948.143.19 2.016 3.079 4.886 4.317.683.295 1.216.471 1.631.603.685.218 1.31.187 1.803.113.55-.082 1.686-.689 1.924-1.354.238-.666.238-1.236.167-1.354-.071-.119-.261-.19-.548-.333z"/></svg>
+    </a>
+  </div>
+
+  <script src="chat-widget.js" defer></script>
+</body>
+</html>

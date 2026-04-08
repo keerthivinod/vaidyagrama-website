@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vaidyagrama Ayurveda" />
+  <meta property="og:title" content="Vaidyagrama Ayurveda — Ayurveda Hospital & Retreat, Coimbatore" />
+  <meta property="og:description" content="NABH-accredited Ayurveda hospital and retreat in Coimbatore, India. Panchakarma, cancer support, wellness retreats, and training programs." />
+  <meta property="og:image" content="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-ayurveda-village-indiavg-1.jpg" />
+  <link rel="canonical" href="https://vaidyagrama.com/" />
+  <meta name="theme-color" content="#2D5016" />
+  <meta name="msapplication-TileColor" content="#2D5016" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Vaidyagrama Ayurveda — Ayurveda Hospital & Retreat, Coimbatore</title>
+  <meta name="description" content="Vaidyagrama Ayurveda is an NABH-accredited Ayurveda Hospital & Retreat in Coimbatore, India. Panchakarma, Cancer Support, Wellness Retreats, and Training Programs." />
+  <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Montserrat:wght@300;400;500;600;700;800&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@400;500;600;700&family=Alike&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    img { max-width: 100%; height: auto; }
+    a { transition: color 0.2s, opacity 0.2s; }
+    :root {
+      --bg-cream: #FAF7F2;
+      --forest-green: #2D5016;
+      --saffron: #D4841A;
+      --sandstone: #C4956A;
+      --light-bg: #F0F4ED;
+      --border: #E8E0D5;
+      --text-dark: #1A1A1A;
+      --text-mid: #4A4A4A;
+      --text-light: #6B7280;
+    }
+    html { overflow-x: clip; scroll-padding-top: 68px; }
+    body { overflow-x: clip; overscroll-behavior-y: contain; }
+    body { background-color: #FAF7F2; color: #1A1A1A; font-family: 'Gentium Plus', Georgia, serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'GFS Didot', Georgia, serif; }
+    .placeholder-block { background: #FFF9E6; border: 2px dashed #F59E0B; border-radius: 8px; padding: 20px; margin: 12px 0; }
+    .placeholder-label { color: #92400E; font-weight: 700; font-size: 13px; font-family: 'Montserrat', sans-serif; margin-bottom: 4px; }
+    .placeholder-desc { color: #78350F; font-size: 14px; font-family: 'Montserrat', sans-serif; }
+    .img-placeholder { background: #D1D5DB; display: flex; align-items: center; justify-content: center; color: #6B7280; font-style: italic; font-family: 'Montserrat', sans-serif; font-size: 14px; border-radius: 8px; overflow: hidden; }
+    .nav-link { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 14px; color: #2D5016; transition: color 0.2s; }
+    .nav-link:hover { color: #D4841A; }
+    .nav-link.active { color: #D4841A; border-bottom: 2px solid #D4841A; }
+    .btn-saffron { background-color: #D4841A; color: white; font-family: 'Montserrat', sans-serif; font-weight: 700; padding: 12px 28px; border-radius: 6px; transition: background 0.2s, transform 0.1s; display: inline-block; letter-spacing: 0.5px; text-transform: uppercase; font-size: 13px; }
+    .btn-saffron:hover { background-color: #b8701a; transform: translateY(-1px); }
+    .btn-outline-green { border: 2px solid #2D5016; color: #2D5016; font-family: 'Montserrat', sans-serif; font-weight: 700; padding: 12px 28px; border-radius: 6px; transition: all 0.2s; display: inline-block; letter-spacing: 0.5px; text-transform: uppercase; font-size: 13px; }
+    .btn-outline-green:hover { background: #2D5016; color: white; }
+    .btn-outline-white { border: 2px solid white; color: white; font-family: 'Montserrat', sans-serif; font-weight: 700; padding: 12px 28px; border-radius: 6px; transition: all 0.2s; display: inline-block; letter-spacing: 0.5px; text-transform: uppercase; font-size: 13px; }
+    .btn-outline-white:hover { background: white; color: #2D5016; }
+    .section-label { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #D4841A; display: block; margin-bottom: 8px; }
+    .form-label { font-family: 'Montserrat', sans-serif; }
+    .form-input { font-family: 'Gentium Plus', Georgia, serif; }
+    .whatsapp-float { position: fixed; bottom: 28px; right: 28px; z-index: 999; }
+    .whatsapp-btn { background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(37,211,102,0.4); transition: transform 0.2s, box-shadow 0.2s; }
+    .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(37,211,102,0.5); }
+    .whatsapp-tooltip { position: absolute; right: 68px; top: 50%; transform: translateY(-50%); background: #1A1A1A; color: white; font-family: 'Montserrat', sans-serif; font-size: 12px; padding: 6px 12px; border-radius: 4px; white-space: nowrap; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+    .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; }
+    .faq-item { border-bottom: 1px solid #E8E0D5; padding: 20px 0; }
+    .stat-card { text-align: center; padding: 24px; border-right: 1px solid #E8E0D5; }
+    .stat-card:last-child { border-right: none; }
+    .program-card { background: white; border-radius: 12px; border: 1px solid #E8E0D5; overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; }
+    .program-card:hover { box-shadow: 0 8px 32px rgba(45,80,22,0.12); transform: translateY(-4px); }
+    .doctor-card { background: white; border-radius: 12px; border: 1px solid #E8E0D5; padding: 32px; text-align: center; transition: box-shadow 0.2s; display: flex; flex-direction: column; }
+    .doctor-card:hover { box-shadow: 0 8px 32px rgba(45,80,22,0.10); }
+    .testimonial-card { background: white; border-radius: 12px; border: 1px solid #E8E0D5; padding: 32px; position: relative; display: flex; flex-direction: column; height: 100%; }
+    .testimonial-card::before { content: '\201C'; font-family: 'GFS Didot', Georgia, serif; font-size: 80px; color: #D4841A; opacity: 0.2; position: absolute; top: 8px; left: 20px; line-height: 1; }
+    .chip { background: #F0F4ED; color: #2D5016; font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: 20px; display: inline-block; border: 1px solid #C4956A; }
+    /* ── Accessibility ──────────────────────────────── */
+    .skip-link { position: absolute; top: -50px; left: 8px; background: #2D5016; color: white; padding: 10px 18px; z-index: 10000; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; text-decoration: none; border-radius: 0 0 6px 6px; transition: top 0.2s; }
+    .skip-link:focus { top: 0; }
+    :focus-visible { outline: 3px solid #D4841A; outline-offset: 3px; border-radius: 3px; }
+    /* ── Reduced Motion ─────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    }
+    button { cursor: pointer; }
+
+    /* ═══ CROSS-PLATFORM & MOBILE RESPONSIVE ═══════════════════════════ */
+    /* Remove iOS/Android tap highlight */
+    * { -webkit-tap-highlight-color: transparent; }
+    /* Smooth momentum scroll on iOS */
+    body { -webkit-overflow-scrolling: touch; }
+    /* Prevent 300 ms tap delay */
+    a, button, [role="button"] { touch-action: manipulation; }
+    /* Remove iOS form styling */
+    input, select, textarea, button { -webkit-appearance: none; -moz-appearance: none; appearance: none; border-radius: 6px; }
+    select { -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234A4A4A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 36px !important; }
+    /* iOS input zoom prevention: font-size >= 16px */
+    input, select, textarea { font-size: 16px !important; }
+    /* iOS safe area for fixed elements */
+    .whatsapp-float { bottom: max(28px, calc(16px + env(safe-area-inset-bottom))); }
+    /* ── Section padding (mobile) ────────────────────────────── */
+    @media (max-width: 640px) {
+      section { padding-top: 48px !important; padding-bottom: 48px !important; }
+    }
+    /* ── Stat bar (trust bar) on mobile ─────────────────────── */
+    @media (max-width: 767px) {
+      .stat-card { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 16px 8px; }
+      .stat-card:last-child { border-bottom: none !important; }
+    }
+    /* ── Buttons full-width on mobile ───────────────────────── */
+    @media (max-width: 480px) {
+      .btn-saffron, .btn-outline-green, .btn-outline, .btn-outline-white { display: block; width: 100%; text-align: center; box-sizing: border-box; }
+    }
+    /* ── Form inputs 100% on mobile ─────────────────────────── */
+    @media (max-width: 640px) {
+      .form-input, input[type="text"], input[type="email"], input[type="tel"],
+      input[type="number"], input[type="date"], select, textarea {
+        width: 100% !important; max-width: 100% !important; box-sizing: border-box;
+      }
+      .doctor-card { padding: 20px 16px; }
+      .chip { font-size: 11px; padding: 4px 10px; }
+    }
+    /* ── WhatsApp smaller on very small screens ──────────────── */
+    @media (max-width: 380px) {
+      .whatsapp-btn { width: 52px; height: 52px; }
+      .whatsapp-float { right: 12px; }
+      .whatsapp-tooltip { display: none; }
+    }
+    /* ── Travel table scroll wrapper ────────────────────────── */
+    .travel-table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .travel-table-inner { min-width: 520px; }
+    /* ── Gallery grid on mobile ─────────────────────────────── */
+    @media (max-width: 640px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    /* ── Pricing table scroll ───────────────────────────────── */
+    .price-table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+    /* ── C7: Mobile Bottom Navigation Bar ────────────────────────── */
+    .mobile-bottom-bar { display:none; position:fixed; bottom:0; left:0; right:0; background:white; border-top:2px solid #2D5016; z-index:998; box-shadow:0 -4px 20px rgba(0,0,0,0.12); padding-bottom:env(safe-area-inset-bottom); }
+    .mobile-bottom-btn { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:10px 4px 8px; font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; color:#2D5016; text-decoration:none; gap:3px; border-right:1px solid #E8E0D5; letter-spacing:0.5px; text-transform:uppercase; transition:background 0.15s; }
+    .mobile-bottom-btn:last-child { border-right:none; }
+    .mobile-bottom-btn:active { background:#F0F4ED; }
+    .mobile-bottom-btn--primary { background:#2D5016; color:white; }
+    .mobile-bottom-btn--primary:active { background:#3a6b1d; }
+    .mobile-bottom-btn--wa { background:#25D366; color:white; }
+    .mobile-bottom-btn--wa:active { background:#1da855; }
+    @media (max-width: 1023px) {
+      .mobile-bottom-bar { display:flex; }
+      body { padding-bottom:calc(68px + env(safe-area-inset-bottom)); }
+    }
+    /* ── E3: Language Switcher ────────────────────────────────────── */
+    .lang-sw { display:flex; align-items:center; border:1.5px solid #E8E0D5; border-radius:6px; overflow:hidden; height:34px; }
+    .lang-sw-btn { padding:0 10px; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; background:none; border:none; color:#6B7280; cursor:pointer; transition:background 0.15s,color 0.15s; height:100%; }
+    .lang-sw-btn.active { background:#2D5016; color:white; }
+    .lang-sw-btn:hover:not(.active) { background:#F0F4ED; color:#2D5016; }
+    .lang-divider { width:1px; height:60%; background:#E8E0D5; }
+    /* Language notice overlay */
+    .lang-notice { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:10001; align-items:center; justify-content:center; padding:16px; }
+    .lang-notice.open { display:flex; }
+    .lang-notice-box { background:white; border-radius:16px; padding:36px 28px; max-width:380px; width:100%; text-align:center; }
+    /* ── A1: Dosha Quiz ─────────────────────────────────────── */
+    .quiz-opt { background:rgba(255,255,255,0.08); border:1.5px solid rgba(255,255,255,0.25); color:white; font-family:'Montserrat',sans-serif; font-size:14px; font-weight:500; padding:14px 20px; border-radius:8px; cursor:pointer; transition:all 0.2s; text-align:left; width:100%; }
+    .quiz-opt:hover { background:rgba(255,255,255,0.18); border-color:rgba(255,255,255,0.5); transform:translateX(4px); }
+    /* ── A2: Program Finder ─────────────────────────────────── */
+    .finder-opt { background:#FAF7F2; border:1.5px solid #E8E0D5; color:#2D5016; font-family:'Montserrat',sans-serif; font-size:14px; font-weight:500; padding:14px 18px; border-radius:8px; cursor:pointer; transition:all 0.2s; text-align:left; width:100%; }
+    .finder-opt:hover { border-color:#2D5016; background:#F0F4ED; }
+
+    /* === UI/UX Pro Max: Accessibility & Interaction Fixes === */
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    /* Cursor pointer on interactive elements */
+    button, [role="button"], label[for], select, summary { cursor: pointer; }
+    /* Visible focus rings for keyboard nav (WCAG 2.4.7) */
+    :focus-visible {
+      outline: 2px solid #D4841A;
+      outline-offset: 3px;
+      border-radius: 3px;
+    }
+    /* Prevent overscroll pull-to-refresh flash on iOS */
+
+    /* Smooth scroll */
+    html { scroll-behavior: smooth; }
+    /* Min touch targets on mobile */
+    @media (max-width: 1023px) {
+      button, a, [role="button"] { min-height: 44px; min-width: 44px; }
+    }
+
+    /* ── Scroll Animations ─────────────────────────────────── */
+    .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── Ken Burns hero animation ───────────────────────────── */
+    @keyframes kenburns {
+      0%   { transform: scale(1.0) translateX(0px) translateY(0px); }
+      33%  { transform: scale(1.06) translateX(-12px) translateY(-6px); }
+      66%  { transform: scale(1.04) translateX(8px) translateY(-10px); }
+      100% { transform: scale(1.0) translateX(0px) translateY(0px); }
+    }
+    .hero-bg-img {
+      animation: kenburns 22s ease-in-out infinite;
+      transform-origin: center center;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-bg-img { animation: none; }
+    }
+
+    /* ── Sticky Book Now CTA bar ─────────────────────────────── */
+    #sticky-book-cta {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 997;
+      background: #2D5016;
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.25);
+    }
+    #sticky-book-cta.visible {
+      transform: translateY(0);
+    }
+    /* Hide sticky CTA on mobile (mobile bottom nav already handles this) */
+    @media (max-width: 1023px) {
+      #sticky-book-cta { display: none !important; }
+    }
+
+    </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="sticky top-0 z-50 bg-white border-b border-[#E8E0D5] shadow-sm" x-data="{ mobileOpen: false }">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center" style="line-height:0;">
+          <img src="logo-color.png" alt="Vaidyagrama Ayurveda" style="height:52px; width:auto; display:block;">
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <div class="hidden lg:flex items-center gap-5">
+          <a href="treatments.html" class="nav-link">Treatments</a>
+          <a href="conditions.html" class="nav-link">Conditions</a>
+          <a href="doctors.html" class="nav-link">Doctors</a>
+          <a href="cancer-program.html" class="nav-link">Cancer Program</a>
+          <a href="training.html" class="nav-link">Training</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="international.html" class="nav-link">International</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+
+        <!-- Desktop CTA -->
+        <div class="hidden lg:block">
+          <a href="booking.html" class="btn-saffron text-sm">Book Consultation</a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button @click="mobileOpen = !mobileOpen" class="lg:hidden p-2 rounded-md text-[#2D5016]" aria-label="Toggle menu">
+          <svg x-show="!mobileOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg x-show="mobileOpen" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div x-show="mobileOpen" x-transition class="lg:hidden border-t border-[#E8E0D5] py-4">
+        <div class="flex flex-col gap-3 px-2">
+          <a href="treatments.html" class="nav-link py-2" @click="mobileOpen = false">Treatments</a>
+          <a href="conditions.html" class="nav-link py-2" @click="mobileOpen = false">Conditions</a>
+          <a href="doctors.html" class="nav-link py-2" @click="mobileOpen = false">Doctors</a>
+          <a href="cancer-program.html" class="nav-link py-2" @click="mobileOpen = false">Cancer Program</a>
+          <a href="training.html" class="nav-link py-2" @click="mobileOpen = false">Training</a>
+          <a href="pricing.html" class="nav-link py-2" @click="mobileOpen = false">Pricing</a>
+          <a href="international.html" class="nav-link py-2" @click="mobileOpen = false">International</a>
+          <a href="about.html" class="nav-link py-2" @click="mobileOpen = false">About</a>
+          <a href="contact.html" class="nav-link py-2" @click="mobileOpen = false">Contact</a>
+          <a href="booking.html" class="btn-saffron text-center mt-2" @click="mobileOpen = false">Book Consultation</a>
+          <!-- Language (mobile) -->
+          <div class="flex items-center gap-2 pt-2 border-t border-[#E8E0D5] mt-2">
+            <span style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:#6B7280;text-transform:uppercase;letter-spacing:1px;">Language:</span>
+            <button style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;background:#2D5016;color:white;border:none;padding:4px 10px;border-radius:4px;cursor:pointer;">EN</button>
+            <button onclick="mobileOpen=false;document.getElementById('lang-notice').classList.add('open')" style="font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;background:none;border:1.5px solid #E8E0D5;color:#6B7280;padding:4px 10px;border-radius:4px;cursor:pointer;">DE</button>
+          </div>
+          </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section id="main-content" class="relative min-h-screen flex items-center justify-center overflow-hidden" style="background: linear-gradient(135deg, #2D5016 0%, #3a6b1d 40%, #1a3009 100%);">
+    <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-ayurveda-village-indiavg-1.jpg" alt="Vaidyagrama Ayurveda Healing Village campus aerial view" class="absolute inset-0 w-full h-full object-cover hero-bg-img" loading="lazy">
+    <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(45,80,22,0.7) 0%, rgba(26,48,9,0.85) 100%);"></div>
+
+    <div class="relative z-10 text-center px-4 max-w-3xl mx-auto" style="padding-top:80px; padding-bottom:64px;">
+      <!-- Sanskrit tagline -->
+      <p class="section-label mb-4" style="color:#D4841A; font-size:13px; letter-spacing:3px;">
+        ॐ &nbsp; Sarve Bhavantu Sukhinah &nbsp; ॐ
+      </p>
+      <p style="font-family:'Montserrat',sans-serif; font-size:12px; color:rgba(212,132,26,0.8); letter-spacing:2px; text-transform:uppercase; margin-bottom:24px;">
+        May All Beings Be Happy
+      </p>
+
+      <h1 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(32px,5vw,62px); font-weight:700; color:white; line-height:1.15; margin-bottom:20px;">
+        Ayurveda Healing Village
+      </h1>
+
+      <p style="font-family:'Montserrat',sans-serif; font-size:clamp(15px,2vw,18px); color:rgba(255,255,255,0.9); font-weight:600; margin-bottom:12px; letter-spacing:0.5px;">
+        A Clinic, Hospital, Retreat, and Learning Centre
+      </p>
+
+      <p style="font-family:'Montserrat',sans-serif; font-size:clamp(14px,1.8vw,17px); color:rgba(255,255,255,0.8); font-weight:400; margin-bottom:40px; max-width:620px; margin-left:auto; margin-right:auto; line-height:1.7;">
+        An 80-room, 120-bedded, NABH-accredited healing space for your wellness with authentic Ayurveda, in the serene outskirts of Coimbatore, South India.
+      </p>
+
+      <!-- 3 CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="conditions.html" class="btn-saffron text-center">
+          I Have a Health Condition &rarr;
+        </a>
+        <a href="treatments.html" style="background:rgba(255,255,255,0.12); border:2px solid rgba(255,255,255,0.5); color:white; font-family:'Montserrat',sans-serif; font-weight:700; padding:12px 24px; border-radius:6px; transition:background 0.2s; display:inline-block; text-align:center; letter-spacing:0.5px; text-transform:uppercase; font-size:13px;"
+           onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.12)'">
+          I Seek a Wellness Retreat &rarr;
+        </a>
+        <a href="training.html" style="background:transparent; border:2px solid #D4841A; color:#D4841A; font-family:'Montserrat',sans-serif; font-weight:700; padding:12px 24px; border-radius:6px; transition:all 0.2s; display:inline-block; text-align:center; letter-spacing:0.5px; text-transform:uppercase; font-size:13px;"
+           onmouseover="this.style.background='#D4841A'; this.style.color='white'" onmouseout="this.style.background='transparent'; this.style.color='#D4841A'">
+          I'm a Healthcare Professional &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- ==================== TRUST BAR ==================== -->
+  <section id="trust-bar" style="background:#2D5016;" class="py-6">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-6 gap-0">
+        <div class="stat-card border-r border-green-700">
+          <div style="font-family:'GFS Didot',Georgia,serif; font-size:26px; font-weight:700; color:#D4841A;"><span class="counter" data-target="180" data-suffix="+">0</span></div>
+          <div style="font-family:'Montserrat',sans-serif; font-size:12px; color:rgba(255,255,255,0.8); font-weight:500; margin-top:4px; line-height:1.4;">Years<br/>Combined Expertise</div>
+        </div>
+        <div class="stat-card border-r border-green-700">
+          <div style="font-family:'GFS Didot',Georgia,serif; font-size:26px; font-weight:700; color:#D4841A;"><span class="counter" data-target="16" data-suffix="+">0</span></div>
+          <div style="font-family:'Montserrat',sans-serif; font-size:12px; color:rgba(255,255,255,0.8); font-weight:500; margin-top:4px; line-height:1.4;">Years<br/>In Service</div>
+        </div>
+        <div class="stat-card border-r border-green-700">
+          <div style="font-family:'GFS Didot',Georgia,serif; font-size:26px; font-weight:700; color:#D4841A;"><span class="counter" data-target="80">0</span></div>
+          <div style="font-family:'Montserrat',sans-serif; font-size:12px; color:rgba(255,255,255,0.8); font-weight:500; margin-top:4px; line-height:1.4;">Rooms<br/>120 Beds</div>
+        </div>
+        <div class="stat-card border-r border-green-700">
+          <div style="font-family:'GFS Didot',Georgia,serif; font-size:26px; font-weight:700; color:#D4841A;">NABH</div>
+          <div style="font-family:'Montserrat',sans-serif; font-size:12px; color:rgba(255,255,255,0.8); font-weight:500; margin-top:4px; line-height:1.4;">Accredited<br/>Hospital</div>
+        </div>
+        <div class="stat-card border-r border-green-700">
+          <div style="font-family:'GFS Didot',Georgia,serif; font-size:26px; font-weight:700; color:#D4841A;"><span class="counter" data-target="5">0</span></div>
+          <div style="font-family:'Montserrat',sans-serif; font-size:12px; color:rgba(255,255,255,0.8); font-weight:500; margin-top:4px; line-height:1.4;">Countries<br/>Global Reach</div>
+        </div>
+        <div class="stat-card" style="border-right:none;">
+          <div style="font-family:'GFS Didot',Georgia,serif; font-size:26px; font-weight:700; color:#D4841A;"><span class="counter" data-target="97" data-suffix="%">0%</span></div>
+          <div style="font-family:'Montserrat',sans-serif; font-size:12px; color:rgba(255,255,255,0.8); font-weight:500; margin-top:4px; line-height:1.4;">Guest<br/>Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== AS FEATURED IN (B5) ==================== -->
+  <section style="background:white; padding:28px 0; border-bottom:1px solid #E8E0D5;">
+    <div class="max-w-5xl mx-auto px-4">
+      <p style="text-align:center; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#6B7280; margin-bottom:20px;">As Featured In</p>
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <span style="font-family:'Oswald',sans-serif; font-size:16px; font-weight:600; color:#4A4A4A; letter-spacing:1px; text-transform:uppercase; opacity:0.7;">Civil Society Online</span>
+        <span style="color:#E8E0D5; font-size:20px;">|</span>
+        <span style="font-family:'Oswald',sans-serif; font-size:16px; font-weight:600; color:#4A4A4A; letter-spacing:1px; text-transform:uppercase; opacity:0.7;">The Hindu</span>
+        <span style="color:#E8E0D5; font-size:20px;">|</span>
+        <span style="font-family:'Oswald',sans-serif; font-size:16px; font-weight:600; color:#4A4A4A; letter-spacing:1px; text-transform:uppercase; opacity:0.7;">Jyoti Pande Blog</span>
+        <span style="color:#E8E0D5; font-size:20px;">|</span>
+        <span style="font-family:'Oswald',sans-serif; font-size:16px; font-weight:600; color:#4A4A4A; letter-spacing:1px; text-transform:uppercase; opacity:0.7;">Garden and the Moon</span>
+        <span style="color:#E8E0D5; font-size:20px;">|</span>
+        <span style="font-family:'Oswald',sans-serif; font-size:16px; font-weight:600; color:#4A4A4A; letter-spacing:1px; text-transform:uppercase; opacity:0.7;">NDTV Health</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WHO IS THIS FOR? ==================== -->
+  <section style="background:#FAF7F2; padding:80px 0;">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-14 fade-up">
+        <p class="section-label">Find Your Path</p>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(28px,4vw,42px); color:#2D5016; font-weight:700;">Who is Vaidyagrama For?</h2>
+        <p style="color:#4A4A4A; max-width:560px; margin:12px auto 0; font-size:17px; line-height:1.8;">Whether you carry a diagnosis, seek deep restoration, or wish to deepen your practice — there is a path here for you.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Card 1: Chronic Disease Patient -->
+        <div class="program-card p-8 text-center h-full fade-up">
+          <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background:#F0F4ED;">
+            <svg class="w-8 h-8" fill="none" stroke="#2D5016" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+          </div>
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:22px; font-weight:700; color:#2D5016; margin-bottom:12px;">Chronic Disease Patient</h3>
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.7; margin-bottom:20px;">Living with a complex condition? Our senior physicians create personalised Ayurvedic protocols that address root causes — not just symptoms.</p>
+          <a href="conditions.html" style="color:#D4841A; font-weight:700; font-family:'Montserrat',sans-serif; text-decoration:none;">Explore Conditions &rarr;</a>
+        </div>
+
+        <!-- Card 2: Wellness Seeker -->
+        <div class="program-card p-8 text-center h-full fade-up" style="border:2px solid #D4841A;">
+          <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background:#FFF3E0;">
+            <svg class="w-8 h-8" fill="none" stroke="#D4841A" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3a2 2 0 012-2h10a2 2 0 012 2v18l-7-3.5L5 21V3z"/><circle cx="12" cy="10" r="3" stroke="#D4841A" stroke-width="1.5"/></svg>
+          </div>
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:22px; font-weight:700; color:#2D5016; margin-bottom:12px;">Wellness & Retreat Seeker</h3>
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.7; margin-bottom:20px;">Burnt out? Ready for a reset? Our retreat programs immerse you in ancient healing rhythms — Panchakarma, yoga, wholesome food, and stillness.</p>
+          <a href="treatments.html" style="color:#D4841A; font-weight:700; font-family:'Montserrat',sans-serif; text-decoration:none;">Explore Retreats &rarr;</a>
+        </div>
+
+        <!-- Card 3: Healthcare Professional -->
+        <div class="program-card p-8 text-center h-full fade-up">
+          <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background:#F0F4ED;">
+            <svg class="w-8 h-8" fill="none" stroke="#2D5016" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422A12.083 12.083 0 0121 13c0 4.97-4.03 9-9 9s-9-4.03-9-9c0-.898.122-1.768.34-2.578L12 14z"/></svg>
+          </div>
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:22px; font-weight:700; color:#2D5016; margin-bottom:12px;">Healthcare Professional</h3>
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.7; margin-bottom:20px;">Ayurveda physician, medical doctor, or therapist? Learn classical Ayurveda directly from masters with 180+ years of combined clinical expertise.</p>
+          <a href="training.html" style="color:#D4841A; font-weight:700; font-family:'Montserrat',sans-serif; text-decoration:none;">Explore Training &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DOSHA QUIZ (A1) ==================== -->
+  <section style="background:#2D5016; padding:64px 0;" x-data="doshaQuiz()">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <span class="section-label" style="color:#D4841A;">Ancient Wisdom</span>
+      <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(26px,4vw,40px); color:white; font-weight:700; margin-bottom:12px;">Discover Your Prakriti</h2>
+      <p style="font-family:'Montserrat',sans-serif; font-size:15px; color:rgba(255,255,255,0.8); margin-bottom:32px; max-width:500px; margin-left:auto; margin-right:auto;">In Ayurveda, your unique body-mind constitution (Prakriti) determines the ideal healing path. Take our 5-question quiz to discover yours — and get a personalised program recommendation.</p>
+
+      <!-- Not started -->
+      <div x-show="step === 0">
+        <button @click="step=1" class="btn-saffron" style="font-size:15px; padding:16px 40px;">
+          Start the Dosha Quiz &rarr;
+        </button>
+        <p style="font-family:'Montserrat',sans-serif; font-size:12px; color:rgba(255,255,255,0.5); margin-top:12px;">Takes about 2 minutes &bull; No registration required</p>
+      </div>
+
+      <!-- Quiz steps -->
+      <div x-show="step > 0 && step <= 5" style="display:none;">
+        <!-- Progress -->
+        <div style="display:flex; gap:6px; justify-content:center; margin-bottom:28px;">
+          <template x-for="i in 5" :key="i">
+            <div :style="i<=step ? 'background:#D4841A;' : 'background:rgba(255,255,255,0.2);'" style="height:4px; width:40px; border-radius:2px; transition:background 0.3s;"></div>
+          </template>
+        </div>
+        <p style="font-family:'Montserrat',sans-serif; font-size:12px; color:rgba(255,255,255,0.5); margin-bottom:16px;" x-text="'Question ' + step + ' of 5'"></p>
+
+        <!-- Q1 -->
+        <div x-show="step===1">
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:22px; color:white; margin-bottom:20px;">How would you describe your body frame?</h3>
+          <div class="flex flex-col gap-3 max-w-md mx-auto">
+            <button @click="addAnswer('vata'); step=2" class="quiz-opt">Slim, light — I find it hard to gain weight</button>
+            <button @click="addAnswer('pitta'); step=2" class="quiz-opt">Medium, athletic — moderate frame</button>
+            <button @click="addAnswer('kapha'); step=2" class="quiz-opt">Broad, sturdy — I gain weight easily</button>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div x-show="step===2">
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:22px; color:white; margin-bottom:20px;">How is your digestion?</h3>
+          <div class="flex flex-col gap-3 max-w-md mx-auto">
+            <button @click="addAnswer('vata'); step=3" class="quiz-opt">Irregular — sometimes strong, sometimes poor</button>
+            <button @click="addAnswer('pitta'); step=3" class="quiz-opt">Sharp — I get very hungry and irritable if I skip meals</button>
+            <button @click="addAnswer('kapha'); step=3" class="quiz-opt">Slow but steady — I rarely feel very hungry</button>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div x-show="step===3">
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:22px; color:white; margin-bottom:20px;">How do you handle stress?</h3>
+          <div class="flex flex-col gap-3 max-w-md mx-auto">
+            <button @click="addAnswer('vata'); step=4" class="quiz-opt">I become anxious, worried, and have racing thoughts</button>
+            <button @click="addAnswer('pitta'); step=4" class="quiz-opt">I become irritable, critical, or confrontational</button>
+            <button @click="addAnswer('kapha'); step=4" class="quiz-opt">I withdraw, feel heavy, or sleep more than usual</button>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div x-show="step===4">
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:22px; color:white; margin-bottom:20px;">How is your sleep?</h3>
+          <div class="flex flex-col gap-3 max-w-md mx-auto">
+            <button @click="addAnswer('vata'); step=5" class="quiz-opt">Light, interrupted — my mind stays active</button>
+            <button @click="addAnswer('pitta'); step=5" class="quiz-opt">Moderate — I wake if too hot or if I have deadlines</button>
+            <button @click="addAnswer('kapha'); step=5" class="quiz-opt">Deep and long — hard to get up in the morning</button>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div x-show="step===5">
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:22px; color:white; margin-bottom:20px;">What is your primary goal for visiting?</h3>
+          <div class="flex flex-col gap-3 max-w-md mx-auto">
+            <button @click="addAnswer('vata'); step=6" class="quiz-opt">Calm my nervous system &amp; restore energy</button>
+            <button @click="addAnswer('pitta'); step=6" class="quiz-opt">Cool inflammation &amp; deep detox</button>
+            <button @click="addAnswer('kapha'); step=6" class="quiz-opt">Lose weight &amp; increase vitality</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div x-show="step===6" style="display:none;">
+        <div style="background:rgba(255,255,255,0.1); border-radius:16px; padding:32px; max-width:480px; margin:0 auto; border:1px solid rgba(255,255,255,0.2);">
+          <p style="font-family:'Montserrat',sans-serif; font-size:12px; color:#D4841A; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px;">Your Dominant Dosha</p>
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:32px; color:white; margin-bottom:12px;" x-text="result.dosha"></h3>
+          <p style="font-family:'Gentium Plus',Georgia,serif; font-size:16px; color:rgba(255,255,255,0.85); line-height:1.7; margin-bottom:20px;" x-text="result.desc"></p>
+          <div style="background:#D4841A; border-radius:10px; padding:16px; margin-bottom:20px;">
+            <p style="font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; color:rgba(255,255,255,0.7); text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">Recommended Program</p>
+            <p style="font-family:'GFS Didot',Georgia,serif; font-size:18px; color:white;" x-text="result.program"></p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="booking.html" class="btn-outline-white">Book a Free Chat</a>
+            <button @click="step=0; answers=[]" style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.6); background:none; border:none; cursor:pointer; padding:12px;">Retake Quiz</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURED PROGRAMS ==================== -->
+  <section style="background:#F0F4ED; padding:80px 0;">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-14 fade-up">
+        <p class="section-label">Healing Programs</p>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(28px,4vw,42px); color:#2D5016; font-weight:700;">Our Signature Programs</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Panchakarma -->
+        <div class="program-card h-full fade-up">
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-treatment-room-2714_1.jpg" alt="Panchakarma treatment room at Vaidyagrama" class="h-52 w-full object-cover" style="border-radius:12px 12px 0 0;" loading="lazy">
+          <div class="p-7">
+            <span class="chip mb-3">2 – 8 Weeks</span>
+            <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:24px; font-weight:700; color:#2D5016; margin:10px 0 10px;">Panchakarma</h3>
+            <p style="color:#4A4A4A; font-size:15px; line-height:1.7; margin-bottom:20px;">The classical five-fold detoxification and rejuvenation program. Deeply cleansing, profoundly restorative — tailored to your unique constitution and condition.</p>
+            <a href="treatments.html" class="btn-saffron text-sm">Explore Panchakarma &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Cancer Support -->
+        <div class="program-card h-full fade-up">
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-dhanwantari-temple1.jpg" alt="Dhanwantari temple at Vaidyagrama healing village" class="h-52 w-full object-cover" style="border-radius:12px 12px 0 0;" loading="lazy">
+          <div class="p-7">
+            <span class="chip mb-3" style="background:#FFF3E0; color:#D4841A; border-color:#D4841A;">Integrative</span>
+            <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:24px; font-weight:700; color:#2D5016; margin:10px 0 10px;">AyurSakthi — Cancer Support</h3>
+            <p style="color:#4A4A4A; font-size:15px; line-height:1.7; margin-bottom:20px;">Ayurvedic integrative care for cancer patients — working alongside conventional oncology to support immunity, manage side effects, and restore vitality.</p>
+            <a href="cancer-program.html" class="btn-saffron text-sm">Learn More &rarr;</a>
+          </div>
+        </div>
+
+        <!-- AyurOrtho -->
+        <div class="program-card h-full fade-up">
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-treatment-room-2663_1.jpg" alt="Ayurvedic treatment room for orthopedic care" class="h-52 w-full object-cover" style="border-radius:12px 12px 0 0;" loading="lazy">
+          <div class="p-7">
+            <span class="chip mb-3">Structural Focus</span>
+            <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:24px; font-weight:700; color:#2D5016; margin:10px 0 10px;">AyurOrtho</h3>
+            <p style="color:#4A4A4A; font-size:15px; line-height:1.7; margin-bottom:20px;">Specialised Ayurvedic orthopedic care for joint pain, spine disorders, arthritis, and structural conditions — combining classical treatments with targeted therapies.</p>
+            <a href="treatments.html" class="btn-saffron text-sm">Explore AyurOrtho &rarr;</a>
+          </div>
+        </div>
+
+        <!-- WellnessNext -->
+        <div class="program-card h-full fade-up">
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-nilkamal-blue-lotus.jpg" alt="Blue lotus at Vaidyagrama wellness retreat" class="h-52 w-full object-cover" style="border-radius:12px 12px 0 0;" loading="lazy">
+          <div class="p-7">
+            <span class="chip mb-3">Contemporary</span>
+            <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:24px; font-weight:700; color:#2D5016; margin:10px 0 10px;">WellnessNext</h3>
+            <p style="color:#4A4A4A; font-size:15px; line-height:1.7; margin-bottom:20px;">A contemporary wellness retreat blending classical Ayurvedic wisdom with modern lifestyle science — ideal for those seeking sustainable wellbeing.</p>
+            <a href="treatments.html" class="btn-saffron text-sm">Explore WellnessNext &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROGRAM FINDER (A2) ==================== -->
+  <section style="background:#FAF7F2; padding:64px 0;" x-data="programFinder()">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <span class="section-label">Not Sure Where to Start?</span>
+      <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(26px,4vw,40px); color:#2D5016; font-weight:700; margin-bottom:12px;">Find Your Perfect Program</h2>
+      <p style="color:#4A4A4A; font-size:16px; line-height:1.7; margin-bottom:32px; max-width:460px; margin-left:auto; margin-right:auto; font-family:'Gentium Plus',Georgia,serif;">Answer 4 quick questions and we'll match you with the right program — personalised to your health goals, availability, and experience level.</p>
+
+      <!-- Start -->
+      <div x-show="pfStep===0">
+        <button @click="pfStep=1" class="btn-saffron" style="font-size:15px; padding:16px 40px;">Find My Program &rarr;</button>
+      </div>
+
+      <!-- Finder Box -->
+      <div x-show="pfStep > 0 && pfStep <= 4" style="display:none; background:white; border-radius:16px; border:1px solid #E8E0D5; padding:36px 28px; text-align:left; box-shadow:0 4px 24px rgba(45,80,22,0.08);">
+        <!-- Progress -->
+        <div style="display:flex; gap:6px; margin-bottom:24px;">
+          <template x-for="i in 4" :key="i">
+            <div :style="i<=pfStep?'background:#2D5016;':'background:#E8E0D5;'" style="height:4px; flex:1; border-radius:2px; transition:background 0.3s;"></div>
+          </template>
+        </div>
+        <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#6B7280; text-transform:uppercase; letter-spacing:1px; margin-bottom:14px;" x-text="'Step ' + pfStep + ' of 4'"></p>
+
+        <!-- Q1 -->
+        <div x-show="pfStep===1">
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:22px; color:#2D5016; margin-bottom:18px;">What brings you to Vaidyagrama?</h3>
+          <div class="flex flex-col gap-3">
+            <button @click="pfAns.push('condition'); pfStep=2" class="finder-opt">I have a specific health condition or diagnosis</button>
+            <button @click="pfAns.push('wellness'); pfStep=2" class="finder-opt">I want a wellness &amp; rejuvenation retreat</button>
+            <button @click="pfAns.push('detox'); pfStep=2" class="finder-opt">I need a deep detox / Panchakarma</button>
+            <button @click="pfAns.push('training'); pfStep=2" class="finder-opt">I am a healthcare professional seeking training</button>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div x-show="pfStep===2">
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:22px; color:#2D5016; margin-bottom:18px;">How long can you stay?</h3>
+          <div class="flex flex-col gap-3">
+            <button @click="pfAns.push('short'); pfStep=3" class="finder-opt">Up to 1 week (5–7 nights)</button>
+            <button @click="pfAns.push('medium'); pfStep=3" class="finder-opt">2 weeks (10–14 nights)</button>
+            <button @click="pfAns.push('long'); pfStep=3" class="finder-opt">3 weeks or more (21–28+ nights)</button>
+            <button @click="pfAns.push('flex'); pfStep=3" class="finder-opt">I'm flexible — advise me</button>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div x-show="pfStep===3">
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:22px; color:#2D5016; margin-bottom:18px;">What is your primary health goal?</h3>
+          <div class="flex flex-col gap-3">
+            <button @click="pfAns.push('pain'); pfStep=4" class="finder-opt">Joint / back / spine pain relief</button>
+            <button @click="pfAns.push('stress'); pfStep=4" class="finder-opt">Stress, burnout &amp; mental fatigue</button>
+            <button @click="pfAns.push('weight'); pfStep=4" class="finder-opt">Weight management &amp; metabolic reset</button>
+            <button @click="pfAns.push('chronic'); pfStep=4" class="finder-opt">A chronic disease or complex condition</button>
+            <button @click="pfAns.push('general'); pfStep=4" class="finder-opt">General wellbeing &amp; prevention</button>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div x-show="pfStep===4">
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:22px; color:#2D5016; margin-bottom:18px;">Have you experienced Ayurveda before?</h3>
+          <div class="flex flex-col gap-3">
+            <button @click="pfAns.push('expert'); calcPf(); pfStep=5" class="finder-opt">Yes — I have done Panchakarma or stayed at an Ayurveda retreat before</button>
+            <button @click="pfAns.push('some'); calcPf(); pfStep=5" class="finder-opt">A little — I've had some Ayurvedic consultations or treatments</button>
+            <button @click="pfAns.push('none'); calcPf(); pfStep=5" class="finder-opt">No — this would be my first time</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div x-show="pfStep===5" style="display:none; background:white; border-radius:16px; border:2px solid #2D5016; padding:36px 28px; box-shadow:0 4px 24px rgba(45,80,22,0.12);">
+        <p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#D4841A; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px; text-align:center;">Your Recommended Program</p>
+        <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:28px; color:#2D5016; margin-bottom:12px; text-align:center;" x-text="pfResult.name"></h3>
+        <p style="font-family:'Gentium Plus',Georgia,serif; font-size:16px; color:#4A4A4A; line-height:1.7; margin-bottom:20px; text-align:left;" x-text="pfResult.desc"></p>
+        <div style="background:#F0F4ED; border-radius:10px; padding:16px; margin-bottom:24px; display:flex; gap:16px; flex-wrap:wrap;">
+          <div><p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#6B7280; text-transform:uppercase; letter-spacing:1px;">Duration</p><p style="font-family:'Montserrat',sans-serif; font-weight:700; color:#2D5016;" x-text="pfResult.duration"></p></div>
+          <div><p style="font-family:'Montserrat',sans-serif; font-size:11px; color:#6B7280; text-transform:uppercase; letter-spacing:1px;">Best For</p><p style="font-family:'Montserrat',sans-serif; font-weight:700; color:#2D5016;" x-text="pfResult.bestFor"></p></div>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="booking.html" class="btn-saffron text-center" style="flex:1;">Book a Free Chat &rarr;</a>
+          <a :href="pfResult.link" class="btn-outline-green text-center" style="flex:1;">Learn More</a>
+        </div>
+        <button @click="pfStep=0; pfAns=[]" style="display:block; margin:16px auto 0; font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280; background:none; border:none; cursor:pointer;">Start Over</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SENIOR MEDICAL TEAM ==================== -->
+  <section style="background:#FAF7F2; padding:80px 0;">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-6 fade-up">
+        <p class="section-label">Senior Physicians</p>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(28px,4vw,42px); color:#2D5016; font-weight:700;">Your Healing Team</h2>
+        <p style="color:#4A4A4A; max-width:560px; margin:14px auto 0; font-size:17px; line-height:1.8;">A combined expertise of 180+ years among your senior medical team — classical Ayurveda, clinical rigour, compassionate care.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+
+        <!-- Doctor 1: Vaidya Ramadas AR -->
+        <div class="doctor-card h-full fade-up">
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/doctor-vaidyagrama-ayurveda-village-indiavg-18_8.jpg" alt="Vaidya Ramadas AR - Medical Director at Vaidyagrama" class="w-28 h-28 rounded-full mx-auto mb-5 object-cover" style="border:3px solid #E8E0D5;" loading="lazy">
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:20px; font-weight:700; color:#2D5016;">Vaidya Ramadas AR</h3>
+          <p style="color:#D4841A; font-family:'Montserrat',sans-serif; font-size:13px; font-weight:600; margin:4px 0 12px;">Medical Director</p>
+          <div class="flex flex-wrap gap-2 justify-center mb-4">
+            <span class="chip" style="font-size:12px;">Psychiatry</span>
+            <span class="chip" style="font-size:12px;">Ophthalmology</span>
+          </div>
+          <p style="color:#4A4A4A; font-size:14px; line-height:1.7; margin-bottom:16px; text-align:left;">
+            Hails from Thrissur, Kerala. A long line of Ayurveda practitioners serving the community for more than half a century. M.S. in Psychotherapy and Counseling.
+          </p>
+          <a href="booking.html" class="btn-saffron text-sm">Book with Ramadas</a>
+        </div>
+
+        <!-- Doctor 2: Vaidya Ramanandan EK -->
+        <div class="doctor-card h-full fade-up">
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/ramanandan-vaidyagrama-ayurveda_orig.jpeg" alt="Vaidya Ramanandan EK - Medical Director at Vaidyagrama" class="w-28 h-28 rounded-full mx-auto mb-5 object-cover" style="border:3px solid #E8E0D5;" loading="lazy">
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:20px; font-weight:700; color:#2D5016;">Vaidya Ramanandan EK</h3>
+          <p style="color:#D4841A; font-family:'Montserrat',sans-serif; font-size:13px; font-weight:600; margin:4px 0 12px;">Medical Director</p>
+          <div class="flex flex-wrap gap-2 justify-center mb-4">
+            <span class="chip" style="font-size:12px;">Neurology</span>
+            <span class="chip" style="font-size:12px;">Lifestyle Diseases</span>
+            <span class="chip" style="font-size:12px;">Fertility</span>
+          </div>
+          <p style="color:#4A4A4A; font-size:14px; line-height:1.7; margin-bottom:16px; text-align:left;">
+            Third-generation Ayurveda physician. MBA in Hospital Administration. Expertise in neurological disorders, diabetes, gynecological concerns, mental health, arthritis.
+          </p>
+          <a href="booking.html" class="btn-saffron text-sm">Book with Ramanandan</a>
+        </div>
+
+        <!-- Doctor 3: Vaidya Harikrishnan KK -->
+        <div class="doctor-card h-full fade-up">
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/doctor-vaidyagrama-ayurveda-village-indiavg-50_5.jpg" alt="Vaidya Harikrishnan KK - Medical Director at Vaidyagrama" class="w-28 h-28 rounded-full mx-auto mb-5 object-cover" style="border:3px solid #E8E0D5;" loading="lazy">
+          <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:20px; font-weight:700; color:#2D5016;">Vaidya Harikrishnan KK</h3>
+          <p style="color:#D4841A; font-family:'Montserrat',sans-serif; font-size:13px; font-weight:600; margin:4px 0 12px;">Medical Director</p>
+          <div class="flex flex-wrap gap-2 justify-center mb-4">
+            <span class="chip" style="font-size:12px;">General Medicine</span>
+            <span class="chip" style="font-size:12px;">Pediatrics (Bala Chikitsa)</span>
+          </div>
+          <p style="color:#4A4A4A; font-size:14px; line-height:1.7; margin-bottom:16px; text-align:left;">
+            Over 30 years of clinical practice. Distinguished Ayurvedic lineage from Kerala. Graduated 1991 from Ayurveda College, Coimbatore.
+          </p>
+          <a href="booking.html" class="btn-saffron text-sm">Book with Harikrishnan</a>
+        </div>
+      </div>
+
+      <p style="text-align:center; margin-top:24px; color:#6B7280; font-family:'Montserrat',sans-serif; font-size:15px;">
+        + 3 more senior physicians on your care team &nbsp;|&nbsp; <a href="doctors.html" style="color:#D4841A; font-weight:600;">Meet the full team &rarr;</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS ==================== -->
+  <section style="background:#F0F4ED; padding:80px 0;">
+    <div class="max-w-6xl mx-auto px-4">
+
+      <!-- Section Header -->
+      <div class="text-center mb-6 fade-up">
+        <p class="section-label">Patient Stories</p>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(28px,4vw,42px); color:#2D5016; font-weight:700;">Voices of Healing — 2009 to 2025</h2>
+        <p style="font-family:'Montserrat',sans-serif; font-size:16px; color:#4A4A4A; margin-top:12px;">98+ Patient Testimonials from 30+ Countries</p>
+      </div>
+
+      <!-- Video Testimonials -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14 fade-up">
+        <!-- Video 1: Actor Dr. Charle testimonial -->
+        <div x-data="{ playing: false }" class="relative rounded-xl overflow-hidden aspect-video bg-black cursor-pointer group" @click="playing = true">
+          <template x-if="!playing">
+            <div class="relative w-full h-full">
+              <img src="https://img.youtube.com/vi/s6T-hBzn6Bk/hqdefault.jpg" alt="Actor Dr. Charle finds holistic healing at Vaidyagrama Ayurveda" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" loading="lazy">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-8 h-8 text-[#2D5016] ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+              <div class="absolute top-3 right-3 bg-red-600 rounded px-2 py-0.5 flex items-center gap-1">
+                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.35a8.16 8.16 0 004.77 1.52V7.42a4.85 4.85 0 01-1-.73z"/></svg>
+                <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; color:white;">YouTube</span>
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                <p style="font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; color:white;">Actor Dr. Charle's Healing Story</p>
+                <p style="font-family:'Montserrat',sans-serif; font-size:12px; color:rgba(255,255,255,0.7);">Click to watch &bull; 9 min</p>
+              </div>
+            </div>
+          </template>
+          <template x-if="playing">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/s6T-hBzn6Bk?autoplay=1&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </template>
+        </div>
+
+        <!-- Video 2: From Vaidyagrama to France -->
+        <div x-data="{ playing: false }" class="relative rounded-xl overflow-hidden aspect-video bg-black cursor-pointer group" @click="playing = true">
+          <template x-if="!playing">
+            <div class="relative w-full h-full">
+              <img src="https://img.youtube.com/vi/7l_RyisCG7E/hqdefault.jpg" alt="Patient from France shares her Ayurveda journey at Vaidyagrama" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" loading="lazy">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-8 h-8 text-[#2D5016] ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+              <div class="absolute top-3 right-3 bg-red-600 rounded px-2 py-0.5 flex items-center gap-1">
+                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.35a8.16 8.16 0 004.77 1.52V7.42a4.85 4.85 0 01-1-.73z"/></svg>
+                <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; color:white;">YouTube</span>
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                <p style="font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; color:white;">From Vaidyagrama to France</p>
+                <p style="font-family:'Montserrat',sans-serif; font-size:12px; color:rgba(255,255,255,0.7);">Click to watch &bull; 2 min</p>
+              </div>
+            </div>
+          </template>
+          <template x-if="playing">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/7l_RyisCG7E?autoplay=1&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </template>
+        </div>
+
+        <!-- Video 3: Western Doctor's Healing Journey -->
+        <div x-data="{ playing: false }" class="relative rounded-xl overflow-hidden aspect-video bg-black cursor-pointer group" @click="playing = true">
+          <template x-if="!playing">
+            <div class="relative w-full h-full">
+              <img src="https://img.youtube.com/vi/1Pfbn09gCeM/hqdefault.jpg" alt="Western medical doctor Dr Uma Daevi's Ayurveda healing journey" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" loading="lazy">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg class="w-8 h-8 text-[#2D5016] ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+              <div class="absolute top-3 right-3 bg-red-600 rounded px-2 py-0.5 flex items-center gap-1">
+                <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.35a8.16 8.16 0 004.77 1.52V7.42a4.85 4.85 0 01-1-.73z"/></svg>
+                <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; color:white;">YouTube</span>
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                <p style="font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; color:white;">A Doctor's Healing Journey</p>
+                <p style="font-family:'Montserrat',sans-serif; font-size:12px; color:rgba(255,255,255,0.7);">Click to watch &bull; 5 min</p>
+              </div>
+            </div>
+          </template>
+          <template x-if="playing">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/1Pfbn09gCeM?autoplay=1&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </template>
+        </div>
+      </div>
+
+      <p style="text-align:center; font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280; margin-bottom:8px;">
+        More patient stories on our <a href="https://www.youtube.com/@vaidyagramaayurvedavillage5701" target="_blank" rel="noopener" style="color:#D4841A; font-weight:600;">YouTube Channel &rarr;</a>
+      </p>
+
+      <!-- ── FEATURED TESTIMONIAL CAROUSEL ──────────────────────── -->
+      <div class="mt-16 mb-8" x-data="{
+        slide: 0,
+        total: 5,
+        autoTimer: null,
+        init() {
+          this.autoTimer = setInterval(() => { this.slide = (this.slide + 1) % this.total; }, 5000);
+        },
+        destroy() { clearInterval(this.autoTimer); },
+        go(n) { this.slide = n; clearInterval(this.autoTimer); this.autoTimer = setInterval(() => { this.slide = (this.slide + 1) % this.total; }, 5000); }
+      }">
+        <p style="text-align:center; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#D4841A; margin-bottom:8px;">Featured Stories</p>
+
+        <!-- Slides (grid overlay: all slides share the same grid cell, tallest one sets height) -->
+        <div class="relative overflow-hidden rounded-2xl" style="background:linear-gradient(135deg,#2D5016 0%,#3a6b1d 100%); display:grid;">
+
+          <!-- Slide 1 -->
+          <div x-show="slide===0" x-transition:enter="transition ease-out duration-400" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition duration-0" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="px-8 py-10 md:px-16 md:py-12" style="grid-area:1/1;">
+            <div style="font-family:'GFS Didot',Georgia,serif; font-size:48px; color:#D4841A; opacity:0.4; line-height:1; margin-bottom:4px;">"</div>
+            <p style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(17px,2.5vw,22px); color:white; line-height:1.75; font-style:italic; margin-bottom:20px; max-width:760px;">
+              The doctors, therapists, and staff treat you as a whole person — body, mind, and spirit. I came for my arthritis and left with a completely transformed life. Vaidyagrama is not a hospital; it is a healing village in every sense.
+            </p>
+            <div>
+              <div class="flex gap-0.5 mb-2">
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <p style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:15px; color:#D4841A;">Margaret H.</p>
+              <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.7);">United Kingdom &bull; Rheumatoid Arthritis</p>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div x-show="slide===1" x-transition:enter="transition ease-out duration-400" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition duration-0" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="px-8 py-10 md:px-16 md:py-12" style="grid-area:1/1; display:none;">
+            <div style="font-family:'GFS Didot',Georgia,serif; font-size:48px; color:#D4841A; opacity:0.4; line-height:1; margin-bottom:4px;">"</div>
+            <p style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(17px,2.5vw,22px); color:white; line-height:1.75; font-style:italic; margin-bottom:20px; max-width:760px;">
+              I had been suffering from chronic back pain for 12 years. After 21 days of Panchakarma at Vaidyagrama, the pain that controlled my life was gone. The Vaidyas here understand the root cause, not just the symptom.
+            </p>
+            <div class="flex items-center gap-3">
+              <div>
+                <p style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:15px; color:#D4841A;">Thomas B.</p>
+                <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.7);">Germany &bull; Chronic Back Pain &bull; 21-day Panchakarma</p>
+              </div>
+              <div class="ml-auto flex gap-1">
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div x-show="slide===2" x-transition:enter="transition ease-out duration-400" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition duration-0" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="px-8 py-10 md:px-16 md:py-12" style="grid-area:1/1; display:none;">
+            <div style="font-family:'GFS Didot',Georgia,serif; font-size:48px; color:#D4841A; opacity:0.4; line-height:1; margin-bottom:4px;">"</div>
+            <p style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(17px,2.5vw,22px); color:white; line-height:1.75; font-style:italic; margin-bottom:20px; max-width:760px;">
+              As a medical professional myself, I was skeptical. But the scientific depth of Ayurveda as practised here is extraordinary. The Vaidyas' knowledge surpassed my expectations entirely. I left recommending Vaidyagrama to my own patients.
+            </p>
+            <div class="flex items-center gap-3">
+              <div>
+                <p style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:15px; color:#D4841A;">Dr. Sarah M.</p>
+                <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.7);">USA &bull; Western Medical Doctor &bull; Wellness Retreat</p>
+              </div>
+              <div class="ml-auto flex gap-1">
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div x-show="slide===3" x-transition:enter="transition ease-out duration-400" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition duration-0" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="px-8 py-10 md:px-16 md:py-12" style="grid-area:1/1; display:none;">
+            <div style="font-family:'GFS Didot',Georgia,serif; font-size:48px; color:#D4841A; opacity:0.4; line-height:1; margin-bottom:4px;">"</div>
+            <p style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(17px,2.5vw,22px); color:white; line-height:1.75; font-style:italic; margin-bottom:20px; max-width:760px;">
+              This is not a luxury resort. This is a healing institution. The simplicity and the routine — early rising, meditation, meals, treatment, rest — is itself the medicine. I returned home a fundamentally different person.
+            </p>
+            <div class="flex items-center gap-3">
+              <div>
+                <p style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:15px; color:#D4841A;">Priya N.</p>
+                <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.7);">Canada &bull; Stress &amp; Burnout Recovery &bull; 14-day Stay</p>
+              </div>
+              <div class="ml-auto flex gap-1">
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div x-show="slide===4" x-transition:enter="transition ease-out duration-400" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition duration-0" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="px-8 py-10 md:px-16 md:py-12" style="grid-area:1/1; display:none;">
+            <div style="font-family:'GFS Didot',Georgia,serif; font-size:48px; color:#D4841A; opacity:0.4; line-height:1; margin-bottom:4px;">"</div>
+            <p style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(17px,2.5vw,22px); color:white; line-height:1.75; font-style:italic; margin-bottom:20px; max-width:760px;">
+              My blood sugar levels dropped dramatically within two weeks. The doctors and therapists at Vaidyagrama don't just treat your body — they heal your relationship with health itself.
+            </p>
+            <div class="flex items-center gap-3">
+              <div>
+                <p style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:15px; color:#D4841A;">Rahul V.</p>
+                <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.7);">Mumbai, India &bull; Type 2 Diabetes &bull; 28-day Program</p>
+              </div>
+              <div class="ml-auto flex gap-1">
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Prev / Next arrows -->
+          <div class="relative pointer-events-none" style="grid-area:1/1; z-index:10;">
+            <button @click="go((slide-1+total)%total)" class="pointer-events-auto absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/20 hover:bg-white/35 flex items-center justify-center transition-colors" aria-label="Previous testimonial">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            <button @click="go((slide+1)%total)" class="pointer-events-auto absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/20 hover:bg-white/35 flex items-center justify-center transition-colors" aria-label="Next testimonial">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Dot indicators -->
+        <div class="flex justify-center gap-2 mt-4">
+          <template x-for="i in total" :key="i">
+            <button @click="go(i-1)" :class="slide===i-1 ? 'bg-[#2D5016] w-6' : 'bg-[#C4956A] w-2'" class="h-2 rounded-full transition-all duration-300" :aria-label="'Go to testimonial '+(i)"></button>
+          </template>
+        </div>
+      </div>
+      <!-- ── END FEATURED CAROUSEL ──────────────────────────────── -->
+
+      <!-- Testimonial Wall -->
+      <div class="mt-14 fade-up" x-data="testimonialWall()">
+        <p style="text-align:center; font-family:'Montserrat',sans-serif; font-size:14px; color:#6B7280; margin-bottom:24px;">
+          Written testimonials from 16 years of healing
+        </p>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap gap-2 justify-center mb-10">
+          <button @click="filter='all'; showCount=12" :class="filter==='all' ? 'bg-[#2D5016] text-white border-[#2D5016]' : 'bg-white text-[#2D5016] border-[#E8E0D5]'" style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:600; padding:8px 18px; border-radius:20px; border-width:1.5px; transition:all 0.2s;">All</button>
+          <button @click="filter='international'; showCount=12" :class="filter==='international' ? 'bg-[#2D5016] text-white border-[#2D5016]' : 'bg-white text-[#2D5016] border-[#E8E0D5]'" style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:600; padding:8px 18px; border-radius:20px; border-width:1.5px; transition:all 0.2s;">International</button>
+          <button @click="filter='india'; showCount=12" :class="filter==='india' ? 'bg-[#2D5016] text-white border-[#2D5016]' : 'bg-white text-[#2D5016] border-[#E8E0D5]'" style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:600; padding:8px 18px; border-radius:20px; border-width:1.5px; transition:all 0.2s;">India</button>
+          <button @click="filter='chronic'; showCount=12" :class="filter==='chronic' ? 'bg-[#2D5016] text-white border-[#2D5016]' : 'bg-white text-[#2D5016] border-[#E8E0D5]'" style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:600; padding:8px 18px; border-radius:20px; border-width:1.5px; transition:all 0.2s;">Chronic Conditions</button>
+          <button @click="filter='wellness'; showCount=12" :class="filter==='wellness' ? 'bg-[#2D5016] text-white border-[#2D5016]' : 'bg-white text-[#2D5016] border-[#E8E0D5]'" style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:600; padding:8px 18px; border-radius:20px; border-width:1.5px; transition:all 0.2s;">Wellness &amp; Retreat</button>
+          <button @click="filter='cancer'; showCount=12" :class="filter==='cancer' ? 'bg-[#2D5016] text-white border-[#2D5016]' : 'bg-white text-[#2D5016] border-[#E8E0D5]'" style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:600; padding:8px 18px; border-radius:20px; border-width:1.5px; transition:all 0.2s;">Cancer Support</button>
+        </div>
+
+        <!-- Testimonial Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <template x-for="(t, index) in filtered" :key="index">
+            <div class="testimonial-card" x-data="{ expanded: false }">
+              <!-- 5-star rating -->
+              <div class="flex gap-0.5 mb-3">
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="w-4 h-4 text-[#D4841A]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <div style="padding-top:8px; margin-bottom:20px;">
+                <p style="font-family:'GFS Didot',Georgia,serif; font-size:16px; color:#2D5016; line-height:1.8; font-style:italic;">
+                  <template x-if="!expanded && t.quote.length > 120">
+                    <span>
+                      <span x-text="t.quote.substring(0, 120) + '...'"></span>
+                      <button @click.stop="expanded=true" style="color:#D4841A; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; background:none; border:none; cursor:pointer; margin-left:4px;">Read more</button>
+                    </span>
+                  </template>
+                  <template x-if="expanded || t.quote.length <= 120">
+                    <span>
+                      <span x-text="t.quote"></span>
+                      <button x-show="t.quote.length > 120" @click.stop="expanded=false" style="color:#D4841A; font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; background:none; border:none; cursor:pointer; margin-left:4px;">Read less</button>
+                    </span>
+                  </template>
+                </p>
+              </div>
+              <div style="border-top:1px solid #E8E0D5; padding-top:14px; margin-top:auto;">
+                <p style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:14px; color:#1A1A1A;" x-text="t.name"></p>
+                <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:#6B7280;" x-text="t.location"></p>
+                <span style="display:inline-block; margin-top:6px; font-family:'Montserrat',sans-serif; font-size:11px; font-weight:600; padding:3px 10px; border-radius:12px; background:#F0F4ED; color:#2D5016; text-transform:capitalize;" x-text="t.category"></span>
+              </div>
+            </div>
+          </template>
+        </div>
+
+        <!-- Load More -->
+        <div class="text-center mt-10" x-show="hasMore">
+          <button @click="loadMore()" class="btn-outline-green">Load More Testimonials</button>
+        </div>
+
+        <div class="text-center mt-8">
+          <a href="success-stories.html" style="color:#D4841A; font-family:'Montserrat',sans-serif; font-weight:700; font-size:15px; text-decoration:none;">
+            Read all testimonials from 2009–2025 &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Instagram Section -->
+      <div class="mt-20 text-center fade-up">
+        <p class="section-label">Social</p>
+        <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(22px,3vw,32px); color:#2D5016; font-weight:700; margin-bottom:8px;">Follow Our Healing Journey on Instagram</h3>
+        <p style="font-family:'Montserrat',sans-serif; font-size:14px; color:#6B7280; margin-bottom:24px;">@vaidyagramaayurveda</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <a href="https://www.instagram.com/vaidyagramaayurveda/" target="_blank" rel="noopener" class="relative rounded-xl overflow-hidden aspect-square group">
+            <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-ayurveda-village-indiavg-9.jpg" alt="Vaidyagrama campus on Instagram" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+              <svg class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/vaidyagramaayurveda/" target="_blank" rel="noopener" class="relative rounded-xl overflow-hidden aspect-square group">
+            <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-temple-1.jpg" alt="Vaidyagrama temple on Instagram" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+              <svg class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/vaidyagramaayurveda/" target="_blank" rel="noopener" class="relative rounded-xl overflow-hidden aspect-square group">
+            <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-nilkamal-blue-lotus.jpg" alt="Blue lotus at Vaidyagrama on Instagram" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+              <svg class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/vaidyagramaayurveda/" target="_blank" rel="noopener" class="relative rounded-xl overflow-hidden aspect-square group">
+            <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-deepasthambam-lightpole.jpg" alt="Vaidyagrama deepasthambam on Instagram" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+              <svg class="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </div>
+          </a>
+        </div>
+        <a href="https://www.instagram.com/vaidyagramaayurveda/" target="_blank" rel="noopener" class="btn-outline-green">Follow on Instagram &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== CANCER PROGRAM FEATURE ==================== -->
+  <section style="background:#2D5016; padding:80px 0;">
+    <div class="max-w-5xl mx-auto text-center px-4">
+      <p class="section-label mb-4 fade-up" style="color:#D4841A;">Integrative Oncology</p>
+      <h2 class="fade-up" style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(28px,4vw,44px); font-weight:700; color:white; margin-bottom:16px; line-height:1.3;">
+        Ayurveda-Based Cancer Support
+      </h2>
+      <p class="fade-up" style="font-family:'Montserrat',sans-serif; font-size:18px; color:rgba(255,255,255,0.85); max-width:560px; margin:0 auto 12px; line-height:1.8;">
+        Integrative care alongside conventional oncology — supporting immunity, managing side effects, and restoring the body's innate intelligence.
+      </p>
+      <p style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.6); margin-bottom:36px;">
+        This program complements — it does not replace — your oncologist's treatment plan.
+      </p>
+      <a href="cancer-program.html" style="background:#D4841A; color:white; font-family:'Montserrat',sans-serif; font-weight:700; padding:14px 36px; border-radius:6px; font-size:13px; letter-spacing:0.5px; text-transform:uppercase; display:inline-block; transition:background 0.2s;"
+         onmouseover="this.style.background='#b8701a'" onmouseout="this.style.background='#D4841A'">
+        Learn About Our Cancer Support Program &rarr;
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== PODCAST / VIDEO SERIES (D4) ==================== -->
+  <section style="background:#1A1A1A; padding:80px 0;">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-14 fade-up">
+        <span class="section-label" style="color:#D4841A;">Ayurveda Wisdom</span>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(28px,4vw,42px); color:white; font-weight:700; margin-bottom:12px;">Learn from the Masters</h2>
+        <p style="font-family:'Montserrat',sans-serif; font-size:15px; color:rgba(255,255,255,0.65); max-width:520px; margin:0 auto;">Classical Ayurveda wisdom, clinical insights, and healing conversations — directly from our senior physicians. New episodes every month.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <!-- Episode 1 -->
+        <div class="fade-up" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:12px; overflow:hidden;">
+          <div style="height:160px; position:relative; overflow:hidden;">
+            <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-treatment-room-2680_1.jpg" alt="What is Panchakarma - Ayurveda treatment room" class="w-full h-full object-cover" loading="lazy">
+            <div style="position:absolute; bottom:10px; right:10px; background:#D4841A; border-radius:4px; padding:4px 8px;">
+              <span style="font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; color:white;">EP 01</span>
+            </div>
+          </div>
+          <div style="padding:20px;">
+            <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:17px; color:white; margin-bottom:6px;">What is Panchakarma?</h4>
+            <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.55);">A physician's guide to the classical five-fold purification therapy.</p>
+          </div>
+        </div>
+        <!-- Episode 2 -->
+        <div class="fade-up" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:12px; overflow:hidden;">
+          <div style="height:160px; position:relative; overflow:hidden;">
+            <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-temple-2.jpg" alt="The Agni Connection - Digestive Fire in Ayurveda" class="w-full h-full object-cover" loading="lazy">
+            <div style="position:absolute; bottom:10px; right:10px; background:#D4841A; border-radius:4px; padding:4px 8px;">
+              <span style="font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; color:white;">EP 02</span>
+            </div>
+          </div>
+          <div style="padding:20px;">
+            <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:17px; color:white; margin-bottom:6px;">The Agni Connection — Your Digestive Fire</h4>
+            <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.55);">Understanding the role of Agni in health, disease, and healing.</p>
+          </div>
+        </div>
+        <!-- Episode 3 -->
+        <div class="fade-up" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:12px; overflow:hidden;">
+          <div style="height:160px; position:relative; overflow:hidden;">
+            <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-wall.jpg" alt="Ayurveda for Modern Life" class="w-full h-full object-cover" loading="lazy">
+            <div style="position:absolute; bottom:10px; right:10px; background:#D4841A; border-radius:4px; padding:4px 8px;">
+              <span style="font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; color:white;">EP 03</span>
+            </div>
+          </div>
+          <div style="padding:20px;">
+            <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:17px; color:white; margin-bottom:6px;">Ayurveda for Modern Life</h4>
+            <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.55);">Bridging ancient wisdom with contemporary wellness challenges.</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="https://www.youtube.com/channel/UCPOQdtK-vNO7x2Vt_ph3siw" target="_blank" rel="noopener" style="font-family:'Montserrat',sans-serif; font-size:14px; font-weight:700; color:#D4841A; text-decoration:none; display:inline-flex; align-items:center; gap:8px;">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          Watch more on our YouTube Channel &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TRAINING ACADEMY PREVIEW ==================== -->
+  <section style="background:#FAF7F2; padding:80px 0;">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12 fade-up">
+        <p class="section-label">For Practitioners</p>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(28px,4vw,42px); color:#2D5016; font-weight:700;">Vaidyagrama Training Academy</h2>
+        <p style="color:#4A4A4A; max-width:560px; margin:14px auto 0; font-size:16px; line-height:1.8;">
+          Learn classical Ayurveda from senior physicians with 180+ years of combined clinical experience. Courses for practitioners, doctors, therapists, and students.
+        </p>
+      </div>
+      <div class="flex flex-wrap gap-3 justify-center mb-10">
+        <a href="training.html" class="chip" style="font-size:14px; padding:10px 18px; cursor:pointer; text-decoration:none;">Tongue26</a>
+        <a href="training.html" class="chip" style="font-size:14px; padding:10px 18px; cursor:pointer; text-decoration:none;">Nutrition Program</a>
+        <a href="training.html" class="chip" style="font-size:14px; padding:10px 18px; cursor:pointer; text-decoration:none;">Agni & Diseases</a>
+        <a href="training.html" class="chip" style="font-size:14px; padding:10px 18px; cursor:pointer; text-decoration:none;">BhishagElite</a>
+        <a href="training.html" class="chip" style="font-size:14px; padding:10px 18px; cursor:pointer; text-decoration:none;">Therapist / Paricharaka Certification</a>
+        <a href="training.html" class="chip" style="font-size:14px; padding:10px 18px; cursor:pointer; text-decoration:none;">DoctorCoaching</a>
+        <a href="training.html" class="chip" style="font-size:14px; padding:10px 18px; cursor:pointer; text-decoration:none;">Mastery26</a>
+        <a href="training.html" class="chip" style="font-size:14px; padding:10px 18px; cursor:pointer; text-decoration:none;">Customised Courses</a>
+        <a href="training.html" class="chip" style="font-size:14px; padding:10px 18px; cursor:pointer; text-decoration:none;">Internship</a>
+      </div>
+      <div class="text-center">
+        <a href="training.html" class="btn-saffron">View Full Training Academy &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INTERNATIONAL AFFILIATES ==================== -->
+  <section style="background:#F0F4ED; padding:80px 0;">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-14 fade-up">
+        <p class="section-label">Global Network</p>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(28px,4vw,42px); color:#2D5016; font-weight:700;">International Affiliates</h2>
+        <p style="color:#4A4A4A; max-width:540px; margin:12px auto 0; font-size:16px; line-height:1.8;">Bringing Vaidyagrama's healing tradition to five countries across three continents.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+
+        <div class="program-card p-5 text-center fade-up">
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-ayurveda-village-indiavg-1.jpg" alt="Vaidyagrama Chennai affiliate" class="h-24 w-full object-cover mb-4" style="border-radius:8px;" loading="lazy">
+          <div style="font-size:24px; margin-bottom:4px;">&#127470;&#127475;</div>
+          <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:16px; font-weight:700; color:#2D5016;">Chennai</h4>
+          <p style="color:#6B7280; font-size:12px;">India</p>
+          <p style="color:#4A4A4A; font-size:12px; font-family:'Montserrat',sans-serif; margin-top:8px;">Ayurveda consultations &amp; retreats</p>
+        </div>
+
+        <div class="program-card p-5 text-center fade-up">
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-nilkamal-blue-lotus.jpg" alt="Vaidyagrama Goa affiliate" class="h-24 w-full object-cover mb-4" style="border-radius:8px;" loading="lazy">
+          <div style="font-size:24px; margin-bottom:4px;">&#127470;&#127475;</div>
+          <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:16px; font-weight:700; color:#2D5016;">Goa</h4>
+          <p style="color:#6B7280; font-size:12px;">India</p>
+          <p style="color:#4A4A4A; font-size:12px; font-family:'Montserrat',sans-serif; margin-top:8px;">Ayurveda consultations &amp; retreats</p>
+        </div>
+
+        <div class="program-card p-5 text-center fade-up">
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-temple-1.jpg" alt="Vaidyagrama Italy affiliate" class="h-24 w-full object-cover mb-4" style="border-radius:8px;" loading="lazy">
+          <div style="font-size:24px; margin-bottom:4px;">&#127470;&#127481;</div>
+          <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:16px; font-weight:700; color:#2D5016;">Italy</h4>
+          <p style="color:#6B7280; font-size:12px;">Europe</p>
+          <p style="color:#4A4A4A; font-size:12px; font-family:'Montserrat',sans-serif; margin-top:8px;">Ayurveda consultations &amp; retreats</p>
+        </div>
+
+        <div class="program-card p-5 text-center fade-up">
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-deepasthambam-lightpole.jpg" alt="Vaidyagrama United Kingdom affiliate" class="h-24 w-full object-cover mb-4" style="border-radius:8px;" loading="lazy">
+          <div style="font-size:24px; margin-bottom:4px;">&#127468;&#127463;</div>
+          <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:16px; font-weight:700; color:#2D5016;">United Kingdom</h4>
+          <p style="color:#6B7280; font-size:12px;">Europe</p>
+          <p style="color:#4A4A4A; font-size:12px; font-family:'Montserrat',sans-serif; margin-top:8px;">Ayurveda consultations &amp; retreats</p>
+        </div>
+
+        <div class="program-card p-5 text-center fade-up">
+          <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-temple-2.jpg" alt="Vaidyagrama Vietnam affiliate" class="h-24 w-full object-cover mb-4" style="border-radius:8px;" loading="lazy">
+          <div style="font-size:24px; margin-bottom:4px;">&#127483;&#127475;</div>
+          <h4 style="font-family:'GFS Didot',Georgia,serif; font-size:16px; font-weight:700; color:#2D5016;">Vietnam</h4>
+          <p style="color:#6B7280; font-size:12px;">Southeast Asia</p>
+          <p style="color:#4A4A4A; font-size:12px; font-family:'Montserrat',sans-serif; margin-top:8px;">Ayurveda consultations &amp; retreats</p>
+        </div>
+      </div>
+      <div class="text-center mt-10">
+        <a href="international.html" class="btn-outline-green">International Patient Services &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ACCORDION ==================== -->
+  <section style="background:#FAF7F2; padding:80px 0;" x-data="{ openFaq: null }">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="text-center mb-14 fade-up">
+        <p class="section-label">Questions & Answers</p>
+        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(28px,4vw,42px); color:#2D5016; font-weight:700;">Frequently Asked Questions</h2>
+      </div>
+
+      <!-- FAQ 1 -->
+      <div class="faq-item">
+        <button @click="openFaq = openFaq === 1 ? null : 1" class="w-full flex justify-between items-center text-left">
+          <span style="font-family:'GFS Didot',Georgia,serif; font-size:17px; font-weight:600; color:#2D5016;">What is Panchakarma and how long does it take?</span>
+          <svg :class="openFaq === 1 ? 'rotate-180' : ''" class="w-5 h-5 text-[#D4841A] flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div x-show="openFaq === 1" x-transition class="mt-4">
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.8;">Panchakarma is the classical Ayurvedic five-fold purification and rejuvenation therapy. The five core procedures — Vamana, Virechana, Basti, Nasya, and Raktamokshana — are selected based on your individual constitution (Prakriti) and imbalance (Vikriti). At Vaidyagrama, programs range from 2 to 8 weeks depending on your health condition and goals. Your physician will prescribe the duration after an initial consultation.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item">
+        <button @click="openFaq = openFaq === 2 ? null : 2" class="w-full flex justify-between items-center text-left">
+          <span style="font-family:'GFS Didot',Georgia,serif; font-size:17px; font-weight:600; color:#2D5016;">Is Vaidyagrama suitable for serious diseases like cancer?</span>
+          <svg :class="openFaq === 2 ? 'rotate-180' : ''" class="w-5 h-5 text-[#D4841A] flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div x-show="openFaq === 2" x-transition class="mt-4">
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.8;">Yes — our AyurSakthi Cancer Support Program offers integrative Ayurvedic care for patients undergoing chemotherapy, radiation, post-surgery recovery, and remission maintenance. <strong>This is complementary care — it works alongside your oncologist's treatment, not as a replacement.</strong> Our physicians are experienced in supporting cancer patients holistically. Please bring your medical reports when you consult with us.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item">
+        <button @click="openFaq = openFaq === 3 ? null : 3" class="w-full flex justify-between items-center text-left">
+          <span style="font-family:'GFS Didot',Georgia,serif; font-size:17px; font-weight:600; color:#2D5016;">Do you offer online consultations?</span>
+          <svg :class="openFaq === 3 ? 'rotate-180' : ''" class="w-5 h-5 text-[#D4841A] flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div x-show="openFaq === 3" x-transition class="mt-4">
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.8;">Yes. Our senior physicians offer online consultations via Google Meet, Zoom, Skype, and WhatsApp. You can book an initial or follow-up consultation directly through our <a href="booking.html" style="color:#D4841A; font-weight:600;">booking page</a>. We also offer a free 15-minute introductory chat on Google Meet for those who are not yet sure if Vaidyagrama is the right fit.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-item">
+        <button @click="openFaq = openFaq === 4 ? null : 4" class="w-full flex justify-between items-center text-left">
+          <span style="font-family:'GFS Didot',Georgia,serif; font-size:17px; font-weight:600; color:#2D5016;">What is the difference between a paid consultation and the free chat?</span>
+          <svg :class="openFaq === 4 ? 'rotate-180' : ''" class="w-5 h-5 text-[#D4841A] flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div x-show="openFaq === 4" x-transition class="mt-4">
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.8;">The free 15-minute chat is an informal conversation to help you understand if Vaidyagrama is a good fit for your situation. No diagnosis is given, no medical advice is provided. It is a no-pressure orientation session. A paid consultation (30 minutes) is a formal clinical interaction where our physician reviews your case, examines reports, and gives personalised guidance or a treatment prescription.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="faq-item">
+        <button @click="openFaq = openFaq === 5 ? null : 5" class="w-full flex justify-between items-center text-left">
+          <span style="font-family:'GFS Didot',Georgia,serif; font-size:17px; font-weight:600; color:#2D5016;">Do you accept international patients?</span>
+          <svg :class="openFaq === 5 ? 'rotate-180' : ''" class="w-5 h-5 text-[#D4841A] flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div x-show="openFaq === 5" x-transition class="mt-4">
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.8;">Absolutely. Vaidyagrama has welcomed guests from over 30 countries. We have international affiliates in Italy, UK, and Vietnam, and our team is experienced in guiding international patients through every step — from the initial online consultation to arrival support. Visit our <a href="international.html" style="color:#D4841A; font-weight:600;">International Patients</a> page for full details.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 6 -->
+      <div class="faq-item">
+        <button @click="openFaq = openFaq === 6 ? null : 6" class="w-full flex justify-between items-center text-left">
+          <span style="font-family:'GFS Didot',Georgia,serif; font-size:17px; font-weight:600; color:#2D5016;">What languages do your doctors speak?</span>
+          <svg :class="openFaq === 6 ? 'rotate-180' : ''" class="w-5 h-5 text-[#D4841A] flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div x-show="openFaq === 6" x-transition class="mt-4">
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.8;">Our doctors speak English, Tamil, Malayalam, Hindi, and Sanskrit. Translation support is available for select languages — please contact us in advance.</p>
+        </div>
+      </div>
+
+      <!-- FAQ 7 -->
+      <div class="faq-item" style="border-bottom:none;">
+        <button @click="openFaq = openFaq === 7 ? null : 7" class="w-full flex justify-between items-center text-left">
+          <span style="font-family:'GFS Didot',Georgia,serif; font-size:17px; font-weight:600; color:#2D5016;">Is accommodation included in treatment packages?</span>
+          <svg :class="openFaq === 7 ? 'rotate-180' : ''" class="w-5 h-5 text-[#D4841A] flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div x-show="openFaq === 7" x-transition class="mt-4">
+          <p style="color:#4A4A4A; font-size:15px; line-height:1.8;">Yes — in-person treatment packages at Vaidyagrama include accommodation in our 80-room, 120-bed facility, along with Ayurvedic meals prepared according to your dietary requirements. Room types range from Standard to Deluxe to Suite. Packages include accommodation, Ayurvedic meals, medications, daily yoga, morning prayers, satsangs, cooking classes, and weekly community dinners. Visit our <a href="pricing.html" style="color:#D4841A; font-weight:600;">Pricing page</a> for package details.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NEWSLETTER CTA ==================== -->
+  <section style="background:#D4841A; padding:80px 0;">
+    <div class="max-w-4xl mx-auto text-center px-4">
+      <span class="section-label" style="color:rgba(255,255,255,0.7);">Join 5,000+ Wellness Seekers</span>
+      <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(24px,3.5vw,38px); font-weight:700; color:white; margin-bottom:8px;">Ayurveda for Every Season</h2>
+      <p style="font-family:'Montserrat',sans-serif; font-size:15px; color:rgba(255,255,255,0.85); margin-bottom:32px;">Seasonal healing wisdom, physician insights, and exclusive program announcements — delivered gently, once a month.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start text-left">
+        <!-- Form -->
+        <div>
+          <form class="flex flex-col gap-3" onsubmit="return false;">
+            <input type="text" placeholder="Your name" class="form-input" style="padding:14px 18px; border-radius:6px; border:none; font-size:16px; outline:none; width:100%;" aria-label="Your name" />
+            <input type="email" inputmode="email" placeholder="Your email address" required class="form-input" style="padding:14px 18px; border-radius:6px; border:none; font-size:16px; outline:none; width:100%;" aria-label="Email address" />
+            <button type="submit" class="btn-outline-white" style="width:100%; padding:14px;">Subscribe — It's Free &rarr;</button>
+          </form>
+          <p style="font-family:'Montserrat',sans-serif; font-size:12px; color:rgba(255,255,255,0.55); margin-top:10px;">No spam. Unsubscribe anytime. We respect your privacy.</p>
+        </div>
+        <!-- What you'll receive -->
+        <div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; color:rgba(255,255,255,0.7); text-transform:uppercase; letter-spacing:1.5px; margin-bottom:14px;">What You'll Receive</p>
+          <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px;">
+            <li style="display:flex; gap:10px; align-items:flex-start; font-family:'Gentium Plus',Georgia,serif; font-size:15px; color:rgba(255,255,255,0.9);">
+              <span style="color:#2D5016; background:rgba(255,255,255,0.9); border-radius:50%; width:20px; height:20px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; flex-shrink:0; margin-top:2px;">&#10003;</span>
+              Seasonal Ayurveda health tips from our physicians
+            </li>
+            <li style="display:flex; gap:10px; align-items:flex-start; font-family:'Gentium Plus',Georgia,serif; font-size:15px; color:rgba(255,255,255,0.9);">
+              <span style="color:#2D5016; background:rgba(255,255,255,0.9); border-radius:50%; width:20px; height:20px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; flex-shrink:0; margin-top:2px;">&#10003;</span>
+              Early access to new programs &amp; training courses
+            </li>
+            <li style="display:flex; gap:10px; align-items:flex-start; font-family:'Gentium Plus',Georgia,serif; font-size:15px; color:rgba(255,255,255,0.9);">
+              <span style="color:#2D5016; background:rgba(255,255,255,0.9); border-radius:50%; width:20px; height:20px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; flex-shrink:0; margin-top:2px;">&#10003;</span>
+              Healing stories from our patient community
+            </li>
+            <li style="display:flex; gap:10px; align-items:flex-start; font-family:'Gentium Plus',Georgia,serif; font-size:15px; color:rgba(255,255,255,0.9);">
+              <span style="color:#2D5016; background:rgba(255,255,255,0.9); border-radius:50%; width:20px; height:20px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; flex-shrink:0; margin-top:2px;">&#10003;</span>
+              Exclusive subscriber-only retreat offers
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer style="background:#2D5016;" class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+        <!-- Logo & Tagline -->
+        <div>
+          <div class="mb-4">
+            <img src="logo-white.png" loading="lazy" alt="Vaidyagrama Ayurveda" style="height:60px; width:auto; display:block;">
+          </div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.65); line-height:1.7; margin-bottom:12px;">Sarve Bhavantu Sukhinah<br/>May all beings be happy.</p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:12px; color:rgba(255,255,255,0.5);">NABH-Accredited Ayurveda<br/>Hospital & Retreat</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:13px; letter-spacing:2px; text-transform:uppercase; color:#D4841A; margin-bottom:16px;">Quick Links</h4>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li style="margin-bottom:10px;"><a href="about.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">About Vaidyagrama</a></li>
+            <li style="margin-bottom:10px;"><a href="doctors.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Our Doctors</a></li>
+            <li style="margin-bottom:10px;"><a href="conditions.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Conditions We Treat</a></li>
+            <li style="margin-bottom:10px;"><a href="international.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">International Patients</a></li>
+            <li style="margin-bottom:10px;"><a href="success-stories.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Success Stories</a></li>
+            <li><a href="contact.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Programs -->
+        <div>
+          <h4 style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:13px; letter-spacing:2px; text-transform:uppercase; color:#D4841A; margin-bottom:16px;">Programs</h4>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li style="margin-bottom:10px;"><a href="treatments.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Panchakarma</a></li>
+            <li style="margin-bottom:10px;"><a href="cancer-program.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Cancer Support (AyurSakthi)</a></li>
+            <li style="margin-bottom:10px;"><a href="treatments.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">AyurOrtho</a></li>
+            <li style="margin-bottom:10px;"><a href="treatments.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">WellnessNext</a></li>
+            <li style="margin-bottom:10px;"><a href="treatments.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Summer Retreat</a></li>
+            <li><a href="training.html" style="font-family:'Montserrat',sans-serif; font-size:14px; color:rgba(255,255,255,0.75); text-decoration:none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">Training Academy</a></li>
+          </ul>
+        </div>
+
+        <!-- Connect & Visit -->
+        <div>
+          <h4 style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:13px; letter-spacing:2px; text-transform:uppercase; color:#D4841A; margin-bottom:16px;">Connect & Visit</h4>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.75); line-height:1.7; margin-bottom:12px;">
+            15 (1) Rottigoundanur Road,<br/>Thirumalayampalayam Panchayat,<br/>Coimbatore, Tamil Nadu 641105, India
+          </p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.75); margin-bottom:4px;">
+            <a href="tel:+914222364200" style="color:rgba(255,255,255,0.75); text-decoration:none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">+91 422 2364200</a>
+          </p>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.75); margin-bottom:16px;">
+            Toll-free: <a href="tel:18001232230" style="color:rgba(255,255,255,0.75); text-decoration:none;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.75)'">1800 1232 230</a>
+          </p>
+          <div class="flex gap-4">
+            <a href="https://instagram.com/vaidyagramaayurveda" target="_blank" rel="noopener" aria-label="Instagram" style="color:rgba(255,255,255,0.65); transition:color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://twitter.com/vaidyagrama" target="_blank" rel="noopener" aria-label="Twitter/X" style="color:rgba(255,255,255,0.65); transition:color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/PunarnavaCommunity" target="_blank" rel="noopener" aria-label="Facebook" style="color:rgba(255,255,255,0.65); transition:color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid rgba(255,255,255,0.15); padding-top:24px;" class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.5);">
+          &copy; 2025 Vaidyagrama Ayurveda. All rights reserved.
+        </p>
+        <div class="flex gap-6">
+          <a href="#" style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.5); text-decoration:none;" onmouseover="this.style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Privacy Policy</a>
+          <a href="#" style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.5); text-decoration:none;" onmouseover="this.style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Medical Disclaimer</a>
+          <a href="#" style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.5); text-decoration:none;" onmouseover="this.style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.color='rgba(255,255,255,0.5)'">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== A3: ANIMATED STAT COUNTERS ==================== -->
+  <script>
+  (function(){
+    const counters = document.querySelectorAll('.counter');
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // If user prefers reduced motion, skip animation and show final value immediately
+    if(prefersReduced){
+      counters.forEach(el => {
+        el.textContent = el.dataset.target + (el.dataset.suffix || '');
+      });
+      return;
+    }
+    const speed = 2000;
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = +el.dataset.target;
+        const suffix = el.dataset.suffix || '';
+        let start = 0;
+        const step = target / (speed / 16);
+        const timer = setInterval(() => {
+          start += step;
+          if(start >= target){ el.textContent = target + suffix; clearInterval(timer); return; }
+          el.textContent = Math.floor(start) + suffix;
+        }, 16);
+        observer.unobserve(el);
+      });
+    }, { threshold: 0.3 });
+    counters.forEach(c => observer.observe(c));
+  })();
+  </script>
+
+  <!-- ==================== A1: DOSHA QUIZ ALPINE COMPONENT ==================== -->
+  <script>
+  function doshaQuiz(){
+    return {
+      step: 0, answers: [],
+      result: { dosha:'', desc:'', program:'' },
+      addAnswer(d){ this.answers.push(d); if(this.answers.length===5) this.calcResult(); },
+      calcResult(){
+        const count = {vata:0,pitta:0,kapha:0};
+        this.answers.forEach(a=>count[a]++);
+        const dominant = Object.keys(count).reduce((a,b)=>count[a]>=count[b]?a:b);
+        const map = {
+          vata:{ dosha:'V\u0101ta (Air & Space)', desc:'You are creative, quick-thinking, and energetic \u2014 but prone to anxiety, dryness, and irregularity when out of balance. Your healing path calls for warmth, nourishment, and stillness.', program:'Panchakarma \u2014 Balancing & Rejuvenation (7\u201314 nights)'},
+          pitta:{ dosha:'Pitta (Fire & Water)', desc:'You are sharp, driven, and focused \u2014 but prone to inflammation, irritability, and burnout when imbalanced. Your healing path calls for cooling therapies and deep detoxification.', program:'Panchakarma \u2014 Detox & Cooling (14\u201321 nights)'},
+          kapha:{ dosha:'Kapha (Earth & Water)', desc:'You are stable, nurturing, and patient \u2014 but prone to sluggishness, weight gain, and congestion when imbalanced. Your healing path calls for stimulating therapies and metabolic reset.', program:'WellnessNext \u2014 Metabolic Cleanse & Vitality (7\u201314 nights)'},
+        };
+        this.result = map[dominant];
+      }
+    }
+  }
+  </script>
+
+  <!-- ==================== A2: PROGRAM FINDER ALPINE COMPONENT ==================== -->
+  <script>
+  function programFinder(){
+    return {
+      pfStep:0, pfAns:[],
+      pfResult:{name:'',desc:'',duration:'',bestFor:'',link:''},
+      calcPf(){
+        const [intent,duration,goal,exp] = this.pfAns;
+        if(intent==='training') { this.pfResult={name:'Training Academy Programs',desc:'Vaidyagrama offers intensive training programs for Ayurveda physicians, healthcare professionals, and therapists \u2014 from 2-day intensives to 6-month masterclasses.',duration:'2 days \u2013 6 months',bestFor:'Ayurveda physicians, doctors, therapists',link:'training.html'}; return; }
+        if(intent==='condition' && (goal==='pain')) { this.pfResult={name:'AyurOrtho \u2014 Orthopedic Program',desc:'A specialised Ayurvedic program for joint pain, spine disorders, arthritis, and structural conditions \u2014 combining classical Panchakarma with targeted orthopedic therapies.',duration:'14\u201328 nights',bestFor:'Joint/back/spine conditions',link:'treatments.html'}; return; }
+        if(intent==='condition' && goal==='chronic') { this.pfResult={name:'Panchakarma \u2014 Disease Management',desc:'Our senior physicians design a personalised Panchakarma protocol addressing the root cause of your condition \u2014 not just the symptoms. Typically 21\u201328 nights for complex cases.',duration:'21\u201328 nights',bestFor:'Chronic / complex conditions',link:'treatments.html'}; return; }
+        if(goal==='stress' || (intent==='wellness' && duration==='short')) { this.pfResult={name:'WellnessNext Retreat',desc:'A contemporary wellness retreat blending classical Ayurvedic wisdom with modern lifestyle science \u2014 ideal for stress, burnout, and sustainable wellbeing.',duration:'7\u201314 nights',bestFor:'Stress, burnout, prevention',link:'treatments.html'}; return; }
+        if(goal==='weight') { this.pfResult={name:'WellnessNext \u2014 Metabolic Cleanse',desc:'A structured program targeting weight management and metabolic reset through Panchakarma therapies, Ayurvedic diet, and lifestyle practices.',duration:'14\u201321 nights',bestFor:'Weight management',link:'treatments.html'}; return; }
+        this.pfResult={name:'Panchakarma \u2014 Rejuvenation',desc:'The classical five-fold detoxification and rejuvenation program \u2014 deeply cleansing, profoundly restorative. Tailored by our senior physicians to your unique constitution and goals.',duration:'14\u201321 nights',bestFor:'Deep detox & rejuvenation',link:'treatments.html'};
+      }
+    };
+  }
+  </script>
+
+  <!-- ==================== TESTIMONIAL WALL ALPINE COMPONENT ==================== -->
+  <script>
+  function testimonialWall() {
+    return {
+      filter: 'all',
+      showCount: 12,
+      testimonials: [
+        { name: 'Pamela Lilak', location: 'USA', quote: 'The devotion of the team towards patients is something I have never seen before. Every single person at Vaidyagrama works with such genuine care and compassion.', category: 'international' },
+        { name: 'Mona Agarwal', location: 'Canada', quote: 'Place heals emotionally, mentally, spiritually. I keep coming back. Vaidyagrama has become a sacred part of my healing journey that I return to again and again.', category: 'international' },
+        { name: 'Joanna Elizabeth Webber', location: 'UK', quote: 'True gem, authentic Ayurveda at its best, thanks to wonderful team. The physicians here practice Ayurveda with a depth and sincerity that is rare to find anywhere else.', category: 'international' },
+        { name: 'Sunder Ganesh', location: 'UAE', quote: 'All doubts and fears disappeared day one \u2014 feels like second home. The warmth and expertise of the medical team put me completely at ease from the moment I arrived.', category: 'international' },
+        { name: 'Linus Roache', location: 'USA', quote: 'Beginning of new health chapter \u2014 enlightening for body. My experience at Vaidyagrama opened my eyes to what true healing can look like when rooted in ancient wisdom.', category: 'wellness' },
+        { name: 'Rosalind Bannett', location: 'USA', quote: 'First Panchakarma in Ayurveda \u2014 blown away by care and simplicity. The entire process was explained with patience, and every treatment felt deeply intentional.', category: 'wellness' },
+        { name: 'Dr. Gerhild Tanew Iliitschew', location: 'Austria', quote: 'Left with less pain, more flexibility in body, mind, strengthened soul. As a medical doctor myself, I was impressed by the clinical rigor combined with holistic care.', category: 'chronic' },
+        { name: 'Salim Currimjee', location: 'Mauritius', quote: 'Fourth visit \u2014 physically, emotionally, spiritually feel cleansed. Each time I return, the healing goes deeper. Vaidyagrama is truly a place of transformation.', category: 'wellness' },
+        { name: 'Lukas Leonhard', location: 'USA', quote: 'Caring atmosphere and skilled doctors helped overcome long-standing health problems. The personalized approach and genuine concern for my wellbeing made all the difference.', category: 'chronic' },
+        { name: 'Jay Goodwin', location: 'USA', quote: 'Grace and level of service consistently high in seven decades of life. I have traveled the world and experienced many healing centres, but none compare to Vaidyagrama.', category: 'international' },
+        { name: 'David Elliot', location: 'France', quote: 'Gentle and loving care \u2014 consideration and dedication extraordinary. Every member of staff, from doctors to kitchen team, radiates genuine warmth and purpose.', category: 'wellness' },
+        { name: 'Jelena Rayner', location: 'London', quote: 'Dr. Ramanandan and Dr. Rajini showed great care. Therapist Bindumol experienced. The entire team worked together seamlessly to support my healing journey.', category: 'international' },
+        { name: 'Dr. Odile Marie Lhopitallier', location: 'France', quote: 'Impressed by kindness and competence of whole team at every level. The integration of medical expertise with heartfelt compassion is what sets this place apart.', category: 'international' },
+        { name: 'Shannon Neville', location: 'Australia', quote: 'Only wonderful things to say \u2014 truly magical. From the serene campus to the dedicated physicians, everything about Vaidyagrama exceeded my expectations.', category: 'wellness' },
+        { name: 'Cihan Kiroglu', location: 'Turkey', quote: 'Returned after 3 years \u2014 surrendered to healing. The trust I have in the Vaidyagrama team grows with each visit. Their wisdom and care are unmatched.', category: 'international' },
+        { name: 'Megan Coble', location: 'USA', quote: 'Held and cared for so lovingly \u2014 cleansed and renewed. I arrived exhausted and broken, and left feeling like a completely new person. Deeply grateful.', category: 'wellness' },
+        { name: 'Gary Sullivan', location: 'Lynchburg, Virginia', quote: 'Staff like family \u2014 learned lot about self at age 70. It is never too late to discover Ayurveda. Vaidyagrama showed me a whole new way of understanding my body.', category: 'international' },
+        { name: 'Mona Singh', location: 'USA', quote: 'World-recommended place \u2014 very life-changing. The depth of knowledge and healing available at Vaidyagrama is something everyone should experience at least once.', category: 'wellness' },
+        { name: 'Anjoli Marie Kumra', location: 'USA', quote: 'Gut and colon feel better \u2014 eczema rash cleared up. After years of struggling with digestive issues and skin problems, Panchakarma at Vaidyagrama finally brought relief.', category: 'chronic' },
+        { name: 'Benjamin Bernstein', location: 'Oakland', quote: 'Thanks and blessings to the "We world" of Vaidyagrama. The community spirit here is unlike anything I have experienced. Healing happens collectively.', category: 'wellness' },
+        { name: 'Leila Stuart & Michael Weiner', location: 'Canada', quote: 'Each time I come feel like coming home to loving family. The bonds we have formed with the doctors and staff are deep and lasting. Vaidyagrama is home.', category: 'international' },
+        { name: 'Anne Sophie Zimmer', location: 'Luxembourg', quote: 'Transformative \u2014 unwavering love, healing potential, and guidance. My stay at Vaidyagrama was a turning point in my life. I left with clarity and renewed purpose.', category: 'wellness' },
+        { name: 'Vandana Shah, Ankita Kumar & Ashita Thaker', location: 'Switzerland', quote: '19 days of pure joy and bliss \u2014 first Panchakarma here. We came as friends and left as a healed family. The experience bonded us in ways we never expected.', category: 'wellness' },
+        { name: 'Arnd Amand', location: 'Belgium', quote: '5th time here! Love place and people. There is a reason I keep returning. Vaidyagrama delivers consistent, excellent Ayurvedic care every single time.', category: 'international' },
+        { name: 'Geoffrey Jan Sanne', location: 'Belgium', quote: 'Dedicated, truthful, compassionate medical team \u2014 full love. The physicians here practice with an integrity and devotion that inspires deep trust and healing.', category: 'international' },
+        { name: 'Laurent Debacker', location: 'Mauritius', quote: 'Grateful for exceptional medicines, unwavering support, healing and harmony. Every aspect of care at Vaidyagrama reflects a deep understanding of the healing arts.', category: 'chronic' },
+        { name: 'Koneru Sathyanarayanan', location: 'India', quote: 'Homely climate with greenery helped speedy recovery. The natural setting of Vaidyagrama combined with expert medical care created the perfect environment for healing.', category: 'india' },
+        { name: 'Suchitra Sharma', location: 'India', quote: 'Home away from home \u2014 inspired to follow Ayurveda as life part. My stay at Vaidyagrama completely changed my perspective on health and daily living.', category: 'india' },
+        { name: 'Ashok Kumar', location: 'India', quote: 'Very special place for genuine healing for body under one roof. The comprehensive approach to treatment at Vaidyagrama addresses every dimension of wellness.', category: 'india' },
+        { name: 'Trinayana Gopinath', location: 'India', quote: 'The staff\'s care and kindness made me feel like I was at home. From admission to discharge, every interaction was filled with warmth and professionalism.', category: 'india' }
+      ],
+      get filtered() {
+        let t = this.filter === 'all' ? this.testimonials : this.testimonials.filter(t => t.category === this.filter);
+        return t.slice(0, this.showCount);
+      },
+      get hasMore() {
+        let t = this.filter === 'all' ? this.testimonials : this.testimonials.filter(t => t.category === this.filter);
+        return this.showCount < t.length;
+      },
+      loadMore() { this.showCount += 12; }
+    }
+  }
+  </script>
+
+  <!-- ==================== SCROLL ANIMATIONS ==================== -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // ── Fade-up scroll animations ──────────────────────────────
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // ── Sticky "Book Now" CTA — appears after scrolling 40% of page ──
+    const stickyBar = document.getElementById('sticky-book-cta');
+    if (stickyBar) {
+      const showThreshold = 0.40;
+      window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+        if (scrolled > showThreshold) {
+          stickyBar.classList.add('visible');
+        } else {
+          stickyBar.classList.remove('visible');
+        }
+      }, { passive: true });
+    }
+  });
+  </script>
+
+  <!-- ==================== STICKY BOOK NOW CTA BAR ==================== -->
+  <div id="sticky-book-cta" role="complementary" aria-label="Quick booking CTA">
+    <div class="flex items-center gap-3">
+      <div>
+        <p style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:14px; color:white; margin:0;">Ready to Begin Your Healing Journey?</p>
+        <p style="font-family:'Montserrat',sans-serif; font-size:12px; color:rgba(255,255,255,0.75); margin:0;">Free 15-minute consultation with our Vaidyas</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="booking.html" style="background:#D4841A; color:white; font-family:'Montserrat',sans-serif; font-weight:700; padding:10px 24px; border-radius:6px; font-size:13px; letter-spacing:0.5px; text-transform:uppercase; white-space:nowrap; transition:background 0.2s;"
+         onmouseover="this.style.background='#b8701a'" onmouseout="this.style.background='#D4841A'">
+        Book Free Consultation &rarr;
+      </a>
+      <button onclick="document.getElementById('sticky-book-cta').style.display='none'" style="background:none; border:none; color:rgba(255,255,255,0.5); cursor:pointer; font-size:20px; line-height:1; padding:4px 6px;" aria-label="Dismiss">&#x2715;</button>
+    </div>
+  </div>
+
+  <!-- ==================== WHATSAPP FLOAT BUTTON ==================== -->
+  <div class="whatsapp-float">
+    <div class="whatsapp-tooltip">Chat with us</div>
+    <a href="https://wa.me/914222364200" target="_blank" rel="noopener" class="whatsapp-btn" aria-label="Chat with Vaidyagrama on WhatsApp">
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="white" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 2C8.373 2 3 7.373 3 14c0 2.385.668 4.61 1.832 6.5L3 28l7.75-1.808A11.952 11.952 0 0015 27c6.627 0 12-5.373 12-12S21.627 2 15 2zm0 21.5c-1.98 0-3.83-.57-5.39-1.55l-.38-.23-4.6 1.07 1.1-4.45-.25-.4A9.467 9.467 0 015.5 14C5.5 8.753 9.753 4.5 15 4.5S24.5 8.753 24.5 14 20.247 23.5 15 23.5zm5.195-7.13c-.285-.143-1.686-.832-1.948-.927-.262-.095-.452-.143-.643.143-.19.285-.737.927-.904 1.117-.166.19-.333.214-.618.071-.285-.143-1.203-.443-2.29-1.414-.846-.755-1.417-1.687-1.583-1.972-.166-.285-.018-.439.125-.581.128-.127.285-.333.428-.5.143-.166.19-.285.285-.476.095-.19.047-.357-.024-.5-.071-.143-.643-1.55-.881-2.12-.232-.557-.468-.481-.643-.49l-.548-.01c-.19 0-.5.071-.762.357-.261.285-1 .976-1 2.38 0 1.403 1.024 2.758 1.167 2.948.143.19 2.016 3.079 4.886 4.317.683.295 1.216.471 1.631.603.685.218 1.31.187 1.803.113.55-.082 1.686-.689 1.924-1.354.238-.666.238-1.236.167-1.354-.071-.119-.261-.19-.548-.333z"/>
+      </svg>
+    </a>
+  </div>
+
+  <script src="chat-widget.js" defer></script>
+</body>
+</html>

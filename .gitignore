@@ -1,0 +1,36 @@
+# Environment variables — NEVER commit
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# OS files
+.DS_Store
+Thumbs.db
+*.log
+
+# IDE & Editor directories
+.agent/
+.claude/
+.codebuddy/
+.codex/
+.continue/
+.cursor/
+.gemini/
+.kiro/
+.opencode/
+.qoder/
+.roo/
+.trae/
+.windsurf/
+.vscode/
+.idea/
+
+# Build & Cache
+dist/
+build/
+.cache/
+.netlify/

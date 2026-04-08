@@ -1,0 +1,2241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaidyagrama Ayurveda — Website Complete Guide</title>
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: #FAF7F2;
+  color: #1a1a1a;
+  line-height: 1.7;
+}
+
+/* ===== BRAND COLORS ===== */
+:root {
+  --green: #2D5016;
+  --green-light: #3d6b1f;
+  --green-pale: #eef3e8;
+  --saffron: #D4841A;
+  --saffron-pale: #fdf3e3;
+  --cream: #FAF7F2;
+  --cream-dark: #f0ebe2;
+  --sandstone: #C4956A;
+  --text: #1a1a1a;
+  --text-muted: #555;
+  --border: #ddd5c8;
+  --urgent: #c0392b;
+  --urgent-bg: #fdf2f2;
+  --high: #d4841a;
+  --high-bg: #fdf3e3;
+  --medium: #2980b9;
+  --medium-bg: #eaf4fb;
+  --nice: #27ae60;
+  --nice-bg: #eafaf1;
+  --sidebar-width: 270px;
+}
+
+/* ===== LAYOUT ===== */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: var(--sidebar-width);
+  background: var(--green);
+  color: #fff;
+  position: fixed;
+  top: 0; left: 0;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 100;
+  padding: 0 0 40px 0;
+  flex-shrink: 0;
+}
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 2px; }
+.sidebar-header {
+  background: #1e3810;
+  padding: 24px 20px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.sidebar-logo {
+  font-family: Georgia, serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #D4841A;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+.sidebar-sub {
+  font-size: 10px;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.sidebar nav { padding: 16px 0; }
+.sidebar-section-label {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.35);
+  padding: 12px 20px 4px;
+  font-weight: 600;
+}
+.sidebar a {
+  display: block;
+  padding: 7px 20px;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 13px;
+  transition: all 0.15s;
+  border-left: 3px solid transparent;
+}
+.sidebar a:hover {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  border-left-color: #D4841A;
+}
+.sidebar a.sub {
+  padding-left: 32px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+}
+.sidebar a.sub:hover { color: rgba(255,255,255,0.9); }
+
+/* ===== MAIN CONTENT ===== */
+.main {
+  margin-left: var(--sidebar-width);
+  flex: 1;
+  min-width: 0;
+}
+
+/* ===== DOCUMENT HEADER ===== */
+.doc-header {
+  background: linear-gradient(135deg, #2D5016 0%, #1e3810 50%, #3d6b1f 100%);
+  color: #fff;
+  padding: 60px 60px 50px;
+  position: relative;
+  overflow: hidden;
+}
+.doc-header::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(212,132,26,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+.doc-header::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; left: 40%;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(212,132,26,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.doc-meta {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 1;
+}
+.doc-badge {
+  background: rgba(212,132,26,0.25);
+  border: 1px solid rgba(212,132,26,0.4);
+  color: #f0c060;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+.doc-header h1 {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 1;
+}
+.doc-header h1 span { color: #D4841A; }
+.doc-header .subtitle {
+  font-size: 17px;
+  color: rgba(255,255,255,0.75);
+  max-width: 600px;
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+}
+.doc-actions {
+  margin-top: 32px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+.btn-print {
+  background: #D4841A;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-print:hover { background: #b8711a; }
+.btn-outline {
+  background: transparent;
+  color: rgba(255,255,255,0.8);
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-outline:hover { background: rgba(255,255,255,0.1); color: #fff; }
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 48px 60px;
+  border-bottom: 1px solid var(--border);
+}
+.section:last-child { border-bottom: none; }
+.section-green { background: var(--green-pale); }
+.section-saffron { background: var(--saffron-pale); }
+.section-cream { background: var(--cream); }
+.section-white { background: #fff; }
+
+.section-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--saffron);
+  margin-bottom: 8px;
+}
+.section-title {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-weight: normal;
+  color: var(--green);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.section-intro {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  max-width: 680px;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h2 {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  color: var(--green);
+  font-weight: normal;
+  margin: 32px 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+}
+h2:first-child { margin-top: 0; }
+h3 {
+  font-family: Georgia, serif;
+  font-size: 17px;
+  color: var(--green);
+  font-weight: bold;
+  margin: 24px 0 8px;
+}
+h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 16px 0 6px;
+}
+p { margin-bottom: 14px; font-size: 15px; color: var(--text); }
+p:last-child { margin-bottom: 0; }
+ul, ol { padding-left: 22px; margin-bottom: 14px; }
+li { font-size: 14px; margin-bottom: 5px; color: var(--text); }
+code {
+  background: #f0ebe2;
+  border: 1px solid #ddd5c8;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  color: #2D5016;
+}
+pre {
+  background: #1e2a1a;
+  color: #c8e6a0;
+  border-radius: 8px;
+  padding: 16px 20px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  overflow-x: auto;
+  margin: 12px 0;
+  line-height: 1.6;
+}
+strong { color: var(--green); }
+
+/* ===== CARDS & BOXES ===== */
+.card-grid {
+  display: grid;
+  gap: 16px;
+}
+.card-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.card-grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+}
+.card-green {
+  background: var(--green-pale);
+  border-color: #c5d9b0;
+}
+.card-saffron {
+  background: var(--saffron-pale);
+  border-color: #f0d0a0;
+}
+
+.info-box {
+  border-left: 4px solid var(--green);
+  background: var(--green-pale);
+  padding: 14px 18px;
+  border-radius: 0 8px 8px 0;
+  margin: 16px 0;
+}
+.info-box.saffron {
+  border-left-color: var(--saffron);
+  background: var(--saffron-pale);
+}
+.info-box.urgent {
+  border-left-color: var(--urgent);
+  background: var(--urgent-bg);
+}
+
+/* ===== PRIORITY BADGES ===== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+.badge-urgent { background: #fde8e8; color: #c0392b; border: 1px solid #f5b7b1; }
+.badge-high { background: #fdf3e3; color: #b7770d; border: 1px solid #f0c060; }
+.badge-medium { background: #eaf4fb; color: #1a6a99; border: 1px solid #aed6f1; }
+.badge-nice { background: #eafaf1; color: #1e8449; border: 1px solid #a9dfbf; }
+
+/* ===== PAGE LIST ===== */
+.page-list { list-style: none; padding: 0; }
+.page-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: #fff;
+  align-items: flex-start;
+}
+.page-num {
+  background: var(--green);
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.page-info { flex: 1; min-width: 0; }
+.page-filename {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--saffron);
+  margin-bottom: 3px;
+}
+.page-title { font-weight: 700; font-size: 14px; color: var(--green); margin-bottom: 4px; }
+.page-desc { font-size: 13px; color: var(--text-muted); }
+
+/* ===== CONTENT BLOCKS (confirmed/needed) ===== */
+.content-block {
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+}
+.confirmed-block {
+  background: #eafaf1;
+  border: 1px solid #a9dfbf;
+}
+.needed-block {
+  background: #fdf3e3;
+  border: 1px solid #f0d0a0;
+}
+.block-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.confirmed-block .block-label { color: #1e8449; }
+.needed-block .block-label { color: #b7770d; }
+.dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot-green { background: #27ae60; }
+.dot-saffron { background: #D4841A; }
+.content-block ul { margin: 0; padding-left: 18px; }
+.content-block li { font-size: 13px; margin-bottom: 4px; }
+
+/* ===== FEATURE CARDS ===== */
+.feature-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+.feature-id {
+  display: inline-block;
+  background: var(--green);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+.feature-card h3 { margin-top: 0; font-size: 16px; }
+.feature-card p { font-size: 14px; }
+.where-tag {
+  display: inline-block;
+  background: var(--saffron-pale);
+  border: 1px solid #f0d0a0;
+  color: var(--saffron);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* ===== TABLE ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin: 16px 0;
+}
+th {
+  background: var(--green);
+  color: #fff;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+tr:nth-child(even) td { background: #faf7f2; }
+tr:last-child td { border-bottom: none; }
+
+/* ===== STEP LIST ===== */
+.steps { list-style: none; padding: 0; counter-reset: step; }
+.steps li {
+  counter-increment: step;
+  display: flex;
+  gap: 14px;
+  margin-bottom: 14px;
+  align-items: flex-start;
+}
+.steps li::before {
+  content: counter(step);
+  background: var(--saffron);
+  color: #fff;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.steps li span { font-size: 14px; padding-top: 3px; }
+
+/* ===== QUICK REF CARD ===== */
+.quick-ref {
+  background: linear-gradient(135deg, #1e3810, #2D5016);
+  color: #fff;
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-top: 24px;
+}
+.quick-ref h3 { color: #D4841A; font-family: Georgia, serif; margin-bottom: 20px; }
+.quick-ref-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.qr-item label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.5);
+  display: block;
+  margin-bottom: 3px;
+}
+.qr-item .val {
+  font-size: 13px;
+  color: rgba(255,255,255,0.9);
+  font-family: 'Courier New', monospace;
+}
+.color-dot {
+  display: inline-block;
+  width: 12px; height: 12px;
+  border-radius: 3px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+/* ===== TOC ===== */
+.toc-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px 28px;
+  margin-bottom: 32px;
+}
+.toc-card h3 {
+  font-family: Georgia, serif;
+  font-size: 15px;
+  color: var(--green);
+  margin: 0 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.toc-list { list-style: none; padding: 0; columns: 2; gap: 32px; }
+.toc-list li { margin-bottom: 8px; break-inside: avoid; }
+.toc-list a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.toc-list a:hover { color: var(--saffron); }
+.toc-num {
+  background: var(--green);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ===== HOSTING OPTION CARDS ===== */
+.hosting-card {
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 22px 24px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.hosting-card.recommended {
+  border-color: var(--green);
+  background: var(--green-pale);
+}
+.hosting-badge {
+  position: absolute;
+  top: -12px; right: 20px;
+  background: var(--green);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 3px 12px;
+  border-radius: 12px;
+}
+.hosting-card h3 { margin-top: 0; }
+
+/* ===== CHECKLIST ===== */
+.checklist { list-style: none; padding: 0; }
+.checklist li {
+  display: flex;
+  gap: 10px;
+  padding: 6px 0;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border);
+}
+.checklist li:last-child { border-bottom: none; }
+.check-icon {
+  width: 20px; height: 20px;
+  background: var(--green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+/* ===== PRINT ===== */
+@media print {
+  .sidebar { display: none !important; }
+  .main { margin-left: 0 !important; }
+  .doc-actions { display: none !important; }
+  .doc-header { background: #2D5016 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .section { padding: 28px 32px; }
+  body { font-size: 13px; }
+  h2 { font-size: 18px; }
+  .card-grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .toc-list { columns: 1; }
+  .quick-ref-grid { grid-template-columns: repeat(2, 1fr); }
+  a { color: inherit; text-decoration: none; }
+  pre { white-space: pre-wrap; word-break: break-all; }
+  .hosting-card { break-inside: avoid; }
+  .feature-card { break-inside: avoid; }
+}
+
+@media (max-width: 900px) {
+  .sidebar { display: none; }
+  .main { margin-left: 0; }
+  .doc-header { padding: 36px 24px 28px; }
+  .doc-header h1 { font-size: 26px; }
+  .section { padding: 32px 24px; }
+  .card-grid-2, .card-grid-3 { grid-template-columns: 1fr; }
+  .toc-list { columns: 1; }
+  .quick-ref-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== SIDEBAR ===== -->
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">Vaidyagrama Ayurveda</div>
+    <div class="sidebar-sub">Website Complete Guide — v1.0</div>
+  </div>
+  <nav>
+    <div class="sidebar-section-label">Document</div>
+    <a href="#overview-intro">Introduction</a>
+    <a href="#toc">Table of Contents</a>
+
+    <div class="sidebar-section-label">Section 1 — Overview</div>
+    <a href="#s1">Website Overview</a>
+    <a href="#s1-pages">12 Pages</a>
+    <a href="#s1-files">Supporting Files</a>
+    <a href="#s1-tech">Technical Stack</a>
+
+    <div class="sidebar-section-label">Section 2 — Page Content</div>
+    <a href="#s2">All Page Content</a>
+    <a href="#s2-index" class="sub">Homepage</a>
+    <a href="#s2-about" class="sub">About</a>
+    <a href="#s2-doctors" class="sub">Doctors</a>
+    <a href="#s2-treatments" class="sub">Treatments</a>
+    <a href="#s2-cancer" class="sub">AyurSakthi</a>
+    <a href="#s2-conditions" class="sub">30 Conditions</a>
+    <a href="#s2-pricing" class="sub">Pricing</a>
+    <a href="#s2-booking" class="sub">Booking</a>
+    <a href="#s2-contact" class="sub">Contact</a>
+    <a href="#s2-training" class="sub">Training</a>
+    <a href="#s2-international" class="sub">International</a>
+    <a href="#s2-stories" class="sub">Success Stories</a>
+
+    <div class="sidebar-section-label">Section 3 — Features</div>
+    <a href="#s3">15 New Features</a>
+    <a href="#s3-interactive" class="sub">Interactive</a>
+    <a href="#s3-trust" class="sub">Trust & Credibility</a>
+    <a href="#s3-booking" class="sub">Booking & Conversion</a>
+    <a href="#s3-content" class="sub">Content Features</a>
+    <a href="#s3-global" class="sub">Global Features</a>
+
+    <div class="sidebar-section-label">Section 4 — How To</div>
+    <a href="#s4">Update Content</a>
+    <a href="#s4-text" class="sub">Change Text</a>
+    <a href="#s4-photos" class="sub">Add Photos</a>
+    <a href="#s4-contact-info" class="sub">Contact Info</a>
+    <a href="#s4-doctors" class="sub">Add a Doctor</a>
+    <a href="#s4-pricing" class="sub">Update Pricing</a>
+
+    <div class="sidebar-section-label">Section 5 — Placeholders</div>
+    <a href="#s5">Master Placeholder List</a>
+    <a href="#s5-urgent" class="sub">Urgent</a>
+    <a href="#s5-high" class="sub">High Priority</a>
+    <a href="#s5-medium" class="sub">Medium Priority</a>
+    <a href="#s5-nice" class="sub">Nice to Have</a>
+
+    <div class="sidebar-section-label">Section 6 — Hosting</div>
+    <a href="#s6">Hosting on Netlify / Weebly</a>
+    <a href="#s6-netlify" class="sub">Netlify (Recommended)</a>
+    <a href="#s6-weebly" class="sub">Weebly Options</a>
+    <a href="#s6-update" class="sub">Updating Live Site</a>
+
+    <div class="sidebar-section-label">Section 7 — Maintenance</div>
+    <a href="#s7">Maintenance & SEO</a>
+    <a href="#s7-schedule" class="sub">Update Schedule</a>
+    <a href="#s7-seo" class="sub">SEO Checklist</a>
+    <a href="#s7-analytics" class="sub">Google Analytics</a>
+    <a href="#s7-backup" class="sub">Backups</a>
+
+    <div class="sidebar-section-label">Section 8 — Support</div>
+    <a href="#s8">Contact & Quick Reference</a>
+  </nav>
+</aside>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main class="main">
+
+<!-- ===== DOCUMENT HEADER ===== -->
+<div class="doc-header" id="overview-intro">
+  <div class="doc-meta">
+    <span class="doc-badge">March 2026</span>
+    <span class="doc-badge">Version 1.0</span>
+    <span class="doc-badge">Confidential — Client Use Only</span>
+  </div>
+  <h1>Vaidyagrama Ayurveda —<br><span>Website Complete Guide</span></h1>
+  <p class="subtitle">Everything your team needs to manage, update, and grow your website — from adding photos to going live and beyond.</p>
+  <div class="doc-actions">
+    <button class="btn-print" onclick="window.print()">Print This Guide</button>
+    <a href="#toc" class="btn-outline">Jump to Contents</a>
+    <a href="#s5-urgent" class="btn-outline">Urgent Placeholders</a>
+  </div>
+</div>
+
+<!-- ===== TABLE OF CONTENTS ===== -->
+<div class="section section-cream" id="toc">
+  <div class="section-eyebrow">Navigation</div>
+  <div class="section-title">Table of Contents</div>
+  <p class="section-intro">This guide covers everything about your new 12-page website. Click any item to jump directly to that section.</p>
+
+  <div class="toc-card">
+    <h3>All Sections at a Glance</h3>
+    <ul class="toc-list">
+      <li><a href="#s1"><span class="toc-num">1</span>Website Overview — Pages, Files & Tech Stack</a></li>
+      <li><a href="#s2"><span class="toc-num">2</span>Page-by-Page Content — What's Done &amp; Needed</a></li>
+      <li><a href="#s2-index"><span class="toc-num">2a</span>Homepage (index.html)</a></li>
+      <li><a href="#s2-about"><span class="toc-num">2b</span>About Page (about.html)</a></li>
+      <li><a href="#s2-doctors"><span class="toc-num">2c</span>Doctors Page</a></li>
+      <li><a href="#s2-treatments"><span class="toc-num">2d</span>Treatments Page</a></li>
+      <li><a href="#s2-cancer"><span class="toc-num">2e</span>Cancer Support (AyurSakthi)</a></li>
+      <li><a href="#s2-conditions"><span class="toc-num">2f</span>30 Conditions Page</a></li>
+      <li><a href="#s2-pricing"><span class="toc-num">2g</span>Pricing Page</a></li>
+      <li><a href="#s2-booking"><span class="toc-num">2h</span>Booking Page</a></li>
+      <li><a href="#s2-contact"><span class="toc-num">2i</span>Contact Page</a></li>
+      <li><a href="#s2-training"><span class="toc-num">2j</span>Training Academy</a></li>
+      <li><a href="#s2-international"><span class="toc-num">2k</span>International Patients</a></li>
+      <li><a href="#s2-stories"><span class="toc-num">2l</span>Success Stories</a></li>
+      <li><a href="#s3"><span class="toc-num">3</span>15 New Features Explained</a></li>
+      <li><a href="#s4"><span class="toc-num">4</span>How to Update Content</a></li>
+      <li><a href="#s5"><span class="toc-num">5</span>Placeholder Master List</a></li>
+      <li><a href="#s6"><span class="toc-num">6</span>Hosting on Netlify / Weebly</a></li>
+      <li><a href="#s7"><span class="toc-num">7</span>Website Maintenance &amp; SEO</a></li>
+      <li><a href="#s8"><span class="toc-num">8</span>Contact, Support &amp; Quick Reference</a></li>
+    </ul>
+  </div>
+
+  <div class="info-box saffron">
+    <strong>How to use this guide:</strong> Read Sections 1–2 first to understand what has been built. Then review Section 5 (Placeholder Master List) to identify what information you need to gather. Share relevant sections with your team or doctor coordinator as needed.
+  </div>
+</div>
+<!-- END TOC -->
+
+<!-- ===== SECTION 1: WEBSITE OVERVIEW ===== -->
+<div class="section section-white" id="s1">
+  <div class="section-eyebrow">Section 1</div>
+  <div class="section-title">Website Overview</div>
+  <p class="section-intro">Your new website consists of 12 fully interconnected HTML pages, built with professional front-end technologies. No subscription software, no drag-and-drop builder limitations — this is a fully custom, owned website that any developer can extend.</p>
+
+  <h2 id="s1-pages">The 12 Pages of Your Website</h2>
+  <p>Each page has a specific purpose and connects to the others through the shared navigation bar and footer. Below is a complete reference for all 12 files.</p>
+
+  <ul class="page-list">
+    <li class="page-item">
+      <div class="page-num">1</div>
+      <div class="page-info">
+        <div class="page-filename">index.html</div>
+        <div class="page-title">Homepage</div>
+        <div class="page-desc">The main entry point for all visitors. Contains the hero section with NABH tagline, an animated trust bar, three visitor pathways (Chronic Patient / Wellness Seeker / Healthcare Professional), the Dosha Quiz, Program Finder tool, featured programs, senior medical team preview, written and video testimonials, a podcast/video series section, FAQ accordion, and the newsletter signup. This is the most important page for first impressions and conversions.</div>
+      </div>
+    </li>
+    <li class="page-item">
+      <div class="page-num">2</div>
+      <div class="page-info">
+        <div class="page-filename">about.html</div>
+        <div class="page-title">About Vaidyagrama</div>
+        <div class="page-desc">Tells the complete story of Vaidyagrama — founding history (2009, Coimbatore), the philosophy rooted in Classical Kerala Ayurveda, the 15-acre campus, NABH accreditation details, a photo gallery section, awards and recognitions, and a virtual campus tour section. This page builds trust with patients researching whether to travel from abroad.</div>
+      </div>
+    </li>
+    <li class="page-item">
+      <div class="page-num">3</div>
+      <div class="page-info">
+        <div class="page-filename">doctors.html</div>
+        <div class="page-title">Senior Medical Team</div>
+        <div class="page-desc">Full profiles for each senior Vaidya/doctor including photo, biography, educational credentials (BAMS, MD Ayurveda), areas of specialization, available consultation days, and a direct booking link. Currently features Vaidya Ramadas AR, Vaidya Ramanandan EK, and Dr. Harikrishnan. Space for additional doctors is built in.</div>
+      </div>
+    </li>
+    <li class="page-item">
+      <div class="page-num">4</div>
+      <div class="page-info">
+        <div class="page-filename">treatments.html</div>
+        <div class="page-title">Treatments &amp; Programs</div>
+        <div class="page-desc">Detailed descriptions of all four flagship programs: Panchakarma (2–8 weeks, classical purification), AyurOrtho (structural and orthopedic conditions), WellnessNext (contemporary urban wellness), and Summer Retreat (seasonal short program). Also includes a typical day schedule showing the daily rhythm of a stay.</div>
+      </div>
+    </li>
+    <li class="page-item">
+      <div class="page-num">5</div>
+      <div class="page-info">
+        <div class="page-filename">cancer-program.html</div>
+        <div class="page-title">AyurSakthi — Cancer Support Program</div>
+        <div class="page-desc">A dedicated, sensitively designed page for the AyurSakthi cancer support program. Includes a prominent medical disclaimer, the four pillars of the program (detoxification support, immune strengthening, symptom management, emotional/mental support), clinical rationale, FAQ, and guidance on how the program complements conventional oncology treatment.</div>
+      </div>
+    </li>
+    <li class="page-item">
+      <div class="page-num">6</div>
+      <div class="page-info">
+        <div class="page-filename">conditions.html</div>
+        <div class="page-title">30 Conditions We Treat</div>
+        <div class="page-desc">A categorized grid of 30 health conditions across 6 categories: Metabolic, Neurological, Digestive, Musculoskeletal, Skin, and Other. Each condition links to a detailed section explaining the Ayurvedic approach. This page serves both patient education and SEO — patients searching for "Ayurveda for Parkinson's" or "Ayurveda psoriasis treatment" will find this page.</div>
+      </div>
+    </li>
+    <li class="page-item">
+      <div class="page-num">7</div>
+      <div class="page-info">
+        <div class="page-filename">pricing.html</div>
+        <div class="page-title">Pricing &amp; Packages</div>
+        <div class="page-desc">Three clearly presented package tiers (7-night, 14-night, 28-night) with per-night rates, room type options (Standard, Deluxe, Suite), full inclusions lists, online consultation fee structure, cancellation and refund policy, and a currency comparison showing approximate USD and EUR equivalents. The PDF brochure download section is also included here.</div>
+      </div>
+    </li>
+    <li class="page-item">
+      <div class="page-num">8</div>
+      <div class="page-info">
+        <div class="page-filename">booking.html</div>
+        <div class="page-title">Book a Consultation or Stay</div>
+        <div class="page-desc">Three pathways: (1) Free 15-minute orientation chat, (2) Paid online consultation with a specific doctor, (3) In-person residential stay booking form. Includes a "What to Prepare" checklist, a "Why Book Direct" benefits section, and the email-gated PDF brochure download. Payment gateway integration point is built in and ready to connect.</div>
+      </div>
+    </li>
+    <li class="page-item">
+      <div class="page-num">9</div>
+      <div class="page-info">
+        <div class="page-filename">contact.html</div>
+        <div class="page-title">Contact</div>
+        <div class="page-desc">A full contact form with 9 fields including a file upload field for medical reports. Alongside the form: the complete address, phone numbers, a travel distances-and-costs table (from Coimbatore Airport, Railway Station, Kochi Airport, Trichy Airport, and Palakkad Railway), social media links, and a placeholder for a Google Maps embed.</div>
+      </div>
+    </li>
+    <li class="page-item">
+      <div class="page-num">10</div>
+      <div class="page-info">
+        <div class="page-filename">training.html</div>
+        <div class="page-title">Training Academy</div>
+        <div class="page-desc">Details of 8 training programs offered through the Vaidyagrama academy: Tongue26, Nutrition, Agni &amp; Diseases, BhishagElite (professional program), Therapist Certification, DoctorCoaching, Mastery26, and Customised Corporate programs. Includes faculty section, program fees, upcoming batch dates, accreditation details, and an application form.</div>
+      </div>
+    </li>
+    <li class="page-item">
+      <div class="page-num">11</div>
+      <div class="page-info">
+        <div class="page-filename">international.html</div>
+        <div class="page-title">International Patients</div>
+        <div class="page-desc">Specifically designed for overseas patients. Features 5 affiliate/partner locations (Italy, UK, Germany/Austria region, Vietnam, and Goa/Chennai), a 5-step patient journey from "First Contact to Return Home," the travel table, visa guidance, language support, and international payment information. Targets the European, Southeast Asian, and diaspora markets.</div>
+      </div>
+    </li>
+    <li class="page-item">
+      <div class="page-num">12</div>
+      <div class="page-info">
+        <div class="page-filename">success-stories.html</div>
+        <div class="page-title">Success Stories</div>
+        <div class="page-desc">Video testimonial placeholders (4 slots) at the top, followed by written testimonials organized by year from 2009 to 2025. A "Share Your Story" form invites past patients to contribute. This page is critical for trust-building with prospective patients who are researching outcomes for their specific condition.</div>
+      </div>
+    </li>
+  </ul>
+
+  <h2 id="s1-files">Supporting Files</h2>
+  <div class="card-grid card-grid-2" style="margin-bottom:16px;">
+    <div class="card card-green">
+      <h4>logo-color.png</h4>
+      <p style="font-size:13px;">The main Vaidyagrama logo in full color. Used in the navigation bar across all 12 pages. Designed for use on white or cream backgrounds. Recommended display size: 160px wide.</p>
+    </div>
+    <div class="card card-green">
+      <h4>logo-white.png</h4>
+      <p style="font-size:13px;">White/reversed version of the logo for use on the dark Forest Green footer background. Same dimensions as logo-color.png. If you update the logo, update both files.</p>
+    </div>
+    <div class="card card-saffron">
+      <h4>PLACEHOLDERS.md</h4>
+      <p style="font-size:13px;">A master markdown text file listing every piece of information that was not available at time of build and still needs to be provided by your team. Open in any text editor or on GitHub.</p>
+    </div>
+    <div class="card card-saffron">
+      <h4>WEBSITE-GUIDE.html</h4>
+      <p style="font-size:13px;">This document — a standalone HTML file that is NOT part of the live website. It is documentation for your team only. Do not publish this file publicly on your website.</p>
+    </div>
+  </div>
+
+  <h2 id="s1-tech">Technical Stack</h2>
+  <p>Your website uses three proven, widely-used technologies. No proprietary software, no subscriptions, no vendor lock-in. Any front-end developer can pick up and extend this codebase immediately.</p>
+  <div class="card-grid card-grid-3">
+    <div class="card">
+      <h4>HTML5</h4>
+      <p style="font-size:13px;">All 12 pages are standard HTML5 files. Open any file directly in a browser — no build step, no compilation, no local server required. This makes the site easy to edit and deploy.</p>
+    </div>
+    <div class="card">
+      <h4>Tailwind CSS v3 (CDN)</h4>
+      <p style="font-size:13px;">A utility-first CSS framework loaded from a CDN. Provides all the layout, spacing, color, and responsive design classes used throughout the site. No installation needed.</p>
+    </div>
+    <div class="card">
+      <h4>Alpine.js v3 (CDN)</h4>
+      <p style="font-size:13px;">A lightweight JavaScript framework (15KB) used for interactive elements: mobile menu toggling, FAQ accordions, the Dosha Quiz, and the Program Finder. No framework knowledge required to edit content.</p>
+    </div>
+  </div>
+  <div class="info-box" style="margin-top:20px;">
+    <strong>Browser compatibility:</strong> Tested and functional on Chrome, Safari, Firefox, and Edge. Works on Windows, macOS, Linux, Android, and iOS. No polyfills or special configurations needed.
+  </div>
+</div>
+<!-- END SECTION 1 -->
+
+<!-- ===== SECTION 2: PAGE-BY-PAGE CONTENT ===== -->
+<div class="section section-green" id="s2">
+  <div class="section-eyebrow">Section 2</div>
+  <div class="section-title">All Website Content — Page by Page</div>
+  <p class="section-intro">For each of the 12 pages, this section shows exactly what confirmed content is already on the page and what placeholder information still needs to be provided by your team. Green boxes = confirmed and live. Amber boxes = still needed from you.</p>
+</div>
+
+<!-- index.html -->
+<div class="section section-white" id="s2-index">
+  <div class="section-eyebrow">Page 1 of 12</div>
+  <div class="section-title" style="font-size:22px;">index.html — Homepage</div>
+  <p style="font-size:14px; color:var(--text-muted); margin-bottom:24px;">The homepage is the highest-traffic page and is built to convert three types of visitors: chronic disease patients, wellness seekers, and healthcare professionals. It contains more interactive features than any other page.</p>
+
+  <div class="confirmed-block content-block">
+    <div class="block-label"><span class="dot dot-green"></span> Confirmed Content — Already on the Page</div>
+    <ul>
+      <li><strong>Hero headline:</strong> "Where Ancient Wisdom Meets Clinical Precision" with NABH-Accredited subtitle</li>
+      <li><strong>Sanskrit tagline:</strong> Sarve Bhavantu Sukhinah (May all beings be happy)</li>
+      <li><strong>Animated trust bar:</strong> 180+ years combined expertise, 16+ years in service, 80 rooms / 120 beds, NABH Accredited, 5 countries global reach, 97% guest satisfaction (see note below)</li>
+      <li><strong>Three visitor pathways:</strong> Chronic Disease Patient → Panchakarma / AyurSakthi; Wellness Seeker → WellnessNext / Summer Retreat; Healthcare Professional → Training Academy</li>
+      <li><strong>Dosha Quiz (Interactive):</strong> 5-question quiz recommending Vata/Pitta/Kapha program match</li>
+      <li><strong>Program Finder Tool (Interactive):</strong> 4-step tool recommending the right program</li>
+      <li><strong>Four featured programs:</strong> Panchakarma, Cancer Support (AyurSakthi), AyurOrtho, WellnessNext</li>
+      <li><strong>Medical team preview:</strong> Vaidya Ramadas AR (General Health, Eye — Mon/Wed), Vaidya Ramanandan EK (General Health, Gut — Wed/Fri), Dr. Harikrishnan (partial information)</li>
+      <li><strong>Testimonials:</strong> Agnes Rajesh — Hypothyroidism recovery; two additional testimonial slots (partial)</li>
+      <li><strong>FAQ section:</strong> 7 fully written questions with answers covering accreditation, duration, international patients, cost, what to bring, diet, and family accommodation</li>
+      <li><strong>WhatsApp button:</strong> +91 422 2364200 (fixed floating button on all pages)</li>
+      <li><strong>Footer — full address:</strong> 15(1) Rottigoundanur Road, Thirumalayampalayam Panchayat, Coimbatore 641105</li>
+      <li><strong>Footer — phones:</strong> +91 422 2364200 and Toll-free 1800 1232 230</li>
+      <li><strong>Footer — social media:</strong> Instagram: vaidyagramaayurveda | Twitter/X: vaidyagrama | Facebook: PunarnavaCommunity</li>
+      <li><strong>Newsletter section:</strong> Two-column layout with email capture + "What You'll Receive" list</li>
+      <li><strong>Mobile bottom navigation bar:</strong> Free Chat / Book Stay / WhatsApp buttons</li>
+      <li><strong>Language switcher:</strong> EN / DE toggle in navigation bar</li>
+    </ul>
+  </div>
+
+  <div class="needed-block content-block">
+    <div class="block-label"><span class="dot dot-saffron"></span> Still Needed From Your Team</div>
+    <ul>
+      <li><strong>Hero background image:</strong> Aerial or landscape beauty shot of the campus — minimum 2560×1440px JPG, under 400KB</li>
+      <li><strong>Doctor photos:</strong> Professional headshots of Vaidya Ramadas AR, Vaidya Ramanandan EK, and Dr. Harikrishnan — 400×400px square JPG</li>
+      <li><strong>Dr. Harikrishnan:</strong> Full designation (e.g., MD Ayurveda), complete list of specialties, and available consultation days/hours</li>
+      <li><strong>Agnes Rajesh testimonial:</strong> Year of visit (e.g., "2022")</li>
+      <li><strong>2nd and 3rd testimonials:</strong> Full patient names, conditions treated, year of visit, and written testimonial text (with patient consent)</li>
+      <li><strong>97% satisfaction rate:</strong> Confirm this is the actual figure; provide source (guest survey, internal data, or third-party review platform)</li>
+      <li><strong>Media / press logos:</strong> For the "As Featured In" section — PNG or SVG files for any publications that have covered Vaidyagrama (The Hindu, Times of India, Outlook Traveller, any international press)</li>
+      <li><strong>Video testimonials:</strong> Minimum 2 patient video testimonials (30–90 seconds each) — film and upload to YouTube, then send the YouTube video links</li>
+      <li><strong>Podcast/video episodes:</strong> 3 educational episodes — can be existing YouTube videos, new recordings, or audio podcast links from your doctors. Provide: title, description, thumbnail image, and YouTube/Spotify link</li>
+    </ul>
+  </div>
+</div>
+
+<!-- about.html -->
+<div class="section section-cream" id="s2-about">
+  <div class="section-eyebrow">Page 2 of 12</div>
+  <div class="section-title" style="font-size:22px;">about.html — About Vaidyagrama</div>
+  <p style="font-size:14px; color:var(--text-muted); margin-bottom:24px;">This page builds deep trust and emotional connection. International patients in particular spend significant time on the About page before committing to travel for treatment.</p>
+
+  <div class="confirmed-block content-block">
+    <div class="block-label"><span class="dot dot-green"></span> Confirmed Content — Already on the Page</div>
+    <ul>
+      <li><strong>Founded:</strong> 2009, Coimbatore, Tamil Nadu</li>
+      <li><strong>Accreditation:</strong> NABH-accredited hospital</li>
+      <li><strong>Campus size:</strong> 15-acre residential campus</li>
+      <li><strong>Lineage:</strong> Classical Kerala Ayurveda lineage — emphasis on authentic, classical protocols (not modernized/diluted Ayurveda)</li>
+      <li><strong>Virtual campus tour section:</strong> Built with 4 clickable area thumbnails (Treatment Rooms, Herbal Garden, Accommodation, Ayurvedic Kitchen)</li>
+    </ul>
+  </div>
+
+  <div class="needed-block content-block">
+    <div class="block-label"><span class="dot dot-saffron"></span> Still Needed From Your Team</div>
+    <ul>
+      <li><strong>Founding story:</strong> 3–5 paragraphs covering: Why was Vaidyagrama founded? What gap in healthcare were the founders responding to? What was the vision?</li>
+      <li><strong>Founder name(s):</strong> Full name(s), background, qualifications, and a brief biography</li>
+      <li><strong>Mission statement:</strong> One or two sentences — the formal mission of Vaidyagrama</li>
+      <li><strong>Vision statement:</strong> Where Vaidyagrama aspires to be in 10–20 years</li>
+      <li><strong>Philosophy statement:</strong> Your core philosophy on Ayurveda — what makes your approach different from other Ayurveda centers</li>
+      <li><strong>Gallery photos:</strong> 8–12 high-resolution photos of: campus grounds, treatment rooms, herbal garden, accommodation rooms, yoga hall, dining hall, nature views on the property</li>
+      <li><strong>NABH certificate:</strong> A scan or photo of the NABH accreditation certificate, OR the official NABH badge image for web use</li>
+      <li><strong>Awards and recognitions:</strong> A list of any awards, rankings, or recognitions received (e.g., "Best Ayurveda Hospital — Times Health Awards 2023")</li>
+      <li><strong>Virtual tour:</strong> Either a recorded walkthrough video (upload to YouTube and send link) or 360° panoramic photos for an immersive embed</li>
+    </ul>
+  </div>
+</div>
+
+<!-- doctors.html -->
+<div class="section section-white" id="s2-doctors">
+  <div class="section-eyebrow">Page 3 of 12</div>
+  <div class="section-title" style="font-size:22px;">doctors.html — Senior Medical Team</div>
+  <p style="font-size:14px; color:var(--text-muted); margin-bottom:24px;">Doctor profiles are one of the highest-converting elements on any medical website. Patients want to know exactly who will be treating them before they commit to a stay.</p>
+
+  <div class="confirmed-block content-block">
+    <div class="block-label"><span class="dot dot-green"></span> Confirmed Content — Already on the Page</div>
+    <ul>
+      <li><strong>Vaidya Ramadas AR</strong> (Dr. A.R. Ramadas) — Specialties: General Health, Eye Health — Available: Monday and Wednesday</li>
+      <li><strong>Vaidya Ramanandan EK</strong> — Specialties: General Health, Gut Health — Available: Wednesday and Friday</li>
+      <li><strong>Card layout:</strong> Built for 5+ doctors — additional doctor cards can be added with a simple copy-paste</li>
+      <li><strong>Direct booking links:</strong> Each doctor card links to the booking page with that doctor pre-selected</li>
+    </ul>
+  </div>
+
+  <div class="needed-block content-block">
+    <div class="block-label"><span class="dot dot-saffron"></span> Still Needed From Your Team</div>
+    <ul>
+      <li><strong>Professional photos:</strong> For all doctors — 400×400px square, professional headshot on neutral background</li>
+      <li><strong>Full biography — Vaidya Ramadas AR:</strong> 3–5 paragraphs covering training, lineage, clinical experience, and area of focus</li>
+      <li><strong>Full biography — Vaidya Ramanandan EK:</strong> Same format as above</li>
+      <li><strong>Educational credentials:</strong> BAMS college and year, MD Ayurveda or specialization, any fellowships or additional certifications</li>
+      <li><strong>Years of experience per doctor:</strong> To cross-reference with the "180+ years combined" trust bar figure</li>
+      <li><strong>Research and publications:</strong> Any peer-reviewed papers, book chapters, or notable case studies published by each doctor</li>
+      <li><strong>Dr. Harikrishnan — complete profile:</strong> Full name with designation, specialties, educational background, biography, and available days</li>
+      <li><strong>Additional doctors:</strong> If there are other senior Vaidyas or specialist doctors, provide full profiles for each</li>
+      <li><strong>Complete consultation schedule:</strong> Exact available hours per day per doctor (e.g., "Monday 9am–1pm, Wednesday 10am–3pm")</li>
+    </ul>
+  </div>
+</div>
+
+<!-- treatments.html -->
+<div class="section section-cream" id="s2-treatments">
+  <div class="section-eyebrow">Page 4 of 12</div>
+  <div class="section-title" style="font-size:22px;">treatments.html — Treatments &amp; Programs</div>
+  <p style="font-size:14px; color:var(--text-muted); margin-bottom:24px;">Patients comparing Ayurveda centers need to understand exactly what they will experience. Detailed, specific program descriptions significantly increase enquiry conversions.</p>
+
+  <div class="confirmed-block content-block">
+    <div class="block-label"><span class="dot dot-green"></span> Confirmed Content — Already on the Page</div>
+    <ul>
+      <li><strong>Panchakarma:</strong> Duration range 2–8 weeks, classical purification protocol, indication categories</li>
+      <li><strong>AyurOrtho:</strong> Focus on structural and orthopedic conditions — arthritis, back pain, spondylitis, frozen shoulder</li>
+      <li><strong>WellnessNext:</strong> Contemporary urban wellness program — for executives, professionals, and healthy guests seeking preventive care</li>
+      <li><strong>Summer Retreat:</strong> Seasonal short program — details and dates are placeholders</li>
+      <li><strong>Typical day structure:</strong> Framework of morning to evening schedule built into page</li>
+    </ul>
+  </div>
+
+  <div class="needed-block content-block">
+    <div class="block-label"><span class="dot dot-saffron"></span> Still Needed From Your Team</div>
+    <ul>
+      <li><strong>Program photos:</strong> 800×520px images for each program — treatment room in use, therapist working, herbal preparations, outdoor therapy if applicable</li>
+      <li><strong>Detailed Panchakarma description:</strong> What are the specific procedures included? (Abhyanga, Shirodhara, Basti, Virechana, etc.) Who is it suitable for?</li>
+      <li><strong>Detailed AyurOrtho description:</strong> What specific therapies are used? Which conditions respond best? Typical duration?</li>
+      <li><strong>Detailed WellnessNext description:</strong> What makes this different from standard Panchakarma? Who is the ideal guest? What outcomes should they expect?</li>
+      <li><strong>Summer Retreat — full details:</strong> Exact dates for next season, program content, pricing, what's included, who it's for</li>
+      <li><strong>Complete daily schedule:</strong> Specific times for each activity (wake time, yoga, breakfast, consultation, treatments, lunch, rest, evening lecture, dinner, lights out)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- cancer-program.html -->
+<div class="section section-white" id="s2-cancer">
+  <div class="section-eyebrow">Page 5 of 12</div>
+  <div class="section-title" style="font-size:22px;">cancer-program.html — AyurSakthi Cancer Support</div>
+  <p style="font-size:14px; color:var(--text-muted); margin-bottom:24px;">This page requires the most careful handling. The medical disclaimer is prominent and the language is carefully chosen to position the program as complementary — not curative. This is both ethically correct and legally important.</p>
+
+  <div class="confirmed-block content-block">
+    <div class="block-label"><span class="dot dot-green"></span> Confirmed Content — Already on the Page</div>
+    <ul>
+      <li><strong>Medical disclaimer:</strong> Prominently displayed — AyurSakthi is a supportive/complementary program and does not claim to treat or cure cancer</li>
+      <li><strong>4 pillars of AyurSakthi:</strong> (1) Detoxification support, (2) Immune system strengthening, (3) Symptom and side-effect management, (4) Emotional and mental support</li>
+      <li><strong>FAQ section:</strong> Answers to common questions from cancer patients and caregivers</li>
+      <li><strong>Safe language throughout:</strong> All claims are qualified and evidence-based in their framing</li>
+    </ul>
+  </div>
+
+  <div class="needed-block content-block">
+    <div class="block-label"><span class="dot dot-saffron"></span> Still Needed From Your Team</div>
+    <ul>
+      <li><strong>Program photos:</strong> Sensitive, calming imagery — patient in treatment, herbal preparations, calm garden setting (no clinical-looking imagery)</li>
+      <li><strong>Research references:</strong> Any peer-reviewed studies or clinical evidence you reference when treating cancer patients with Ayurveda — citations to include on the page</li>
+      <li><strong>Partner oncology hospitals:</strong> Names of conventional hospitals or oncologists you work alongside — co-management builds enormous trust with this patient group</li>
+      <li><strong>Anonymised patient case study:</strong> One patient journey (anonymous — e.g., "Mrs. S., 54, breast cancer, treated at Vaidyagrama during chemotherapy...") with outcomes described</li>
+    </ul>
+  </div>
+</div>
+
+<!-- conditions.html -->
+<div class="section section-cream" id="s2-conditions">
+  <div class="section-eyebrow">Page 6 of 12</div>
+  <div class="section-title" style="font-size:22px;">conditions.html — 30 Conditions We Treat</div>
+  <p style="font-size:14px; color:var(--text-muted); margin-bottom:24px;">This page serves a dual purpose: patient education and search engine visibility. Patients searching "Ayurveda for IBS" or "Ayurvedic treatment for psoriasis" are high-intent visitors who should find this page.</p>
+
+  <div class="confirmed-block content-block">
+    <div class="block-label"><span class="dot dot-green"></span> Confirmed Content — Already on the Page</div>
+    <ul>
+      <li><strong>Metabolic (6):</strong> Type 2 Diabetes, Obesity, Thyroid Disorders, PCOS, Metabolic Syndrome, Dyslipidemia</li>
+      <li><strong>Neurological (6):</strong> Parkinson's Disease, Multiple Sclerosis, Peripheral Neuropathy, Chronic Migraine, Epilepsy (support), Stroke Rehabilitation</li>
+      <li><strong>Digestive (5):</strong> Irritable Bowel Syndrome (IBS), Crohn's Disease, Gastroesophageal Reflux (GERD), Liver Disorders, Piles / Hemorrhoids</li>
+      <li><strong>Musculoskeletal (5):</strong> Rheumatoid &amp; Osteoarthritis, Ankylosing Spondylitis, Chronic Back Pain, Osteoporosis, Frozen Shoulder</li>
+      <li><strong>Skin (3):</strong> Psoriasis, Eczema / Atopic Dermatitis, Vitiligo</li>
+      <li><strong>Other (5):</strong> Infertility (Male &amp; Female), Autism Spectrum Support, Anxiety &amp; Depression, Chronic Fatigue Syndrome, Cancer Support (AyurSakthi)</li>
+    </ul>
+  </div>
+
+  <div class="needed-block content-block">
+    <div class="block-label"><span class="dot dot-saffron"></span> Still Needed From Your Team</div>
+    <ul>
+      <li><strong>Individual condition pages (optional but high SEO value):</strong> A dedicated sub-page for each of the 30 conditions explaining the Ayurvedic understanding of the condition, the treatment approach at Vaidyagrama, and expected outcomes. This is a significant content project but would dramatically increase organic search traffic.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- pricing.html -->
+<div class="section section-white" id="s2-pricing">
+  <div class="section-eyebrow">Page 7 of 12</div>
+  <div class="section-title" style="font-size:22px;">pricing.html — Pricing &amp; Packages</div>
+  <p style="font-size:14px; color:var(--text-muted); margin-bottom:24px;">Pricing transparency is the single most effective way to reduce the volume of low-quality enquiries and increase the quality of bookings. All figures on this page are currently placeholders and must be confirmed before launch.</p>
+
+  <div class="confirmed-block content-block">
+    <div class="block-label"><span class="dot dot-green"></span> Confirmed Content — Already on the Page</div>
+    <ul>
+      <li><strong>Package structure:</strong> Three tiers — 7-night, 14-night, 28-night</li>
+      <li><strong>Room types:</strong> Standard, Deluxe, Suite (with descriptions of each)</li>
+      <li><strong>Starting price indicators:</strong> ₹6,500 / ₹9,500 / ₹14,000 per night (these are placeholder estimates — see below)</li>
+      <li><strong>Currency equivalents:</strong> Approximate USD and EUR shown alongside rupee pricing</li>
+      <li><strong>Cancellation policy section:</strong> Framework built in, exact terms need to be provided</li>
+      <li><strong>Online consultation fee section:</strong> Structure built in — free chat vs. paid consultation amounts are placeholders</li>
+    </ul>
+  </div>
+
+  <div class="needed-block content-block">
+    <div class="block-label"><span class="dot dot-saffron"></span> Still Needed From Your Team</div>
+    <ul>
+      <li><strong>Confirmed per-night rates:</strong> Actual pricing per room type per package tier (9 price points total: 3 packages × 3 room types)</li>
+      <li><strong>Online consultation fees:</strong> What is the fee for a 30-minute paid online consultation? 60-minute? Per doctor?</li>
+      <li><strong>Seasonal pricing:</strong> Is pricing different for peak season (October–March) vs. off-season? If yes, provide both rates</li>
+      <li><strong>Group / family discounts:</strong> Do you offer discounts for couples or families traveling together?</li>
+      <li><strong>Detailed inclusions list:</strong> For each package tier, exactly what is included — consultations per week, number of treatment sessions per day, meals, airport pickup, yoga classes, etc.</li>
+      <li><strong>Cancellation policy exact terms:</strong> Full refund until X days prior, partial refund until Y days prior, no refund after Z days — your actual policy</li>
+    </ul>
+  </div>
+</div>
+
+<!-- booking.html -->
+<div class="section section-cream" id="s2-booking">
+  <div class="section-eyebrow">Page 8 of 12</div>
+  <div class="section-title" style="font-size:22px;">booking.html — Book a Consultation or Stay</div>
+  <p style="font-size:14px; color:var(--text-muted); margin-bottom:24px;">This page is the conversion endpoint of your entire website. Every page's call-to-action leads here. The free chat option dramatically lowers the barrier to first contact.</p>
+
+  <div class="confirmed-block content-block">
+    <div class="block-label"><span class="dot dot-green"></span> Confirmed Content — Already on the Page</div>
+    <ul>
+      <li><strong>Prominence banner:</strong> Saffron-colored full-width strip emphasizing the free 15-minute orientation chat</li>
+      <li><strong>Free 15-minute chat:</strong> Clear CTA — "No pressure, no commitment, just answers to your questions"</li>
+      <li><strong>Online paid consultation:</strong> Three doctor cards (Vaidya Ramadas AR, Vaidya Ramanandan EK, Dr. Harikrishnan) with booking buttons</li>
+      <li><strong>In-person stay booking form:</strong> 9 fields — name, email, phone, country, arrival date, departure date, room preference, health condition summary, special requirements</li>
+      <li><strong>"What to Prepare" checklist:</strong> List of items guests should bring and information they should have ready</li>
+      <li><strong>"Why Book Direct" section:</strong> 4 benefits: best rate guarantee, direct doctor communication, flexible modification, complimentary welcome package</li>
+      <li><strong>PDF brochure download section:</strong> Email-gated download card (PDF file not yet created)</li>
+    </ul>
+  </div>
+
+  <div class="needed-block content-block">
+    <div class="block-label"><span class="dot dot-saffron"></span> Still Needed From Your Team</div>
+    <ul>
+      <li><strong>Payment gateway:</strong> Razorpay (recommended for India) or Stripe (recommended for international) — integrate for the paid online consultation. Requires a Razorpay/Stripe business account.</li>
+      <li><strong>Booking/reservation system:</strong> If you use any reservation management software (e.g., ResNexus, Little Hotelier, or a custom system), we can add a direct link or embed</li>
+      <li><strong>PDF program brochure:</strong> Design a PDF (Canva works well) and save as <code>vaidyagrama-guide-2025.pdf</code> in the website folder</li>
+      <li><strong>Doctor availability calendar:</strong> For online consultations — either a Calendly embed or similar scheduling tool linked per doctor</li>
+      <li><strong>Form submission destination:</strong> Email address where booking enquiry form submissions should be sent</li>
+    </ul>
+  </div>
+</div>
+
+<!-- contact.html -->
+<div class="section section-white" id="s2-contact">
+  <div class="section-eyebrow">Page 9 of 12</div>
+  <div class="section-title" style="font-size:22px;">contact.html — Contact</div>
+  <p style="font-size:14px; color:var(--text-muted); margin-bottom:24px;">The contact page is where visitors with specific questions come. The ability to upload medical reports directly via the form is a significant differentiator from typical contact forms.</p>
+
+  <div class="confirmed-block content-block">
+    <div class="block-label"><span class="dot dot-green"></span> Confirmed Content — Already on the Page</div>
+    <ul>
+      <li><strong>Contact form:</strong> 9 fields including name, email, phone, country, subject, message, and a file upload field for medical reports</li>
+      <li><strong>Travel table (confirmed distances and estimated costs):</strong>
+        <ul style="margin-top:6px;">
+          <li>Coimbatore International Airport — 34 km — approx. ₹1,300 by taxi</li>
+          <li>Coimbatore Railway Station — 22 km — approx. ₹1,000 by taxi</li>
+          <li>Kochi International Airport — 141 km — approx. ₹5,000 by taxi</li>
+          <li>Trichy Airport — 239 km — approx. ₹5,500 by taxi</li>
+          <li>Palakkad Railway Station — 40 km — approx. ₹2,000 by taxi</li>
+        </ul>
+      </li>
+      <li><strong>Full address:</strong> 15(1) Rottigoundanur Road, Thirumalayampalayam Panchayat, Coimbatore 641105</li>
+      <li><strong>Phone numbers:</strong> +91 422 2364200 | Toll-free: 1800 1232 230</li>
+    </ul>
+  </div>
+
+  <div class="needed-block content-block">
+    <div class="block-label"><span class="dot dot-saffron"></span> Still Needed From Your Team</div>
+    <ul>
+      <li><strong>Google Maps embed code:</strong> Go to Google Maps → search your address → click Share → Embed a map → copy the iframe code. Paste into the contact page placeholder.</li>
+      <li><strong>Contact form email:</strong> The email address where form submissions should be delivered (e.g., info@vaidyagrama.com or reservations@vaidyagrama.com)</li>
+      <li><strong>Email service setup:</strong> A form submission service is needed to actually send emails. Recommended: Formspree (free tier handles 50 submissions/month) or Netlify Forms (free with Netlify hosting)</li>
+      <li><strong>Email address for the website:</strong> A public-facing email address to display on the page — currently not set</li>
+    </ul>
+  </div>
+</div>
+
+<!-- training.html -->
+<div class="section section-cream" id="s2-training">
+  <div class="section-eyebrow">Page 10 of 12</div>
+  <div class="section-title" style="font-size:22px;">training.html — Training Academy</div>
+  <p style="font-size:14px; color:var(--text-muted); margin-bottom:24px;">The training academy serves a completely different audience — Ayurveda practitioners, medical doctors, and therapists seeking advanced education. This page is designed to attract that professional cohort.</p>
+
+  <div class="confirmed-block content-block">
+    <div class="block-label"><span class="dot dot-green"></span> Confirmed Content — Already on the Page</div>
+    <ul>
+      <li><strong>8 programs listed:</strong> Tongue26, Nutrition &amp; Dietetics, Agni &amp; Diseases, BhishagElite (professional-level, flagged as premium), Therapist Certification Course, DoctorCoaching, Mastery26, and Customised Corporate Programs</li>
+      <li><strong>Program card layout:</strong> Each program has a card with description, duration, and enquiry button</li>
+      <li><strong>Application form:</strong> Built into the page — name, profession, which program, dates, and message</li>
+    </ul>
+  </div>
+
+  <div class="needed-block content-block">
+    <div class="block-label"><span class="dot dot-saffron"></span> Still Needed From Your Team</div>
+    <ul>
+      <li><strong>Faculty photos and bios:</strong> Professional photos and 2–3 paragraph bios for each faculty member teaching these programs</li>
+      <li><strong>Program fees:</strong> Cost per program (in INR and USD/EUR for international applicants)</li>
+      <li><strong>Upcoming batch dates:</strong> Next available start dates for each program (at minimum for the next 6 months)</li>
+      <li><strong>Accreditation details:</strong> Are any programs accredited by a medical or Ayurveda regulatory body? (e.g., Central Council of Indian Medicine, Kerala University of Health Sciences)</li>
+      <li><strong>Application process:</strong> Is there an interview? A prerequisite qualification? How long does application review take?</li>
+    </ul>
+  </div>
+</div>
+
+<!-- international.html -->
+<div class="section section-white" id="s2-international">
+  <div class="section-eyebrow">Page 11 of 12</div>
+  <div class="section-title" style="font-size:22px;">international.html — International Patients</div>
+  <p style="font-size:14px; color:var(--text-muted); margin-bottom:24px;">International patients have more questions and more anxiety than domestic patients. This page is designed to answer all of them — from visa and travel to language support and payment in foreign currency.</p>
+
+  <div class="confirmed-block content-block">
+    <div class="block-label"><span class="dot dot-green"></span> Confirmed Content — Already on the Page</div>
+    <ul>
+      <li><strong>5 affiliate / partner locations:</strong> Italy, United Kingdom, Germany / Austria region, Vietnam, Goa and Chennai (domestic affiliates)</li>
+      <li><strong>5-step patient journey:</strong> (1) First enquiry, (2) Online consultation, (3) Travel planning, (4) Arrival and treatment, (5) Return home with care plan</li>
+      <li><strong>Travel table:</strong> Same as contact page — distances and costs from all major airports/stations</li>
+      <li><strong>Visa section:</strong> Framework explaining Indian medical visa requirements (partial — needs confirmation)</li>
+      <li><strong>Language support:</strong> Note about English-speaking staff, German-speaking coordinator availability</li>
+      <li><strong>Payment section:</strong> Notes on international bank transfer and card payment options (partial)</li>
+    </ul>
+  </div>
+
+  <div class="needed-block content-block">
+    <div class="block-label"><span class="dot dot-saffron"></span> Still Needed From Your Team</div>
+    <ul>
+      <li><strong>Complete affiliate details (all 5 locations):</strong> For each: city name, partner organization name, website URL, contact email/phone, what services they provide (referrals only, or pre/post-treatment care)</li>
+      <li><strong>Affiliate photos:</strong> At minimum a logo or photo of each affiliate location/partner</li>
+      <li><strong>Visa guidance confirmation:</strong> Do you issue medical visa support letters? What type of Indian visa should patients apply for — Medical Visa (MED) or Tourist Visa? Provide the exact guidance your team gives patients</li>
+      <li><strong>International payment gateway:</strong> For overseas patients paying in EUR/USD/GBP — Stripe is recommended; Razorpay also supports international cards</li>
+    </ul>
+  </div>
+</div>
+
+<!-- success-stories.html -->
+<div class="section section-cream" id="s2-stories">
+  <div class="section-eyebrow">Page 12 of 12</div>
+  <div class="section-title" style="font-size:22px;">success-stories.html — Success Stories</div>
+  <p style="font-size:14px; color:var(--text-muted); margin-bottom:24px;">Patient stories are the most powerful marketing tool available to a medical wellness center. This page is designed to showcase them at their best — with video at the top for maximum impact.</p>
+
+  <div class="confirmed-block content-block">
+    <div class="block-label"><span class="dot dot-green"></span> Confirmed Content — Already on the Page</div>
+    <ul>
+      <li><strong>Written testimonials section:</strong> Organized by year, from 2009 through 2025 — framework built to accommodate any number of testimonials</li>
+      <li><strong>Agnes Rajesh testimonial:</strong> Hypothyroidism recovery — partial (year of visit still needed)</li>
+      <li><strong>"Share Your Story" form:</strong> Built into the bottom of the page — invites past patients to submit their experience</li>
+      <li><strong>Video testimonial slots:</strong> 4 placeholder cards at the top of the page, ready to receive YouTube embed codes</li>
+    </ul>
+  </div>
+
+  <div class="needed-block content-block">
+    <div class="block-label"><span class="dot dot-saffron"></span> Still Needed From Your Team</div>
+    <ul>
+      <li><strong>Patient video testimonials:</strong> Minimum 4 videos for this page (30–90 seconds each). Film patients at the end of their stay or via video call after return. Upload to YouTube (can be unlisted) and send links.</li>
+      <li><strong>Full written testimonials:</strong> With written patient consent — full name (or initials), country, condition treated, year of visit, and their words in their own language (translate if needed)</li>
+      <li><strong>Patient photos (optional, with written permission):</strong> A photo alongside the testimonial significantly increases its perceived authenticity</li>
+    </ul>
+  </div>
+</div>
+<!-- END SECTION 2 -->
+
+<!-- ===== SECTION 3: 15 NEW FEATURES ===== -->
+<div class="section section-green" id="s3">
+  <div class="section-eyebrow">Section 3</div>
+  <div class="section-title">15 New Features Explained</div>
+  <p class="section-intro">Beyond the standard pages and content, 15 purpose-built features have been added to improve conversions, build credibility, and make your website stand out from other Ayurveda centers. Each feature is documented below with what it does, where it appears, and how your team can update or activate it.</p>
+</div>
+
+<!-- INTERACTIVE FEATURES -->
+<div class="section section-white" id="s3-interactive">
+  <h2>Interactive Features</h2>
+
+  <div class="feature-card">
+    <span class="feature-id">A1</span>
+    <h3>Dosha / Prakriti Quiz</h3>
+    <div class="where-tag">Homepage — between "Who Is This For?" and "Featured Programs"</div>
+    <p><strong>What it does:</strong> A 5-question interactive quiz. Visitors answer questions about their body type, digestion, stress response, sleep patterns, and health goals. Based on their answers, the system calculates whether they are dominant Vata, Pitta, or Kapha and recommends a specific Vaidyagrama program best suited to their constitution.</p>
+    <p><strong>How it works:</strong> Pure JavaScript using Alpine.js. No backend, no server, no database. Results appear instantly in the browser. Works offline.</p>
+    <p><strong>How to update it:</strong> The quiz logic lives in the <code>doshaQuiz()</code> function near the bottom of <code>index.html</code>. You can edit question text, answer options, result descriptions, and program recommendations directly in that function. No programming knowledge required — just edit the text strings.</p>
+  </div>
+
+  <div class="feature-card">
+    <span class="feature-id">A2</span>
+    <h3>Program Finder Tool</h3>
+    <div class="where-tag">Homepage — between "Featured Programs" and "Senior Medical Team"</div>
+    <p><strong>What it does:</strong> A 4-step guided decision tool. Visitors answer: (1) What brings them to Vaidyagrama, (2) How long they can stay, (3) Their primary health goal, and (4) Their prior Ayurveda experience level. The tool recommends the most appropriate program with a clear "Book Free Chat" call-to-action.</p>
+    <p><strong>How it works:</strong> Alpine.js component — all logic runs client-side. The recommendation algorithm matches visitor inputs against program profiles and returns the best fit.</p>
+    <p><strong>How to update it:</strong> Open <code>index.html</code> and find the <code>programFinder()</code> function. The matching rules are in the <code>calcPf()</code> sub-function. To add a new program, add it to the programs array and add matching rules in the calculation logic.</p>
+  </div>
+
+  <div class="feature-card">
+    <span class="feature-id">A3</span>
+    <h3>Animated Statistics Counters</h3>
+    <div class="where-tag">Homepage — the dark Forest Green trust bar</div>
+    <p><strong>What it does:</strong> When a visitor scrolls down to the trust bar, the numbers (180, 16, 80, 5, 97) animate from zero up to their final value over 2 seconds. This creates a dynamic, attention-holding effect that gives the statistics more perceived weight.</p>
+    <p><strong>How it works:</strong> Uses the browser's built-in <code>IntersectionObserver</code> API to detect when the trust bar enters the viewport, then triggers a JavaScript counter animation. No external library needed.</p>
+    <p><strong>How to update the numbers:</strong> In <code>index.html</code>, find each number in the trust bar — they are stored as <code>data-target="180"</code> attributes. Change the number in the attribute and the animation will automatically adapt. Also update the label text below each counter.</p>
+  </div>
+
+  <div class="feature-card">
+    <span class="feature-id">A5</span>
+    <h3>Virtual Campus Tour Section</h3>
+    <div class="where-tag">about.html — after the gallery section</div>
+    <p><strong>What it does:</strong> A dark-background section with 4 clickable thumbnail areas representing key campus locations: Treatment Rooms, Herbal Garden, Accommodation, and Ayurvedic Kitchen. A large area in the center is reserved for a 360° virtual tour embed or a YouTube walkthrough video.</p>
+    <p><strong>How to add the real tour — Option A (YouTube video):</strong> Film a 3–5 minute walking tour of the campus. Upload to YouTube. Go to the video → Share → Embed → copy the iframe code. In <code>about.html</code>, find the virtual tour placeholder div and replace it with the YouTube iframe. Set <code>width="100%"</code> and <code>height="500"</code>.</p>
+    <p><strong>How to add the real tour — Option B (Google 360°):</strong> Hire a Google-certified Street View photographer. They will photograph the campus in 360° and upload it to Google Maps. You can then get an embed code from Google Maps to paste into this section.</p>
+  </div>
+</div>
+
+<!-- TRUST FEATURES -->
+<div class="section section-cream" id="s3-trust">
+  <h2>Trust &amp; Credibility Features</h2>
+
+  <div class="feature-card">
+    <span class="feature-id">B1</span>
+    <h3>Guest Satisfaction Rate</h3>
+    <div class="where-tag">Homepage trust bar — 6th tile</div>
+    <p><strong>What it shows:</strong> "97% Guest Satisfaction" — currently a placeholder figure. This number will animate (via the A3 counter feature) when the trust bar scrolls into view.</p>
+    <p><strong>Why it matters:</strong> A high satisfaction rate is one of the first things international patients look for. It signals that other guests had positive outcomes, reducing the perceived risk of traveling abroad for treatment.</p>
+    <p><strong>How to update:</strong> In <code>index.html</code>, find <code>data-target="97"</code> and change 97 to your confirmed figure. Also update the label text. If you have a source (e.g., an exit survey or a review platform average), add a small footnote below the trust bar.</p>
+  </div>
+
+  <div class="feature-card">
+    <span class="feature-id">B5</span>
+    <h3>"As Featured In" Media Bar</h3>
+    <div class="where-tag">Homepage — immediately below the trust bar, above "Who Is This For?"</div>
+    <p><strong>What it does:</strong> A horizontal row of press/media publication logos, displayed in grayscale to signal third-party credibility without overwhelming the brand's visual identity. Even one or two recognizable publication logos dramatically increase perceived authority.</p>
+    <p><strong>How to add logos:</strong></p>
+    <ol style="font-size:14px; padding-left:20px; margin:10px 0;">
+      <li>Obtain the publication's logo file — PNG with transparent background, or SVG. Grayscale is preferred.</li>
+      <li>Save the logo file in the <code>vaidyagrama-rebuild</code> folder (e.g., <code>logo-thehindu.png</code>).</li>
+      <li>In <code>index.html</code>, find the "As Featured In" section and replace each placeholder block with: <code>&lt;img src="logo-thehindu.png" alt="The Hindu" style="height:40px; width:auto; filter:grayscale(100%); opacity:0.6;"&gt;</code></li>
+    </ol>
+    <p><strong>Which publications to contact:</strong> The Hindu, Times of India Health section, NDTV Health, Outlook Traveller, Condé Nast Traveller India — and any international publications (German, Italian, UK health magazines) that have covered you.</p>
+  </div>
+</div>
+
+<!-- BOOKING FEATURES -->
+<div class="section section-white" id="s3-booking">
+  <h2>Booking &amp; Conversion Features</h2>
+
+  <div class="feature-card">
+    <span class="feature-id">C1</span>
+    <h3>Free Consultation Prominence Banner</h3>
+    <div class="where-tag">booking.html — immediately below the navigation bar</div>
+    <p><strong>What it does:</strong> A full-width saffron-colored strip at the very top of the booking page that immediately tells new visitors: "Start with a free 15-minute orientation chat — no commitment required." This reduces anxiety and prevents visitors from leaving the page because the booking options feel overwhelming.</p>
+    <p><strong>Research backing:</strong> Offering a free first step increases conversion rates by 30–60% compared to pages that only offer paid or complex booking options first.</p>
+    <p><strong>How to update:</strong> Open <code>booking.html</code> and find the section marked with the comment <code>&lt;!-- C1: Free Consultation Prominence --&gt;</code>. Edit the headline and subtext directly.</p>
+  </div>
+
+  <div class="feature-card">
+    <span class="feature-id">C2</span>
+    <h3>Why Book Direct</h3>
+    <div class="where-tag">booking.html — above the in-person stay booking form</div>
+    <p><strong>What it does:</strong> A 4-point checklist explaining the advantages of booking directly with Vaidyagrama rather than through a third-party travel agent or online booking platform. This reduces reliance on agents and protects your direct booking revenue.</p>
+    <p><strong>Current 4 advantages listed:</strong> (1) Best available rate guarantee, (2) Direct communication with your doctor before arrival, (3) Flexible date modification, (4) Complimentary welcome package or room upgrade.</p>
+    <p><strong>How to update:</strong> In <code>booking.html</code>, find the section labeled "C2: Why Book Direct" and edit the 4 bullet point descriptions. Adjust the advantages to match your actual direct-booking benefits.</p>
+  </div>
+
+  <div class="feature-card">
+    <span class="feature-id">C3</span>
+    <h3>PDF Program Brochure Download</h3>
+    <div class="where-tag">booking.html and pricing.html — near the bottom of each page</div>
+    <p><strong>What it does:</strong> An email-gated PDF download card. Visitors enter their email address to receive the program guide PDF. This both delivers value to the visitor and captures their email address for your newsletter/follow-up sequence.</p>
+    <p><strong>How to activate — Step by step:</strong></p>
+    <ol style="font-size:14px; padding-left:20px; margin:10px 0;">
+      <li>Create a PDF brochure using Canva (free) or Adobe InDesign — include your programs, room photos, pricing, testimonial excerpts, and FAQs. Aim for 8–12 pages.</li>
+      <li>Save the PDF as <code>vaidyagrama-guide-2025.pdf</code> and place it in the <code>vaidyagrama-rebuild</code> folder.</li>
+      <li>In <code>booking.html</code> and <code>pricing.html</code>, find the C3 placeholder section and replace the placeholder div with: <code>&lt;a href="vaidyagrama-guide-2025.pdf" download class="..."&gt;Download PDF Guide →&lt;/a&gt;</code></li>
+      <li>To capture emails: connect the email form to Mailchimp, ConvertKit, or Brevo. Each provides a simple embed form code you paste in place of the existing form tags.</li>
+    </ol>
+  </div>
+
+  <div class="feature-card">
+    <span class="feature-id">C4</span>
+    <h3>Starting-From Prices</h3>
+    <div class="where-tag">pricing.html — inside each of the 3 package cards</div>
+    <p><strong>What it shows:</strong> The per-night "starting from" price for each package tier, displayed prominently in Forest Green. Below the rupee price, an approximate USD and EUR equivalent is shown to help international visitors estimate costs without needing to calculate exchange rates.</p>
+    <p><strong>Current placeholder prices:</strong> ₹6,500/night (7-night), ₹9,500/night (14-night), ₹14,000/night (28-night). These are estimates only and must be confirmed before launch.</p>
+    <p><strong>How to update:</strong> In <code>pricing.html</code>, find the three <code>price-amount</code> spans and change the rupee amounts. The approximate exchange rate used: ₹1 ≈ $0.012 USD ≈ €0.011 EUR. Update the displayed equivalents accordingly.</p>
+  </div>
+</div>
+
+<!-- CONTENT FEATURES -->
+<div class="section section-cream" id="s3-content">
+  <h2>Content Features</h2>
+
+  <div class="feature-card">
+    <span class="feature-id">D2</span>
+    <h3>Newsletter Signup — Upgraded Layout</h3>
+    <div class="where-tag">Homepage — the saffron-colored section near the bottom</div>
+    <p><strong>What it shows:</strong> A two-column layout with an email signup form on the left and a "What You'll Receive" bullet list on the right. The bullet list makes the signup more compelling by specifying what subscribers get (seasonal health tips, new program announcements, doctor interviews, early-bird pricing for retreats).</p>
+    <p><strong>How to connect to an email service:</strong></p>
+    <ul style="font-size:14px;">
+      <li><strong>Mailchimp (recommended):</strong> Create a free account at mailchimp.com → create an Audience → get your form action URL → replace the form's <code>onsubmit="return false;"</code> with <code>action="YOUR_MAILCHIMP_URL" method="POST"</code></li>
+      <li><strong>Brevo (formerly Sendinblue — free up to 300 emails/day):</strong> Same process — get the embed form code from Brevo and update the form action URL</li>
+      <li><strong>ConvertKit:</strong> Best for content-driven newsletters — integrates with Zapier for automations</li>
+    </ul>
+  </div>
+
+  <div class="feature-card">
+    <span class="feature-id">D3</span>
+    <h3>Video Testimonials Section</h3>
+    <div class="where-tag">Homepage testimonials section — above the written testimonials</div>
+    <p><strong>What it shows:</strong> Two dark-background video placeholder cards, ready to receive YouTube embed codes. Each card has a play button icon overlay and space for patient name, condition, and country.</p>
+    <p><strong>How to add real videos — step by step:</strong></p>
+    <ol style="font-size:14px; padding-left:20px; margin:10px 0;">
+      <li>Film patient testimonials. Ideal length: 30–90 seconds. Ask patients to speak about: their condition before coming, their experience at Vaidyagrama, and their outcome.</li>
+      <li>Upload to YouTube. Set visibility to "Unlisted" if you don't want the video to appear in YouTube search results — it will still embed on your website.</li>
+      <li>On the YouTube video page: click Share → Embed → copy the full <code>&lt;iframe&gt;</code> code.</li>
+      <li>In <code>index.html</code>, find each video placeholder div (search for "video-placeholder") and replace it with the YouTube iframe. Add <code>style="width:100%; height:100%; border:none; border-radius:12px;"</code> to the iframe.</li>
+    </ol>
+  </div>
+
+  <div class="feature-card">
+    <span class="feature-id">D4</span>
+    <h3>Podcast / Video Series — "Learn from the Masters"</h3>
+    <div class="where-tag">Homepage — dark section titled "Learn from the Masters"</div>
+    <p><strong>What it shows:</strong> Three episode cards in a dark Forest Green layout. Each card has a thumbnail image, episode title, description, and a "Watch / Listen" link. This positions your doctors as thought leaders and gives visitors a reason to return to the website.</p>
+    <p><strong>How to activate:</strong></p>
+    <ul style="font-size:14px;">
+      <li><strong>Option A — YouTube:</strong> Record 3 short (10–20 minute) educational videos with your doctors on topics like "Understanding Your Dosha," "Ayurveda for Gut Health," or "What is Panchakarma?" Upload to YouTube, get thumbnail images and video links, replace the 3 placeholder episode cards with real content.</li>
+      <li><strong>Option B — Podcast:</strong> Record audio episodes and publish via Anchor.fm (free — distributes to Spotify and Apple Podcasts automatically). Embed the Spotify player widget in this section.</li>
+      <li><strong>Option C (quickest):</strong> Create a YouTube playlist of existing educational videos or recorded webinars your doctors have given, and link the 3 most recent as episode cards.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- GLOBAL FEATURES -->
+<div class="section section-white" id="s3-global">
+  <h2>Navigation &amp; Global Features</h2>
+
+  <div class="feature-card">
+    <span class="feature-id">C7</span>
+    <h3>Mobile Bottom Navigation Bar</h3>
+    <div class="where-tag">All 12 pages — fixed at the bottom on mobile devices only</div>
+    <p><strong>What it shows:</strong> Three persistent buttons visible at the bottom of every page on phones and tablets: a green "Free Chat" button, a dark Forest Green "Book Stay" button, and a WhatsApp green "WhatsApp" button with the WhatsApp icon.</p>
+    <p><strong>Why it matters:</strong> On mobile, the standard navigation menu is hidden behind a hamburger icon. This bottom bar ensures there is always a clear, thumb-friendly action visible without any interaction. It follows the user as they scroll.</p>
+    <p><strong>How to update:</strong> The HTML for this bar is at the bottom of every HTML file — search for the comment <code>&lt;!-- MOBILE BOTTOM BAR --&gt;</code>. Change link destinations or button labels inside that block.</p>
+    <p><strong>Note:</strong> This bar automatically hides itself on screens wider than 1024px (laptops and desktops) using a CSS media query — desktop users will not see it.</p>
+  </div>
+
+  <div class="feature-card">
+    <span class="feature-id">E3</span>
+    <h3>Language Switcher — EN | DE</h3>
+    <div class="where-tag">All 12 pages — desktop navigation bar (right side) and mobile menu (bottom)</div>
+    <p><strong>What it does:</strong> Shows an EN/DE toggle button in the navigation bar. Currently, clicking DE shows a polite modal message in both English and German explaining that the German version is being prepared.</p>
+    <p><strong>Why German first:</strong> Germany, Austria, and Switzerland represent the largest European market for Ayurveda wellness travel. Many high-value international guests will come from the German-speaking world. Having a German version — even partially — signals seriousness about serving this market.</p>
+    <p><strong>How to activate the German version:</strong></p>
+    <ol style="font-size:14px; padding-left:20px; margin:10px 0;">
+      <li>Hire a German-speaking Ayurveda translator (not just a generic translator — they need to understand the medical and wellness terminology). Budget approximately 2–3 weeks for translation of all key pages.</li>
+      <li>Save translated pages as: <code>index-de.html</code>, <code>about-de.html</code>, <code>treatments-de.html</code>, etc.</li>
+      <li>In every page, find the DE button's <code>onclick</code> handler and change it from the modal trigger to: <code>window.location.href='index-de.html'</code> (or the equivalent page name).</li>
+    </ol>
+    <p><strong>Languages to consider adding in the future:</strong> German (priority), French (second largest European market), Italian (your affiliate is in Italy), Russian (growing wellness travel market).</p>
+  </div>
+</div>
+<!-- END SECTION 3 -->
+
+<!-- ===== SECTION 4: HOW TO UPDATE CONTENT ===== -->
+<div class="section section-green" id="s4">
+  <div class="section-eyebrow">Section 4</div>
+  <div class="section-title">How to Update Content — Step by Step</div>
+  <p class="section-intro">You do not need a developer to update your website's text, photos, contact information, or pricing. Everything can be done with a basic text editor. This section walks through the most common update tasks.</p>
+</div>
+
+<div class="section section-white" id="s4-text">
+  <h2>How to Change Text</h2>
+  <p>All website text lives directly in the HTML files. There is no content management system (CMS) or admin panel — the HTML file is the content. This means you can update text in under 2 minutes using any text editor.</p>
+
+  <div class="info-box saffron">
+    <strong>Recommended free text editors:</strong> VS Code (code.visualstudio.com — best option), Notepad++ (notepad-plus-plus.org — Windows only, lightweight), or even the built-in Windows Notepad for simple changes.
+  </div>
+
+  <ol class="steps" style="margin-top:20px;">
+    <li><span>Open the relevant HTML file in your text editor. For example, to change homepage text, open <code>index.html</code>.</span></li>
+    <li><span>Press <strong>Ctrl+F</strong> (Windows) or <strong>Cmd+F</strong> (Mac) to open the Find dialog. Type the text you want to change and press Enter — the editor will jump to that location in the file.</span></li>
+    <li><span>Edit the text between the HTML tags. For example, to change a headline: find <code>&lt;h2&gt;Our Senior Doctors&lt;/h2&gt;</code> and change "Our Senior Doctors" to your preferred wording. Do not delete or change the tags themselves (<code>&lt;h2&gt;</code> and <code>&lt;/h2&gt;</code>).</span></li>
+    <li><span>Save the file with <strong>Ctrl+S</strong>.</span></li>
+    <li><span>Open the file in your web browser to preview the change. Double-click the HTML file or drag it into a browser window.</span></li>
+    <li><span>If satisfied, upload the updated file to your web host to make the change live (see Section 6).</span></li>
+  </ol>
+
+  <h2 id="s4-photos" style="margin-top:32px;">How to Replace a Photo Placeholder</h2>
+  <p>All images that are still needed appear in the HTML as styled <code>&lt;div&gt;</code> elements with a dashed border and descriptive label (e.g., "Doctor Photo — Vaidya Ramadas AR"). Here is how to replace them with real images.</p>
+
+  <h3>Image Specifications by Type</h3>
+  <table>
+    <thead><tr><th>Image Type</th><th>Dimensions</th><th>Format</th><th>Max File Size</th><th>Where Used</th></tr></thead>
+    <tbody>
+      <tr><td>Hero / banner background</td><td>2560 × 1440 px</td><td>JPG or WebP</td><td>400 KB</td><td>Top of homepage, about, treatments pages</td></tr>
+      <tr><td>Doctor headshots</td><td>400 × 400 px (square)</td><td>JPG</td><td>100 KB</td><td>Doctors page, homepage preview, booking page</td></tr>
+      <tr><td>Program photos</td><td>800 × 520 px</td><td>JPG</td><td>150 KB</td><td>Treatments, homepage programs section</td></tr>
+      <tr><td>Gallery photos</td><td>1200 × 800 px</td><td>JPG</td><td>200 KB</td><td>About page gallery</td></tr>
+      <tr><td>Video thumbnails</td><td>1280 × 720 px</td><td>JPG</td><td>150 KB</td><td>Homepage podcast/video section</td></tr>
+      <tr><td>Media / press logos</td><td>~200 px wide (any height)</td><td>PNG (transparent)</td><td>30 KB</td><td>Homepage "As Featured In" bar</td></tr>
+      <tr><td>Affiliate logos</td><td>200 × 80 px</td><td>PNG (transparent)</td><td>30 KB</td><td>International page affiliate section</td></tr>
+    </tbody>
+  </table>
+
+  <div class="info-box">
+    <strong>Free image compression tools:</strong> Use <a href="https://tinypng.com" style="color:var(--saffron);">tinypng.com</a> to compress JPG/PNG files. Use <a href="https://squoosh.app" style="color:var(--saffron);">squoosh.app</a> to convert images to WebP format (30% smaller than JPG with equal quality).
+  </div>
+
+  <ol class="steps" style="margin-top:16px;">
+    <li><span>Prepare your image file — resize to the correct dimensions and compress it using tinypng.com.</span></li>
+    <li><span>Save the image file inside the <code>vaidyagrama-rebuild</code> folder. Use simple filenames with no spaces: e.g., <code>doctor-ramadas.jpg</code>, <code>hero-campus.jpg</code>, <code>treatment-panchakarma.jpg</code>.</span></li>
+    <li><span>Open the relevant HTML file in your text editor.</span></li>
+    <li><span>Search for the placeholder div — they contain text like "Photo description" or "IMG NEEDED". They look like: <code>&lt;div class="img-placeholder"&gt;Doctor Photo&lt;/div&gt;</code></span></li>
+    <li><span>Replace the entire <code>&lt;div class="img-placeholder"...&gt;...&lt;/div&gt;</code> block with an image tag: <code>&lt;img src="doctor-ramadas.jpg" alt="Vaidya Ramadas AR — Senior Ayurveda Physician" loading="lazy" style="width:100%; height:100%; object-fit:cover;"&gt;</code></span></li>
+    <li><span>Save and preview in the browser. Check that the image looks correct on both desktop and mobile (resize the browser window to test).</span></li>
+  </ol>
+
+  <h2 id="s4-contact-info" style="margin-top:32px;">How to Update Contact Information</h2>
+  <p>Contact information appears in multiple places across all 12 pages (navigation, footer, contact page, booking page). If any detail changes, you need to update it in every file. Use your text editor's "Find in Files" feature (Ctrl+Shift+F in VS Code) to find all occurrences at once.</p>
+
+  <table>
+    <thead><tr><th>Information</th><th>Current Value</th><th>Where to Search in HTML</th></tr></thead>
+    <tbody>
+      <tr><td>Main phone</td><td>+91 422 2364200</td><td>Search: <code>2364200</code></td></tr>
+      <tr><td>Toll-free number</td><td>1800 1232 230</td><td>Search: <code>1800 1232</code></td></tr>
+      <tr><td>WhatsApp link</td><td>wa.me/914222364200</td><td>Search: <code>wa.me</code></td></tr>
+      <tr><td>Address line 1</td><td>15(1) Rottigoundanur Road</td><td>Search: <code>Rottigoundanur</code></td></tr>
+      <tr><td>Address line 2</td><td>Thirumalayampalayam Panchayat</td><td>Search: <code>Thirumalayampalayam</code></td></tr>
+      <tr><td>City / PIN</td><td>Coimbatore 641105</td><td>Search: <code>641105</code></td></tr>
+      <tr><td>Email (to be set)</td><td>— not yet configured —</td><td>Add wherever you see "EMAIL NEEDED"</td></tr>
+      <tr><td>Instagram handle</td><td>vaidyagramaayurveda</td><td>Search: <code>vaidyagramaayurveda</code></td></tr>
+      <tr><td>Twitter/X handle</td><td>vaidyagrama</td><td>Search: <code>twitter.com/vaidyagrama</code></td></tr>
+      <tr><td>Facebook page</td><td>PunarnavaCommunity</td><td>Search: <code>PunarnavaCommunity</code></td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="s4-doctors" style="margin-top:32px;">How to Add a New Doctor</h2>
+  <ol class="steps">
+    <li><span>Open <code>doctors.html</code> in your text editor.</span></li>
+    <li><span>Find an existing doctor card block — it will be a large <code>&lt;div&gt;</code> block containing the doctor's photo, name, title, specialties, and booking button. Select from the opening <code>&lt;div class="doctor-card"&gt;</code> to its closing <code>&lt;/div&gt;</code>.</span></li>
+    <li><span>Copy the entire block (Ctrl+C).</span></li>
+    <li><span>Paste it immediately below the last existing doctor card (Ctrl+V).</span></li>
+    <li><span>Update all the details in the pasted block: name, title (designation), specialties list, available days, booking link, and photo.</span></li>
+    <li><span>Add the doctor's photo: save the image as a JPG in the <code>vaidyagrama-rebuild</code> folder, then update the <code>src</code> attribute in the image tag (or replace the placeholder div with an img tag as described above).</span></li>
+    <li><span>Save and preview. The new doctor will appear alongside the existing ones.</span></li>
+    <li><span>Also update the homepage (<code>index.html</code>) preview section if this doctor should appear in the "Senior Medical Team" strip on the homepage.</span></li>
+  </ol>
+
+  <h2 id="s4-pricing" style="margin-top:32px;">How to Update Pricing</h2>
+  <ol class="steps">
+    <li><span>Open <code>pricing.html</code> in your text editor.</span></li>
+    <li><span>Search for <code>price-amount</code> — this will find the three main per-night price figures displayed in the package cards.</span></li>
+    <li><span>Change each rupee amount to your actual confirmed price.</span></li>
+    <li><span>Below each rupee price, update the approximate USD and EUR equivalents. Current exchange estimate: divide the rupee amount by 84 for USD, divide by 91 for EUR.</span></li>
+    <li><span>Find and update the inclusions lists inside each package card — what is included in the 7-night, 14-night, and 28-night packages respectively.</span></li>
+    <li><span>Update the cancellation policy section — find the text that says "CANCELLATION TERMS NEEDED" and replace it with your actual policy.</span></li>
+    <li><span>Save and preview.</span></li>
+  </ol>
+</div>
+<!-- END SECTION 4 -->
+
+<!-- ===== SECTION 5: PLACEHOLDER MASTER LIST ===== -->
+<div class="section section-green" id="s5">
+  <div class="section-eyebrow">Section 5</div>
+  <div class="section-title">Placeholder Master List</div>
+  <p class="section-intro">This is every piece of information that was not available at time of build. Items are sorted by priority — launch is blocked by Urgent items. Use this list as your action checklist when gathering information from your team.</p>
+</div>
+
+<div class="section section-white" id="s5-urgent">
+  <h2><span class="badge badge-urgent" style="font-size:13px; padding:4px 14px; margin-right:10px;">URGENT</span> Needed Before Launch</h2>
+  <p style="color:var(--text-muted); font-size:14px; margin-bottom:20px;">These items are required for the website to function correctly and make a professional first impression. Do not launch without these.</p>
+
+  <table>
+    <thead><tr><th>Item</th><th>Page(s) Affected</th><th>Who to Ask</th><th>Format Needed</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Hero background image</strong></td>
+        <td>Homepage, About, Treatments</td>
+        <td>Photographer / management</td>
+        <td>JPG, 2560×1440px, under 400KB — aerial or landscape shot of campus</td>
+      </tr>
+      <tr>
+        <td><strong>Doctor photos — all 3</strong></td>
+        <td>Doctors, Homepage, Booking</td>
+        <td>Vaidyas themselves / photographer</td>
+        <td>JPG, 400×400px square, professional headshot on neutral background</td>
+      </tr>
+      <tr>
+        <td><strong>Dr. Harikrishnan — full designation &amp; specialties</strong></td>
+        <td>Doctors, Homepage, Booking</td>
+        <td>Dr. Harikrishnan directly</td>
+        <td>Text: full name with suffix (MD, BAMS etc.), list of specialties, available days</td>
+      </tr>
+      <tr>
+        <td><strong>Confirmed pricing — all 9 price points</strong></td>
+        <td>Pricing, Booking</td>
+        <td>Management / accounts</td>
+        <td>INR per night: 7-night/14-night/28-night × Standard/Deluxe/Suite room (9 figures)</td>
+      </tr>
+      <tr>
+        <td><strong>Online consultation fees</strong></td>
+        <td>Booking, Doctors</td>
+        <td>Management</td>
+        <td>Fee for 30-minute and 60-minute paid online consultation (INR and USD)</td>
+      </tr>
+      <tr>
+        <td><strong>Google Maps embed code</strong></td>
+        <td>Contact</td>
+        <td>Anyone with Google account</td>
+        <td>HTML iframe code from Google Maps → Share → Embed a map</td>
+      </tr>
+      <tr>
+        <td><strong>Contact form email destination</strong></td>
+        <td>Contact, Booking</td>
+        <td>Management — which email receives enquiries?</td>
+        <td>An email address (e.g., info@vaidyagrama.com) and a form service (Formspree or Netlify Forms)</td>
+      </tr>
+      <tr>
+        <td><strong>Website email address</strong></td>
+        <td>Contact, Footer (all pages)</td>
+        <td>Management</td>
+        <td>The public-facing email address to display on the website</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section section-cream" id="s5-high">
+  <h2><span class="badge badge-high" style="font-size:13px; padding:4px 14px; margin-right:10px;">HIGH PRIORITY</span> Within 2 Weeks of Launch</h2>
+  <p style="color:var(--text-muted); font-size:14px; margin-bottom:20px;">These items significantly affect the quality and conversion rate of the website. Aim to have them in place within the first two weeks after launch.</p>
+
+  <table>
+    <thead><tr><th>Item</th><th>Page(s) Affected</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Doctor biographies — all 3</strong></td>
+        <td>Doctors, About</td>
+        <td>3–5 paragraphs each: training lineage, experience, focus areas, personal statement. Ideally written by each doctor in their own voice, then edited.</td>
+      </tr>
+      <tr>
+        <td><strong>Guest satisfaction rate — confirmed figure</strong></td>
+        <td>Homepage trust bar</td>
+        <td>Currently shows 97% as a placeholder. Provide the actual percentage from your guest surveys or review platform (e.g., Google Reviews average). Provide the source.</td>
+      </tr>
+      <tr>
+        <td><strong>Affiliate details — all 5 locations</strong></td>
+        <td>International</td>
+        <td>For each location: partner name, city, website URL, contact email/phone, and what role they play (referrals, pre-treatment, post-treatment care). Italy / UK / Germany-Austria / Vietnam / Goa-Chennai.</td>
+      </tr>
+      <tr>
+        <td><strong>Visa guidance — confirmed policy</strong></td>
+        <td>International</td>
+        <td>Do you issue medical visa support letters? Should patients apply for a Medical Visa (MED) or Tourist Visa (T)? What documentation do you provide?</td>
+      </tr>
+      <tr>
+        <td><strong>Cancellation policy — exact terms</strong></td>
+        <td>Pricing, Booking</td>
+        <td>Full refund until X days prior to arrival. Partial refund (specify %) until Y days prior. No refund after Z days. Your actual policy text.</td>
+      </tr>
+      <tr>
+        <td><strong>Package inclusions — detailed list per tier</strong></td>
+        <td>Pricing</td>
+        <td>For each of the 3 package tiers: exact number of doctor consultations per week, number of treatment sessions per day, which meals are included, airport pickup included or at cost, yoga sessions, etc.</td>
+      </tr>
+      <tr>
+        <td><strong>Agnes Rajesh — year of visit</strong></td>
+        <td>Homepage, Success Stories</td>
+        <td>The year she visited Vaidyagrama — to be added to the testimonial card for authenticity.</td>
+      </tr>
+      <tr>
+        <td><strong>2nd and 3rd testimonials — full details</strong></td>
+        <td>Homepage, Success Stories</td>
+        <td>Full name, condition treated, year of visit, and the written testimonial text (with patient consent). Currently only Agnes Rajesh is confirmed.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section section-white" id="s5-medium">
+  <h2><span class="badge badge-medium" style="font-size:13px; padding:4px 14px; margin-right:10px;">MEDIUM PRIORITY</span> Within 1 Month of Launch</h2>
+  <p style="color:var(--text-muted); font-size:14px; margin-bottom:20px;">These items will improve your website significantly but the site can launch and convert without them. Plan to complete these within the first month after going live.</p>
+
+  <table>
+    <thead><tr><th>Item</th><th>Page(s) Affected</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Patient video testimonials (minimum 2)</strong></td>
+        <td>Homepage, Success Stories</td>
+        <td>Film at end of guest stays or via video call after return. Upload to YouTube (can be unlisted). 30–90 seconds each. Send YouTube links.</td>
+      </tr>
+      <tr>
+        <td><strong>Press / media logos</strong></td>
+        <td>Homepage "As Featured In"</td>
+        <td>PNG or SVG logos from any publications that have covered Vaidyagrama. Contact publications for logo files. Grayscale preferred.</td>
+      </tr>
+      <tr>
+        <td><strong>Program photos</strong></td>
+        <td>Treatments, Homepage, Booking</td>
+        <td>800×520px for each: Panchakarma treatment room in use, AyurOrtho session, WellnessNext activity, Summer Retreat outdoor scene. Hire a photographer for half a day.</td>
+      </tr>
+      <tr>
+        <td><strong>About page gallery photos</strong></td>
+        <td>About</td>
+        <td>8–12 photos of campus grounds, treatment rooms, herbal garden, accommodation interiors, yoga hall, dining hall, nature views. Can be the same photography session as program photos.</td>
+      </tr>
+      <tr>
+        <td><strong>Founding story — written content</strong></td>
+        <td>About</td>
+        <td>3–5 paragraphs covering why Vaidyagrama was founded, who the founders are, what gap they were addressing, and the vision that drives the institution.</td>
+      </tr>
+      <tr>
+        <td><strong>Podcast / video episodes — initial 3</strong></td>
+        <td>Homepage</td>
+        <td>3 educational doctor-led videos or audio podcast episodes. Can be as simple as a 15-minute recorded Q&amp;A with a Vaidya on a health topic. Provide titles, thumbnails, and YouTube/Spotify links.</td>
+      </tr>
+      <tr>
+        <td><strong>PDF program brochure</strong></td>
+        <td>Booking, Pricing</td>
+        <td>Design using Canva or InDesign. 8–12 pages covering programs, rooms, photos, pricing overview, FAQs, and testimonials. Save as PDF and place in website folder.</td>
+      </tr>
+      <tr>
+        <td><strong>Training Academy — fees and batch dates</strong></td>
+        <td>Training</td>
+        <td>Program fees in INR and USD. Next available start dates for each of the 8 programs. Faculty names and short bios.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section section-cream" id="s5-nice">
+  <h2><span class="badge badge-nice" style="font-size:13px; padding:4px 14px; margin-right:10px;">NICE TO HAVE</span> Future Enhancements</h2>
+  <p style="color:var(--text-muted); font-size:14px; margin-bottom:20px;">These are valuable additions that will strengthen the website over time but are not needed at launch or in the first month. Plan these for 3–6 months after launch.</p>
+
+  <div class="card-grid card-grid-2">
+    <div class="card">
+      <h4>German Language Version</h4>
+      <p style="font-size:13px;">Translate key pages (homepage, treatments, booking, pricing, international) into German. Hire a German-speaking Ayurveda translator. Save as <code>index-de.html</code> etc. Update the DE button in the navigation to link to these pages.</p>
+    </div>
+    <div class="card">
+      <h4>360° Virtual Campus Tour</h4>
+      <p style="font-size:13px;">Hire a Google-certified Street View photographer to photograph the campus in 360°. Alternatively, record a 3–5 minute walkthrough video and embed it in the About page virtual tour section.</p>
+    </div>
+    <div class="card">
+      <h4>Individual Condition Pages (30 pages)</h4>
+      <p style="font-size:13px;">A dedicated landing page for each of the 30 conditions (e.g., "Ayurveda for IBS," "Ayurvedic treatment for Psoriasis"). Each page would explain the condition, the Ayurvedic understanding, Vaidyagrama's approach, and expected outcomes. Enormous SEO value.</p>
+    </div>
+    <div class="card">
+      <h4>Live Availability Calendar</h4>
+      <p style="font-size:13px;">A real-time room/program availability calendar integrated into the booking page. Options: Calendly (for consultations), Little Hotelier or ResNexus (for in-person stays). These require a monthly subscription but significantly reduce back-and-forth enquiry handling.</p>
+    </div>
+    <div class="card">
+      <h4>Patient Intake Questionnaire (Online)</h4>
+      <p style="font-size:13px;">A structured online form patients complete before their first consultation. Covers medical history, current medications, lifestyle, and health goals. Tool options: Typeform (beautifully designed), Google Forms (free), or Jotform.</td>
+    </div>
+    <div class="card">
+      <h4>Blog / Health Articles Section</h4>
+      <p style="font-size:13px;">A regular publishing schedule of Ayurveda health articles authored by your Vaidyas builds SEO authority over time. Each article targeting a common health search (e.g., "Ayurveda for stress") brings new visitors to the site. Recommend one article per month minimum.</p>
+    </div>
+  </div>
+</div>
+<!-- END SECTION 5 -->
+
+<!-- ===== SECTION 6: HOSTING ===== -->
+<div class="section section-green" id="s6">
+  <div class="section-eyebrow">Section 6</div>
+  <div class="section-title">Hosting Your Website</div>
+  <p class="section-intro">Your website is a set of standard HTML files — it can be hosted on any web server in the world. Below are three options, presented from most to least recommended. Read Option A first; it takes 5 minutes and is completely free.</p>
+</div>
+
+<div class="section section-white" id="s6-netlify">
+  <h2>Option A — Netlify (Strongly Recommended)</h2>
+  <p>Netlify is a professional static website hosting platform used by millions of websites worldwide. It is free for static HTML websites with no limitations on traffic. It is faster, simpler, and more powerful than Weebly for custom-coded sites.</p>
+
+  <div class="hosting-card recommended">
+    <div class="hosting-badge">RECOMMENDED</div>
+    <h3 style="color:var(--green); margin-top:0;">Netlify — Free, Fast, Professional</h3>
+    <p style="font-size:14px; margin-bottom:16px;">Takes approximately 5 minutes. No credit card required. Your site will be live at a <code>*.netlify.app</code> URL immediately, and you can connect your custom domain (e.g., vaidyagrama.com) within 30 minutes.</p>
+    <ol class="steps">
+      <li><span>Go to <strong>netlify.com</strong> and create a free account using your email address.</span></li>
+      <li><span>After logging in, you will see your Netlify dashboard with a large dashed upload area that reads "Drag and drop your site folder here."</span></li>
+      <li><span>Open File Explorer on your computer and navigate to your Desktop. You will see the <code>vaidyagrama-rebuild</code> folder.</span></li>
+      <li><span>Drag the entire <code>vaidyagrama-rebuild</code> folder and drop it into the Netlify upload area in your browser.</span></li>
+      <li><span>Netlify will upload all 12 pages and supporting files. After 30–60 seconds, your site will be live at a temporary URL like <code>random-name-12345.netlify.app</code>.</span></li>
+      <li><span>Test your site by visiting that URL — click through all 12 pages and check that navigation, images, and interactive features work correctly.</span></li>
+      <li><span>To connect your custom domain: in Netlify, go to <strong>Site Settings → Domain Management → Add Custom Domain</strong>. Enter your domain name (e.g., vaidyagrama.com).</span></li>
+      <li><span>Netlify will show you DNS records to configure. Log in to wherever your domain is registered (e.g., GoDaddy, Namecheap, Weebly) and update the DNS nameservers to Netlify's: <code>dns1.p01.nsone.net</code> and <code>dns2.p01.nsone.net</code>. Alternatively, add the A record and CNAME values Netlify provides.</span></li>
+      <li><span>DNS changes take 24–48 hours to propagate worldwide. After that, your custom domain will point to your new Netlify-hosted site.</span></li>
+      <li><span>Netlify automatically provides a free SSL certificate (HTTPS) for your domain within minutes of DNS connecting. No configuration needed.</span></li>
+    </ol>
+  </div>
+
+  <h2 id="s6-update" style="margin-top:32px;">How to Update the Live Site After Launch</h2>
+  <p>Every time you update an HTML file or add a new image, you need to re-deploy to make the changes live. There are three ways to do this with Netlify:</p>
+
+  <div class="card-grid card-grid-3" style="margin-top:16px;">
+    <div class="card">
+      <h4>Method 1 — Drag &amp; Drop (Simplest)</h4>
+      <p style="font-size:13px;">Log into Netlify → click your site → go to the Deploys tab → drag the updated <code>vaidyagrama-rebuild</code> folder into the deploy area again. The entire site will update in under 60 seconds.</p>
+    </div>
+    <div class="card">
+      <h4>Method 2 — Netlify CLI (For Developers)</h4>
+      <p style="font-size:13px;">Install the Netlify CLI tool (<code>npm install -g netlify-cli</code>), then from the vaidyagrama-rebuild folder run <code>netlify deploy --prod</code>. Your site updates instantly from the command line.</p>
+    </div>
+    <div class="card">
+      <h4>Method 3 — GitHub Integration (Best for Teams)</h4>
+      <p style="font-size:13px;">Connect Netlify to a GitHub repository containing your website files. Every time you push a file change to GitHub, Netlify automatically detects it and deploys the updated site within 60 seconds. Best for ongoing team collaboration.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section section-cream" id="s6-weebly">
+  <h2>Option B — Weebly with HTML Embedding (Limited)</h2>
+  <div class="hosting-card">
+    <h3 style="margin-top:0;">Important Limitation Notice</h3>
+    <p style="font-size:14px;">Weebly is a drag-and-drop website builder and was not designed to host custom multi-page HTML websites. While some content can be embedded, this approach has significant drawbacks: Weebly's own CSS styles will conflict with your custom design, interactive features (Dosha Quiz, Program Finder) may not work, and managing 12 pages this way is time-consuming.</p>
+    <p style="font-size:14px; margin-top:8px;"><strong>Recommendation: Use Netlify (Option A) and simply update your domain's DNS to point away from Weebly. You can keep your Weebly account dormant or cancel it.</strong></p>
+  </div>
+
+  <h3>If Weebly Embedding is Required</h3>
+  <ol class="steps">
+    <li><span>Log in to your Weebly account at weebly.com.</span></li>
+    <li><span>For each page of your website, create a new Weebly page with the same name.</span></li>
+    <li><span>Drag an "Embed Code" element onto each Weebly page.</span></li>
+    <li><span>From the HTML file, copy only the content between the <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code> tags (do not include the html, head, or body tags themselves). Paste this into the Weebly embed box.</span></li>
+    <li><span>In Weebly's "Page Settings" → "Advanced" → "Header Code," paste the CSS styles from the HTML file's <code>&lt;style&gt;</code> block and the CDN links for Tailwind CSS and Alpine.js.</span></li>
+    <li><span>Preview each page and fix any style conflicts that appear due to Weebly's default CSS overriding your styles.</span></li>
+  </ol>
+  <div class="info-box urgent" style="margin-top:16px;">
+    <strong>Warning:</strong> The interactive features (Dosha Quiz, Program Finder, FAQ accordions, mobile navigation) are unlikely to work correctly in Weebly's embed environment due to JavaScript sandboxing and CSS conflicts. Netlify hosting avoids all of these problems entirely.
+  </div>
+
+  <h2 style="margin-top:32px;">Option C — Weebly Developer Platform (Advanced)</h2>
+  <p>Weebly has a developer platform (dev.weebly.com) that allows custom themes to be built and uploaded as ZIP files. This is a full-featured option but requires developer knowledge of Weebly's proprietary templating system. Only recommended if you have a developer on staff who is familiar with Weebly's platform. For all other situations, Netlify is the correct choice.</p>
+</div>
+<!-- END SECTION 6 -->
+
+<!-- ===== SECTION 7: MAINTENANCE & SEO ===== -->
+<div class="section section-green" id="s7">
+  <div class="section-eyebrow">Section 7</div>
+  <div class="section-title">Website Maintenance &amp; SEO</div>
+  <p class="section-intro">A website that is never updated loses search rankings and visitor trust over time. This section covers the minimum ongoing maintenance your team should perform, plus the steps to set up Google Analytics and improve search visibility.</p>
+</div>
+
+<div class="section section-white" id="s7-schedule">
+  <h2>Recommended Update Schedule</h2>
+  <table>
+    <thead><tr><th>Frequency</th><th>Task</th><th>Who</th><th>Time Required</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>As needed</strong></td>
+        <td>Update doctor availability / schedule</td>
+        <td>Reception / coordinator</td>
+        <td>5–10 minutes</td>
+      </tr>
+      <tr>
+        <td><strong>As needed</strong></td>
+        <td>Update Summer Retreat dates and pricing</td>
+        <td>Management</td>
+        <td>15 minutes</td>
+      </tr>
+      <tr>
+        <td><strong>Monthly</strong></td>
+        <td>Add 1–2 new patient testimonials (written)</td>
+        <td>Guest relations</td>
+        <td>30 minutes</td>
+      </tr>
+      <tr>
+        <td><strong>Monthly</strong></td>
+        <td>Publish one educational article or video episode (D4 section)</td>
+        <td>Doctor or content team</td>
+        <td>1–2 hours</td>
+      </tr>
+      <tr>
+        <td><strong>Quarterly</strong></td>
+        <td>Review and update FAQ section with new common questions</td>
+        <td>Reception / management</td>
+        <td>1 hour</td>
+      </tr>
+      <tr>
+        <td><strong>Yearly</strong></td>
+        <td>Update pricing for the new season</td>
+        <td>Management</td>
+        <td>30 minutes</td>
+      </tr>
+      <tr>
+        <td><strong>Yearly</strong></td>
+        <td>Review all placeholder sections — fill any that have been skipped</td>
+        <td>Management / developer</td>
+        <td>Half a day</td>
+      </tr>
+      <tr>
+        <td><strong>Every 2 years</strong></td>
+        <td>Full design review — does the site still look current and professional?</td>
+        <td>Management + developer</td>
+        <td>Hire a developer for a refresh</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section section-cream" id="s7-seo">
+  <h2>SEO — What Is Already Done</h2>
+  <p>Each of the 12 pages has the following SEO elements already configured and unique per page:</p>
+  <ul class="checklist">
+    <li><span class="check-icon">✓</span><span><strong>Unique title tag</strong> — each page has a different, descriptive title that appears in browser tabs and Google search results</span></li>
+    <li><span class="check-icon">✓</span><span><strong>Meta description</strong> — a 150-160 character description of each page that appears in Google search snippets</span></li>
+    <li><span class="check-icon">✓</span><span><strong>robots: index, follow</strong> — instructs Google to index the page and follow all links (standard for public pages)</span></li>
+    <li><span class="check-icon">✓</span><span><strong>Open Graph tags</strong> — controls how the page appears when shared on Facebook, WhatsApp, LinkedIn, and Twitter. Includes og:title, og:description, og:image.</span></li>
+    <li><span class="check-icon">✓</span><span><strong>Semantic HTML structure</strong> — correct use of H1, H2, H3, article, section, nav, footer tags — helps Google understand page structure</span></li>
+    <li><span class="check-icon">✓</span><span><strong>Mobile-responsive design</strong> — Google ranks mobile-friendly pages higher ("mobile-first indexing")</span></li>
+    <li><span class="check-icon">✓</span><span><strong>Image alt text structure</strong> — all image tags have <code>alt=""</code> attributes ready to be filled with descriptive text when real images are added</span></li>
+    <li><span class="check-icon">✓</span><span><strong>Fast loading</strong> — no heavy JavaScript frameworks, all CDN resources load from global servers, lazy loading on images</span></li>
+  </ul>
+
+  <h2 style="margin-top:32px;">SEO — What You Should Do After Launch</h2>
+  <ul class="checklist">
+    <li><span class="check-icon" style="background:#D4841A;">→</span><span><strong>Create a sitemap.xml file</strong> — lists all 12 page URLs for Google. Generate it free at xml-sitemaps.com. Upload the <code>sitemap.xml</code> file to your website folder.</span></li>
+    <li><span class="check-icon" style="background:#D4841A;">→</span><span><strong>Submit to Google Search Console</strong> — go to search.google.com/search-console, verify your domain, submit your sitemap. Google will start indexing your pages within days.</span></li>
+    <li><span class="check-icon" style="background:#D4841A;">→</span><span><strong>Build backlinks from Ayurveda directories</strong> — submit your listing to: NABH member directory, Kerala Tourism official website, Ayurveda Association of India, international Ayurveda directories (e.g., Ayurveda-Portal.eu for German-speaking markets).</span></li>
+    <li><span class="check-icon" style="background:#D4841A;">→</span><span><strong>Update all Open Graph image references</strong> — once you have your hero image, add its URL to the <code>og:image</code> meta tag in all 12 pages so social media shares show the campus photo.</span></li>
+    <li><span class="check-icon" style="background:#D4841A;">→</span><span><strong>Add alt text to all images</strong> — when you add real photos, always fill in descriptive alt text: e.g., <code>alt="Ayurveda Panchakarma treatment at Vaidyagrama Coimbatore"</code></span></li>
+  </ul>
+</div>
+
+<div class="section section-white" id="s7-analytics">
+  <h2>Google Analytics Setup</h2>
+  <p>Google Analytics lets you see how many people visit your website, which pages they visit most, where they come from (India, Germany, UK, etc.), how long they stay, and which pages they leave from. This information is essential for improving your website over time.</p>
+  <ol class="steps">
+    <li><span>Go to <strong>analytics.google.com</strong> and sign in with a Google account. Create a new Property for your website.</span></li>
+    <li><span>Choose "Web" as the platform. Enter your website URL and timezone. You will receive a <strong>Measurement ID</strong> in the format <code>G-XXXXXXXXXX</code>.</span></li>
+    <li><span>Open each of the 12 HTML files in your text editor. Find the closing <code>&lt;/head&gt;</code> tag near the top of each file.</span></li>
+    <li><span>Paste the following code immediately before <code>&lt;/head&gt;</code> in all 12 files, replacing <code>G-XXXXXXXXXX</code> with your actual Measurement ID:</span></li>
+  </ol>
+  <pre>&lt;!-- Google Analytics --&gt;
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+&lt;/script&gt;</pre>
+  <div class="info-box saffron" style="margin-top:12px;">
+    <strong>Time-saving tip:</strong> In VS Code, use "Find in Files" (Ctrl+Shift+F) to find <code>&lt;/head&gt;</code> across all files, then use "Replace All" to insert the analytics snippet in one step. Be careful to replace the correct closing head tag only.
+  </div>
+
+  <h3 style="margin-top:24px;">Key Metrics to Monitor Monthly</h3>
+  <div class="card-grid card-grid-3">
+    <div class="card card-green">
+      <h4>Sessions</h4>
+      <p style="font-size:13px;">Total number of visits to your website per month. A healthy baseline for a specialist medical wellness center is 1,000–5,000 sessions/month in year one. Set a target and track growth month-on-month.</p>
+    </div>
+    <div class="card card-green">
+      <h4>Geographic Breakdown</h4>
+      <p style="font-size:13px;">Which countries are your visitors from? Use this to decide which language versions to prioritize (if 20% of visitors are German, the German version becomes urgent).</p>
+    </div>
+    <div class="card card-green">
+      <h4>Top Landing Pages</h4>
+      <p style="font-size:13px;">Which pages do visitors land on first? If the conditions page drives the most organic traffic, it deserves more investment in content and photos.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section section-cream" id="s7-backup">
+  <h2>Backup Instructions</h2>
+  <p>Because your website is a folder of files — not a hosted platform — backing it up is straightforward. There is no database to export, no platform account to worry about. The files on your computer are the source of truth.</p>
+  <div class="card-grid card-grid-3">
+    <div class="card">
+      <h4>Daily Backup (Automatic)</h4>
+      <p style="font-size:13px;">If Netlify is connected to a GitHub repository, every file change creates an automatic version history. You can roll back to any previous version of any file at any time. This is the gold standard.</p>
+    </div>
+    <div class="card">
+      <h4>Monthly Backup (Manual)</h4>
+      <p style="font-size:13px;">Once a month, copy the entire <code>vaidyagrama-rebuild</code> folder to Google Drive or Dropbox. Name the backup folder with the date: <code>vaidyagrama-rebuild-2026-03</code>. Keep at least 3 months of backups.</p>
+    </div>
+    <div class="card">
+      <h4>Before Any Major Edit</h4>
+      <p style="font-size:13px;">Before editing any HTML file, duplicate it first: right-click the file → Copy → Paste → rename the copy to <code>filename_backup_DATE.html</code>. If the edit goes wrong, you can revert instantly.</p>
+    </div>
+  </div>
+</div>
+<!-- END SECTION 7 -->
+
+<!-- ===== SECTION 8: CONTACT & SUPPORT ===== -->
+<div class="section section-green" id="s8">
+  <div class="section-eyebrow">Section 8</div>
+  <div class="section-title">Contact, Support &amp; Quick Reference</div>
+  <p class="section-intro">Technical reference information for your team and any developer who maintains this website in the future.</p>
+</div>
+
+<div class="section section-white">
+  <h2>For Developers — Technology Reference</h2>
+  <p>This website is built with widely adopted, well-documented open web standards. Any front-end developer will be immediately familiar with the codebase and able to extend it without onboarding. No proprietary frameworks, no build tools, no dependency management required.</p>
+
+  <table>
+    <thead><tr><th>Technology</th><th>Version</th><th>Purpose</th><th>Documentation</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>HTML5</strong></td>
+        <td>Standard</td>
+        <td>All 12 page structures — semantic markup with correct heading hierarchy, landmark roles, and accessibility attributes</td>
+        <td>developer.mozilla.org/HTML</td>
+      </tr>
+      <tr>
+        <td><strong>Tailwind CSS</strong></td>
+        <td>v3 (CDN)</td>
+        <td>Utility-first CSS framework — all layout, spacing, color, typography, responsive breakpoints. Loaded via CDN, no build step.</td>
+        <td>tailwindcss.com/docs</td>
+      </tr>
+      <tr>
+        <td><strong>Alpine.js</strong></td>
+        <td>v3 (CDN)</td>
+        <td>Lightweight reactive JavaScript — mobile menu, FAQ accordions, Dosha Quiz (A1), Program Finder (A2), language switcher (E3). 15KB, no build required.</td>
+        <td>alpinejs.dev</td>
+      </tr>
+      <tr>
+        <td><strong>Vanilla JavaScript</strong></td>
+        <td>ES6+</td>
+        <td>Statistics counter animations (A3), IntersectionObserver for scroll-triggered effects, form validation helpers</td>
+        <td>developer.mozilla.org/JavaScript</td>
+      </tr>
+      <tr>
+        <td><strong>Google Fonts</strong></td>
+        <td>CDN</td>
+        <td>GFS Didot (display headings), Montserrat (UI and navigation), Gentium Plus (body text), Oswald (statistics), Alike (accent)</td>
+        <td>fonts.google.com</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="info-box" style="margin-top:16px;">
+    <strong>For any developer taking over this project:</strong> All interactive components follow the Alpine.js <code>x-data</code> / <code>x-show</code> / <code>x-on:click</code> pattern. All custom styles use Tailwind utility classes with occasional <code>&lt;style&gt;</code> blocks for complex components. There are no module imports, no package.json, and no build step required. Open any HTML file in a browser and it works.
+  </div>
+
+  <h2 style="margin-top:32px;">Design System Reference</h2>
+  <p>All design decisions follow the Vaidyagrama brand guidelines. The color palette, typography, and spacing system are consistent across all 12 pages.</p>
+
+  <table>
+    <thead><tr><th>Token</th><th>Value</th><th>Usage</th></tr></thead>
+    <tbody>
+      <tr><td><span class="color-dot" style="background:#2D5016;"></span> Forest Green</td><td><code>#2D5016</code></td><td>Primary brand color — navigation bar background, headings, buttons, footer, trust bar. The dominant color of the brand.</td></tr>
+      <tr><td><span class="color-dot" style="background:#D4841A;"></span> Saffron Gold</td><td><code>#D4841A</code></td><td>Accent color — CTAs, highlights, hover states, badges, the newsletter section, important banners.</td></tr>
+      <tr><td><span class="color-dot" style="background:#FAF7F2;"></span> Cream</td><td><code>#FAF7F2</code></td><td>Page background — warmer than pure white, feels more natural and Ayurvedic. Used for alternating section backgrounds.</td></tr>
+      <tr><td><span class="color-dot" style="background:#C4956A;"></span> Sandstone</td><td><code>#C4956A</code></td><td>Tertiary accent — used for decorative elements, subtle borders, and earth-toned highlights. Complements both Forest Green and Saffron.</td></tr>
+      <tr><td><span class="color-dot" style="background:#3d6b1f;"></span> Green Light</td><td><code>#3d6b1f</code></td><td>Hover state for Forest Green buttons and links. Slightly lighter to provide visual feedback on interaction.</td></tr>
+      <tr><td><span class="color-dot" style="background:#1a1a1a;"></span> Text Dark</td><td><code>#1a1a1a</code></td><td>Body text — near-black rather than pure black for reduced eye strain and a softer appearance.</td></tr>
+    </tbody>
+  </table>
+
+  <table style="margin-top:16px;">
+    <thead><tr><th>Font Role</th><th>Family</th><th>Usage</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Display / Headings</strong></td><td>GFS Didot, Georgia, serif</td><td>Page titles, section headings (H1, H2), hero text. Classical serif conveys heritage and authority.</td></tr>
+      <tr><td><strong>UI / Navigation</strong></td><td>Montserrat, -apple-system, sans-serif</td><td>Navigation links, buttons, labels, form fields. Clean geometric sans-serif for clarity and modernity.</td></tr>
+      <tr><td><strong>Body Text</strong></td><td>Gentium Plus, Georgia, serif</td><td>Long-form paragraph text. Humanist serif improves readability for dense medical content.</td></tr>
+      <tr><td><strong>Statistics</strong></td><td>Oswald, Arial, sans-serif</td><td>Trust bar numbers and statistics — condensed display font for impact at large sizes.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="quick-ref">
+    <h3>Quick Reference Card</h3>
+    <div class="quick-ref-grid">
+      <div class="qr-item">
+        <label>Folder Location</label>
+        <div class="val">Desktop / vaidyagrama-rebuild /</div>
+      </div>
+      <div class="qr-item">
+        <label>Total HTML Pages</label>
+        <div class="val">12 pages + WEBSITE-GUIDE.html</div>
+      </div>
+      <div class="qr-item">
+        <label>Logo — Color Version</label>
+        <div class="val">logo-color.png (navbar use)</div>
+      </div>
+      <div class="qr-item">
+        <label>Logo — White Version</label>
+        <div class="val">logo-white.png (footer use)</div>
+      </div>
+      <div class="qr-item">
+        <label>WhatsApp Number</label>
+        <div class="val">+91 422 2364200</div>
+      </div>
+      <div class="qr-item">
+        <label>Toll-Free</label>
+        <div class="val">1800 1232 230</div>
+      </div>
+      <div class="qr-item">
+        <label>Forest Green</label>
+        <div class="val"><span class="color-dot" style="background:#2D5016;"></span>#2D5016</div>
+      </div>
+      <div class="qr-item">
+        <label>Saffron Gold</label>
+        <div class="val"><span class="color-dot" style="background:#D4841A;"></span>#D4841A</div>
+      </div>
+      <div class="qr-item">
+        <label>Cream Background</label>
+        <div class="val"><span class="color-dot" style="background:#FAF7F2; border:1px solid #ccc;"></span>#FAF7F2</div>
+      </div>
+      <div class="qr-item">
+        <label>Sandstone Accent</label>
+        <div class="val"><span class="color-dot" style="background:#C4956A;"></span>#C4956A</div>
+      </div>
+      <div class="qr-item">
+        <label>Heading Font</label>
+        <div class="val">GFS Didot, Georgia, serif</div>
+      </div>
+      <div class="qr-item">
+        <label>Body Font</label>
+        <div class="val">Gentium Plus, Georgia, serif</div>
+      </div>
+      <div class="qr-item">
+        <label>Instagram</label>
+        <div class="val">@vaidyagramaayurveda</div>
+      </div>
+      <div class="qr-item">
+        <label>Twitter / X</label>
+        <div class="val">@vaidyagrama</div>
+      </div>
+      <div class="qr-item">
+        <label>Facebook</label>
+        <div class="val">PunarnavaCommunity</div>
+      </div>
+      <div class="qr-item">
+        <label>Hosting (Recommended)</label>
+        <div class="val">Netlify.com (free)</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 style="margin-top:40px;">Address &amp; Contact Summary</h2>
+  <div class="card card-green" style="max-width:480px;">
+    <h4 style="margin-bottom:12px;">Vaidyagrama Ayurveda Hospital</h4>
+    <p style="font-size:14px; margin:0;">
+      15(1) Rottigoundanur Road<br>
+      Thirumalayampalayam Panchayat<br>
+      Coimbatore 641105<br>
+      Tamil Nadu, India<br><br>
+      <strong>Phone:</strong> +91 422 2364200<br>
+      <strong>Toll-Free:</strong> 1800 1232 230<br>
+      <strong>WhatsApp:</strong> +91 422 2364200<br>
+      <strong>Email:</strong> <em>(to be configured)</em>
+    </p>
+  </div>
+
+  <!-- FOOTER OF GUIDE DOCUMENT -->
+  <div style="margin-top:48px; padding-top:24px; border-top:2px solid var(--border); text-align:center;">
+    <p style="font-family: Georgia, serif; font-size:18px; color:var(--green); margin-bottom:6px;">Vaidyagrama Ayurveda</p>
+    <p style="font-size:13px; color:var(--text-muted); margin:0;">Website Complete Guide · Version 1.0 · March 2026</p>
+    <p style="font-size:12px; color:var(--text-muted); margin-top:8px; font-style:italic;">This document is confidential and intended for use by the Vaidyagrama team and authorized partners only. Do not publish this file on the website.</p>
+  </div>
+</div>
+<!-- END SECTION 8 -->
+
+</main>
+</div>
+
+<script>
+// Highlight active sidebar link on scroll
+const sections = document.querySelectorAll('[id]');
+const sidebarLinks = document.querySelectorAll('.sidebar a[href^="#"]');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    if (window.scrollY >= section.offsetTop - 80) {
+      current = section.id;
+    }
+  });
+  sidebarLinks.forEach(link => {
+    link.style.backgroundColor = '';
+    link.style.borderLeftColor = 'transparent';
+    link.style.color = '';
+    if (link.getAttribute('href') === '#' + current) {
+      link.style.backgroundColor = 'rgba(255,255,255,0.12)';
+      link.style.borderLeftColor = '#D4841A';
+      link.style.color = '#fff';
+    }
+  });
+});
+</script>
+</body>
+</html>
+
