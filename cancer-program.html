@@ -20,6 +20,8 @@
   <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Montserrat:wght@300;400;500;600;700;800&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@400;500;600;700&family=Alike&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="animations.css">
+  <script defer src="animations.js"></script>
   <style>
     * { box-sizing: border-box; }
     img { max-width: 100%; height: auto; }
@@ -277,9 +279,9 @@
         <p class="section-label">Our Support Framework</p>
         <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(26px,3.5vw,40px); color:#2D5016; font-weight:700;">Four Pillars of Support</h2>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-anim-stagger="0.12">
 
-        <div class="pillar-card">
+        <div class="pillar-card anim-fade-up">
           <div class="w-14 h-14 rounded-full flex items-center justify-center mb-5" style="background:#F0F4ED;">
             <svg class="w-7 h-7" fill="none" stroke="#2D5016" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
           </div>
@@ -287,7 +289,7 @@
           <p style="color:#4A4A4A; font-size:15px; line-height:1.8;">Classical Panchakarma-based detoxification protocols — carefully modified for the patient's current condition and tolerance — help clear accumulated toxins and create a cleaner internal environment for healing.</p>
         </div>
 
-        <div class="pillar-card">
+        <div class="pillar-card anim-fade-up">
           <div class="w-14 h-14 rounded-full flex items-center justify-center mb-5" style="background:#F0F4ED;">
             <svg class="w-7 h-7" fill="none" stroke="#2D5016" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
           </div>
@@ -295,7 +297,7 @@
           <p style="color:#4A4A4A; font-size:15px; line-height:1.8;">Rasayana (rejuvenation) therapies and formulations to strengthen Ojas — the body's innate immunity and vitality. Especially important for patients whose immune systems are compromised by chemotherapy or surgery.</p>
         </div>
 
-        <div class="pillar-card">
+        <div class="pillar-card anim-fade-up">
           <div class="w-14 h-14 rounded-full flex items-center justify-center mb-5" style="background:#FFF3E0;">
             <svg class="w-7 h-7" fill="none" stroke="#D4841A" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
           </div>
@@ -303,7 +305,7 @@
           <p style="color:#4A4A4A; font-size:15px; line-height:1.8;">Targeted Ayurvedic interventions to help manage the side effects of chemotherapy, radiation, and surgery — including nausea, fatigue, hair loss, neuropathy, digestive disturbances, and pain.</p>
         </div>
 
-        <div class="pillar-card">
+        <div class="pillar-card anim-fade-up">
           <div class="w-14 h-14 rounded-full flex items-center justify-center mb-5" style="background:#F0F4ED;">
             <svg class="w-7 h-7" fill="none" stroke="#2D5016" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-9h-1M4.34 12H3m15.07-6.07l-.707.707M6.34 17.66l-.707.707M18.07 17.66l-.707-.707M6.34 6.34l-.707-.707"/></svg>
           </div>
@@ -506,7 +508,7 @@
     <div class="max-w-3xl mx-auto px-4">
       <div class="text-center mb-12">
         <p class="section-label">Questions</p>
-        <h2 style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(24px,3vw,36px); color:#2D5016; font-weight:700;">Cancer Program FAQs</h2>
+        <h2 class="anim-fade-up" style="font-family:'GFS Didot',Georgia,serif; font-size:clamp(24px,3vw,36px); color:#2D5016; font-weight:700;">Cancer Program FAQs</h2>
       </div>
 
       <div class="faq-item">

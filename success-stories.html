@@ -19,7 +19,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Montserrat:wght@300;400;500;600;700;800&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@400;500;600;700&family=Alike&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="animations.css">
+  <script defer src="animations.js"></script>
   <style>
     * { box-sizing: border-box; }
     img { max-width: 100%; height: auto; }
@@ -355,7 +358,7 @@
       <!-- Testimonial Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         <template x-for="(t, idx) in filtered" :key="idx">
-          <div class="testimonial-card" x-data="{ expanded: false }">
+          <div class="testimonial-card anim-fade-up" x-data="{ expanded: false }" :style="{ transitionDelay: (idx % 6) * 0.1 + 's' }">
             <blockquote style="font-family:'Gentium Plus',Georgia,serif; font-size:1rem; color:#1A1A1A; font-style:italic; line-height:1.8; position:relative; z-index:1; margin-bottom:20px; flex:1;">
               <span x-show="!expanded && t.quote.length > 120" x-text="t.quote.substring(0, 120) + '...'"></span>
               <span x-show="expanded || t.quote.length <= 120" x-text="'&ldquo;' + t.quote + '&rdquo;'"></span>

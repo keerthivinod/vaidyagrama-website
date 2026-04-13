@@ -20,6 +20,8 @@
   <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Montserrat:wght@300;400;500;600;700;800&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@400;500;600;700&family=Alike&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="animations.css">
+  <script defer src="animations.js"></script>
   <style>
     * { box-sizing: border-box; }
     img { max-width: 100%; height: auto; }
@@ -240,27 +242,27 @@
 
       <!-- Metabolic & Lifestyle -->
       <div class="mb-14">
-        <h3 class="category-heading">
+        <h3 class="category-heading anim-fade-in">
           <span style="color:#D4841A; margin-right:8px;">❋</span> Metabolic &amp; Lifestyle
         </h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-          <a href="#" class="condition-card" title="Ayurvedic treatment for Diabetes Type 2">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4" data-anim-stagger="0.05">
+          <a href="#" class="condition-card anim-scale-up card-lift" title="Ayurvedic treatment for Diabetes Type 2">
             <h4>Diabetes (Type 2)</h4>
             <p>Madhumeha</p>
           </a>
-          <a href="#" class="condition-card" title="Ayurvedic treatment for Obesity">
+          <a href="#" class="condition-card anim-scale-up card-lift" title="Ayurvedic treatment for Obesity">
             <h4>Obesity</h4>
             <p>Sthaulya</p>
           </a>
-          <a href="#" class="condition-card" title="Ayurvedic treatment for Thyroid Disorders">
+          <a href="#" class="condition-card anim-scale-up card-lift" title="Ayurvedic treatment for Thyroid Disorders">
             <h4>Thyroid Disorders</h4>
             <p>Hypo / Hyper</p>
           </a>
-          <a href="#" class="condition-card" title="Ayurvedic treatment for High Cholesterol">
+          <a href="#" class="condition-card anim-scale-up card-lift" title="Ayurvedic treatment for High Cholesterol">
             <h4>High Cholesterol</h4>
             <p>Dyslipidaemia</p>
           </a>
-          <a href="#" class="condition-card" title="Ayurvedic treatment for PCOD/PCOS">
+          <a href="#" class="condition-card anim-scale-up card-lift" title="Ayurvedic treatment for PCOD/PCOS">
             <h4>PCOD / PCOS</h4>
             <p>Hormonal imbalance</p>
           </a>
@@ -270,27 +272,27 @@
 
       <!-- Neurological & Mental -->
       <div class="mb-14">
-        <h3 class="category-heading">
+        <h3 class="category-heading anim-fade-in">
           <span style="color:#D4841A; margin-right:8px;">❋</span> Neurological &amp; Mental
         </h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-          <a href="#" class="condition-card">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4" data-anim-stagger="0.05">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>Migraine</h4>
             <p>Ardhavabhedaka</p>
           </a>
-          <a href="#" class="condition-card">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>Stress &amp; Anxiety</h4>
             <p>Chittodvega</p>
           </a>
-          <a href="#" class="condition-card">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>Depression</h4>
             <p>Vishada</p>
           </a>
-          <a href="#" class="condition-card">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>Insomnia</h4>
             <p>Anidra</p>
           </a>
-          <a href="#" class="condition-card">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>Parkinson's</h4>
             <p>Early-stage support</p>
           </a>
@@ -299,27 +301,27 @@
 
       <!-- Digestive -->
       <div class="mb-14">
-        <h3 class="category-heading">
+        <h3 class="category-heading anim-fade-in">
           <span style="color:#D4841A; margin-right:8px;">❋</span> Digestive
         </h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-          <a href="#" class="condition-card">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4" data-anim-stagger="0.05">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>IBS</h4>
             <p>Grahani</p>
           </a>
-          <a href="#" class="condition-card">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>Crohn's Disease</h4>
             <p>Inflammatory bowel</p>
           </a>
-          <a href="#" class="condition-card">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>Acid Reflux / GERD</h4>
             <p>Amlapitta</p>
           </a>
-          <a href="#" class="condition-card">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>Constipation</h4>
             <p>Vibandha</p>
           </a>
-          <a href="#" class="condition-card">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>Liver Disorders</h4>
             <p>Yakrit Vikara</p>
           </a>
@@ -328,27 +330,27 @@
 
       <!-- Musculoskeletal -->
       <div class="mb-14">
-        <h3 class="category-heading">
+        <h3 class="category-heading anim-fade-in">
           <span style="color:#D4841A; margin-right:8px;">❋</span> Musculoskeletal
         </h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-          <a href="#" class="condition-card">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4" data-anim-stagger="0.05">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>Arthritis</h4>
             <p>Osteo &amp; Rheumatoid</p>
           </a>
-          <a href="#" class="condition-card">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>Back Pain</h4>
             <p>Lumbar / Cervical</p>
           </a>
-          <a href="#" class="condition-card">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>Spondylosis</h4>
             <p>Cervical / Lumbar</p>
           </a>
-          <a href="#" class="condition-card">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>Sciatica</h4>
             <p>Gridhrasi</p>
           </a>
-          <a href="#" class="condition-card">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>Frozen Shoulder</h4>
             <p>Apabahuka</p>
           </a>
@@ -357,23 +359,23 @@
 
       <!-- Skin -->
       <div class="mb-14">
-        <h3 class="category-heading">
+        <h3 class="category-heading anim-fade-in">
           <span style="color:#D4841A; margin-right:8px;">❋</span> Skin Conditions
         </h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-          <a href="#" class="condition-card">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4" data-anim-stagger="0.05">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>Psoriasis</h4>
             <p>Ekakushtha</p>
           </a>
-          <a href="#" class="condition-card">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>Eczema</h4>
             <p>Vicharchika</p>
           </a>
-          <a href="#" class="condition-card">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>Vitiligo</h4>
             <p>Shvitra</p>
           </a>
-          <a href="#" class="condition-card">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>Acne</h4>
             <p>Yuvanpidika</p>
           </a>
@@ -382,23 +384,23 @@
 
       <!-- Other -->
       <div class="mb-8">
-        <h3 class="category-heading">
+        <h3 class="category-heading anim-fade-in">
           <span style="color:#D4841A; margin-right:8px;">❋</span> Other Conditions
         </h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-          <a href="#" class="condition-card">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4" data-anim-stagger="0.05">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>Infertility Support</h4>
             <p>Vandhyatva</p>
           </a>
-          <a href="#" class="condition-card">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>Kidney Disorders</h4>
             <p>Chronic support</p>
           </a>
-          <a href="#" class="condition-card">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>Eye Conditions</h4>
             <p>Netra Vikara</p>
           </a>
-          <a href="#" class="condition-card">
+          <a href="#" class="condition-card anim-scale-up card-lift">
             <h4>General Immunity</h4>
             <p>Vyadhikshamatva</p>
           </a>

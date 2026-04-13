@@ -1,0 +1,228 @@
+/* ══════════════════════════════════════════════════
+   Vaidyagrama — Shared Animation System
+   ══════════════════════════════════════════════════ */
+
+/* ── Scroll Reveal Animations ───────────────────── */
+/* Backward-compat alias for index.html's existing .fade-up class */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+.anim-fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.anim-fade-up.visible { opacity: 1; transform: translateY(0); }
+
+.anim-fade-in-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.anim-fade-in-left.visible { opacity: 1; transform: translateX(0); }
+
+.anim-fade-in-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.anim-fade-in-right.visible { opacity: 1; transform: translateX(0); }
+
+.anim-scale-up {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.anim-scale-up.visible { opacity: 1; transform: scale(1); }
+
+.anim-fade-in {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.anim-fade-in.visible { opacity: 1; }
+
+/* ── Stagger Delays (data-anim-delay="1" through 8) */
+[data-anim-delay="1"] { transition-delay: 0.1s; }
+[data-anim-delay="2"] { transition-delay: 0.2s; }
+[data-anim-delay="3"] { transition-delay: 0.3s; }
+[data-anim-delay="4"] { transition-delay: 0.4s; }
+[data-anim-delay="5"] { transition-delay: 0.5s; }
+[data-anim-delay="6"] { transition-delay: 0.6s; }
+[data-anim-delay="7"] { transition-delay: 0.7s; }
+[data-anim-delay="8"] { transition-delay: 0.8s; }
+
+/* ── Card Hover Lift ────────────────────────────── */
+.card-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(45,80,22,0.1);
+  border-color: #2D5016;
+}
+
+/* ── Depth Card (3D perspective hover) ──────────── */
+.depth-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.depth-card:hover {
+  transform: translateY(-4px) perspective(600px) rotateX(1deg);
+  box-shadow:
+    0 4px 8px rgba(45,80,22,0.06),
+    0 12px 28px rgba(45,80,22,0.1),
+    0 20px 48px rgba(45,80,22,0.04);
+}
+
+/* ── Image Hover Zoom ───────────────────────────── */
+.img-hover-zoom {
+  overflow: hidden;
+  border-radius: inherit;
+}
+.img-hover-zoom img {
+  transition: transform 0.4s ease;
+}
+.img-hover-zoom:hover img {
+  transform: scale(1.06);
+}
+
+/* ── 3D Tilt Cards (vanilla-tilt.js companion) ──── */
+.tilt-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.tilt-card .tilt-inner {
+  transform: translateZ(20px);
+}
+
+/* ── 3D Flip Card ───────────────────────────────── */
+.flip-card {
+  perspective: 800px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+@media (hover: hover) {
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 12px;
+}
+.flip-card-back {
+  transform: rotateY(180deg);
+  background: #2D5016;
+  color: white;
+}
+
+/* ── Button Hover Enhancement ───────────────────── */
+.btn-hover {
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+.btn-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212,132,26,0.25);
+}
+.btn-hover:active {
+  transform: translateY(0);
+}
+
+/* ── Form Focus Enhancement ─────────────────────── */
+.form-input-anim {
+  transition: border-color 0.2s, box-shadow 0.3s;
+}
+.form-input-anim:focus {
+  border-color: #D4841A;
+  box-shadow: 0 0 0 3px rgba(212,132,26,0.15);
+  outline: none;
+}
+
+/* ── Floating Leaves (decorative) ───────────────── */
+@keyframes float-leaf {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.4; }
+  50%      { transform: translateY(-18px) rotate(8deg); opacity: 0.6; }
+}
+.floating-leaf {
+  position: absolute;
+  pointer-events: none;
+  animation: float-leaf 6s ease-in-out infinite;
+  will-change: transform;
+  z-index: 0;
+}
+.floating-leaf:nth-child(2) { animation-delay: 2s; animation-duration: 7s; }
+.floating-leaf:nth-child(3) { animation-delay: 4s; animation-duration: 8s; }
+
+/* ── Quote Pop (testimonial quote mark) ─────────── */
+@keyframes quote-pop {
+  0%   { opacity: 0; transform: scale(0.5); }
+  100% { opacity: 0.4; transform: scale(1); }
+}
+.quote-pop::before {
+  animation: quote-pop 0.5s ease forwards;
+}
+
+/* ── 404 & CTA Animations ──────────────────────── */
+@keyframes wobble {
+  0%, 100% { transform: rotate(0deg); }
+  25%      { transform: rotate(-3deg); }
+  75%      { transform: rotate(3deg); }
+}
+.anim-wobble {
+  animation: wobble 2s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.04); }
+}
+.anim-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+/* ── Badge Shimmer ──────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.anim-shimmer {
+  background: linear-gradient(90deg, transparent 30%, rgba(255,255,255,0.2) 50%, transparent 70%);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* ── Reduced Motion Override ────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .anim-fade-up, .anim-fade-in-left, .anim-fade-in-right,
+  .anim-scale-up, .anim-fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .flip-card-inner { transition: none !important; }
+  .floating-leaf { animation: none !important; }
+  .anim-wobble, .anim-pulse-soft, .anim-shimmer { animation: none !important; }
+  .card-lift, .depth-card, .img-hover-zoom img, .btn-hover {
+    transition: none !important;
+  }
+  [data-anim-delay] { transition-delay: 0s !important; }
+}

@@ -20,6 +20,9 @@
   <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Montserrat:wght@300;400;500;600;700;800&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@400;500;600;700&family=Alike&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="animations.css">
+  <script defer src="animations.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
   <style>
     * { box-sizing: border-box; }
     img { max-width: 100%; height: auto; }
@@ -214,7 +217,7 @@
     <div class="max-w-5xl mx-auto px-4">
 
       <!-- Doctor 1: Vaidya AR Ramadas -->
-      <div class="doctor-full-card">
+      <div class="doctor-full-card anim-fade-up">
         <div class="flex flex-col md:flex-row gap-8">
           <!-- Photo column -->
           <div style="padding:32px; background:#F0F4ED; display:flex; flex-direction:column; align-items:center; justify-content:center; width:240px; min-width:240px; max-width:240px; flex-shrink:0;">
@@ -261,7 +264,7 @@
       </div>
 
       <!-- Doctor 2: Vaidya Harikrishnan KK -->
-      <div class="doctor-full-card">
+      <div class="doctor-full-card anim-fade-up">
         <div class="flex flex-col md:flex-row gap-8">
           <div style="padding:32px; background:#F0F4ED; display:flex; flex-direction:column; align-items:center; justify-content:center; width:240px; min-width:240px; max-width:240px; flex-shrink:0;">
             <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/doctor-vaidyagrama-ayurveda-village-indiavg-50_5.jpg" alt="Vaidya Harikrishnan KK — Medical Director at Vaidyagrama" loading="lazy" class="doctor-photo">
@@ -305,7 +308,7 @@
       </div>
 
       <!-- Doctor 3: Vaidya Ramanandan EK -->
-      <div class="doctor-full-card">
+      <div class="doctor-full-card anim-fade-up">
         <div class="flex flex-col md:flex-row gap-8">
           <div style="padding:32px; background:#F0F4ED; display:flex; flex-direction:column; align-items:center; justify-content:center; width:240px; min-width:240px; max-width:240px; flex-shrink:0;">
             <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/ramanandan-vaidyagrama-ayurveda_orig.jpeg" alt="Vaidya Ramanandan EK — Medical Director at Vaidyagrama" loading="lazy" class="doctor-photo">
@@ -352,7 +355,7 @@
       </div>
 
       <!-- Doctor 4: Vaidya Harikumar Namboodiri -->
-      <div class="doctor-full-card">
+      <div class="doctor-full-card anim-fade-up">
         <div class="flex flex-col md:flex-row gap-8">
           <div style="padding:32px; background:#F0F4ED; display:flex; flex-direction:column; align-items:center; justify-content:center; width:240px; min-width:240px; max-width:240px; flex-shrink:0;">
             <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-ayurveda-village-indiavg-1.jpg" alt="Vaidyagrama campus — photo of Vaidya Harikumar Namboodiri coming soon" loading="lazy" class="doctor-photo" style="object-position:center center;">
@@ -387,7 +390,7 @@
       </div>
 
       <!-- Doctor 5: Vaidya Omprakash G -->
-      <div class="doctor-full-card">
+      <div class="doctor-full-card anim-fade-up">
         <div class="flex flex-col md:flex-row gap-8">
           <div style="padding:32px; background:#F0F4ED; display:flex; flex-direction:column; align-items:center; justify-content:center; width:240px; min-width:240px; max-width:240px; flex-shrink:0;">
             <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-hospital-dr-omprakash_orig.jpeg" alt="Vaidya Omprakash G — Medical Director at Vaidyagrama" loading="lazy" class="doctor-photo">
@@ -430,7 +433,7 @@
       </div>
 
       <!-- Doctor 6: Vaidya Vinod Govind -->
-      <div class="doctor-full-card">
+      <div class="doctor-full-card anim-fade-up">
         <div class="flex flex-col md:flex-row gap-8">
           <div style="padding:32px; background:#F0F4ED; display:flex; flex-direction:column; align-items:center; justify-content:center; width:240px; min-width:240px; max-width:240px; flex-shrink:0;">
             <img src="https://www.vaidyagrama.com/uploads/1/8/1/5/18153735/vaidyagrama-dhanwantari-temple1.jpg" alt="Vaidyagrama Dhanwantari temple — photo of Vaidya Vinod Govind coming soon" loading="lazy" class="doctor-photo" style="object-position:center center;">

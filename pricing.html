@@ -20,6 +20,8 @@
   <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Montserrat:wght@300;400;500;600;700;800&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@400;500;600;700&family=Alike&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="animations.css">
+  <script defer src="animations.js"></script>
   <style>
     * { box-sizing: border-box; }
     img { max-width: 100%; height: auto; }
@@ -256,10 +258,10 @@
         <a href="contact.html" style="color:#D4841A; font-weight:700; margin-left:8px;">Get a Quote &rarr;</a>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch" data-anim-stagger="0.12">
 
         <!-- 7-Night -->
-        <div class="price-card">
+        <div class="price-card anim-fade-up">
           <p style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#D4841A; margin-bottom:8px;">Starter</p>
           <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:22px; font-weight:700; color:#2D5016; margin-bottom:4px;">7-Night Wellness</h3>
           <p style="font-family:'Montserrat',sans-serif; font-size:14px; color:#6B7280; margin-bottom:20px;">7 nights / 8 days</p>
@@ -292,7 +294,7 @@
         </div>
 
         <!-- 14-Night -->
-        <div class="price-card featured" style="margin-top:-12px;">
+        <div class="price-card featured anim-scale-up" style="margin-top:-12px;">
           <div class="badge">Most Popular</div>
           <p style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#D4841A; margin-bottom:8px; margin-top:8px;">Recommended</p>
           <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:22px; font-weight:700; color:#2D5016; margin-bottom:4px;">14-Night Panchakarma</h3>
@@ -326,7 +328,7 @@
         </div>
 
         <!-- 28-Night -->
-        <div class="price-card">
+        <div class="price-card anim-fade-up">
           <p style="font-family:'Montserrat',sans-serif; font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#D4841A; margin-bottom:8px;">Deep Healing</p>
           <h3 style="font-family:'GFS Didot',Georgia,serif; font-size:22px; font-weight:700; color:#2D5016; margin-bottom:4px;">28-Night Program</h3>
           <p style="font-family:'Montserrat',sans-serif; font-size:14px; color:#6B7280; margin-bottom:20px;">28 nights / 29 days</p>
